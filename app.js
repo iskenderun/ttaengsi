@@ -57,7 +57,9 @@
     advanceTimerId: null,
     locked: false,
     missed: [],
-    selectedListTerm: null
+    selectedListTerm: null,
+    layoutMode: "default",
+    examAnswerDraft: ""
   };
 
   const setupPanel = document.getElementById("setup-panel");
@@ -68,6 +70,7 @@
   const weekSelectField = document.getElementById("week-select-field");
   const weekSelect = document.getElementById("week-select");
   const questionCountSelect = document.getElementById("question-count");
+  const layoutModeSelect = document.getElementById("layout-mode-select");
   const customWeekField = document.getElementById("custom-week-field");
   const customWeekOptions = document.getElementById("custom-week-options");
   const customQuestionField = document.getElementById("custom-question-field");
@@ -92,12 +95,16 @@
   const progressText = document.getElementById("progress-text");
   const scoreText = document.getElementById("score-text");
   const timerText = document.getElementById("timer-text");
+  const examTimerText = document.getElementById("exam-timer-text");
+  const examSessionMeta = document.getElementById("exam-session-meta");
+  const examAnswerVisibilityCheckbox = document.getElementById("exam-answer-visibility");
   const progressFill = document.getElementById("progress-fill");
   const metaWeek = document.getElementById("meta-week");
   const metaCategory = document.getElementById("meta-category");
   const metaMode = document.getElementById("meta-mode");
   const questionTitle = document.getElementById("question-title");
   const questionBody = document.getElementById("question-body");
+  const answerLabel = document.getElementById("answer-label");
   const answerInput = document.getElementById("answer-input");
   const feedback = document.getElementById("feedback");
   const resultSummary = document.getElementById("result-summary");
@@ -126,11 +133,16 @@
     listCategoryFilter.addEventListener("change", syncListViewIfOpen);
     customWeekOptions.addEventListener("change", syncListViewIfOpen);
     customQuestionCountInput.addEventListener("input", syncListViewIfOpen);
+    examAnswerVisibilityCheckbox.addEventListener("change", syncExamAnswerVisibility);
     listDetailBackdrop.addEventListener("click", handleListDetailClose);
     listDetailCloseButton.addEventListener("click", handleListDetailClose);
 
     answerInput.addEventListener("keydown", (event) => {
       if (event.key !== "Enter") {
+        if (handleExamAnswerKeydown(event)) {
+          return;
+        }
+
         return;
       }
 
@@ -142,6 +154,10 @@
 
       submitAnswer(false);
     });
+    answerInput.addEventListener("input", syncExamDraftFromInput);
+    answerInput.addEventListener("paste", handleExamAnswerPaste);
+    answerInput.addEventListener("click", keepExamCaretAtEnd);
+    answerInput.addEventListener("focus", keepExamCaretAtEnd);
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && !listDetail.classList.contains("hidden")) {
@@ -320,6 +336,136 @@
     return `1-${scopeConfig.maxWeek}주차 누적`;
   }
 
+  function applyLayoutMode() {
+    document.body.classList.toggle("quiz-layout-exam", state.layoutMode === "exam" && !quizPanel.classList.contains("hidden"));
+  }
+
+  function isExamLayout() {
+    return state.layoutMode === "exam";
+  }
+
+  function syncExamAnswerVisibility() {
+    if (!isExamLayout()) {
+      answerInput.classList.remove("exam-answer-masked");
+      return;
+    }
+
+    answerInput.classList.toggle("exam-answer-masked", !examAnswerVisibilityCheckbox.checked);
+    answerInput.value = state.examAnswerDraft;
+    keepExamCaretAtEnd();
+  }
+
+  function isExamAnswerProtected() {
+    return isExamLayout() && !examAnswerVisibilityCheckbox.checked;
+  }
+
+  function keepExamCaretAtEnd() {
+    if (!isExamAnswerProtected()) {
+      return;
+    }
+
+    const end = answerInput.value.length;
+    window.setTimeout(() => {
+      try {
+        answerInput.setSelectionRange(end, end);
+      } catch (error) {
+        return;
+      }
+    }, 0);
+  }
+
+  function handleExamAnswerKeydown(event) {
+    if (!isExamAnswerProtected() || answerInput.disabled) {
+      return false;
+    }
+
+    const blockedKeys = new Set([
+      "Backspace",
+      "Delete",
+      "ArrowLeft",
+      "ArrowRight",
+      "ArrowUp",
+      "ArrowDown",
+      "Home",
+      "End",
+      "PageUp",
+      "PageDown"
+    ]);
+
+    if (blockedKeys.has(event.key)) {
+      event.preventDefault();
+      keepExamCaretAtEnd();
+      return true;
+    }
+
+    if (event.ctrlKey || event.metaKey) {
+      const loweredKey = event.key.toLowerCase();
+      if (["a", "v", "x", "y", "z"].includes(loweredKey)) {
+        event.preventDefault();
+        keepExamCaretAtEnd();
+        return true;
+      }
+    }
+
+    if (event.altKey) {
+      return false;
+    }
+
+    return false;
+  }
+
+  function syncExamDraftFromInput() {
+    if (!isExamLayout()) {
+      return;
+    }
+
+    if (examAnswerVisibilityCheckbox.checked) {
+      state.examAnswerDraft = answerInput.value;
+      return;
+    }
+
+    if (answerInput.value.startsWith(state.examAnswerDraft)) {
+      state.examAnswerDraft = answerInput.value;
+    }
+
+    answerInput.value = state.examAnswerDraft;
+    keepExamCaretAtEnd();
+  }
+
+  function handleExamAnswerPaste(event) {
+    if (!isExamAnswerProtected() || answerInput.disabled) {
+      return;
+    }
+
+    const pastedText = event.clipboardData ? event.clipboardData.getData("text") : "";
+    if (!pastedText) {
+      event.preventDefault();
+      return;
+    }
+
+    event.preventDefault();
+    state.examAnswerDraft += pastedText;
+    answerInput.value = state.examAnswerDraft;
+    keepExamCaretAtEnd();
+  }
+
+  function getCurrentAnswerValue() {
+    return isExamLayout() ? state.examAnswerDraft : answerInput.value;
+  }
+
+  function isAnswerCorrect(question, userInput) {
+    const normalizedInput = normalize(userInput);
+    if (!normalizedInput) {
+      return false;
+    }
+
+    const acceptedAnswers = Array.isArray(question.acceptedAnswers)
+      ? question.acceptedAnswers.map((answer) => normalize(answer)).filter(Boolean)
+      : [];
+
+    return acceptedAnswers.includes(normalizedInput);
+  }
+
   function startQuiz() {
     const selectedModes = Array.from(document.querySelectorAll(".mode-groups input[type=\"checkbox\"]:checked"))
       .map((element) => element.value);
@@ -352,11 +498,13 @@
     state.currentIndex = 0;
     state.score = 0;
     state.missed = [];
+    state.layoutMode = layoutModeSelect.value;
     scoreText.textContent = "0";
 
     setupPanel.classList.add("hidden");
     resultPanel.classList.add("hidden");
     quizPanel.classList.remove("hidden");
+    applyLayoutMode();
 
     renderQuestion();
   }
@@ -365,6 +513,7 @@
     setupPanel.classList.add("hidden");
     quizPanel.classList.add("hidden");
     resultPanel.classList.add("hidden");
+    applyLayoutMode();
     listPanel.classList.remove("hidden");
     renderListView();
   }
@@ -374,6 +523,7 @@
     closeListDetail();
     state.selectedListTerm = null;
     setupPanel.classList.remove("hidden");
+    applyLayoutMode();
   }
 
   function syncListViewIfOpen() {
@@ -1016,13 +1166,17 @@
     state.locked = false;
     state.remainingSeconds = 25;
     timerText.textContent = String(state.remainingSeconds);
+    examTimerText.textContent = `${state.remainingSeconds}초`;
     feedback.textContent = "";
     feedback.className = "feedback";
     nextButton.classList.add("hidden");
+    state.examAnswerDraft = "";
     answerInput.value = "";
     answerInput.disabled = false;
     submitButton.disabled = false;
     skipButton.disabled = false;
+    examAnswerVisibilityCheckbox.checked = false;
+    syncExamAnswerVisibility();
 
     const question = state.questions[state.currentIndex];
     const total = state.questions.length;
@@ -1032,7 +1186,17 @@
     metaWeek.textContent = question.week;
     metaCategory.textContent = CATEGORY_LABELS[question.category];
     metaMode.textContent = MODE_LABELS[question.mode];
-    questionTitle.textContent = question.prompt.title;
+    examSessionMeta.textContent = `${question.week} · ${CATEGORY_LABELS[question.category]} · ${MODE_LABELS[question.mode]} · ${state.currentIndex + 1}/${total}`;
+    if (isExamLayout()) {
+      questionTitle.innerHTML = `
+        <span class="exam-question-number">${state.currentIndex + 1}</span>
+        <span class="exam-question-text">/${total}. ${cleanupDisplay(question.prompt.title)}</span>
+      `;
+    } else {
+      questionTitle.textContent = question.prompt.title;
+    }
+    answerLabel.textContent = isExamLayout() ? "답 1" : "정답 입력";
+    submitButton.textContent = isExamLayout() ? "답안 전송" : "제출";
     questionBody.innerHTML = "";
 
     question.prompt.blocks.forEach((block) => {
@@ -1067,9 +1231,11 @@
 
   function startTimer() {
     timerText.textContent = String(state.remainingSeconds);
+    examTimerText.textContent = `${state.remainingSeconds}초`;
     state.timerId = window.setInterval(() => {
       state.remainingSeconds -= 1;
       timerText.textContent = String(state.remainingSeconds);
+      examTimerText.textContent = `${state.remainingSeconds}초`;
 
       if (state.remainingSeconds <= 0) {
         submitAnswer(true);
@@ -1100,19 +1266,22 @@
     state.locked = true;
 
     const question = state.questions[state.currentIndex];
-    const userInput = isTimeout || isSkip ? "" : answerInput.value;
-    const normalizedInput = normalize(userInput);
-    const isCorrect = !isTimeout && !isSkip && question.acceptedAnswers.some((answer) => normalize(answer) === normalizedInput);
+    const userInput = isTimeout || isSkip ? "" : getCurrentAnswerValue();
+    const isCorrect = !isTimeout && !isSkip && isAnswerCorrect(question, userInput);
 
     if (isCorrect) {
       state.score += 1;
       scoreText.textContent = String(state.score);
-      feedback.className = "feedback ok";
-      feedback.textContent = `정답입니다.\n정답: ${question.displayAnswer}`;
+      if (!isExamLayout()) {
+        feedback.className = "feedback ok";
+        feedback.textContent = `정답입니다.\n정답: ${question.displayAnswer}`;
+      }
     } else {
       const reason = isTimeout ? "시간 종료" : isSkip ? "건너뜀" : "오답";
-      feedback.className = "feedback bad";
-      feedback.textContent = `${reason}\n정답: ${question.displayAnswer}${userInput ? `\n입력: ${userInput}` : ""}`;
+      if (!isExamLayout()) {
+        feedback.className = "feedback bad";
+        feedback.textContent = `${reason}\n정답: ${question.displayAnswer}${userInput ? `\n입력: ${userInput}` : ""}`;
+      }
       state.missed.push({
         question,
         userInput: userInput || (isTimeout ? "시간 초과" : "미입력")
@@ -1126,7 +1295,7 @@
     state.advanceTimerId = window.setTimeout(() => {
       state.advanceTimerId = null;
       goToNextQuestion();
-    }, 450);
+    }, isExamLayout() ? 120 : 450);
   }
 
   function goToNextQuestion() {
@@ -1144,6 +1313,7 @@
     clearAdvanceTimer();
     quizPanel.classList.add("hidden");
     resultPanel.classList.remove("hidden");
+    applyLayoutMode();
 
     const total = state.questions.length;
     const accuracy = total === 0 ? 0 : Math.round((state.score / total) * 100);
@@ -1195,6 +1365,7 @@
     resultPanel.classList.add("hidden");
     quizPanel.classList.add("hidden");
     setupPanel.classList.remove("hidden");
+    applyLayoutMode();
   }
 
   function normalize(value) {
