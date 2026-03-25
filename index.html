@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>의학영어 땡시</title>
-  <link rel="stylesheet" href="./styles.css?v=20260324-1">
+  <link rel="stylesheet" href="./styles.css?v=20260325-9">
 </head>
 <body>
   <main class="app-shell">
@@ -50,22 +50,6 @@
             <option value="all">전체</option>
           </select>
         </label>
-
-        <label class="field">
-          <span>퀴즈 레이아웃</span>
-          <select id="layout-mode-select">
-            <option value="default" selected>기본 레이아웃</option>
-            <option value="exam">실전 레이아웃</option>
-          </select>
-        </label>
-
-        <div class="field checkbox-card">
-          <span>어근 정답 처리</span>
-          <label class="checkbox inline-checkbox">
-            <input id="root-allow-combining-vowel" type="checkbox" checked>
-            <span>결합모음 포함형도 정답으로 인정</span>
-          </label>
-        </div>
       </div>
 
       <div id="custom-week-field" class="field hidden">
@@ -123,6 +107,17 @@
             <span>전체 어휘 빈칸 보고 접두어 맞히기</span>
           </label>
         </fieldset>
+      </div>
+
+      <div class="bottom-toggles">
+        <label class="checkbox inline-checkbox">
+          <input id="layout-mode-checkbox" type="checkbox">
+          <span>실전 레이아웃으로 시작</span>
+        </label>
+        <label class="checkbox inline-checkbox">
+          <input id="root-allow-combining-vowel" type="checkbox" checked>
+          <span>결합모음 포함형도 정답으로 인정</span>
+        </label>
       </div>
 
       <div class="notice">
@@ -265,7 +260,7 @@
     </section>
   </main>
 
-  <script src="./quiz-data.js?v=20260324-1"></script>
-  <script src="./app.js?v=20260324-1"></script>
+  <script src="./quiz-data.js?v=20260325-9"></script>
+  <script src="./app.js?v=20260325-9"></script>
 </body>
 </html>
