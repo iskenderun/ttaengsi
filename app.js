@@ -133,9 +133,15 @@
     listCategoryFilter.addEventListener("change", syncListViewIfOpen);
     customWeekOptions.addEventListener("change", syncListViewIfOpen);
     customQuestionCountInput.addEventListener("input", syncListViewIfOpen);
-    examAnswerVisibilityCheckbox.addEventListener("change", syncExamAnswerVisibility);
-    listDetailBackdrop.addEventListener("click", handleListDetailClose);
-    listDetailCloseButton.addEventListener("click", handleListDetailClose);
+    if (examAnswerVisibilityCheckbox) {
+      examAnswerVisibilityCheckbox.addEventListener("change", syncExamAnswerVisibility);
+    }
+    if (listDetailBackdrop) {
+      listDetailBackdrop.addEventListener("click", handleListDetailClose);
+    }
+    if (listDetailCloseButton) {
+      listDetailCloseButton.addEventListener("click", handleListDetailClose);
+    }
 
     answerInput.addEventListener("keydown", (event) => {
       if (event.key !== "Enter") {
@@ -160,7 +166,7 @@
     answerInput.addEventListener("focus", keepExamCaretAtEnd);
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !listDetail.classList.contains("hidden")) {
+      if (event.key === "Escape" && listDetail && !listDetail.classList.contains("hidden")) {
         handleListDetailClose();
       }
     });
@@ -350,13 +356,13 @@
       return;
     }
 
-    answerInput.classList.toggle("exam-answer-masked", !examAnswerVisibilityCheckbox.checked);
+    answerInput.classList.toggle("exam-answer-masked", !(examAnswerVisibilityCheckbox && examAnswerVisibilityCheckbox.checked));
     answerInput.value = state.examAnswerDraft;
     keepExamCaretAtEnd();
   }
 
   function isExamAnswerProtected() {
-    return isExamLayout() && !examAnswerVisibilityCheckbox.checked;
+    return isExamLayout() && !(examAnswerVisibilityCheckbox && examAnswerVisibilityCheckbox.checked);
   }
 
   function keepExamCaretAtEnd() {
@@ -419,7 +425,7 @@
       return;
     }
 
-    if (examAnswerVisibilityCheckbox.checked) {
+    if (examAnswerVisibilityCheckbox && examAnswerVisibilityCheckbox.checked) {
       state.examAnswerDraft = answerInput.value;
       return;
     }
@@ -498,7 +504,7 @@
     state.currentIndex = 0;
     state.score = 0;
     state.missed = [];
-    state.layoutMode = layoutModeCheckbox.checked ? "exam" : "default";
+    state.layoutMode = layoutModeCheckbox && layoutModeCheckbox.checked ? "exam" : "default";
     scoreText.textContent = "0";
 
     setupPanel.classList.add("hidden");
@@ -727,6 +733,9 @@
 
     const entry = getEntry(term);
     if (!entry) {
+      if (!listDetail || !listDetailTitle || !listDetailContent) {
+        return;
+      }
       listDetailTitle.textContent = "뜻 보기";
       listDetailContent.innerHTML = "<p class=\"muted\">뜻 정보를 찾지 못했습니다.</p>";
       listDetail.classList.remove("hidden");
@@ -746,6 +755,10 @@
       blocks.push({ label: "뜻", value: "정의 없음" });
     }
 
+    if (!listDetail || !listDetailTitle || !listDetailContent) {
+      return;
+    }
+
     const body = blocks
       .map((block) => `
         <section class="list-detail-block">
@@ -762,6 +775,9 @@
   }
 
   function closeListDetail() {
+    if (!listDetail) {
+      return;
+    }
     listDetail.classList.add("hidden");
     listDetail.setAttribute("aria-hidden", "true");
   }
@@ -1166,7 +1182,9 @@
     state.locked = false;
     state.remainingSeconds = 25;
     timerText.textContent = String(state.remainingSeconds);
-    examTimerText.textContent = `${state.remainingSeconds}초`;
+    if (examTimerText) {
+      examTimerText.textContent = `${state.remainingSeconds}초`;
+    }
     feedback.textContent = "";
     feedback.className = "feedback";
     nextButton.classList.add("hidden");
@@ -1175,7 +1193,9 @@
     answerInput.disabled = false;
     submitButton.disabled = false;
     skipButton.disabled = false;
-    examAnswerVisibilityCheckbox.checked = false;
+    if (examAnswerVisibilityCheckbox) {
+      examAnswerVisibilityCheckbox.checked = false;
+    }
     syncExamAnswerVisibility();
 
     const question = state.questions[state.currentIndex];
@@ -1186,7 +1206,9 @@
     metaWeek.textContent = question.week;
     metaCategory.textContent = CATEGORY_LABELS[question.category];
     metaMode.textContent = MODE_LABELS[question.mode];
-    examSessionMeta.textContent = `${question.week} · ${CATEGORY_LABELS[question.category]} · ${MODE_LABELS[question.mode]} · ${state.currentIndex + 1}/${total}`;
+    if (examSessionMeta) {
+      examSessionMeta.textContent = `${question.week} · ${CATEGORY_LABELS[question.category]} · ${MODE_LABELS[question.mode]} · ${state.currentIndex + 1}/${total}`;
+    }
     if (isExamLayout()) {
       questionTitle.innerHTML = `
         <span class="exam-question-number">${state.currentIndex + 1}</span>
@@ -1195,7 +1217,9 @@
     } else {
       questionTitle.textContent = question.prompt.title;
     }
-    answerLabel.textContent = isExamLayout() ? "답 1" : "정답 입력";
+    if (answerLabel) {
+      answerLabel.textContent = isExamLayout() ? "답 1" : "정답 입력";
+    }
     submitButton.textContent = isExamLayout() ? "답안 전송" : "제출";
     questionBody.innerHTML = "";
 
@@ -1231,11 +1255,15 @@
 
   function startTimer() {
     timerText.textContent = String(state.remainingSeconds);
-    examTimerText.textContent = `${state.remainingSeconds}초`;
+    if (examTimerText) {
+      examTimerText.textContent = `${state.remainingSeconds}초`;
+    }
     state.timerId = window.setInterval(() => {
       state.remainingSeconds -= 1;
       timerText.textContent = String(state.remainingSeconds);
-      examTimerText.textContent = `${state.remainingSeconds}초`;
+      if (examTimerText) {
+        examTimerText.textContent = `${state.remainingSeconds}초`;
+      }
 
       if (state.remainingSeconds <= 0) {
         submitAnswer(true);
