@@ -43,9 +43,14 @@
     "-osis": "정답에 알파벳 o를 포함하시오.",
     "-iasis": "정답에 알파벳 a를 포함하시오.",
     "-dynia": "정답에 알파벳 d를 포함하시오.",
-    "-algia": "정답에 알파벳 l을 포함하시오.",
-    "opt(o)": "정답에 알파벳 t를 포함하시오.",
+    "-algia": "정답에 알파벳 g를 포함하시오.",
+    "opt(o)": "정답에 알파벳 h를 포함하지 마시오.",
     "ophthalm(o)": "정답에 알파벳 h를 포함하시오."
+  };
+
+  const VOCAB_PROMPT_CONSTRAINTS = {
+    "hypodermic": "정답에 알파벳 h를 포함하시오.",
+    "subcutaneous": "정답에 알파벳 s를 포함하시오."
   };
 
   const state = {
@@ -850,13 +855,17 @@
   }
 
   function buildVocabularyPrompt(entry) {
+    const constraint = VOCAB_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
+    const title = constraint
+      ? `뜻에 맞는 영어 어휘를 쓰세요. 조건: ${constraint}`
+      : "뜻에 맞는 영어 어휘를 쓰세요.";
     const choices = [];
 
     if (entry.korean) {
       choices.push({
         mode: "korean",
         prompt: {
-          title: "뜻에 맞는 영어 어휘를 쓰세요.",
+          title,
           blocks: [
             { label: "한국어", value: entry.korean }
           ]
@@ -868,7 +877,7 @@
       choices.push({
         mode: "definition",
         prompt: {
-          title: "뜻에 맞는 영어 어휘를 쓰세요.",
+          title,
           blocks: [
             { label: "영어 뜻풀이", value: entry.english }
           ]
