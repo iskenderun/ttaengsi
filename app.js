@@ -70,12 +70,12 @@
   const weekSelectField = document.getElementById("week-select-field");
   const weekSelect = document.getElementById("week-select");
   const questionCountSelect = document.getElementById("question-count");
-  const layoutModeSelect = document.getElementById("layout-mode-select");
   const customWeekField = document.getElementById("custom-week-field");
   const customWeekOptions = document.getElementById("custom-week-options");
   const customQuestionField = document.getElementById("custom-question-field");
   const customQuestionCountInput = document.getElementById("custom-question-count");
   const rootAllowCombiningVowelCheckbox = document.getElementById("root-allow-combining-vowel");
+  const layoutModeCheckbox = document.getElementById("layout-mode-checkbox");
   const listCategoryFilter = document.getElementById("list-category-filter");
   const dataSummary = document.getElementById("data-summary");
   const listSummary = document.getElementById("list-summary");
@@ -498,7 +498,7 @@
     state.currentIndex = 0;
     state.score = 0;
     state.missed = [];
-    state.layoutMode = layoutModeSelect.value;
+    state.layoutMode = layoutModeCheckbox.checked ? "exam" : "default";
     scoreText.textContent = "0";
 
     setupPanel.classList.add("hidden");
