@@ -41,6 +41,16 @@ body {
   margin-bottom: 22px;
 }
 
+body.view-quiz .hero,
+body.view-result .hero {
+  display: none;
+}
+
+body.view-quiz .app-shell,
+body.view-result .app-shell {
+  padding-top: 18px;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   font-size: 0.82rem;

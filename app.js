@@ -45,7 +45,11 @@
     "-dynia": "정답에 알파벳 d를 포함하시오.",
     "-algia": "정답에 알파벳 g를 포함하시오.",
     "opt(o)": "정답에 알파벳 h를 포함하지 마시오.",
-    "ophthalm(o)": "정답에 알파벳 h를 포함하시오."
+    "ophthalm(o)": "정답에 알파벳 h를 포함하시오.",
+    "cutane(o)": "정답에 알파벳 c를 포함하시오.",
+    "dermat(o)": "정답에 알파벳 d를 포함하시오.",
+    "muscul(o)": "정답에 알파벳 u를 포함하시오.",
+    "my(o)": "정답에 알파벳 o를 포함하시오."
   };
 
   const VOCAB_PROMPT_CONSTRAINTS = {
@@ -124,6 +128,7 @@
     updateRangeModeUI();
     updateQuestionCountUI();
     renderDataSummary();
+    syncViewState();
 
     startButton.addEventListener("click", startQuiz);
     openListButton.addEventListener("click", openListView);
@@ -351,6 +356,13 @@
     document.body.classList.toggle("quiz-layout-exam", state.layoutMode === "exam" && !quizPanel.classList.contains("hidden"));
   }
 
+  function syncViewState() {
+    document.body.classList.toggle("view-setup", !setupPanel.classList.contains("hidden"));
+    document.body.classList.toggle("view-list", !listPanel.classList.contains("hidden"));
+    document.body.classList.toggle("view-quiz", !quizPanel.classList.contains("hidden"));
+    document.body.classList.toggle("view-result", !resultPanel.classList.contains("hidden"));
+  }
+
   function isExamLayout() {
     return state.layoutMode === "exam";
   }
@@ -516,6 +528,7 @@
     resultPanel.classList.add("hidden");
     quizPanel.classList.remove("hidden");
     applyLayoutMode();
+    syncViewState();
 
     renderQuestion();
   }
@@ -526,6 +539,7 @@
     resultPanel.classList.add("hidden");
     applyLayoutMode();
     listPanel.classList.remove("hidden");
+    syncViewState();
     renderListView();
   }
 
@@ -535,6 +549,7 @@
     state.selectedListTerm = null;
     setupPanel.classList.remove("hidden");
     applyLayoutMode();
+    syncViewState();
   }
 
   function syncListViewIfOpen() {
@@ -1351,6 +1366,7 @@
     quizPanel.classList.add("hidden");
     resultPanel.classList.remove("hidden");
     applyLayoutMode();
+    syncViewState();
 
     const total = state.questions.length;
     const accuracy = total === 0 ? 0 : Math.round((state.score / total) * 100);
@@ -1403,6 +1419,7 @@
     quizPanel.classList.add("hidden");
     setupPanel.classList.remove("hidden");
     applyLayoutMode();
+    syncViewState();
   }
 
   function normalize(value) {
