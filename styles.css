@@ -51,6 +51,124 @@ body.view-result .app-shell {
   padding-top: 18px;
 }
 
+body.view-quiz:not(.quiz-layout-exam) .app-shell,
+body.view-result:not(.quiz-layout-exam) .app-shell {
+  width: min(920px, calc(100% - 26px));
+  padding-top: 10px;
+  padding-bottom: 28px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) #quiz-panel,
+body.view-result:not(.quiz-layout-exam) #result-panel {
+  margin-top: 10px;
+  padding: 18px;
+  border-radius: 20px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .status-bar {
+  gap: 8px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .status-item {
+  padding: 10px 12px;
+  border-radius: 14px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .status-item strong {
+  margin-top: 4px;
+  font-size: 1.05rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .status-label {
+  font-size: 0.8rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .progress-track {
+  height: 8px;
+  margin-top: 12px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-meta {
+  gap: 6px;
+  margin-top: 12px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .pill {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-card {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-card h2 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-body {
+  gap: 8px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-block {
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-label {
+  margin-bottom: 3px;
+  font-size: 0.72rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-value {
+  font-size: clamp(0.9rem, 1.7vw, 1.02rem);
+}
+
+body.view-quiz:not(.quiz-layout-exam) .question-small {
+  font-size: 0.84rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .answer-field {
+  margin-top: 12px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .answer-field span {
+  font-size: 0.86rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .answer-field input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .actions {
+  gap: 8px;
+  margin-top: 12px;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .actions button {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+body.view-quiz:not(.quiz-layout-exam) .feedback,
+body.view-result:not(.quiz-layout-exam) .missed-card {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+body.view-result:not(.quiz-layout-exam) .result-stats,
+body.view-result:not(.quiz-layout-exam) .missed-list {
+  margin-top: 12px;
+  gap: 10px;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   font-size: 0.82rem;
