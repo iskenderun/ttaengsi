@@ -1337,7 +1337,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Gastr(o)"
                                                                     ]
                                                       },
-                                       "english":  "Pain in the stomach; called also gastrodynia",
+                                       "english":  "Pain in the stomach",
                                        "answer":  "gastralgia",
                                        "term":  "Gastralgia",
                                        "type":  "vocabulary",
@@ -1526,18 +1526,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "sphyx(o)",
                                      "korean":  "맥박"
                                  },
-                    "-ptysis":  {
-                                    "english":  "Spitting",
-                                    "answer":  "ptysis",
-                                    "source":  "-ptysis.md",
-                                    "answers":  [
-                                                    "ptysis",
-                                                    "-ptysis"
-                                                ],
-                                    "type":  "suffix",
-                                    "term":  "-ptysis",
-                                    "korean":  "뱉음"
-                                },
+                    "-lexia":  {
+                                   "english":  "-lexia",
+                                   "answer":  "lexia",
+                                   "source":  "-lexia.md",
+                                   "answers":  [
+                                                   "lexia",
+                                                   "-lexia"
+                                               ],
+                                   "type":  "suffix",
+                                   "term":  "-lexia",
+                                   "korean":  "읽기"
+                               },
                     "cardiomegaly":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -3504,7 +3504,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                            "Thorac(o)"
                                                                        ]
                                                          },
-                                          "english":  "Aspiration of fluid from the chest; called also thoracocentesis",
+                                          "english":  "Aspiration of fluid from the chest",
                                           "answer":  "thoracentesis",
                                           "term":  "Thoracentesis",
                                           "type":  "vocabulary",
@@ -4782,7 +4782,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                            "brady-"
                                                                        ],
                                                           "suffixes":  [
-
+                                                                           "-lexia"
                                                                        ],
                                                           "roots":  [
 
@@ -4945,7 +4945,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                     "asphyxia":  {
                                      "morphology":  {
                                                         "prefixes":  [
-
+                                                                         "a-"
                                                                      ],
                                                         "suffixes":  [
 
@@ -5024,7 +5024,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                              "Thorac(o)"
                                                                          ]
                                                            },
-                                            "english":  "Aspiration of fluid from the chest (as in empyema); called also thoracentesis",
+                                            "english":  "Aspiration of fluid from the chest (as in empyema)",
                                             "answer":  "thoracocentesis",
                                             "term":  "Thoracocentesis",
                                             "type":  "vocabulary",
@@ -5590,6 +5590,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "type":  "suffix",
                                     "term":  "-partum",
                                     "korean":  "분만"
+                                },
+                    "-ptysis":  {
+                                    "english":  "Spitting",
+                                    "answer":  "ptysis",
+                                    "source":  "-ptysis.md",
+                                    "answers":  [
+                                                    "ptysis",
+                                                    "-ptysis"
+                                                ],
+                                    "type":  "suffix",
+                                    "term":  "-ptysis",
+                                    "korean":  "뱉음"
                                 },
                     "tom(o)":  {
                                    "english":  "Cut, section",
@@ -6515,7 +6527,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "Hem(o)"
                                                                      ]
                                                        },
-                                        "english":  "Formation of blood or blood cells; called also hematopoiesis",
+                                        "english":  "Formation of blood or blood cells",
                                         "answer":  "hemopoiesis",
                                         "term":  "Hemopoiesis",
                                         "type":  "vocabulary",
@@ -6692,7 +6704,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "Gastr(o)"
                                                                      ]
                                                        },
-                                        "english":  "Pain in the stomach; called also gastralgia",
+                                        "english":  "Pain in the stomach",
                                         "answer":  "gastrodynia",
                                         "term":  "Gastrodynia",
                                         "type":  "vocabulary",
@@ -7028,7 +7040,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                            "Hemat(o)"
                                                                        ]
                                                          },
-                                          "english":  "Formation of blood or blood cells; called also Hemopoiesis",
+                                          "english":  "Formation of blood or blood cells",
                                           "answer":  "hematopoiesis",
                                           "term":  "Hematopoiesis",
                                           "type":  "vocabulary",
@@ -7558,7 +7570,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                           "Hem(o)"
                                                                       ]
                                                         },
-                                         "english":  "The process of removing blood from an artery (as of a patient affected with kidney failure), purifying it by dialysis, adding vital substances, and returning it to a vein; called also dialysis",
+                                         "english":  "The process of removing blood from an artery (as of a patient affected with kidney failure), purifying it by dialysis, adding vital substances, and returning it to a vein",
                                          "answer":  "hemodialysis",
                                          "term":  "Hemodialysis",
                                          "type":  "vocabulary",
@@ -7713,7 +7725,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "dys-"
                                                                      ],
                                                         "suffixes":  [
-
+                                                                         "-lexia"
                                                                      ],
                                                         "roots":  [
 
@@ -7752,7 +7764,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                  ]
                                  },
                     "hemorrhoid":  {
-                                       "english":  "An abnormal mass of dilated and engorged blood vessels in swollen tissue that occurs internally in the anal canal or externally around the anus, that may be marked by bleeding, pain, or itching, and that when occurring internally often protrude through the outer sphincter of the anus and when occurring externally may lead to thrombosis; usually used in plural; called also piles",
+                                       "english":  "An abnormal mass of dilated and engorged blood vessels in swollen tissue that occurs internally in the anal canal or externally around the anus, that may be marked by bleeding, pain, or itching, and that when occurring internally often protrude through the outer sphincter of the anus and when occurring externally may lead to thrombosis; usually used in plural",
                                        "answer":  "hemorrhoid",
                                        "source":  "Hemorrhoid.md",
                                        "answers":  [
@@ -8332,7 +8344,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
     "missingEntries":  [
 
                        ],
-    "generatedAt":  "2026-03-27 14:02:23",
+    "generatedAt":  "2026-03-27 17:37:35",
     "weeks":  [
                   {
                       "title":  "1주차 - 용어의 구성",
@@ -8845,6 +8857,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "-ide",
                                                      "-ium",
                                                      "-logist",
+                                                     "-lexia",
                                                      "-ome",
                                                      "-ose",
                                                      "-ous",

@@ -26,6 +26,156 @@
     cloze: "빈칸"
   };
 
+  /* legacy help block retained only to avoid data loss during repair
+  const HELP_CONTENT = {
+    "range-mode": {
+      title: "학습 방식",
+      blocks: [
+        { label: "누적 범위", value: "1주차부터 선택한 주차까지 누적해서 출제합니다." },
+        { label: "해당 주차만", value: "선택한 한 주차의 항목만 따로 연습합니다." },
+        { label: "선택 주차", value: "여러 주차를 직접 골라서 묶어 연습합니다." }
+      ]
+    },
+    "week-select": {
+      title: "주차 선택",
+      blocks: [
+        { label: "기본 사용", value: "학습 방식에 따라 기준이 되는 주차를 고릅니다." },
+        { label: "누적 범위", value: "예를 들어 4주차를 고르면 1~4주차가 함께 출제됩니다." },
+        { label: "선택 주차", value: "직접 체크한 주차 목록만 문제와 테스트 목록에 반영됩니다." }
+      ]
+    },
+    "question-count": {
+      title: "문제 수",
+      blocks: [
+        { label: "고정 선택", value: "10, 20, 30처럼 미리 정해진 개수로 시작합니다." },
+        { label: "직접 입력", value: "원하는 문제 수를 숫자로 직접 넣을 수 있습니다." },
+        { label: "전체", value: "현재 범위에 포함된 모든 문제를 한 번에 풉니다." }
+      ]
+    },
+    "vocabulary-mode": {
+      title: "어휘 문제",
+      blocks: [
+        { label: "출제 방식", value: "한국어 대응어 또는 영어 뜻풀이 중 하나를 보고 전체 어휘를 맞힙니다." },
+        { label: "조건 문구", value: "뜻이 비슷한 어휘가 있으면 알파벳 포함/제외 같은 조건이 함께 붙을 수 있습니다." }
+      ]
+    },
+    "root-mode": {
+      title: "어근 문제",
+      blocks: [
+        { label: "영어 풀이형", value: "어근의 영어 풀이를 보고 해당 어근을 맞힙니다." },
+        { label: "빈칸형", value: "어근이 들어간 전체 어휘와 뜻 단서를 보고 빈칸에 들어갈 어근을 맞힙니다." }
+      ]
+    },
+    "suffix-mode": {
+      title: "접미어 문제",
+      blocks: [
+        { label: "영어 풀이형", value: "접미어 자체의 영어 풀이를 보고 접미어를 맞힙니다." },
+        { label: "빈칸형", value: "접미어가 실제로 쓰인 어휘만 골라 빈칸 문제로 냅니다." },
+        { label: "주의", value: "뜻이 너무 일반적인 접미어는 뜻풀이형 대신 빈칸형으로만 출제될 수 있습니다." }
+      ]
+    },
+    "prefix-mode": {
+      title: "접두어 문제",
+      blocks: [
+        { label: "영어 풀이형", value: "접두어의 영어 풀이를 보고 접두어를 맞힙니다." },
+        { label: "빈칸형", value: "접두어가 실제로 들어간 어휘를 기준으로 빈칸 문제를 만듭니다." },
+        { label: "조건 문구", value: "뜻이 비슷한 접두어끼리는 알파벳 포함/제외 조건이 함께 붙을 수 있습니다." }
+      ]
+    },
+    "layout-mode": {
+      title: "실전 레이아웃",
+      blocks: [
+        { label: "체크 시", value: "중앙대 CBT 느낌의 실전형 화면으로 풀이합니다." },
+        { label: "입력 방식", value: "실전 모드에서는 답이 기본적으로 점으로 가려지고, 체크를 켜야 표시와 수정이 가능합니다." }
+      ]
+    },
+    "combining-vowel": {
+      title: "결합모음 정답 인정",
+      blocks: [
+        { label: "기본값", value: "체크하지 않으면 어근은 결합모음을 뺀 형태만 정답으로 인정합니다." },
+        { label: "체크 시", value: "예를 들어 gastr, gastro, gastr(o)처럼 결합모음 포함형도 함께 정답 처리합니다." }
+      ]
+    }
+  };
+
+  */
+
+  const HELP_CONTENT = {
+    "setup-overview": {
+      title: "시작 화면 도움말",
+      blocks: [
+        { label: "현재 화면", value: "퀴즈를 시작하기 전에 학습 범위, 문제 수, 문제 형식을 설정하는 화면입니다." },
+        { label: "문제 형식", value: "전체 어휘 문제와 어근, 접미어, 접두어 문제를 함께 섞어서 연습할 수 있습니다." },
+        { label: "테스트 데이터 창", value: "테스트 데이터 창 버튼을 누르면 현재 범위에 포함된 단어를 확인하고, 각 단어의 뜻과 form 분해를 열어볼 수 있습니다." }
+      ]
+    },
+    "range-mode": {
+      title: "학습 범위",
+      blocks: [
+        { label: "누적 범위", value: "1주차부터 선택한 주차까지 누적해서 출제합니다." },
+        { label: "해당 주차만", value: "선택한 한 주차의 항목만 사용합니다." },
+        { label: "선택 주차", value: "여러 주차를 직접 골라서 함께 연습합니다." }
+      ]
+    },
+    "week-select": {
+      title: "주차 선택",
+      blocks: [
+        { label: "기본 역할", value: "누적 범위나 해당 주차만 학습에서 기준이 되는 주차를 정합니다." },
+        { label: "선택 주차 모드", value: "선택 주차 모드에서는 체크한 주차만 사용됩니다." }
+      ]
+    },
+    "question-count": {
+      title: "문제 수",
+      blocks: [
+        { label: "고정 선택", value: "10, 20, 30처럼 미리 정해진 문제 수로 시작합니다." },
+        { label: "직접 입력", value: "원하는 문제 수를 숫자로 직접 입력할 수 있습니다." },
+        { label: "전체", value: "현재 범위에 포함된 모든 문제를 한 번에 풉니다." }
+      ]
+    },
+    "vocabulary-mode": {
+      title: "어휘 문제",
+      blocks: [
+        { label: "출제 방식", value: "한국어 대응어 또는 영어 뜻풀이 중 하나를 보고 전체 어휘를 맞힙니다." },
+        { label: "추가 조건", value: "비슷한 뜻의 단어가 있으면 알파벳 포함이나 제외 조건이 함께 붙을 수 있습니다." }
+      ]
+    },
+    "root-mode": {
+      title: "어근 문제",
+      blocks: [
+        { label: "영어 풀이형", value: "어근의 영어 풀이를 보고 해당 어근을 맞힙니다." },
+        { label: "빈칸형", value: "전체 단어와 단서를 보고 빈칸에 들어갈 어근을 맞힙니다." }
+      ]
+    },
+    "suffix-mode": {
+      title: "접미어 문제",
+      blocks: [
+        { label: "영어 풀이형", value: "접미어의 영어 풀이를 보고 접미어를 맞힙니다." },
+        { label: "빈칸형", value: "그 접미어가 실제로 form 분해에 등록된 단어만 골라 빈칸 문제로 냅니다." }
+      ]
+    },
+    "prefix-mode": {
+      title: "접두어 문제",
+      blocks: [
+        { label: "영어 풀이형", value: "접두어의 영어 풀이를 보고 접두어를 맞힙니다." },
+        { label: "빈칸형", value: "그 접두어가 실제로 form 분해에 등록된 단어만 골라 빈칸 문제로 냅니다." }
+      ]
+    },
+    "layout-mode": {
+      title: "실전 레이아웃",
+      blocks: [
+        { label: "체크 시", value: "CBT 느낌의 실전형 화면으로 풀이합니다." },
+        { label: "답 입력", value: "실전 레이아웃에서는 답이 기본적으로 가려지고, 체크를 켜야 표시와 수정이 가능합니다." }
+      ]
+    },
+    "combining-vowel": {
+      title: "결합모음 정답 인정",
+      blocks: [
+        { label: "기본값", value: "체크하지 않으면 결합모음을 뺀 어근 형태만 정답으로 인정합니다." },
+        { label: "체크 시", value: "예를 들어 gastr, gastro, gastr(o)처럼 결합모음 포함형도 함께 정답 처리합니다." }
+      ]
+    }
+  };
+
   const CLOZE_ONLY_TERMS = new Set([
     "-a",
     "-ac",
@@ -154,12 +304,18 @@
   const layoutModeCheckbox = document.getElementById("layout-mode-checkbox");
   const listCategoryFilter = document.getElementById("list-category-filter");
   const dataSummary = document.getElementById("data-summary");
+  const setupHelpButton = document.getElementById("setup-help-button");
   const listSummary = document.getElementById("list-summary");
   const listDetail = document.getElementById("list-detail");
   const listDetailBackdrop = document.getElementById("list-detail-backdrop");
   const listDetailTitle = document.getElementById("list-detail-title");
   const listDetailContent = document.getElementById("list-detail-content");
   const listDetailCloseButton = document.getElementById("list-detail-close");
+  const helpModal = document.getElementById("help-modal");
+  const helpBackdrop = document.getElementById("help-backdrop");
+  const helpTitle = document.getElementById("help-title");
+  const helpContent = document.getElementById("help-content");
+  const helpCloseButton = document.getElementById("help-close");
   const listGroups = document.getElementById("list-groups");
   const startButton = document.getElementById("start-button");
   const openListButton = document.getElementById("open-list-button");
@@ -210,6 +366,9 @@
     listCategoryFilter.addEventListener("change", syncListViewIfOpen);
     customWeekOptions.addEventListener("change", syncListViewIfOpen);
     customQuestionCountInput.addEventListener("input", syncListViewIfOpen);
+    if (setupHelpButton) {
+      setupHelpButton.addEventListener("click", () => openHelpModal("setup-overview"));
+    }
     if (examAnswerVisibilityCheckbox) {
       examAnswerVisibilityCheckbox.addEventListener("change", syncExamAnswerVisibility);
     }
@@ -218,6 +377,12 @@
     }
     if (listDetailCloseButton) {
       listDetailCloseButton.addEventListener("click", handleListDetailClose);
+    }
+    if (helpBackdrop) {
+      helpBackdrop.addEventListener("click", closeHelpModal);
+    }
+    if (helpCloseButton) {
+      helpCloseButton.addEventListener("click", closeHelpModal);
     }
 
     answerInput.addEventListener("keydown", (event) => {
@@ -245,8 +410,91 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && listDetail && !listDetail.classList.contains("hidden")) {
         handleListDetailClose();
+        return;
+      }
+
+      if (event.key === "Escape" && helpModal && !helpModal.classList.contains("hidden")) {
+        closeHelpModal();
       }
     });
+  }
+
+  function attachHelpButtons() {
+    document.querySelectorAll("#setup-panel [data-help-key]").forEach((container) => {
+      if (container.dataset.helpBound === "true") {
+        return;
+      }
+
+      const target = container.matches("fieldset")
+        ? container.querySelector("legend")
+        : container.querySelector(":scope > span");
+
+      if (!target || target.querySelector(".help-trigger")) {
+        return;
+      }
+
+      const key = container.dataset.helpKey;
+      const text = target.textContent.trim();
+      const wrapper = document.createElement("span");
+      wrapper.className = "label-with-help";
+
+      const textNode = document.createElement("span");
+      textNode.textContent = text;
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "help-trigger";
+      /*
+      button.setAttribute("aria-label", `${text} 도움말`);
+      button.textContent = "ⓘ";
+      */
+      button.setAttribute("aria-label", `${text} help`);
+      /*
+      button.textContent = "ⓘ";
+      */
+      button.textContent = "\u24D8";
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        openHelpModal(key);
+      });
+
+      target.textContent = "";
+      wrapper.appendChild(textNode);
+      wrapper.appendChild(button);
+      target.appendChild(wrapper);
+      container.dataset.helpBound = "true";
+    });
+  }
+
+  function openHelpModal(key) {
+    const content = HELP_CONTENT[key];
+    if (!content || !helpModal || !helpTitle || !helpContent) {
+      return;
+    }
+
+    const body = content.blocks
+      .map((block) => `
+        <section class="list-detail-block">
+          <span class="list-detail-label">${block.label}</span>
+          <div class="list-detail-value">${block.value}</div>
+        </section>
+      `)
+      .join("");
+
+    helpTitle.textContent = content.title;
+    helpContent.innerHTML = `<div class="list-detail-grid">${body}</div>`;
+    helpModal.classList.remove("hidden");
+    helpModal.setAttribute("aria-hidden", "false");
+  }
+
+  function closeHelpModal() {
+    if (!helpModal) {
+      return;
+    }
+
+    helpModal.classList.add("hidden");
+    helpModal.setAttribute("aria-hidden", "true");
   }
 
   function populateWeekSelect() {
@@ -935,7 +1183,7 @@
     const parts = [];
     [entry.morphology.prefixes, entry.morphology.roots, entry.morphology.suffixes].forEach((bucket) => {
       (bucket || []).forEach((part) => {
-        const cleaned = cleanupDisplay(part);
+        const cleaned = cleanupDisplay(part).toLowerCase();
         if (cleaned) {
           parts.push(cleaned);
         }
@@ -1136,7 +1384,9 @@
       buildMeaningBlock(chosen),
       { label: "빈칸", value: chosen.masked }
     ];
-    const vocabConstraint = VOCAB_PROMPT_CONSTRAINTS[(chosen.word || "").toLowerCase()];
+    const vocabConstraint = entry.type === "suffix"
+      ? ""
+      : VOCAB_PROMPT_CONSTRAINTS[(chosen.word || "").toLowerCase()];
     const title = vocabConstraint
       ? `${CATEGORY_LABELS[entry.type]}가 들어갈 자리를 맞히세요. 조건: ${vocabConstraint}`
       : `${CATEGORY_LABELS[entry.type]}가 들어갈 자리를 맞히세요.`;

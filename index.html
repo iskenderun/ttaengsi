@@ -4,27 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>의학영어 땡시</title>
-  <link rel="stylesheet" href="./styles.css?v=20260327-28">
+  <link rel="stylesheet" href="./styles.css?v=20260327-43">
 </head>
 <body>
   <main class="app-shell">
     <section class="hero">
       <p class="eyebrow">Medical English Weekly Drill</p>
       <h1>의학영어 땡시</h1>
-      <p class="hero-copy">
-        `의학영어(1)` 주차 문서와 `_vocab` 폴더를 바탕으로
-        누적 범위를 25초 제한 단답형으로 연습하는 로컬 퀴즈입니다.
-      </p>
     </section>
 
     <section class="panel" id="setup-panel">
       <div class="panel-header">
         <h2>퀴즈 설정</h2>
-        <p id="data-summary" class="muted"></p>
+        <div class="panel-header-meta">
+          <p id="data-summary" class="muted"></p>
+          <button id="setup-help-button" type="button" class="help-trigger panel-help-trigger" aria-label="Open help">ⓘ</button>
+        </div>
       </div>
 
       <div class="grid">
-        <label class="field">
+        <label class="field" data-help-key="range-mode">
           <span>학습 방식</span>
           <select id="range-mode-select">
             <option value="cumulative" selected>누적 범위</option>
@@ -33,12 +32,12 @@
           </select>
         </label>
 
-        <label id="week-select-field" class="field">
+        <label id="week-select-field" class="field" data-help-key="week-select">
           <span>주차 선택</span>
           <select id="week-select"></select>
         </label>
 
-        <label class="field">
+        <label class="field" data-help-key="question-count">
           <span>문제 수</span>
           <select id="question-count">
             <option value="10">10문제</option>
@@ -64,7 +63,7 @@
       </label>
 
       <div class="mode-groups">
-        <fieldset class="mode-group">
+        <fieldset class="mode-group" data-help-key="vocabulary-mode">
           <legend>어휘</legend>
           <label class="checkbox">
             <input type="checkbox" value="vocabulary:korean" checked>
@@ -72,7 +71,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="mode-group">
+        <fieldset class="mode-group" data-help-key="root-mode">
           <legend>어근</legend>
           <label class="checkbox">
             <input type="checkbox" value="root:gloss" checked>
@@ -84,7 +83,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="mode-group">
+        <fieldset class="mode-group" data-help-key="suffix-mode">
           <legend>접미어</legend>
           <label class="checkbox">
             <input type="checkbox" value="suffix:gloss" checked>
@@ -96,7 +95,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="mode-group">
+        <fieldset class="mode-group" data-help-key="prefix-mode">
           <legend>접두어</legend>
           <label class="checkbox">
             <input type="checkbox" value="prefix:gloss" checked>
@@ -110,11 +109,11 @@
       </div>
 
       <div class="bottom-toggles">
-        <label class="checkbox inline-checkbox">
+        <label class="checkbox inline-checkbox" data-help-key="layout-mode">
           <input id="layout-mode-checkbox" type="checkbox">
           <span>실전 레이아웃으로 시작</span>
         </label>
-        <label class="checkbox inline-checkbox">
+        <label class="checkbox inline-checkbox" data-help-key="combining-vowel">
           <input id="root-allow-combining-vowel" type="checkbox">
           <span>결합모음 포함형도 정답으로 인정</span>
         </label>
@@ -167,6 +166,17 @@
         <div id="list-detail-content" class="list-detail-content">
           <p class="muted">단어를 누르면 뜻이 여기 표시됩니다.</p>
         </div>
+      </article>
+    </section>
+
+    <section id="help-modal" class="list-detail-modal hidden" aria-hidden="true">
+      <div id="help-backdrop" class="list-detail-backdrop"></div>
+      <article class="list-detail-panel help-panel">
+        <div class="list-detail-topbar">
+          <h3 id="help-title">도움말</h3>
+          <button id="help-close" type="button" class="ghost">닫기</button>
+        </div>
+        <div id="help-content" class="list-detail-content"></div>
       </article>
     </section>
 
@@ -260,7 +270,7 @@
     </section>
   </main>
 
-  <script src="./quiz-data.js?v=20260327-28"></script>
-  <script src="./app.js?v=20260327-28"></script>
+  <script src="./quiz-data.js?v=20260327-43"></script>
+  <script src="./app.js?v=20260327-43"></script>
 </body>
 </html>
