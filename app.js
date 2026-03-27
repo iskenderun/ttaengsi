@@ -28,15 +28,30 @@
 
   const CLOZE_ONLY_TERMS = new Set([
     "-a",
+    "-ac",
     "-al",
+    "-ation",
+    "-ary",
     "-e",
-    "-poiesis",
-    "-plasia",
+    "-eal",
+    "-i",
+    "-ic",
+    "-ium",
+    "-logy",
+    "-ology",
+    "-ose",
+    "-tic",
+    "-tion",
+    "-ual",
+    "-um",
+    "-us",
+    "-ous",
     "-y",
     "a-",
     "an-",
-    "hypo-",
-    "sub-"
+    "in-",
+    "non-",
+    "un-"
   ]);
 
   const GLOSS_PROMPT_CONSTRAINTS = {
@@ -58,6 +73,48 @@
     "hypodermic": "정답에 알파벳 h를 포함하시오.",
     "subcutaneous": "정답에 알파벳 s를 포함하시오."
   };
+
+  Object.assign(VOCAB_PROMPT_CONSTRAINTS, {
+    "gastralgia": "정답에 알파벳 d를 포함하지 마시오.",
+    "gastrodynia": "정답에 알파벳 d를 포함하시오.",
+    "thoracentesis": "정답에 연속 알파벳 co를 포함하지 마시오.",
+    "thoracocentesis": "정답에 연속 알파벳 co를 포함하시오.",
+    "hematopoiesis": "정답에 알파벳 t를 포함하시오.",
+    "hemopoiesis": "정답에 알파벳 t를 포함하지 마시오.",
+    "membraneous": "정답에 연속 알파벳 eo를 포함하시오.",
+    "membranous": "정답에 연속 알파벳 eo를 포함하지 마시오.",
+    "polydactylia": "정답을 알파벳 a로 끝내시오.",
+    "polydactyly": "정답을 알파벳 y로 끝내시오.",
+    "subglossal": "정답에 알파벳 i를 포함하지 마시오.",
+    "sublingual": "정답에 알파벳 i를 포함하시오.",
+    "trachea": "정답에 알파벳 t를 포함하시오.",
+    "windpipe": "정답에 알파벳 w를 포함하시오."
+  });
+
+  Object.assign(GLOSS_PROMPT_CONSTRAINTS, {
+    "-osis": "정답에 알파벳 o를 포함하시오.",
+    "-iasis": "정답에 알파벳 a를 포함하시오.",
+    "-dynia": "정답에 알파벳 d를 포함하시오.",
+    "-algia": "정답에 알파벳 g를 포함하시오.",
+    "opt(o)": "정답에 알파벳 h를 포함하지 마시오.",
+    "ophthalm(o)": "정답에 알파벳 h를 포함하시오.",
+    "cutane(o)": "정답에 알파벳 c를 포함하시오.",
+    "dermat(o)": "정답에 알파벳 d를 포함하시오.",
+    "hem(o)": "정답에 알파벳 t를 포함하지 마시오.",
+    "hemat(o)": "정답에 알파벳 t를 포함하시오.",
+    "muscul(o)": "정답에 알파벳 u를 포함하시오.",
+    "my(o)": "정답에 알파벳 y를 포함하시오.",
+    "con-": "정답에 알파벳 c를 포함하시오.",
+    "syn-": "정답에 알파벳 s를 포함하시오.",
+    "anti-": "정답에 알파벳 c를 포함하지 마시오.",
+    "contra-": "정답에 알파벳 c를 포함하시오.",
+    "hypo-": "정답에 알파벳 h를 포함하시오.",
+    "sub-": "정답에 알파벳 s를 포함하시오.",
+    "hyper-": "정답에 알파벳 h를 포함하시오.",
+    "supra-": "정답에 알파벳 s를 포함하시오.",
+    "ante-": "정답에 알파벳 a를 포함하시오.",
+    "pro-": "정답에 알파벳 p를 포함하시오."
+  });
 
   const state = {
     questions: [],
@@ -722,7 +779,7 @@
         const chip = document.createElement("button");
         chip.type = "button";
         chip.className = "term-chip term-chip-button";
-        chip.textContent = term;
+        chip.textContent = getListDisplayTerm(term);
         chip.addEventListener("click", () => {
           state.selectedListTerm = term;
           renderListView();
@@ -769,7 +826,7 @@
     if (entry.korean) {
       blocks.push({ label: "한국어", value: entry.korean });
     }
-    if (entry.english) {
+    if (hasUsableEnglishClue(entry)) {
       blocks.push({ label: entry.type === "vocabulary" ? "영어 뜻풀이" : "영어 풀이", value: entry.english });
     }
 
@@ -790,7 +847,7 @@
       `)
       .join("");
 
-    listDetailTitle.textContent = cleanupDisplay(entry.term);
+    listDetailTitle.textContent = getListDisplayTerm(entry.term);
     listDetailContent.innerHTML = `<div class="list-detail-grid">${body}</div>`;
     listDetail.classList.remove("hidden");
     listDetail.setAttribute("aria-hidden", "false");
@@ -821,13 +878,36 @@
     return categories
       .map((category) => {
         const bucketName = category === "vocabulary" ? "vocabulary" : CATEGORY_BUCKETS[category];
-        const terms = scopedTerms[bucketName].slice();
+        const terms = scopedTerms[bucketName]
+          .slice()
+          .sort((left, right) => compareListTerms(left, right));
         return {
           label: CATEGORY_LABELS[category],
           terms
         };
       })
       .filter((group) => group.terms.length > 0);
+  }
+
+  function compareListTerms(left, right) {
+    const leftLabel = getListDisplayTerm(left);
+    const rightLabel = getListDisplayTerm(right);
+    return leftLabel.localeCompare(rightLabel, "en", { sensitivity: "base" });
+  }
+
+  function getListDisplayTerm(term) {
+    const entry = getEntry(term);
+    const source = entry ? cleanupDisplay(entry.term) : cleanupDisplay(term);
+
+    if (!entry) {
+      return source;
+    }
+
+    if (entry.type === "vocabulary") {
+      return source.replace(/^[a-z]/, (match) => match.toUpperCase());
+    }
+
+    return source.replace(/^[A-Z]/, (match) => match.toLowerCase());
   }
 
   function getEntry(term) {
@@ -843,7 +923,15 @@
   }
 
   function isClozeOnlyTerm(entry) {
-    return entry && CLOZE_ONLY_TERMS.has(entry.term.toLowerCase());
+    if (!entry) {
+      return false;
+    }
+
+    if (CLOZE_ONLY_TERMS.has(entry.term.toLowerCase())) {
+      return true;
+    }
+
+    return entry.type === "suffix" && /(^|[;,\s])pertaining to\b/i.test(entry.english || "");
   }
 
   function findIntroducedWeek(term, bucketName, scopeConfig) {
@@ -916,7 +1004,7 @@
       });
     }
 
-    if (entryLike.english) {
+    if (hasUsableEnglishClue(entryLike)) {
       choices.push({
         label: "영어 뜻풀이",
         value: entryLike.english,
@@ -933,6 +1021,31 @@
     }
 
     return choices[Math.floor(Math.random() * choices.length)];
+  }
+
+  function hasUsableEnglishClue(entryLike) {
+    if (!entryLike || !entryLike.english) {
+      return false;
+    }
+
+    const english = normalizeClueKey(entryLike.english);
+    const sourceWord = normalizeClueKey(entryLike.word || entryLike.term || "");
+
+    if (!english) {
+      return false;
+    }
+
+    if (!sourceWord) {
+      return true;
+    }
+
+    return english !== sourceWord;
+  }
+
+  function normalizeClueKey(text) {
+    return cleanupDisplay(text || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "");
   }
 
   function buildClozePrompt(entry, vocabularyEntries, scopeConfig, categoryTerms, scopedTerms) {
@@ -980,7 +1093,7 @@
       if (!lowerWord.startsWith(target)) {
         return null;
       }
-      if (hasLongerAffixMatch(entry, lowerWord, categoryTerms, scopedTerms)) {
+      if (hasBetterPrefixMatch(entry, lowerWord, categoryTerms, scopedTerms)) {
         return null;
       }
       if (hasLongerRootStartingAtPrefix(lowerWord, target.length, scopedTerms)) {
@@ -1060,6 +1173,57 @@
       const remainder = lowerWord.slice(0, lowerWord.length - other.length);
       return fragmentCanEndBeforeSuffix(remainder, scopedTerms);
     });
+  }
+
+  function hasBetterPrefixMatch(entry, lowerWord, categoryTerms, scopedTerms) {
+    if (!Array.isArray(categoryTerms) || entry.type !== "prefix") {
+      return false;
+    }
+
+    const currentScore = getPrefixMatchScore(entry, lowerWord, scopedTerms);
+    if (!currentScore) {
+      return false;
+    }
+
+    return categoryTerms.some((term) => {
+      const otherEntry = getEntry(term);
+      if (!otherEntry || otherEntry.type !== "prefix") {
+        return false;
+      }
+
+      const otherScore = getPrefixMatchScore(otherEntry, lowerWord, scopedTerms);
+      if (!otherScore) {
+        return false;
+      }
+
+      if (otherScore.key === currentScore.key) {
+        return false;
+      }
+
+      if (otherScore.plausible !== currentScore.plausible) {
+        return otherScore.plausible && !currentScore.plausible;
+      }
+
+      return otherScore.length > currentScore.length;
+    });
+  }
+
+  function getPrefixMatchScore(entry, lowerWord, scopedTerms) {
+    if (!entry || entry.type !== "prefix") {
+      return null;
+    }
+
+    const target = entry.answer.toLowerCase();
+    if (!lowerWord.startsWith(target)) {
+      return null;
+    }
+
+    const remainder = lowerWord.slice(target.length);
+    return {
+      key: entry.term.toLowerCase(),
+      plausible: fragmentCanStartAfterPrefix(remainder, scopedTerms),
+      length: target.length
+    };
   }
 
   function overlapsPlausibleAffix(entry, lowerWord, startIndex, length, scopedTerms) {
