@@ -61,12 +61,15 @@
     "-algia": "정답에 알파벳 g를 포함하시오.",
     "opt(o)": "정답에 알파벳 h를 포함하지 마시오.",
     "ophthalm(o)": "정답에 알파벳 h를 포함하시오.",
+    "derm(o)": "정답에 알파벳 t를 포함하지 마시오.",
     "cutane(o)": "정답에 알파벳 c를 포함하시오.",
-    "dermat(o)": "정답에 알파벳 d를 포함하시오.",
+    "dermat(o)": "정답에 알파벳 d와 t를 모두 포함하시오.",
     "hem(o)": "정답에 알파벳 t를 포함하지 마시오.",
     "hemat(o)": "정답에 알파벳 t를 포함하시오.",
     "muscul(o)": "정답에 알파벳 u를 포함하시오.",
-    "my(o)": "정답에 알파벳 y를 포함하시오."
+    "my(o)": "정답에 알파벳 y를 포함하시오.",
+    "gloss(o)": "정답에 알파벳 i를 포함하지 마시오.",
+    "lingu(o)": "정답에 알파벳 i를 포함하시오."
   };
 
   const VOCAB_PROMPT_CONSTRAINTS = {
@@ -85,6 +88,8 @@
     "membranous": "정답에 연속 알파벳 eo를 포함하지 마시오.",
     "polydactylia": "정답을 알파벳 a로 끝내시오.",
     "polydactyly": "정답을 알파벳 y로 끝내시오.",
+    "syndactylia": "정답을 알파벳 a로 끝내시오.",
+    "syndactyly": "정답을 알파벳 y로 끝내시오.",
     "subglossal": "정답에 알파벳 i를 포함하지 마시오.",
     "sublingual": "정답에 알파벳 i를 포함하시오.",
     "trachea": "정답에 알파벳 t를 포함하시오.",
@@ -98,12 +103,15 @@
     "-algia": "정답에 알파벳 g를 포함하시오.",
     "opt(o)": "정답에 알파벳 h를 포함하지 마시오.",
     "ophthalm(o)": "정답에 알파벳 h를 포함하시오.",
+    "derm(o)": "정답에 알파벳 t를 포함하지 마시오.",
     "cutane(o)": "정답에 알파벳 c를 포함하시오.",
-    "dermat(o)": "정답에 알파벳 d를 포함하시오.",
+    "dermat(o)": "정답에 알파벳 d와 t를 모두 포함하시오.",
     "hem(o)": "정답에 알파벳 t를 포함하지 마시오.",
     "hemat(o)": "정답에 알파벳 t를 포함하시오.",
     "muscul(o)": "정답에 알파벳 u를 포함하시오.",
     "my(o)": "정답에 알파벳 y를 포함하시오.",
+    "gloss(o)": "정답에 알파벳 i를 포함하지 마시오.",
+    "lingu(o)": "정답에 알파벳 i를 포함하시오.",
     "con-": "정답에 알파벳 c를 포함하시오.",
     "syn-": "정답에 알파벳 s를 포함하시오.",
     "anti-": "정답에 알파벳 c를 포함하지 마시오.",
@@ -823,11 +831,16 @@
     }
 
     const blocks = [];
+    const morphologyForm = entry.type === "vocabulary" ? formatMorphologyForm(entry) : "";
     if (entry.korean) {
       blocks.push({ label: "한국어", value: entry.korean });
     }
     if (hasUsableEnglishClue(entry)) {
       blocks.push({ label: entry.type === "vocabulary" ? "영어 뜻풀이" : "영어 풀이", value: entry.english });
+    }
+
+    if (morphologyForm) {
+      blocks.push({ label: "분해 form", value: morphologyForm });
     }
 
     if (blocks.length === 0) {
@@ -912,6 +925,24 @@
 
   function getEntry(term) {
     return data.entries[term.toLowerCase()] || null;
+  }
+
+  function formatMorphologyForm(entry) {
+    if (!entry || !entry.morphology) {
+      return "";
+    }
+
+    const parts = [];
+    [entry.morphology.prefixes, entry.morphology.roots, entry.morphology.suffixes].forEach((bucket) => {
+      (bucket || []).forEach((part) => {
+        const cleaned = cleanupDisplay(part);
+        if (cleaned) {
+          parts.push(cleaned);
+        }
+      });
+    });
+
+    return parts.length > 0 ? parts.join(" + ") : "";
   }
 
   function getAcceptedAnswers(entry, allowCombiningVowel) {
@@ -1048,6 +1079,48 @@
       .replace(/[^a-z0-9]+/g, "");
   }
 
+  function normalizeMorphologyKey(text) {
+    return cleanupDisplay(text || "").toLowerCase();
+  }
+
+  function getMorphologyBucketName(type) {
+    if (type === "root") {
+      return "roots";
+    }
+
+    if (type === "suffix") {
+      return "suffixes";
+    }
+
+    if (type === "prefix") {
+      return "prefixes";
+    }
+
+    return null;
+  }
+
+  function getAllowedMorphologyTerms(vocabularyEntry, type) {
+    if (!vocabularyEntry || !vocabularyEntry.morphology) {
+      return null;
+    }
+
+    const bucketName = getMorphologyBucketName(type);
+    if (!bucketName || !Object.prototype.hasOwnProperty.call(vocabularyEntry.morphology, bucketName)) {
+      return null;
+    }
+
+    return (vocabularyEntry.morphology[bucketName] || []).map((term) => normalizeMorphologyKey(term));
+  }
+
+  function isAllowedMorphologyCandidate(entry, vocabularyEntry) {
+    const allowedTerms = getAllowedMorphologyTerms(vocabularyEntry, entry.type);
+    if (allowedTerms === null) {
+      return true;
+    }
+
+    return allowedTerms.includes(normalizeMorphologyKey(entry.term));
+  }
+
   function buildClozePrompt(entry, vocabularyEntries, scopeConfig, categoryTerms, scopedTerms) {
     const candidates = vocabularyEntries
       .filter((item) => introducedInScope(item.term, scopeConfig))
@@ -1063,9 +1136,13 @@
       buildMeaningBlock(chosen),
       { label: "빈칸", value: chosen.masked }
     ];
+    const vocabConstraint = VOCAB_PROMPT_CONSTRAINTS[(chosen.word || "").toLowerCase()];
+    const title = vocabConstraint
+      ? `${CATEGORY_LABELS[entry.type]}가 들어갈 자리를 맞히세요. 조건: ${vocabConstraint}`
+      : `${CATEGORY_LABELS[entry.type]}가 들어갈 자리를 맞히세요.`;
 
     return {
-      title: `${CATEGORY_LABELS[entry.type]}가 들어갈 자리를 맞히세요.`,
+      title,
       blocks,
       word: chosen.word
     };
@@ -1084,6 +1161,10 @@
     const target = entry.answer.toLowerCase();
 
     if (!target) {
+      return null;
+    }
+
+    if (!isAllowedMorphologyCandidate(entry, vocabularyEntry)) {
       return null;
     }
 
