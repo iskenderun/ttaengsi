@@ -1,8 +1,8 @@
-(function () {
+﻿(function () {
   const data = window.MEDICAL_ENGLISH_QUIZ_DATA;
 
   if (!data) {
-    document.body.innerHTML = "<main class=\"app-shell\"><section class=\"panel\"><h1>데이터를 불러오지 못했습니다.</h1><p>`quiz-data.js`가 있는지 확인해주세요.</p></section></main>";
+    document.body.innerHTML = "<main class=\"app-shell\"><section class=\"panel\"><h1>퀴즈 데이터를 불러오지 못했습니다.</h1><p>`quiz-data.js`가 정상적으로 로드되었는지 확인해 주세요.</p></section></main>";
     return;
   }
 
@@ -20,158 +20,86 @@
   };
 
   const MODE_LABELS = {
-    korean: "한국어 뜻",
+    korean: "한국어 뜻풀이",
     definition: "영어 뜻풀이",
-    gloss: "영어 풀이",
+    image: "이미지",
+    gloss: "영어 설명",
     cloze: "빈칸"
   };
 
-  /* legacy help block retained only to avoid data loss during repair
   const HELP_CONTENT = {
+    "setup-overview": {
+      title: "설정 화면 안내",
+      blocks: [
+        { label: "이 화면의 기능", value: "학습 범위와 문제 형식을 고른 뒤 퀴즈를 시작하는 화면입니다." },
+        { label: "문제 형식", value: "어휘, 어근, 접미어, 접두어, 이미지 문제를 함께 섞어서 학습할 수 있습니다." },
+        { label: "테스트 데이터 확인", value: "테스트 데이터 보기에서 포함 단어, 뜻, 분해 form, 연결 이미지를 미리 확인할 수 있습니다." }
+      ]
+    },
     "range-mode": {
       title: "학습 방식",
       blocks: [
-        { label: "누적 범위", value: "1주차부터 선택한 주차까지 누적해서 출제합니다." },
-        { label: "해당 주차만", value: "선택한 한 주차의 항목만 따로 연습합니다." },
-        { label: "선택 주차", value: "여러 주차를 직접 골라서 묶어 연습합니다." }
+        { label: "누적 범위", value: "1주차부터 선택한 주차까지의 범위를 모두 포함합니다." },
+        { label: "해당 주차만", value: "선택한 한 주차의 항목만 출제합니다." },
+        { label: "선택 주차", value: "여러 주차를 직접 골라 묶어서 학습합니다." }
       ]
     },
     "week-select": {
       title: "주차 선택",
       blocks: [
-        { label: "기본 사용", value: "학습 방식에 따라 기준이 되는 주차를 고릅니다." },
-        { label: "누적 범위", value: "예를 들어 4주차를 고르면 1~4주차가 함께 출제됩니다." },
-        { label: "선택 주차", value: "직접 체크한 주차 목록만 문제와 테스트 목록에 반영됩니다." }
+        { label: "기본 선택", value: "학습 방식에 따라 한 주차 또는 마지막 주차를 선택합니다." },
+        { label: "선택 주차 방식", value: "선택 주차 모드에서는 아래 체크 목록에서 원하는 주차를 직접 고릅니다." }
       ]
     },
     "question-count": {
       title: "문제 수",
       blocks: [
-        { label: "고정 선택", value: "10, 20, 30처럼 미리 정해진 개수로 시작합니다." },
+        { label: "고정 선택", value: "10, 20, 30처럼 미리 준비된 문제 수를 바로 선택할 수 있습니다." },
         { label: "직접 입력", value: "원하는 문제 수를 숫자로 직접 넣을 수 있습니다." },
-        { label: "전체", value: "현재 범위에 포함된 모든 문제를 한 번에 풉니다." }
+        { label: "전체", value: "현재 범위에서 생성 가능한 모든 문제를 출제합니다." }
       ]
     },
     "vocabulary-mode": {
       title: "어휘 문제",
       blocks: [
-        { label: "출제 방식", value: "한국어 대응어 또는 영어 뜻풀이 중 하나를 보고 전체 어휘를 맞힙니다." },
-        { label: "조건 문구", value: "뜻이 비슷한 어휘가 있으면 알파벳 포함/제외 같은 조건이 함께 붙을 수 있습니다." }
+        { label: "텍스트형", value: "한국어 대응어 또는 영어 뜻풀이를 보고 영어 어휘를 맞히는 문제입니다." },
+        { label: "이미지형", value: "이미지를 보고 관련 영어 어휘를 맞히는 문제입니다." },
+        { label: "문제 구성", value: "어휘 텍스트형과 이미지형은 같은 세션에서 함께 섞여 출제될 수 있습니다." }
       ]
     },
     "root-mode": {
       title: "어근 문제",
       blocks: [
-        { label: "영어 풀이형", value: "어근의 영어 풀이를 보고 해당 어근을 맞힙니다." },
-        { label: "빈칸형", value: "어근이 들어간 전체 어휘와 뜻 단서를 보고 빈칸에 들어갈 어근을 맞힙니다." }
+        { label: "영어 설명형", value: "어근의 영어 설명을 보고 어근을 맞히는 문제입니다." },
+        { label: "빈칸형", value: "실제 어휘의 빈칸을 보고 해당 어근을 맞히는 문제입니다." }
       ]
     },
     "suffix-mode": {
       title: "접미어 문제",
       blocks: [
-        { label: "영어 풀이형", value: "접미어 자체의 영어 풀이를 보고 접미어를 맞힙니다." },
-        { label: "빈칸형", value: "접미어가 실제로 쓰인 어휘만 골라 빈칸 문제로 냅니다." },
-        { label: "주의", value: "뜻이 너무 일반적인 접미어는 뜻풀이형 대신 빈칸형으로만 출제될 수 있습니다." }
+        { label: "영어 설명형", value: "접미어의 영어 설명을 보고 접미어를 맞히는 문제입니다." },
+        { label: "빈칸형", value: "실제 어휘의 빈칸을 보고 해당 접미어를 맞히는 문제입니다." }
       ]
     },
     "prefix-mode": {
       title: "접두어 문제",
       blocks: [
-        { label: "영어 풀이형", value: "접두어의 영어 풀이를 보고 접두어를 맞힙니다." },
-        { label: "빈칸형", value: "접두어가 실제로 들어간 어휘를 기준으로 빈칸 문제를 만듭니다." },
-        { label: "조건 문구", value: "뜻이 비슷한 접두어끼리는 알파벳 포함/제외 조건이 함께 붙을 수 있습니다." }
+        { label: "영어 설명형", value: "접두어의 영어 설명을 보고 접두어를 맞히는 문제입니다." },
+        { label: "빈칸형", value: "실제 어휘의 빈칸을 보고 해당 접두어를 맞히는 문제입니다." }
       ]
     },
     "layout-mode": {
       title: "실전 레이아웃",
       blocks: [
-        { label: "체크 시", value: "중앙대 CBT 느낌의 실전형 화면으로 풀이합니다." },
-        { label: "입력 방식", value: "실전 모드에서는 답이 기본적으로 점으로 가려지고, 체크를 켜야 표시와 수정이 가능합니다." }
+        { label: "실전 화면", value: "CBT 느낌의 실전 레이아웃으로 문제 화면을 바꿉니다." },
+        { label: "적용 범위", value: "퀴즈를 시작한 뒤 문제 풀이 화면에만 적용됩니다." }
       ]
     },
     "combining-vowel": {
       title: "결합모음 정답 인정",
       blocks: [
-        { label: "기본값", value: "체크하지 않으면 어근은 결합모음을 뺀 형태만 정답으로 인정합니다." },
-        { label: "체크 시", value: "예를 들어 gastr, gastro, gastr(o)처럼 결합모음 포함형도 함께 정답 처리합니다." }
-      ]
-    }
-  };
-
-  */
-
-  const HELP_CONTENT = {
-    "setup-overview": {
-      title: "시작 화면 도움말",
-      blocks: [
-        { label: "현재 화면", value: "퀴즈를 시작하기 전에 학습 범위, 문제 수, 문제 형식을 설정하는 화면입니다." },
-        { label: "문제 형식", value: "전체 어휘 문제와 어근, 접미어, 접두어 문제를 함께 섞어서 연습할 수 있습니다." },
-        { label: "테스트 데이터 창", value: "테스트 데이터 창 버튼을 누르면 현재 범위에 포함된 단어를 확인하고, 각 단어의 뜻과 form 분해를 열어볼 수 있습니다." }
-      ]
-    },
-    "range-mode": {
-      title: "학습 범위",
-      blocks: [
-        { label: "누적 범위", value: "1주차부터 선택한 주차까지 누적해서 출제합니다." },
-        { label: "해당 주차만", value: "선택한 한 주차의 항목만 사용합니다." },
-        { label: "선택 주차", value: "여러 주차를 직접 골라서 함께 연습합니다." }
-      ]
-    },
-    "week-select": {
-      title: "주차 선택",
-      blocks: [
-        { label: "기본 역할", value: "누적 범위나 해당 주차만 학습에서 기준이 되는 주차를 정합니다." },
-        { label: "선택 주차 모드", value: "선택 주차 모드에서는 체크한 주차만 사용됩니다." }
-      ]
-    },
-    "question-count": {
-      title: "문제 수",
-      blocks: [
-        { label: "고정 선택", value: "10, 20, 30처럼 미리 정해진 문제 수로 시작합니다." },
-        { label: "직접 입력", value: "원하는 문제 수를 숫자로 직접 입력할 수 있습니다." },
-        { label: "전체", value: "현재 범위에 포함된 모든 문제를 한 번에 풉니다." }
-      ]
-    },
-    "vocabulary-mode": {
-      title: "어휘 문제",
-      blocks: [
-        { label: "출제 방식", value: "한국어 대응어 또는 영어 뜻풀이 중 하나를 보고 전체 어휘를 맞힙니다." },
-        { label: "추가 조건", value: "비슷한 뜻의 단어가 있으면 알파벳 포함이나 제외 조건이 함께 붙을 수 있습니다." }
-      ]
-    },
-    "root-mode": {
-      title: "어근 문제",
-      blocks: [
-        { label: "영어 풀이형", value: "어근의 영어 풀이를 보고 해당 어근을 맞힙니다." },
-        { label: "빈칸형", value: "전체 단어와 단서를 보고 빈칸에 들어갈 어근을 맞힙니다." }
-      ]
-    },
-    "suffix-mode": {
-      title: "접미어 문제",
-      blocks: [
-        { label: "영어 풀이형", value: "접미어의 영어 풀이를 보고 접미어를 맞힙니다." },
-        { label: "빈칸형", value: "그 접미어가 실제로 form 분해에 등록된 단어만 골라 빈칸 문제로 냅니다." }
-      ]
-    },
-    "prefix-mode": {
-      title: "접두어 문제",
-      blocks: [
-        { label: "영어 풀이형", value: "접두어의 영어 풀이를 보고 접두어를 맞힙니다." },
-        { label: "빈칸형", value: "그 접두어가 실제로 form 분해에 등록된 단어만 골라 빈칸 문제로 냅니다." }
-      ]
-    },
-    "layout-mode": {
-      title: "실전 레이아웃",
-      blocks: [
-        { label: "체크 시", value: "CBT 느낌의 실전형 화면으로 풀이합니다." },
-        { label: "답 입력", value: "실전 레이아웃에서는 답이 기본적으로 가려지고, 체크를 켜야 표시와 수정이 가능합니다." }
-      ]
-    },
-    "combining-vowel": {
-      title: "결합모음 정답 인정",
-      blocks: [
-        { label: "기본값", value: "체크하지 않으면 결합모음을 뺀 어근 형태만 정답으로 인정합니다." },
-        { label: "체크 시", value: "예를 들어 gastr, gastro, gastr(o)처럼 결합모음 포함형도 함께 정답 처리합니다." }
+        { label: "기본값", value: "기본적으로는 결합모음을 제외한 어근 형태만 정답으로 처리합니다." },
+        { label: "체크 시", value: "예를 들어 gastr, gastro, gastr(o)처럼 결합모음 포함형도 정답으로 인정합니다." }
       ]
     }
   };
@@ -186,9 +114,9 @@
     "-eal",
     "-i",
     "-ic",
-  "-ium",
-  "-ology",
-  "-ose",
+    "-ium",
+    "-ology",
+    "-ose",
     "-tic",
     "-tion",
     "-ual",
@@ -199,53 +127,9 @@
     "a-",
     "an-",
     "in-",
-    "non-",
     "un-"
   ]);
-
-  const GLOSS_PROMPT_CONSTRAINTS = {
-    "-osis": "정답에 알파벳 o를 포함하시오.",
-    "-iasis": "정답에 알파벳 a를 포함하시오.",
-    "-dynia": "정답에 알파벳 d를 포함하시오.",
-    "-algia": "정답에 알파벳 g를 포함하시오.",
-    "opt(o)": "정답에 알파벳 h를 포함하지 마시오.",
-    "ophthalm(o)": "정답에 알파벳 h를 포함하시오.",
-    "derm(o)": "정답에 알파벳 t를 포함하지 마시오.",
-    "cutane(o)": "정답에 알파벳 c를 포함하시오.",
-    "dermat(o)": "정답에 알파벳 d와 t를 모두 포함하시오.",
-    "hem(o)": "정답에 알파벳 t를 포함하지 마시오.",
-    "hemat(o)": "정답에 알파벳 t를 포함하시오.",
-    "muscul(o)": "정답에 알파벳 u를 포함하시오.",
-    "my(o)": "정답에 알파벳 y를 포함하시오.",
-    "gloss(o)": "정답에 알파벳 i를 포함하지 마시오.",
-    "lingu(o)": "정답에 알파벳 i를 포함하시오."
-  };
-
-  const VOCAB_PROMPT_CONSTRAINTS = {
-    "hypodermic": "정답에 알파벳 h를 포함하시오.",
-    "subcutaneous": "정답에 알파벳 s를 포함하시오."
-  };
-
-  Object.assign(VOCAB_PROMPT_CONSTRAINTS, {
-    "gastralgia": "정답에 알파벳 d를 포함하지 마시오.",
-    "gastrodynia": "정답에 알파벳 d를 포함하시오.",
-    "thoracentesis": "정답에 연속 알파벳 co를 포함하지 마시오.",
-    "thoracocentesis": "정답에 연속 알파벳 co를 포함하시오.",
-    "hematopoiesis": "정답에 알파벳 t를 포함하시오.",
-    "hemopoiesis": "정답에 알파벳 t를 포함하지 마시오.",
-    "membraneous": "정답에 연속 알파벳 eo를 포함하시오.",
-    "membranous": "정답에 연속 알파벳 eo를 포함하지 마시오.",
-    "polydactylia": "정답을 알파벳 a로 끝내시오.",
-    "polydactyly": "정답을 알파벳 y로 끝내시오.",
-    "syndactylia": "정답을 알파벳 a로 끝내시오.",
-    "syndactyly": "정답을 알파벳 y로 끝내시오.",
-    "subglossal": "정답에 알파벳 i를 포함하지 마시오.",
-    "sublingual": "정답에 알파벳 i를 포함하시오.",
-    "trachea": "정답에 알파벳 t를 포함하시오.",
-    "windpipe": "정답에 알파벳 w를 포함하시오."
-  });
-
-  Object.assign(GLOSS_PROMPT_CONSTRAINTS, {
+  const GLOSS_PROMPT_CONSTRAINTS = Object.freeze({
     "-osis": "정답에 알파벳 o를 포함하시오.",
     "-iasis": "정답에 알파벳 a를 포함하시오.",
     "-dynia": "정답에 알파벳 d를 포함하시오.",
@@ -271,6 +155,44 @@
     "supra-": "정답에 알파벳 s를 포함하시오.",
     "ante-": "정답에 알파벳 a를 포함하시오.",
     "pro-": "정답에 알파벳 p를 포함하시오."
+  });
+  const VOCAB_PROMPT_CONSTRAINTS = Object.freeze({
+    "hypodermic": "정답에 알파벳 h를 포함하시오.",
+    "subcutaneous": "정답에 알파벳 s를 포함하시오.",
+    "gastralgia": "정답에 알파벳 d를 포함하지 마시오.",
+    "gastrodynia": "정답에 알파벳 d를 포함하시오.",
+    "thoracentesis": "정답에 연속 알파벳 co를 포함하지 마시오.",
+    "thoracocentesis": "정답에 연속 알파벳 co를 포함하시오.",
+    "hematopoiesis": "정답에 알파벳 t를 포함하시오.",
+    "hemopoiesis": "정답에 알파벳 t를 포함하지 마시오.",
+    "membraneous": "정답에 연속 알파벳 eo를 포함하시오.",
+    "membranous": "정답에 연속 알파벳 eo를 포함하지 마시오.",
+    "polydactylia": "정답을 a로 끝내시오.",
+    "polydactyly": "정답을 y로 끝내시오.",
+    "syndactylia": "정답을 a로 끝내시오.",
+    "syndactyly": "정답을 y로 끝내시오.",
+    "subglossal": "정답에 알파벳 i를 포함하지 마시오.",
+    "sublingual": "정답에 알파벳 i를 포함하시오.",
+    "trachea": "정답에 알파벳 t를 포함하시오.",
+    "windpipe": "정답에 알파벳 w를 포함하시오.",
+    "esophagus": "정답에 알파벳 s를 포함하시오.",
+    "gullet": "정답에 알파벳 g를 포함하시오."
+  });
+  const VOCAB_IMAGE_PROMPT_OVERRIDES = Object.freeze({
+    electrocardiograph: {
+      plain: {
+        title: "그림의 기기 명칭은?"
+      }
+    },
+    endoscopy: {
+      plain: {
+        title: "소화기내과 전문의가 손에 쥐고 있는 기기 명칭은?",
+        answer: "endoscope",
+        acceptedAnswers: ["endoscope"],
+        displayAnswer: "Endoscope",
+        alt: "Endoscope 관련 이미지"
+      }
+    }
   });
 
   const state = {
@@ -350,21 +272,27 @@
     updateRangeModeUI();
     updateQuestionCountUI();
     renderDataSummary();
+    attachHelpButtons();
     syncViewState();
-
-    startButton.addEventListener("click", startQuiz);
-    openListButton.addEventListener("click", openListView);
-    closeListButton.addEventListener("click", closeListView);
-    submitButton.addEventListener("click", () => submitAnswer(false));
-    skipButton.addEventListener("click", () => submitAnswer(false, true));
-    nextButton.addEventListener("click", goToNextQuestion);
-    restartButton.addEventListener("click", resetToSetup);
     rangeModeSelect.addEventListener("change", handleRangeModeChange);
-    weekSelect.addEventListener("change", syncListViewIfOpen);
-    questionCountSelect.addEventListener("change", updateQuestionCountUI);
+    weekSelect.addEventListener("change", () => {
+      populateCustomWeekOptions();
+      syncListViewIfOpen();
+    });
+    questionCountSelect.addEventListener("change", () => {
+      updateQuestionCountUI();
+      syncListViewIfOpen();
+    });
     listCategoryFilter.addEventListener("change", syncListViewIfOpen);
     customWeekOptions.addEventListener("change", syncListViewIfOpen);
     customQuestionCountInput.addEventListener("input", syncListViewIfOpen);
+    startButton.addEventListener("click", startQuiz);
+    openListButton.addEventListener("click", openListView);
+    closeListButton.addEventListener("click", closeListView);
+    submitButton.addEventListener("click", () => submitAnswer(false, false));
+    skipButton.addEventListener("click", () => submitAnswer(false, true));
+    nextButton.addEventListener("click", goToNextQuestion);
+    restartButton.addEventListener("click", resetToSetup);
     if (setupHelpButton) {
       setupHelpButton.addEventListener("click", () => openHelpModal("setup-overview"));
     }
@@ -419,51 +347,7 @@
   }
 
   function attachHelpButtons() {
-    document.querySelectorAll("#setup-panel [data-help-key]").forEach((container) => {
-      if (container.dataset.helpBound === "true") {
-        return;
-      }
-
-      const target = container.matches("fieldset")
-        ? container.querySelector("legend")
-        : container.querySelector(":scope > span");
-
-      if (!target || target.querySelector(".help-trigger")) {
-        return;
-      }
-
-      const key = container.dataset.helpKey;
-      const text = target.textContent.trim();
-      const wrapper = document.createElement("span");
-      wrapper.className = "label-with-help";
-
-      const textNode = document.createElement("span");
-      textNode.textContent = text;
-
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "help-trigger";
-      /*
-      button.setAttribute("aria-label", `${text} 도움말`);
-      button.textContent = "ⓘ";
-      */
-      button.setAttribute("aria-label", `${text} help`);
-      /*
-      button.textContent = "ⓘ";
-      */
-      button.textContent = "\u24D8";
-      button.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        openHelpModal(key);
-      });
-
-      target.textContent = "";
-      wrapper.appendChild(textNode);
-      wrapper.appendChild(button);
-      target.appendChild(wrapper);
-      container.dataset.helpBound = "true";
-    });
+    return;
   }
 
   function openHelpModal(key) {
@@ -549,10 +433,10 @@
     ];
 
     if (missingCount > 0) {
-      summary.push(`미등록 항목 ${missingCount}개 제외`);
+      summary.push(`출제에서 제외된 누락 항목 ${missingCount}개`);
     }
 
-    dataSummary.textContent = summary.join(" · ");
+    dataSummary.textContent = summary.join(" / ");
   }
 
   function handleRangeModeChange() {
@@ -609,7 +493,7 @@
     if (rangeMode === "custom") {
       const selectedWeeks = getSelectedCustomWeeks();
       if (shouldValidate && selectedWeeks.length === 0) {
-        window.alert("선택 주차 모드에서는 최소 한 주차를 골라주세요.");
+        window.alert("선택 주차 모드에서는 최소 한 개 이상의 주차를 선택해 주세요.");
         return null;
       }
 
@@ -640,7 +524,7 @@
     if (value === "custom") {
       const customValue = Number(customQuestionCountInput.value);
       if (!Number.isInteger(customValue) || customValue < 1) {
-        window.alert("직접 입력 문제 수는 1 이상의 정수로 입력해주세요.");
+        window.alert("직접 입력 문제 수는 1 이상의 정수로 입력해 주세요.");
         return null;
       }
 
@@ -657,10 +541,10 @@
 
     if (scopeConfig.rangeMode === "custom") {
       if (scopeConfig.weeks.length === 0) {
-        return "선택 주차 없음";
+        return "\uC120\uD0DD \uC8FC\uCC28 \uC5C6\uC74C";
       }
 
-      return `선택 주차 ${scopeConfig.weeks.map((week) => `${week}주차`).join(", ")}`;
+      return `선택 주차: ${scopeConfig.weeks.map((week) => `${week}주차`).join(", ")}`;
     }
 
     return `1-${scopeConfig.maxWeek}주차 누적`;
@@ -814,13 +698,13 @@
     }
 
     if (selectedModes.length === 0) {
-      window.alert("최소 한 가지 문제 유형은 선택해주세요.");
+      window.alert("최소 한 개 이상의 문제 형식을 선택해 주세요.");
       return;
     }
 
     let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel);
     if (questions.length === 0) {
-      window.alert("현재 선택으로 만들 수 있는 문제가 없습니다.");
+      window.alert("선택한 범위와 문제 형식으로 만들 수 있는 문제가 없습니다.");
       return;
     }
 
@@ -872,6 +756,20 @@
     }
   }
 
+  function createQuestion(config) {
+    return {
+      id: config.id,
+      week: config.week,
+      category: config.category,
+      mode: config.mode,
+      term: config.term,
+      prompt: config.prompt,
+      answer: config.answer,
+      acceptedAnswers: config.acceptedAnswers,
+      displayAnswer: config.displayAnswer
+    };
+  }
+
   function buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel) {
     const scopedTerms = getScopedTerms(scopeConfig);
     const vocabularyTerms = scopedTerms.vocabulary;
@@ -882,28 +780,43 @@
     const questions = [];
 
     vocabularyTerms.forEach((term) => {
-      if (!selectedModeSet.has("vocabulary:korean")) {
-        return;
-      }
-
       const entry = getEntry(term);
       if (!entry || (!entry.korean && !entry.english)) {
         return;
       }
 
-      const promptInfo = buildVocabularyPrompt(entry);
+      if (selectedModeSet.has("vocabulary:korean")) {
+        const promptInfo = buildVocabularyPrompt(entry);
 
-      questions.push({
-        id: `vocabulary:korean:${entry.term}`,
-        week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
-        category: "vocabulary",
-        mode: promptInfo.mode,
-        term: entry.term,
-        prompt: promptInfo.prompt,
-        answer: entry.answer,
-        acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
-        displayAnswer: entry.term
-      });
+        questions.push(createQuestion({
+          id: `vocabulary:korean:${entry.term}`,
+          week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
+          category: "vocabulary",
+          mode: promptInfo.mode,
+          term: entry.term,
+          prompt: promptInfo.prompt,
+          answer: entry.answer,
+          acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
+          displayAnswer: entry.term
+        }));
+      }
+
+      if (selectedModeSet.has("vocabulary:image") && Array.isArray(entry.imageQuestions)) {
+        entry.imageQuestions.forEach((imageInfo, index) => {
+          const imageQuestionConfig = buildVocabularyImageQuestionConfig(entry, imageInfo, allowCombiningVowel);
+          questions.push(createQuestion({
+            id: `vocabulary:image:${entry.term}:${index}`,
+            week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
+            category: "vocabulary",
+            mode: "image",
+            term: entry.term,
+            prompt: imageQuestionConfig.prompt,
+            answer: imageQuestionConfig.answer,
+            acceptedAnswers: imageQuestionConfig.acceptedAnswers,
+            displayAnswer: imageQuestionConfig.displayAnswer
+          }));
+        });
+      }
     });
 
     ["root", "suffix", "prefix"].forEach((category) => {
@@ -915,7 +828,7 @@
 
         if (selectedModeSet.has(`${category}:gloss`) && entry.english && !isClozeOnlyTerm(entry)) {
           const glossPrompt = buildMorphologyGlossPrompt(entry);
-          questions.push({
+          questions.push(createQuestion({
             id: `${category}:gloss:${entry.term}`,
             week: findIntroducedWeek(entry.term, CATEGORY_BUCKETS[category], scopeConfig),
             category,
@@ -925,7 +838,7 @@
             answer: entry.answer,
             acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
             displayAnswer: entry.answer
-          });
+          }));
         }
 
         if (selectedModeSet.has(`${category}:cloze`)) {
@@ -934,7 +847,7 @@
             return;
           }
 
-          questions.push({
+          questions.push(createQuestion({
             id: `${category}:cloze:${entry.term}:${cloze.word}`,
             week: findIntroducedWeek(entry.term, CATEGORY_BUCKETS[category], scopeConfig),
             category,
@@ -947,7 +860,7 @@
             answer: entry.answer,
             acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
             displayAnswer: entry.answer
-          });
+          }));
         }
       });
     });
@@ -1002,10 +915,10 @@
     const totalCount = groups.reduce((sum, group) => sum + group.terms.length, 0);
     const rangeLabel = describeScope(scopeConfig);
     const categoryLabel = categoryFilter === "all"
-      ? "전체 범주"
+      ? "\uC804\uCCB4 / \uC804\uCCB4"
       : CATEGORY_LABELS[categoryFilter];
 
-    listSummary.textContent = `${rangeLabel} · ${categoryLabel} · ${totalCount}개 항목`;
+    listSummary.textContent = `${rangeLabel} / ${categoryLabel} / ${totalCount}개`;
     listGroups.innerHTML = "";
 
     if (groups.length === 0) {
@@ -1070,8 +983,8 @@
       if (!listDetail || !listDetailTitle || !listDetailContent) {
         return;
       }
-      listDetailTitle.textContent = "뜻 보기";
-      listDetailContent.innerHTML = "<p class=\"muted\">뜻 정보를 찾지 못했습니다.</p>";
+      listDetailTitle.textContent = "\uD56D\uBAA9 \uC815\uBCF4";
+      listDetailContent.innerHTML = "<p class=\"muted\">표시할 정보가 없습니다.</p>";
       listDetail.classList.remove("hidden");
       listDetail.setAttribute("aria-hidden", "false");
       return;
@@ -1079,11 +992,12 @@
 
     const blocks = [];
     const morphologyForm = entry.type === "vocabulary" ? formatMorphologyForm(entry) : "";
+    const detailImages = entry.type === "vocabulary" ? getListDetailImages(entry) : [];
     if (entry.korean) {
-      blocks.push({ label: "한국어", value: entry.korean });
+      blocks.push({ label: "\uD55C\uAD6D\uC5B4", value: entry.korean });
     }
     if (hasUsableEnglishClue(entry)) {
-      blocks.push({ label: entry.type === "vocabulary" ? "영어 뜻풀이" : "영어 풀이", value: entry.english });
+      blocks.push({ label: entry.type === "vocabulary" ? "\uC601\uC5B4 \uB73B\uD480\uC774" : "\uC601\uC5B4 \uC124\uBA85", value: entry.english });
     }
 
     if (morphologyForm) {
@@ -1091,7 +1005,7 @@
     }
 
     if (blocks.length === 0) {
-      blocks.push({ label: "뜻", value: "정의 없음" });
+      blocks.push({ label: "안내", value: "표시할 정보가 없습니다." });
     }
 
     if (!listDetail || !listDetailTitle || !listDetailContent) {
@@ -1106,9 +1020,23 @@
         </section>
       `)
       .join("");
+    const imageBody = detailImages.length > 0
+      ? `
+        <section class="list-detail-block">
+          <span class="list-detail-label">연결 이미지</span>
+          <div class="list-detail-image-grid">
+            ${detailImages.map((image) => `
+              <div class="list-detail-image-frame">
+                <img class="list-detail-image" src="${image.src}" alt="${image.alt}">
+              </div>
+            `).join("")}
+          </div>
+        </section>
+      `
+      : "";
 
     listDetailTitle.textContent = getListDisplayTerm(entry.term);
-    listDetailContent.innerHTML = `<div class="list-detail-grid">${body}</div>`;
+    listDetailContent.innerHTML = `<div class="list-detail-grid">${body}${imageBody}</div>`;
     listDetail.classList.remove("hidden");
     listDetail.setAttribute("aria-hidden", "false");
   }
@@ -1192,6 +1120,26 @@
     return parts.length > 0 ? parts.join(" + ") : "";
   }
 
+  function getListDetailImages(entry) {
+    if (!entry || !Array.isArray(entry.imageQuestions) || entry.imageQuestions.length === 0) {
+      return [];
+    }
+
+    const seen = new Set();
+    return entry.imageQuestions
+      .filter((image) => {
+        if (!image || !image.src || seen.has(image.src)) {
+          return false;
+        }
+        seen.add(image.src);
+        return true;
+      })
+      .map((image) => ({
+        src: image.src,
+        alt: `${entry.term} 연결 이미지`
+      }));
+  }
+
   function getAcceptedAnswers(entry, allowCombiningVowel) {
     if (entry.type === "root" && !allowCombiningVowel) {
       return [entry.answer];
@@ -1220,19 +1168,19 @@
       .sort((left, right) => left.week - right.week)
       .find((weekInfo) => weekInfo.items[bucketName].some((item) => item.toLowerCase() === lowered));
 
-    return match ? `${match.week}주차` : "범위 외";
+    return match ? `${match.week}\uC8FC\uCC28` : "\uC8FC\uCC28 \uBBF8\uC0C1";
   }
 
   function buildMorphologyGlossPrompt(entry) {
     const constraint = GLOSS_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
     const title = constraint
-      ? `${CATEGORY_LABELS[entry.type]}의 영어 풀이를 보고 맞히세요. 조건: ${constraint}`
-      : `${CATEGORY_LABELS[entry.type]}의 영어 풀이를 보고 맞히세요.`;
+      ? `${CATEGORY_LABELS[entry.type]}의 영어 설명을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오. 조건: ${constraint}`
+      : `${CATEGORY_LABELS[entry.type]}의 영어 설명을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오.`;
 
     return {
       title,
       blocks: [
-        { label: "영어 풀이", value: entry.english }
+        { label: "영어 설명", value: entry.english }
       ]
     };
   }
@@ -1240,8 +1188,8 @@
   function buildVocabularyPrompt(entry) {
     const constraint = VOCAB_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
     const title = constraint
-      ? `뜻에 맞는 영어 어휘를 쓰세요. 조건: ${constraint}`
-      : "뜻에 맞는 영어 어휘를 쓰세요.";
+      ? `제시된 뜻풀이를 보고 해당 영어 어휘를 쓰시오. 조건: ${constraint}`
+      : "제시된 뜻풀이를 보고 해당 영어 어휘를 쓰시오.";
     const choices = [];
 
     if (entry.korean) {
@@ -1250,7 +1198,7 @@
         prompt: {
           title,
           blocks: [
-            { label: "한국어", value: entry.korean }
+            { label: "\uD55C\uAD6D\uC5B4", value: entry.korean }
           ]
         }
       });
@@ -1262,7 +1210,7 @@
         prompt: {
           title,
           blocks: [
-            { label: "영어 뜻풀이", value: entry.english }
+            { label: "\uC601\uC5B4 \uB73B\uD480\uC774", value: entry.english }
           ]
         }
       });
@@ -1271,12 +1219,67 @@
     return choices[Math.floor(Math.random() * choices.length)];
   }
 
+  function buildVocabularyImagePrompt(entry, imageInfo) {
+    const constraint = VOCAB_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
+    const baseTitle = imageInfo.type === "plain"
+      ? "그림과 관련된 어휘는?"
+      : imageInfo.type === "numbered"
+        ? `${imageInfo.number}번에 들어갈 어휘는?`
+        : "?에 들어갈 단어는?";
+    const title = constraint
+      ? `${baseTitle} 조건: ${constraint}`
+      : baseTitle;
+
+    return {
+      title,
+      blocks: [
+        {
+          label: "이미지",
+          type: "image",
+          src: imageInfo.src,
+          alt: `${entry.term} 관련 이미지`
+        }
+      ]
+    };
+  }
+
+  function buildVocabularyImageQuestionConfig(entry, imageInfo, allowCombiningVowel) {
+    const override = ((VOCAB_IMAGE_PROMPT_OVERRIDES[entry.term.toLowerCase()] || {})[imageInfo.type]) || null;
+    const defaultConfig = {
+      prompt: buildVocabularyImagePrompt(entry, imageInfo),
+      answer: entry.answer,
+      acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
+      displayAnswer: entry.term
+    };
+
+    if (!override) {
+      return defaultConfig;
+    }
+
+    return {
+      prompt: {
+        title: override.title,
+        blocks: [
+          {
+            label: "이미지",
+            type: "image",
+            src: imageInfo.src,
+            alt: override.alt || `${entry.term} 관련 이미지`
+          }
+        ]
+      },
+      answer: override.answer || entry.answer,
+      acceptedAnswers: override.acceptedAnswers || getAcceptedAnswers(entry, allowCombiningVowel),
+      displayAnswer: override.displayAnswer || entry.term
+    };
+  }
+
   function buildMeaningBlock(entryLike) {
     const choices = [];
 
     if (entryLike.korean) {
       choices.push({
-        label: "한국어",
+        label: "\uD55C\uAD6D\uC5B4",
         value: entryLike.korean,
         small: true
       });
@@ -1284,7 +1287,7 @@
 
     if (hasUsableEnglishClue(entryLike)) {
       choices.push({
-        label: "영어 뜻풀이",
+        label: "\uC601\uC5B4 \uB73B\uD480\uC774",
         value: entryLike.english,
         small: true
       });
@@ -1292,8 +1295,8 @@
 
     if (choices.length === 0) {
       return {
-        label: "뜻풀이",
-        value: "정의 없음",
+        label: "\uB2E8\uC11C",
+        value: "표시할 단서가 없습니다.",
         small: true
       };
     }
@@ -1362,7 +1365,7 @@
   function isAllowedMorphologyCandidate(entry, vocabularyEntry) {
     const allowedTerms = getAllowedMorphologyTerms(vocabularyEntry, entry.type);
     if (allowedTerms === null) {
-      return true;
+      return false;
     }
 
     return allowedTerms.includes(normalizeMorphologyKey(entry.term));
@@ -1381,14 +1384,14 @@
     const chosen = candidates[Math.floor(Math.random() * candidates.length)];
     const blocks = [
       buildMeaningBlock(chosen),
-      { label: "빈칸", value: chosen.masked }
+      { label: "\uBE48\uCE78", value: chosen.masked }
     ];
     const vocabConstraint = entry.type === "suffix"
       ? ""
       : VOCAB_PROMPT_CONSTRAINTS[(chosen.word || "").toLowerCase()];
     const title = vocabConstraint
-      ? `${CATEGORY_LABELS[entry.type]}가 들어갈 자리를 맞히세요. 조건: ${vocabConstraint}`
-      : `${CATEGORY_LABELS[entry.type]}가 들어갈 자리를 맞히세요.`;
+      ? `${CATEGORY_LABELS[entry.type]}가 들어간 전체 어휘의 빈칸을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오. 조건: ${vocabConstraint}`
+      : `${CATEGORY_LABELS[entry.type]}가 들어간 전체 어휘의 빈칸을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오.`;
 
     return {
       title,
@@ -1727,7 +1730,7 @@
     metaCategory.textContent = CATEGORY_LABELS[question.category];
     metaMode.textContent = MODE_LABELS[question.mode];
     if (examSessionMeta) {
-      examSessionMeta.textContent = `${question.week} · ${CATEGORY_LABELS[question.category]} · ${MODE_LABELS[question.mode]} · ${state.currentIndex + 1}/${total}`;
+      examSessionMeta.textContent = `${question.week}주차 · ${CATEGORY_LABELS[question.category]} · ${MODE_LABELS[question.mode]} · ${state.currentIndex + 1}/${total}`;
     }
     if (isExamLayout()) {
       questionTitle.innerHTML = `
@@ -1738,7 +1741,7 @@
       questionTitle.textContent = question.prompt.title;
     }
     if (answerLabel) {
-      answerLabel.textContent = isExamLayout() ? "답 1" : "정답 입력";
+      answerLabel.textContent = isExamLayout() ? "\uB2F5 1" : "\uC815\uB2F5 \uC785\uB825";
     }
     submitButton.textContent = isExamLayout() ? "답안 전송" : "제출";
     questionBody.innerHTML = "";
@@ -1747,15 +1750,33 @@
       const container = document.createElement("section");
       container.className = "question-block";
 
+      if (block.type === "image") {
+        container.classList.add("question-block-image");
+      }
+
       const label = document.createElement("span");
       label.className = "question-label";
       label.textContent = block.label;
       container.appendChild(label);
 
-      const value = document.createElement("div");
-      value.className = `question-value${block.small ? " question-small" : ""}`;
-      value.textContent = cleanupDisplay(block.value);
-      container.appendChild(value);
+      if (block.type === "image") {
+        const frame = document.createElement("div");
+        frame.className = "question-image-frame";
+
+        const image = document.createElement("img");
+        image.className = "question-image";
+        image.src = block.src;
+        image.alt = block.alt || "문항 이미지";
+        image.loading = "eager";
+
+        frame.appendChild(image);
+        container.appendChild(frame);
+      } else {
+        const value = document.createElement("div");
+        value.className = `question-value${block.small ? " question-small" : ""}`;
+        value.textContent = cleanupDisplay(block.value);
+        container.appendChild(value);
+      }
 
       questionBody.appendChild(container);
     });
@@ -1825,14 +1846,14 @@
         feedback.textContent = `정답입니다.\n정답: ${question.displayAnswer}`;
       }
     } else {
-      const reason = isTimeout ? "시간 종료" : isSkip ? "건너뜀" : "오답";
+      const reason = isTimeout ? "\uC2DC\uAC04 \uCD08\uACFC" : isSkip ? "\uAC74\uB108\uB700" : "\uC624\uB2F5";
       if (!isExamLayout()) {
         feedback.className = "feedback bad";
-        feedback.textContent = `${reason}\n정답: ${question.displayAnswer}${userInput ? `\n입력: ${userInput}` : ""}`;
+        feedback.textContent = `${reason}\n정답: ${question.displayAnswer}${userInput ? `\n내 답: ${userInput}` : ""}`;
       }
       state.missed.push({
         question,
-        userInput: userInput || (isTimeout ? "시간 초과" : "미입력")
+        userInput: userInput || (isTimeout ? "\uC2DC\uAC04 \uCD08\uACFC" : "\uAC74\uB108\uB700")
       });
     }
 
@@ -1871,9 +1892,9 @@
     resultStats.innerHTML = "";
 
     [
-      { label: "총 문제 수", value: total },
-      { label: "맞힌 문제", value: state.score },
-      { label: "틀린 문제", value: total - state.score }
+      { label: "\uC804\uCCB4 \uBB38\uC81C \uC218", value: total },
+      { label: "\uB9DE\uD78C \uBB38\uC81C \uC218", value: state.score },
+      { label: "\uD2C0\uB9B0 \uBB38\uC81C \uC218", value: total - state.score }
     ].forEach((item) => {
       const card = document.createElement("article");
       card.className = "stat-card";
@@ -1885,14 +1906,16 @@
     if (state.missed.length === 0) {
       const card = document.createElement("article");
       card.className = "missed-card";
-      card.innerHTML = "<h3>틀린 문제가 없습니다.</h3><p>현재 선택한 범위는 모두 맞혔습니다.</p>";
+      card.innerHTML = "<h3>오답이 없습니다.</h3><p>모든 문제를 맞혔습니다.</p>";
       missedList.appendChild(card);
       return;
     }
 
     state.missed.forEach((item, index) => {
       const promptLines = item.question.prompt.blocks
-        .map((block) => `${block.label}: ${cleanupDisplay(block.value)}`)
+        .map((block) => block.type === "image"
+          ? `${block.label}: 이미지가 제시되었습니다.`
+          : `${block.label}: ${cleanupDisplay(block.value)}`)
         .join("<br>");
 
       const card = document.createElement("article");

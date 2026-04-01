@@ -546,6 +546,27 @@ button:disabled {
   word-break: break-word;
 }
 
+.question-block-image {
+  background: transparent;
+  padding: 0;
+}
+
+.question-image-frame {
+  display: inline-flex;
+  max-width: min(100%, 560px);
+  padding: 10px;
+  border: 1px solid rgba(97, 71, 46, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.question-image {
+  display: block;
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
 .question-small {
   font-size: 1rem;
   font-weight: 600;
@@ -695,6 +716,27 @@ button:disabled {
   line-height: 1.7;
   font-weight: 600;
   word-break: break-word;
+}
+
+.list-detail-image-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.list-detail-image-frame {
+  display: inline-flex;
+  max-width: min(100%, 560px);
+  padding: 10px;
+  border: 1px solid rgba(97, 71, 46, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.list-detail-image {
+  display: block;
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
 }
 
 .list-group {
@@ -910,6 +952,10 @@ body.quiz-layout-exam .question-block {
   background: transparent;
 }
 
+body.quiz-layout-exam .question-block-image {
+  padding: 0;
+}
+
 body.quiz-layout-exam .question-label {
   margin-bottom: 4px;
   font-size: 0.8rem;
@@ -921,6 +967,18 @@ body.quiz-layout-exam .question-label {
 body.quiz-layout-exam .question-value {
   font-size: clamp(0.9rem, 1.2vw, 1.05rem);
   font-weight: 400;
+}
+
+body.quiz-layout-exam .question-image-frame {
+  max-width: min(100%, 430px);
+  padding: 6px;
+  border-radius: 0;
+  border: 1px solid #b8ad88;
+  background: #fffdf2;
+}
+
+body.quiz-layout-exam .question-image {
+  max-height: 300px;
 }
 
 body.quiz-layout-exam .answer-field {

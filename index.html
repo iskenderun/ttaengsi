@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>의학영어 땡시</title>
-  <link rel="stylesheet" href="./styles.css?v=20260331-1">
+  <link rel="stylesheet" href="./styles.css?v=20260401-5">
 </head>
 <body>
   <main class="app-shell">
@@ -18,7 +18,7 @@
         <h2>퀴즈 설정</h2>
         <div class="panel-header-meta">
           <p id="data-summary" class="muted"></p>
-          <button id="setup-help-button" type="button" class="help-trigger panel-help-trigger" aria-label="Open help">ⓘ</button>
+          <button id="setup-help-button" type="button" class="help-trigger panel-help-trigger" aria-label="도움말 열기">ⓘ</button>
         </div>
       </div>
 
@@ -67,7 +67,11 @@
           <legend>어휘</legend>
           <label class="checkbox">
             <input type="checkbox" value="vocabulary:korean" checked>
-            <span>한국어 또는 영어 뜻풀이 보고 영어 어휘 맞히기</span>
+            <span>한국어 또는 영어 뜻풀이를 보고 영어 어휘 맞히기</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="vocabulary:image" checked>
+            <span>이미지를 보고 영어 어휘 맞히기</span>
           </label>
         </fieldset>
 
@@ -75,11 +79,11 @@
           <legend>어근</legend>
           <label class="checkbox">
             <input type="checkbox" value="root:gloss" checked>
-            <span>영어 풀이 보고 어근 맞히기</span>
+            <span>영어 설명을 보고 어근 맞히기</span>
           </label>
           <label class="checkbox">
             <input type="checkbox" value="root:cloze" checked>
-            <span>전체 어휘 빈칸 보고 어근 맞히기</span>
+            <span>전체 어휘 빈칸을 보고 어근 맞히기</span>
           </label>
         </fieldset>
 
@@ -87,11 +91,11 @@
           <legend>접미어</legend>
           <label class="checkbox">
             <input type="checkbox" value="suffix:gloss" checked>
-            <span>영어 풀이 보고 접미어 맞히기</span>
+            <span>영어 설명을 보고 접미어 맞히기</span>
           </label>
           <label class="checkbox">
             <input type="checkbox" value="suffix:cloze" checked>
-            <span>전체 어휘 빈칸 보고 접미어 맞히기</span>
+            <span>전체 어휘 빈칸을 보고 접미어 맞히기</span>
           </label>
         </fieldset>
 
@@ -99,11 +103,11 @@
           <legend>접두어</legend>
           <label class="checkbox">
             <input type="checkbox" value="prefix:gloss" checked>
-            <span>영어 풀이 보고 접두어 맞히기</span>
+            <span>영어 설명을 보고 접두어 맞히기</span>
           </label>
           <label class="checkbox">
             <input type="checkbox" value="prefix:cloze" checked>
-            <span>전체 어휘 빈칸 보고 접두어 맞히기</span>
+            <span>전체 어휘 빈칸을 보고 접두어 맞히기</span>
           </label>
         </fieldset>
       </div>
@@ -120,13 +124,13 @@
       </div>
 
       <div class="notice">
-        <p>어근은 기본적으로 결합모음을 제외한 형태를 정답으로 봅니다.</p>
+        <p>어근은 기본적으로 결합모음을 제외한 형태를 정답으로 처리합니다.</p>
         <p>설정에서 원하면 `gastr`, `gastro`, `gastr(o)`처럼 결합모음 포함형도 정답으로 인정할 수 있습니다.</p>
       </div>
 
       <div class="actions">
         <button id="start-button" class="primary">퀴즈 시작</button>
-        <button id="open-list-button" class="ghost">테스트 목록 보기</button>
+        <button id="open-list-button" class="ghost">테스트 데이터 보기</button>
       </div>
     </section>
 
@@ -160,11 +164,11 @@
       <div id="list-detail-backdrop" class="list-detail-backdrop"></div>
       <article class="list-detail-panel">
         <div class="list-detail-topbar">
-          <h3 id="list-detail-title">뜻 보기</h3>
+          <h3 id="list-detail-title">상세 보기</h3>
           <button id="list-detail-close" type="button" class="ghost">닫기</button>
         </div>
         <div id="list-detail-content" class="list-detail-content">
-          <p class="muted">단어를 누르면 뜻이 여기 표시됩니다.</p>
+          <p class="muted">단어를 누르면 뜻과 이미지가 여기에 표시됩니다.</p>
         </div>
       </article>
     </section>
@@ -270,7 +274,7 @@
     </section>
   </main>
 
-  <script src="./quiz-data.js?v=20260331-1"></script>
-  <script src="./app.js?v=20260331-1"></script>
+  <script src="./quiz-data.js?v=20260401-5"></script>
+  <script src="./app.js?v=20260401-5"></script>
 </body>
 </html>

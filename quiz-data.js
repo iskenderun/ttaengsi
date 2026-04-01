@@ -34,7 +34,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "Gloss(o)"
                                                                    ]
                                                      },
-                                      "english":  "inflammation of the tongue",
+                                      "english":  "Inflammation of the tongue",
                                       "answer":  "glossitis",
                                       "term":  "Glossitis",
                                       "type":  "vocabulary",
@@ -140,11 +140,11 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                         ]
                                                        },
-                                        "english":  "of, relating to, or resembling membrane",
+                                        "english":  "Of, relating to, or resembling membrane",
                                         "answer":  "membraneous",
-                                        "term":  "membraneous",
+                                        "term":  "Membraneous",
                                         "type":  "vocabulary",
-                                        "source":  "membraneous.md",
+                                        "source":  "Membraneous.md",
                                         "korean":  "막의",
                                         "answers":  [
                                                         "membraneous"
@@ -243,7 +243,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Gloss(o)"
                                                                     ]
                                                       },
-                                       "english":  "pain localized in the tongue",
+                                       "english":  "Pain localized in the tongue",
                                        "answer":  "glossalgia",
                                        "term":  "Glossalgia",
                                        "type":  "vocabulary",
@@ -349,7 +349,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                      "Trache(o)"
                                                                  ]
                                                    },
-                                    "english":  "the main trunk of the system of tubes by which air passes to and from the lungs",
+                                    "english":  "The main trunk of the system of tubes by which air passes to and from the lungs",
                                     "answer":  "trachea",
                                     "term":  "Trachea",
                                     "type":  "vocabulary",
@@ -357,7 +357,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "기관",
                                     "answers":  [
                                                     "trachea"
-                                                ]
+                                                ],
+                                    "imageQuestions":  [
+                                                           {
+                                                               "number":  2,
+                                                               "source":  "Pasted image 20260331141804.png",
+                                                               "type":  "numbered",
+                                                               "src":  "question-images/larynx-group-1.png"
+                                                           }
+                                                       ]
                                 },
                     "tonsillotome":  {
                                          "morphology":  {
@@ -371,7 +379,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                           "Tonsill(o)"
                                                                       ]
                                                         },
-                                         "english":  "an instrument for cutting the tonsils",
+                                         "english":  "An instrument for cutting the tonsils",
                                          "answer":  "tonsillotome",
                                          "term":  "Tonsillotome",
                                          "type":  "vocabulary",
@@ -393,7 +401,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "affecting one side of the body",
+                                       "english":  "Affecting one side of the body",
                                        "answer":  "unilateral",
                                        "term":  "Unilateral",
                                        "type":  "vocabulary",
@@ -401,7 +409,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "한쪽의, 편측의, 일측성의",
                                        "answers":  [
                                                        "unilateral"
-                                                   ]
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "number":  1,
+                                                                  "source":  "Pasted image 20260331144508.png",
+                                                                  "type":  "numbered",
+                                                                  "src":  "question-images/direction-group-1.png"
+                                                              }
+                                                          ]
                                    },
                     "encephalopathy":  {
                                            "morphology":  {
@@ -536,13 +552,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "term":  "Pylorospasm",
                                         "type":  "vocabulary",
                                         "source":  "Pylorospasm.md",
-                                        "korean":  "날문연축, 유문연축, 위경련 !Pasted image 20260323193504.png",
+                                        "korean":  "날문연축, 유문연축, 위경련",
                                         "answers":  [
                                                         "pylorospasm"
-                                                    ]
+                                                    ],
+                                        "imageQuestions":  [
+                                                               {
+                                                                   "source":  "Pasted image 20260331143521.png",
+                                                                   "type":  "question-mark",
+                                                                   "src":  "question-images/pylorospasm-1.png"
+                                                               }
+                                                           ]
                                     },
                     "-ic":  {
-                                "english":  "pertaining to",
+                                "english":  "Pertaining to",
                                 "answer":  "ic",
                                 "source":  "-ic.md",
                                 "answers":  [
@@ -577,7 +600,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "Arteri(o)"
                                                                    ]
                                                      },
-                                      "english":  "a small terminal branch of an artery that ends in capillaries",
+                                      "english":  "A small terminal branch of an artery that ends in capillaries",
                                       "answer":  "arteriole",
                                       "term":  "Arteriole",
                                       "type":  "vocabulary",
@@ -588,7 +611,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   ]
                                   },
                     "sphincter(o)":  {
-                                         "english":  "Sphincter",
+                                         "english":  "Annular muscle that closes a bodily opening",
                                          "answer":  "sphincter",
                                          "source":  "sphincter(o).md",
                                          "answers":  [
@@ -726,7 +749,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "korean":  "라틴계 단수 명사 어미"
                             },
                     "splen(o)":  {
-                                     "english":  "Spleen",
+                                     "english":  "Blood-filtering organ near the stomach",
                                      "answer":  "splen",
                                      "source":  "splen(o).md",
                                      "answers":  [
@@ -771,7 +794,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "머리뼈절개기",
                                        "answers":  [
                                                        "craniotome"
-                                                   ]
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "source":  "Pasted image 20260331164102.png",
+                                                                  "type":  "plain",
+                                                                  "src":  "question-images/craniotome-1.png"
+                                                              }
+                                                          ]
                                    },
                     "ab-":  {
                                 "english":  "Away from",
@@ -797,7 +827,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "a substance able to inhibit or kill microorganisms",
+                                       "english":  "A substance able to inhibit or kill microorganisms",
                                        "answer":  "antibiotic",
                                        "term":  "Antibiotic",
                                        "type":  "vocabulary",
@@ -819,7 +849,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                        ]
                                                          },
-                                          "english":  "a device or preparation designed to prevent conception",
+                                          "english":  "A device or preparation designed to prevent conception",
                                           "answer":  "contraceptive",
                                           "term":  "Contraceptive",
                                           "type":  "vocabulary",
@@ -943,7 +973,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                        ]
                                                          },
-                                          "english":  "release from attachment or connection",
+                                          "english":  "Release from attachment or connection",
                                           "answer":  "disengagement",
                                           "term":  "Disengagement",
                                           "type":  "vocabulary",
@@ -995,7 +1025,19 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "korean":  "대장창냄술, 인공항문형성술",
                                       "answers":  [
                                                       "colostomy"
-                                                  ]
+                                                  ],
+                                      "imageQuestions":  [
+                                                             {
+                                                                 "source":  "Pasted image 20260331142546.png",
+                                                                 "type":  "question-mark",
+                                                                 "src":  "question-images/colostomy-1.png"
+                                                             },
+                                                             {
+                                                                 "source":  "Pasted image 20260331142400.png",
+                                                                 "type":  "plain",
+                                                                 "src":  "question-images/colostomy-2.png"
+                                                             }
+                                                         ]
                                   },
                     "bacilli":  {
                                     "morphology":  {
@@ -1009,11 +1051,11 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                      "Bacill(o)"
                                                                  ]
                                                    },
-                                    "english":  "rod-shaped bacteria",
+                                    "english":  "Rod-shaped bacteria",
                                     "answer":  "bacilli",
-                                    "term":  "bacilli",
+                                    "term":  "Bacilli",
                                     "type":  "vocabulary",
-                                    "source":  "bacilli.md",
+                                    "source":  "Bacilli.md",
                                     "korean":  "막대균의 복수형",
                                     "answers":  [
                                                     "bacilli"
@@ -1053,7 +1095,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "Esophag(o)"
                                                                    ]
                                                      },
-                                      "english":  "a muscular tube that conveys food from the mouth to the stomach",
+                                      "english":  "A muscular tube that conveys food from the mouth to the stomach",
                                       "answer":  "esophagus",
                                       "term":  "Esophagus",
                                       "type":  "vocabulary",
@@ -1061,7 +1103,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "korean":  "식도",
                                       "answers":  [
                                                       "esophagus"
-                                                  ]
+                                                  ],
+                                      "imageQuestions":  [
+                                                             {
+                                                                 "number":  6,
+                                                                 "source":  "Pasted image 20260331144207.png",
+                                                                 "type":  "numbered",
+                                                                 "src":  "question-images/pharynx-group-1.png"
+                                                             }
+                                                         ]
                                   },
                     "lith(o)":  {
                                     "english":  "Stone, calculus",
@@ -1078,7 +1128,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "돌, 석"
                                 },
                     "esophag(o)":  {
-                                       "english":  "Esophagus",
+                                       "english":  "Muscular tube conveying food from the mouth to the stomach",
                                        "answer":  "esophag",
                                        "source":  "esophag(o).md",
                                        "answers":  [
@@ -1129,7 +1179,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "Dactyl(o)"
                                                                      ]
                                                        },
-                                        "english":  "the condition of having more than the normal number of fingers or toes",
+                                        "english":  "The condition of having more than the normal number of fingers or toes",
                                         "answer":  "polydactyly",
                                         "term":  "Polydactyly",
                                         "type":  "vocabulary",
@@ -1140,7 +1190,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "dis-":  {
-                                 "english":  "to undo, free from, separation",
+                                 "english":  "To undo, free from, separation",
                                  "answer":  "dis",
                                  "source":  "dis-.md",
                                  "answers":  [
@@ -1263,7 +1313,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "-ule"
                                                                     ]
                                                    },
-                                    "english":  "a small duct",
+                                    "english":  "A small duct",
                                     "answer":  "ductule",
                                     "term":  "Ductule",
                                     "type":  "vocabulary",
@@ -1316,7 +1366,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "korean":  ""
                                     },
                     "bronchiol(o)":  {
-                                         "english":  "Bronchiole",
+                                         "english":  "Minute thin-walled branch of a bronchus",
                                          "answer":  "bronchiol",
                                          "source":  "bronchiol(o).md",
                                          "answers":  [
@@ -1379,7 +1429,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "-ule"
                                                                    ]
                                                   },
-                                   "english":  "a small vein",
+                                   "english":  "A small vein",
                                    "answer":  "venule",
                                    "term":  "Venule",
                                    "type":  "vocabulary",
@@ -1402,7 +1452,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "확장"
                                  },
                     "lingu(o)":  {
-                                     "english":  "tongue",
+                                     "english":  "Tongue",
                                      "answer":  "lingu",
                                      "source":  "lingu(o).md",
                                      "answers":  [
@@ -1416,7 +1466,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "혀"
                                  },
                     "un-":  {
-                                "english":  "negative prefix, not",
+                                "english":  "Negative prefix, not",
                                 "answer":  "un",
                                 "source":  "un-.md",
                                 "answers":  [
@@ -1425,10 +1475,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                             ],
                                 "type":  "prefix",
                                 "term":  "un-",
-                                "korean":  "부정 접두어, 무-, 비-"
+                                "korean":  "부정 접두어, 비(非), 무(無)"
                             },
                     "tachy-":  {
-                                   "english":  "rapid",
+                                   "english":  "Rapid",
                                    "answer":  "tachy",
                                    "source":  "tachy-.md",
                                    "answers":  [
@@ -1440,7 +1490,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "빠른"
                                },
                     "-eal":  {
-                                 "english":  "pertaining to",
+                                 "english":  "Pertaining to",
                                  "answer":  "eal",
                                  "source":  "-eal.md",
                                  "answers":  [
@@ -1539,7 +1589,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "통증"
                                },
                     "-lexia":  {
-                                   "english":  "-lexia",
+                                   "english":  "Reading",
                                    "answer":  "lexia",
                                    "source":  "-lexia.md",
                                    "answers":  [
@@ -1562,7 +1612,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                           "Cardi(o)"
                                                                       ]
                                                         },
-                                         "english":  "enlargement of the heart",
+                                         "english":  "Enlargement of the heart",
                                          "answer":  "cardiomegaly",
                                          "term":  "Cardiomegaly",
                                          "type":  "vocabulary",
@@ -1665,7 +1715,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "영양, 커짐"
                                 },
                     "tetra-":  {
-                                   "english":  "four",
+                                   "english":  "Four",
                                    "answer":  "tetra",
                                    "source":  "tetra-.md",
                                    "answers":  [
@@ -1689,15 +1739,23 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "korean":  "억제제, 정지시키는 것"
                               },
                     "nasal cavity":  {
-                                         "english":  "the vaulted chamber extending from the external nares to the pharynx",
+                                         "english":  "The vaulted chamber extending from the external nares to the pharynx",
                                          "answer":  "nasal cavity",
+                                         "term":  "Nasal cavity",
+                                         "type":  "vocabulary",
                                          "source":  "Nasal cavity.md",
+                                         "korean":  "비강",
                                          "answers":  [
                                                          "nasal cavity"
                                                      ],
-                                         "type":  "vocabulary",
-                                         "term":  "Nasal cavity",
-                                         "korean":  "비강"
+                                         "imageQuestions":  [
+                                                                {
+                                                                    "number":  1,
+                                                                    "source":  "Pasted image 20260331144207.png",
+                                                                    "type":  "numbered",
+                                                                    "src":  "question-images/pharynx-group-1.png"
+                                                                }
+                                                            ]
                                      },
                     "enter(o)":  {
                                      "english":  "Intestine",
@@ -1725,7 +1783,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                        ]
                                                          },
-                                          "english":  "occurring on or acting with a part on the opposite side of the body",
+                                          "english":  "Occurring on or acting with a part on the opposite side of the body",
                                           "answer":  "contralateral",
                                           "term":  "Contralateral",
                                           "type":  "vocabulary",
@@ -1733,7 +1791,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                           "korean":  "반대쪽의, 맞은편의",
                                           "answers":  [
                                                           "contralateral"
-                                                      ]
+                                                      ],
+                                          "imageQuestions":  [
+                                                                 {
+                                                                     "number":  4,
+                                                                     "source":  "Pasted image 20260331144508.png",
+                                                                     "type":  "numbered",
+                                                                     "src":  "question-images/direction-group-1.png"
+                                                                 }
+                                                             ]
                                       },
                     "autoimmunity":  {
                                          "morphology":  {
@@ -1747,7 +1813,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                           "Immun(o)"
                                                                       ]
                                                         },
-                                         "english":  "an immune response directed against the body\u0027s own tissues",
+                                         "english":  "An immune response directed against the body\u0027s own tissues",
                                          "answer":  "autoimmunity",
                                          "term":  "Autoimmunity",
                                          "type":  "vocabulary",
@@ -1780,7 +1846,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       ]
                                       },
                     "-i":  {
-                               "english":  "plural ending",
+                               "english":  "Plural ending",
                                "answer":  "i",
                                "source":  "-i.md",
                                "answers":  [
@@ -1848,7 +1914,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                      ]
                                                        },
-                                        "english":  "situated or appearing on or affecting the same side of the body",
+                                        "english":  "Situated or appearing on or affecting the same side of the body",
                                         "answer":  "ipsilateral",
                                         "term":  "Ipsilateral",
                                         "type":  "vocabulary",
@@ -1856,7 +1922,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "korean":  "같은쪽의, 동측의",
                                         "answers":  [
                                                         "ipsilateral"
-                                                    ]
+                                                    ],
+                                        "imageQuestions":  [
+                                                               {
+                                                                   "number":  3,
+                                                                   "source":  "Pasted image 20260331144508.png",
+                                                                   "type":  "numbered",
+                                                                   "src":  "question-images/direction-group-1.png"
+                                                               }
+                                                           ]
                                     },
                     "myoma":  {
                                   "morphology":  {
@@ -1881,14 +1955,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                               ]
                               },
                     "conference":  {
-                                       "english":  "a meeting of two or more persons for discussing matters of common concern",
+                                       "english":  "A meeting of two or more persons for discussing matters of common concern",
                                        "answer":  "conference",
-                                       "source":  "conference.md",
+                                       "source":  "Conference.md",
                                        "answers":  [
                                                        "conference"
                                                    ],
                                        "type":  "vocabulary",
-                                       "term":  "conference",
+                                       "term":  "Conference",
                                        "korean":  "회의"
                                    },
                     "catabolism":  {
@@ -1903,7 +1977,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "break down",
+                                       "english":  "Break down",
                                        "answer":  "catabolism",
                                        "term":  "Catabolism",
                                        "type":  "vocabulary",
@@ -1925,7 +1999,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "a thin plate of flexible cartilage in front of the glottis that protects it during swallowing",
+                                       "english":  "A thin plate of flexible cartilage in front of the glottis that protects it during swallowing",
                                        "answer":  "epiglottis",
                                        "term":  "Epiglottis",
                                        "type":  "vocabulary",
@@ -1933,7 +2007,21 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "후두덮개",
                                        "answers":  [
                                                        "epiglottis"
-                                                   ]
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "number":  3,
+                                                                  "source":  "Pasted image 20260331141804.png",
+                                                                  "type":  "numbered",
+                                                                  "src":  "question-images/larynx-group-1.png"
+                                                              },
+                                                              {
+                                                                  "number":  5,
+                                                                  "source":  "Pasted image 20260331144207.png",
+                                                                  "type":  "numbered",
+                                                                  "src":  "question-images/pharynx-group-1.png"
+                                                              }
+                                                          ]
                                    },
                     "path(o)":  {
                                     "english":  "Disease",
@@ -2039,7 +2127,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "Laryng(o)"
                                                                    ]
                                                      },
-                                      "english":  "of or relating to the larynx",
+                                      "english":  "Of or relating to the larynx",
                                       "answer":  "laryngeal",
                                       "term":  "Laryngeal",
                                       "type":  "vocabulary",
@@ -2061,7 +2149,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                                  "Bacill(o)"
                                                                              ]
                                                                },
-                                                "english":  "shigellosis",
+                                                "english":  "Shigellosis",
                                                 "answer":  "bacillary dysentery",
                                                 "term":  "Bacillary dysentery",
                                                 "type":  "vocabulary",
@@ -2140,7 +2228,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "sept(o)"
                                                                     ]
                                                       },
-                                       "english":  "preventing or inhibiting the growth of microorganisms on living tissue",
+                                       "english":  "Preventing or inhibiting the growth of microorganisms on living tissue",
                                        "answer":  "antiseptic",
                                        "term":  "Antiseptic",
                                        "type":  "vocabulary",
@@ -2151,7 +2239,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "-ary":  {
-                                 "english":  "pertaining to",
+                                 "english":  "Pertaining to",
                                  "answer":  "ary",
                                  "source":  "-ary.md",
                                  "answers":  [
@@ -2163,7 +2251,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "korean":  "~에 대한, ~의"
                              },
                     "brady-":  {
-                                   "english":  "slow",
+                                   "english":  "Slow",
                                    "answer":  "brady",
                                    "source":  "brady-.md",
                                    "answers":  [
@@ -2266,7 +2354,19 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "korean":  "벌림, 외전",
                                       "answers":  [
                                                       "abduction"
-                                                  ]
+                                                  ],
+                                      "imageQuestions":  [
+                                                             {
+                                                                 "source":  "Pasted image 20260331143702.png",
+                                                                 "type":  "question-mark",
+                                                                 "src":  "question-images/abduction-1.png"
+                                                             },
+                                                             {
+                                                                 "source":  "Pasted image 20260331143732.png",
+                                                                 "type":  "question-mark",
+                                                                 "src":  "question-images/abduction-2.png"
+                                                             }
+                                                         ]
                                   },
                     "electroencephalograph":  {
                                                   "morphology":  {
@@ -2315,7 +2415,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Pharyng(o)"
                                                                     ]
                                                       },
-                                       "english":  "of or relating to the pharynx",
+                                       "english":  "Of or relating to the pharynx",
                                        "answer":  "pharyngeal",
                                        "term":  "Pharyngeal",
                                        "type":  "vocabulary",
@@ -2351,7 +2451,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "the part situated below the glottis",
+                                       "english":  "The part situated below the glottis",
                                        "answer":  "subglottis",
                                        "term":  "Subglottis",
                                        "type":  "vocabulary",
@@ -2359,7 +2459,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "성문아래부",
                                        "answers":  [
                                                        "subglottis"
-                                                   ]
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "number":  6,
+                                                                  "source":  "Pasted image 20260331141804.png",
+                                                                  "type":  "numbered",
+                                                                  "src":  "question-images/larynx-group-1.png"
+                                                              }
+                                                          ]
                                    },
                     "prodrome":  {
                                      "morphology":  {
@@ -2395,7 +2503,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "Pharyng(o)"
                                                                      ]
                                                        },
-                                        "english":  "the upper part of the pharynx continuous with the nasal passages",
+                                        "english":  "The upper part of the pharynx continuous with the nasal passages",
                                         "answer":  "nasopharynx",
                                         "term":  "Nasopharynx",
                                         "type":  "vocabulary",
@@ -2403,7 +2511,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "korean":  "비인두",
                                         "answers":  [
                                                         "nasopharynx"
-                                                    ]
+                                                    ],
+                                        "imageQuestions":  [
+                                                               {
+                                                                   "number":  3,
+                                                                   "source":  "Pasted image 20260331144207.png",
+                                                                   "type":  "numbered",
+                                                                   "src":  "question-images/pharynx-group-1.png"
+                                                               }
+                                                           ]
                                     },
                     "splenorrhexis":  {
                                           "morphology":  {
@@ -2428,7 +2544,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       ]
                                       },
                     "bacill(o)":  {
-                                      "english":  "a straight rod-shaped bacterium",
+                                      "english":  "A straight rod-shaped bacterium",
                                       "answer":  "bacill",
                                       "source":  "bacill(o).md",
                                       "answers":  [
@@ -2461,7 +2577,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "korean":  "내시경술",
                                       "answers":  [
                                                       "endoscopy"
-                                                  ]
+                                                  ],
+                                      "imageQuestions":  [
+                                                             {
+                                                                 "source":  "Pasted image 20260331143215.png",
+                                                                 "type":  "plain",
+                                                                 "src":  "question-images/endoscopy-1.png"
+                                                             }
+                                                         ]
                                   },
                     "bacteri(o)":  {
                                        "english":  "Bacteria",
@@ -2478,15 +2601,23 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "세균"
                                    },
                     "oral cavity":  {
-                                        "english":  "the cavity of the mouth",
+                                        "english":  "The cavity of the mouth",
                                         "answer":  "oral cavity",
+                                        "term":  "Oral cavity",
+                                        "type":  "vocabulary",
                                         "source":  "Oral cavity.md",
+                                        "korean":  "구강",
                                         "answers":  [
                                                         "oral cavity"
                                                     ],
-                                        "type":  "vocabulary",
-                                        "term":  "Oral cavity",
-                                        "korean":  "구강"
+                                        "imageQuestions":  [
+                                                               {
+                                                                   "number":  2,
+                                                                   "source":  "Pasted image 20260331144207.png",
+                                                                   "type":  "numbered",
+                                                                   "src":  "question-images/pharynx-group-1.png"
+                                                               }
+                                                           ]
                                     },
                     "tonsillar":  {
                                       "morphology":  {
@@ -2500,7 +2631,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "Tonsill(o)"
                                                                    ]
                                                      },
-                                      "english":  "of or relating to or affecting the tonsils",
+                                      "english":  "Of or relating to or affecting the tonsils",
                                       "answer":  "tonsillar",
                                       "term":  "Tonsillar",
                                       "type":  "vocabulary",
@@ -2566,7 +2697,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                  ]
                                                    },
-                                    "english":  "the elongated space between the vocal cords",
+                                    "english":  "The elongated space between the vocal cords",
                                     "answer":  "glottis",
                                     "term":  "Glottis",
                                     "type":  "vocabulary",
@@ -2574,7 +2705,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "성문, 성대문",
                                     "answers":  [
                                                     "glottis"
-                                                ]
+                                                ],
+                                    "imageQuestions":  [
+                                                           {
+                                                               "number":  5,
+                                                               "source":  "Pasted image 20260331141804.png",
+                                                               "type":  "numbered",
+                                                               "src":  "question-images/larynx-group-1.png"
+                                                           }
+                                                       ]
                                 },
                     "-blast":  {
                                    "english":  "Embryonic, immature",
@@ -2589,7 +2728,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "배아의, 미성숙한"
                                },
                     "my(o)":  {
-                                  "english":  "Muscle",
+                                  "english":  "Contractile body tissue that produces motion",
                                   "answer":  "my",
                                   "source":  "my(o).md",
                                   "answers":  [
@@ -2619,7 +2758,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                ]
                                },
                     "crani(o)":  {
-                                     "english":  "Cranium",
+                                     "english":  "Skull",
                                      "answer":  "crani",
                                      "source":  "crani(o).md",
                                      "answers":  [
@@ -2661,7 +2800,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "korean":  "혈전"
                                   },
                     "laryng(o)":  {
-                                      "english":  "larynx",
+                                      "english":  "Larynx",
                                       "answer":  "laryng",
                                       "source":  "laryng(o).md",
                                       "answers":  [
@@ -2686,7 +2825,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                       "Dactyl(o)"
                                                                   ]
                                                     },
-                                     "english":  "of or relating to fingers or toes",
+                                     "english":  "Of or relating to fingers or toes",
                                      "answer":  "dactylic",
                                      "term":  "Dactylic",
                                      "type":  "vocabulary",
@@ -2742,7 +2881,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                      ]
                                                        },
-                                        "english":  "relatively rapid heart action",
+                                        "english":  "Relatively rapid heart action",
                                         "answer":  "tachycardia",
                                         "term":  "Tachycardia",
                                         "type":  "vocabulary",
@@ -2753,18 +2892,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "vocal folds":  {
-                                        "english":  "paired folds in the larynx that vibrate to produce voice",
+                                        "english":  "Paired folds in the larynx that vibrate to produce voice",
                                         "answer":  "vocal folds",
-                                        "source":  "vocal folds.md",
+                                        "source":  "Vocal folds.md",
                                         "answers":  [
                                                         "vocal folds"
                                                     ],
                                         "type":  "vocabulary",
-                                        "term":  "vocal folds",
+                                        "term":  "Vocal folds",
                                         "korean":  "성대주름"
                                     },
                     "-ac":  {
-                                "english":  "pertaining to",
+                                "english":  "Pertaining to",
                                 "answer":  "ac",
                                 "source":  "-ac.md",
                                 "answers":  [
@@ -2800,7 +2939,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "살균-"
                                },
                     "con-":  {
-                                 "english":  "with, together",
+                                 "english":  "With, together",
                                  "answer":  "con",
                                  "source":  "con-.md",
                                  "answers":  [
@@ -2854,7 +2993,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                             "-ous"
                                                                         ]
                                                        },
-                                        "english":  "having lost consciousness",
+                                        "english":  "Having lost consciousness",
                                         "answer":  "unconscious",
                                         "term":  "Unconscious",
                                         "type":  "vocabulary",
@@ -2865,7 +3004,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "immun(o)":  {
-                                     "english":  "immunity",
+                                     "english":  "Immunity",
                                      "answer":  "immun",
                                      "source":  "immun(o).md",
                                      "answers":  [
@@ -2935,7 +3074,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       ]
                                       },
                     "-um":  {
-                                "english":  "structure, tissue",
+                                "english":  "Structure, tissue",
                                 "answer":  "um",
                                 "source":  "-um.md",
                                 "answers":  [
@@ -2981,7 +3120,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "관찰 기구"
                                },
                     "engagement":  {
-                                       "english":  "the phase of childbirth in which the fetal head passes into the cavity of the true pelvis",
+                                       "english":  "The phase of childbirth in which the fetal head passes into the cavity of the true pelvis",
                                        "answer":  "engagement",
                                        "source":  "Engagement.md",
                                        "answers":  [
@@ -3003,18 +3142,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "trans-",
                                    "korean":  "가로질러, 통하여, 넘어"
                                },
-                    "poly-":  {
-                                  "english":  "Many, much",
-                                  "answer":  "poly",
-                                  "source":  "poly-.md",
-                                  "answers":  [
-                                                  "poly",
-                                                  "poly-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "poly-",
-                                  "korean":  "다"
-                              },
                     "bronchus":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -3027,7 +3154,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                       "Bronch(o)"
                                                                   ]
                                                     },
-                                     "english":  "either of the two primary divisions of the trachea leading into the lungs",
+                                     "english":  "Either of the two primary divisions of the trachea leading into the lungs",
                                      "answer":  "bronchus",
                                      "term":  "Bronchus",
                                      "type":  "vocabulary",
@@ -3052,7 +3179,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "눈, 시각"
                                },
                     "uni-":  {
-                                 "english":  "one, single",
+                                 "english":  "One, single",
                                  "answer":  "uni",
                                  "source":  "uni-.md",
                                  "answers":  [
@@ -3141,7 +3268,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                    ]
                                                      },
-                                      "english":  "affecting the right and left sides of the body",
+                                      "english":  "Affecting the right and left sides of the body",
                                       "answer":  "bilateral",
                                       "term":  "Bilateral",
                                       "type":  "vocabulary",
@@ -3149,7 +3276,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "korean":  "양쪽의, 양측의, 양측성의",
                                       "answers":  [
                                                       "bilateral"
-                                                  ]
+                                                  ],
+                                      "imageQuestions":  [
+                                                             {
+                                                                 "number":  2,
+                                                                 "source":  "Pasted image 20260331144508.png",
+                                                                 "type":  "numbered",
+                                                                 "src":  "question-images/direction-group-1.png"
+                                                             }
+                                                         ]
                                   },
                     "pharynx":  {
                                     "morphology":  {
@@ -3163,7 +3298,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                      "Pharyng(o)"
                                                                  ]
                                                    },
-                                    "english":  "the muscular tubular passage from the back of the nasal cavity and mouth to the esophagus",
+                                    "english":  "The muscular tubular passage from the back of the nasal cavity and mouth to the esophagus",
                                     "answer":  "pharynx",
                                     "term":  "Pharynx",
                                     "type":  "vocabulary",
@@ -3174,7 +3309,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                 ]
                                 },
                     "pylor(o)":  {
-                                     "english":  "Pylorus",
+                                     "english":  "Opening from the stomach into the intestine",
                                      "answer":  "pylor",
                                      "source":  "pylor(o).md",
                                      "answers":  [
@@ -3185,7 +3320,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                  ],
                                      "type":  "root",
                                      "term":  "pylor(o)",
-                                     "korean":  "날문, 유문 !Pasted image 20260323192746.png"
+                                     "korean":  "날문, 유문"
                                  },
                     "bacterium":  {
                                       "morphology":  {
@@ -3199,7 +3334,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "Bacteri(o)"
                                                                    ]
                                                      },
-                                      "english":  "a single-celled prokaryotic microorganism",
+                                      "english":  "A single-celled prokaryotic microorganism",
                                       "answer":  "bacterium",
                                       "term":  "Bacterium",
                                       "type":  "vocabulary",
@@ -3278,7 +3413,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                           "korean":  "편도절제(술)",
                                           "answers":  [
                                                           "tonsillectomy"
-                                                      ]
+                                                      ],
+                                          "imageQuestions":  [
+                                                                 {
+                                                                     "source":  "Pasted image 20260331143028.png",
+                                                                     "type":  "question-mark",
+                                                                     "src":  "question-images/tonsillectomy-1.png"
+                                                                 }
+                                                             ]
                                       },
                     "cerebellar":  {
                                        "morphology":  {
@@ -3328,7 +3470,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                       ]
                                                         },
-                                         "english":  "the part situated above the glottis",
+                                         "english":  "The part situated above the glottis",
                                          "answer":  "supraglottis",
                                          "term":  "Supraglottis",
                                          "type":  "vocabulary",
@@ -3336,7 +3478,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                          "korean":  "성문위부",
                                          "answers":  [
                                                          "supraglottis"
-                                                     ]
+                                                     ],
+                                         "imageQuestions":  [
+                                                                {
+                                                                    "number":  4,
+                                                                    "source":  "Pasted image 20260331141804.png",
+                                                                    "type":  "numbered",
+                                                                    "src":  "question-images/larynx-group-1.png"
+                                                                }
+                                                            ]
                                      },
                     "pro-":  {
                                  "english":  "In front of, before, preceding",
@@ -3351,7 +3501,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "korean":  "앞의, 이전의, 선행하는"
                              },
                     "neur(o)":  {
-                                    "english":  "Nerve",
+                                    "english":  "Band of nervous tissue conducting impulses",
                                     "answer":  "neur",
                                     "source":  "neur(o).md",
                                     "answers":  [
@@ -3387,7 +3537,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                  ]
                                  },
                     "midline":  {
-                                    "english":  "a median line",
+                                    "english":  "A median line",
                                     "answer":  "midline",
                                     "source":  "Midline.md",
                                     "answers":  [
@@ -3513,7 +3663,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                       ]
                                                         },
-                                         "english":  "decline from a more advanced or effective state to a lower one",
+                                         "english":  "Decline from a more advanced or effective state to a lower one",
                                          "answer":  "degeneration",
                                          "term":  "Degeneration",
                                          "type":  "vocabulary",
@@ -3546,7 +3696,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "-ual":  {
-                                 "english":  "of or relating to",
+                                 "english":  "Of or relating to",
                                  "answer":  "ual",
                                  "source":  "-ual.md",
                                  "answers":  [
@@ -3557,20 +3707,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-ual",
                                  "korean":  "~의, ~와 관련된"
                              },
-                    "cardi(o)":  {
-                                     "english":  "Heart",
-                                     "answer":  "cardi",
-                                     "source":  "Cardi(o).md",
-                                     "answers":  [
-                                                     "cardi",
-                                                     "cardio",
-                                                     "cardi/o",
-                                                     "cardi(o)"
-                                                 ],
-                                     "type":  "root",
-                                     "term":  "Cardi(o)",
-                                     "korean":  "심장"
-                                 },
+                    "hyperphoria":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+                                                                            "hyper-"
+                                                                        ],
+                                                           "suffixes":  [
+                                                                            "-phoria"
+                                                                        ],
+                                                           "roots":  [
+
+                                                                     ]
+                                                       },
+                                        "english":  "Latent strabismus in which the visual axis of one eye deviates upward in relation to the other",
+                                        "answer":  "hyperphoria",
+                                        "term":  "Hyperphoria",
+                                        "type":  "vocabulary",
+                                        "source":  "Hyperphoria.md",
+                                        "korean":  "상사위",
+                                        "answers":  [
+                                                        "hyperphoria"
+                                                    ]
+                                    },
                     "atresia":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -3628,7 +3786,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                             "Pharyng(o)"
                                                                         ]
                                                           },
-                                           "english":  "the lower part of the pharynx behind the larynx",
+                                           "english":  "The lower part of the pharynx behind the larynx",
                                            "answer":  "laryngopharynx",
                                            "term":  "Laryngopharynx",
                                            "type":  "vocabulary",
@@ -3636,7 +3794,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                            "korean":  "후인두",
                                            "answers":  [
                                                            "laryngopharynx"
-                                                       ]
+                                                       ],
+                                           "imageQuestions":  [
+                                                                  {
+                                                                      "number":  7,
+                                                                      "source":  "Pasted image 20260331144207.png",
+                                                                      "type":  "numbered",
+                                                                      "src":  "question-images/pharynx-group-1.png"
+                                                                  }
+                                                              ]
                                        },
                     "chem(o)":  {
                                     "english":  "Chemical, chemistry",
@@ -3684,7 +3850,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "개복(술)",
                                        "answers":  [
                                                        "laparotomy"
-                                                   ]
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "source":  "Pasted image 20260331164119.png",
+                                                                  "type":  "plain",
+                                                                  "src":  "question-images/laparotomy-1.png"
+                                                              }
+                                                          ]
                                    },
                     "-stalsis":  {
                                      "english":  "Contraction",
@@ -3732,7 +3905,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                    ]
                                                      },
-                                      "english":  "breakdown of all or part of a cell or tissue by self-produced enzymes",
+                                      "english":  "Breakdown of all or part of a cell or tissue by self-produced enzymes",
                                       "answer":  "autolysis",
                                       "term":  "Autolysis",
                                       "type":  "vocabulary",
@@ -3780,7 +3953,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "going before",
+                                       "english":  "Going before",
                                        "answer":  "antecedent",
                                        "term":  "Antecedent",
                                        "type":  "vocabulary",
@@ -3803,7 +3976,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                                "Laryng(o)"
                                                                            ]
                                                              },
-                                              "english":  "of or common to both the larynx and the pharynx",
+                                              "english":  "Of or common to both the larynx and the pharynx",
                                               "answer":  "pharyngolaryngeal",
                                               "term":  "Pharyngolaryngeal",
                                               "type":  "vocabulary",
@@ -3833,7 +4006,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                          "korean":  "기관절개(술)",
                                          "answers":  [
                                                          "tracheostomy"
-                                                     ]
+                                                     ],
+                                         "imageQuestions":  [
+                                                                {
+                                                                    "source":  "Pasted image 20260331142814.png",
+                                                                    "type":  "plain",
+                                                                    "src":  "question-images/tracheostomy-1.png"
+                                                                }
+                                                            ]
                                      },
                     "-therapy":  {
                                      "english":  "Treatment",
@@ -3889,7 +4069,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "",
                                        "answers":  [
                                                        "hypophysis"
-                                                   ]
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "source":  "Pasted image 20260331141551.png",
+                                                                  "type":  "question-mark",
+                                                                  "src":  "question-images/hypophysis-1.png"
+                                                              }
+                                                          ]
                                    },
                     "laterality":  {
                                        "morphology":  {
@@ -3903,7 +4090,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "the preference or dominance of one side of the body over the other",
+                                       "english":  "The preference or dominance of one side of the body over the other",
                                        "answer":  "laterality",
                                        "term":  "Laterality",
                                        "type":  "vocabulary",
@@ -4013,7 +4200,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Pharmac(o)"
                                                                     ]
                                                       },
-                                       "english":  "a health-care professional licensed to prepare and dispense drugs",
+                                       "english":  "A health-care professional licensed to prepare and dispense drugs",
                                        "answer":  "pharmacist",
                                        "term":  "Pharmacist",
                                        "type":  "vocabulary",
@@ -4058,7 +4245,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                "korean":  "심전도기",
                                                "answers":  [
                                                                "electrocardiograph"
-                                                           ]
+                                                           ],
+                                               "imageQuestions":  [
+                                                                      {
+                                                                          "source":  "Pasted image 20260331164323.png",
+                                                                          "type":  "plain",
+                                                                          "src":  "question-images/electrocardiograph-1.png"
+                                                                      }
+                                                                  ]
                                            },
                     "muscular atrophy":  {
                                              "morphology":  {
@@ -4161,7 +4355,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   ]
                                   },
                     "-ician":  {
-                                   "english":  "specialist, practitioner",
+                                   "english":  "Specialist, practitioner",
                                    "answer":  "ician",
                                    "source":  "-ician.md",
                                    "answers":  [
@@ -4196,7 +4390,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                ]
                                                },
                     "-ation":  {
-                                   "english":  "action or process",
+                                   "english":  "Action or process",
                                    "answer":  "ation",
                                    "source":  "-ation.md",
                                    "answers":  [
@@ -4241,7 +4435,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Pharyng(o)"
                                                                     ]
                                                       },
-                                       "english":  "the part of the pharynx below the soft palate and above the epiglottis",
+                                       "english":  "The part of the pharynx below the soft palate and above the epiglottis",
                                        "answer":  "oropharynx",
                                        "term":  "Oropharynx",
                                        "type":  "vocabulary",
@@ -4249,7 +4443,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "구인두",
                                        "answers":  [
                                                        "oropharynx"
-                                                   ]
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "number":  4,
+                                                                  "source":  "Pasted image 20260331144207.png",
+                                                                  "type":  "numbered",
+                                                                  "src":  "question-images/pharynx-group-1.png"
+                                                              }
+                                                          ]
                                    },
                     "-ptosis":  {
                                     "english":  "Drooping",
@@ -4275,7 +4477,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "Lact(o)"
                                                                      ]
                                                        },
-                                        "english":  "the act of weaning",
+                                        "english":  "The act of weaning",
                                         "answer":  "ablactation",
                                         "term":  "Ablactation",
                                         "type":  "vocabulary",
@@ -4286,7 +4488,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "helminthic dysentery":  {
-                                                 "english":  "dysentery caused by helminths",
+                                                 "english":  "Dysentery caused by helminths",
                                                  "answer":  "helminthic dysentery",
                                                  "source":  "Helminthic dysentery.md",
                                                  "answers":  [
@@ -4320,7 +4522,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          ]
                                          },
                     "-tion":  {
-                                  "english":  "action or process",
+                                  "english":  "Action or process",
                                   "answer":  "tion",
                                   "source":  "-tion.md",
                                   "answers":  [
@@ -4343,7 +4545,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                      ]
                                                        },
-                                        "english":  "relatively slow heart action",
+                                        "english":  "Relatively slow heart action",
                                         "answer":  "bradycardia",
                                         "term":  "Bradycardia",
                                         "type":  "vocabulary",
@@ -4379,7 +4581,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                      "Cardi(o)"
                                                                  ]
                                                    },
-                                    "english":  "of, relating to, situated near, or acting on the heart",
+                                    "english":  "Of, relating to, situated near, or acting on the heart",
                                     "answer":  "cardiac",
                                     "term":  "Cardiac",
                                     "type":  "vocabulary",
@@ -4412,7 +4614,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                  ]
                                  },
                     "-ose":  {
-                                 "english":  "pertaining to",
+                                 "english":  "Pertaining to",
                                  "answer":  "ose",
                                  "source":  "-ose.md",
                                  "answers":  [
@@ -4503,15 +4705,23 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      ]
                                      },
                     "windpipe":  {
-                                     "english":  "the passage that carries air from the larynx to the bronchi",
+                                     "english":  "Trachea, the passage that carries air from the larynx to the bronchi",
                                      "answer":  "windpipe",
-                                     "source":  "windpipe.md",
+                                     "term":  "Windpipe",
+                                     "type":  "vocabulary",
+                                     "source":  "Windpipe.md",
+                                     "korean":  "기관",
                                      "answers":  [
                                                      "windpipe"
                                                  ],
-                                     "type":  "vocabulary",
-                                     "term":  "windpipe",
-                                     "korean":  "기관"
+                                     "imageQuestions":  [
+                                                            {
+                                                                "number":  2,
+                                                                "source":  "Pasted image 20260331141804.png",
+                                                                "type":  "numbered",
+                                                                "src":  "question-images/larynx-group-1.png"
+                                                            }
+                                                        ]
                                  },
                     "cardiology":  {
                                        "morphology":  {
@@ -4746,7 +4956,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "물"
                                 },
                     "-cardia":  {
-                                    "english":  "heart action or location(of a specified type)",
+                                    "english":  "Heart action or location(of a specified type)",
                                     "answer":  "cardia",
                                     "source":  "-cardia.md",
                                     "answers":  [
@@ -4797,7 +5007,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                       },
-                                       "english":  "slow read",
+                                       "english":  "Slow read",
                                        "answer":  "bradylexia",
                                        "term":  "Bradylexia",
                                        "type":  "vocabulary",
@@ -4829,18 +5039,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "leukocyte"
                                                   ]
                                   },
-                    "non-":  {
-                                 "english":  "negative prefix, not",
-                                 "answer":  "non",
-                                 "source":  "non-.md",
-                                 "answers":  [
-                                                 "non",
-                                                 "non-"
-                                             ],
-                                 "type":  "prefix",
-                                 "term":  "non-",
-                                 "korean":  "부정 접두어, 비-"
-                             },
                     "toxoid":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -4864,15 +5062,23 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                ]
                                },
                     "gullet":  {
-                                   "english":  "esophagus, broadly throat",
+                                   "english":  "Esophagus, broadly throat",
                                    "answer":  "gullet",
+                                   "term":  "Gullet",
+                                   "type":  "vocabulary",
                                    "source":  "Gullet.md",
+                                   "korean":  "식도, 목구멍",
                                    "answers":  [
                                                    "gullet"
                                                ],
-                                   "type":  "vocabulary",
-                                   "term":  "Gullet",
-                                   "korean":  "식도, 목구멍"
+                                   "imageQuestions":  [
+                                                          {
+                                                              "number":  6,
+                                                              "source":  "Pasted image 20260331144207.png",
+                                                              "type":  "numbered",
+                                                              "src":  "question-images/pharynx-group-1.png"
+                                                          }
+                                                      ]
                                },
                     "fungus":  {
                                    "morphology":  {
@@ -4886,7 +5092,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                     "fung(i)"
                                                                 ]
                                                   },
-                                   "english":  "any of a kingdom of spore-producing organisms that lack chlorophyll",
+                                   "english":  "Any of a kingdom of spore-producing organisms that lack chlorophyll",
                                    "answer":  "fungus",
                                    "term":  "Fungus",
                                    "type":  "vocabulary",
@@ -4908,7 +5114,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "Cardi(o)"
                                                                      ]
                                                        },
-                                        "english":  "the conical sac of serous membrane that encloses the heart",
+                                        "english":  "The conical sac of serous membrane that encloses the heart",
                                         "answer":  "pericardium",
                                         "term":  "Pericardium",
                                         "type":  "vocabulary",
@@ -4918,6 +5124,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "pericardium"
                                                     ]
                                     },
+                    "cardi(o)":  {
+                                     "english":  "Heart",
+                                     "answer":  "cardi",
+                                     "source":  "Cardi(o).md",
+                                     "answers":  [
+                                                     "cardi",
+                                                     "cardio",
+                                                     "cardi/o",
+                                                     "cardi(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "Cardi(o)",
+                                     "korean":  "심장"
+                                 },
                     "blepharoptosis":  {
                                            "morphology":  {
                                                               "prefixes":  [
@@ -4974,7 +5194,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                   ]
                                                     },
-                                     "english":  "the state of not being able to breathe",
+                                     "english":  "The state of not being able to breathe",
                                      "answer":  "asphyxia",
                                      "term":  "Asphyxia",
                                      "type":  "vocabulary",
@@ -5055,7 +5275,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         ]
                                         },
                     "lact(o)":  {
-                                    "english":  "milk",
+                                    "english":  "Milk",
                                     "answer":  "lact",
                                     "source":  "lact(o).md",
                                     "answers":  [
@@ -5069,7 +5289,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "젖"
                                 },
                     "somni(o)":  {
-                                     "english":  "sleep",
+                                     "english":  "Sleep",
                                      "answer":  "somni",
                                      "source":  "somni(o).md",
                                      "answers":  [
@@ -5095,7 +5315,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "삼킴, 먹음"
                                 },
                     "-ous":  {
-                                 "english":  "pertaining to, containing",
+                                 "english":  "Pertaining to, containing",
                                  "answer":  "ous",
                                  "source":  "-ous.md",
                                  "answers":  [
@@ -5118,7 +5338,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                    ]
                                                      },
-                                      "english":  "build up",
+                                      "english":  "Build up",
                                       "answer":  "anabolism",
                                       "term":  "Anabolism",
                                       "type":  "vocabulary",
@@ -5140,7 +5360,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "Dactyl(o)"
                                                                      ]
                                                        },
-                                        "english":  "union of two or more digits marked by webbing or fusion",
+                                        "english":  "Union of two or more digits marked by webbing or fusion",
                                         "answer":  "syndactylia",
                                         "term":  "Syndactylia",
                                         "type":  "vocabulary",
@@ -5173,7 +5393,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          ]
                                          },
                     "vocal cord":  {
-                                       "english":  "either of the lower pair of vocal cords that produce voice",
+                                       "english":  "Either of the lower pair of vocal cords that produce voice",
                                        "answer":  "vocal cord",
                                        "source":  "Vocal cord.md",
                                        "answers":  [
@@ -5184,7 +5404,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "성대"
                                    },
                     "dactyl(o)":  {
-                                      "english":  "finger, toes",
+                                      "english":  "Finger, toes",
                                       "answer":  "dactyl",
                                       "source":  "dactyl(o).md",
                                       "answers":  [
@@ -5254,7 +5474,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                             "Pharmac(o)"
                                                                         ]
                                                           },
-                                           "english":  "a specialist in pharmacology",
+                                           "english":  "A specialist in pharmacology",
                                            "answer":  "pharmacologist",
                                            "term":  "Pharmacologist",
                                            "type":  "vocabulary",
@@ -5340,7 +5560,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                          "korean":  "고위관장법",
                                          "answers":  [
                                                          "enteroclysis"
-                                                     ]
+                                                     ],
+                                         "imageQuestions":  [
+                                                                {
+                                                                    "source":  "Pasted image 20260331164135.png",
+                                                                    "type":  "plain",
+                                                                    "src":  "question-images/enteroclysis-1.png"
+                                                                }
+                                                            ]
                                      },
                     "erythr(o)":  {
                                       "english":  "Red",
@@ -5434,7 +5661,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                 ]
                                 },
                     "quarantine":  {
-                                       "english":  "restraint designed to prevent the spread of disease",
+                                       "english":  "Restraint designed to prevent the spread of disease",
                                        "answer":  "quarantine",
                                        "source":  "Quarantine.md",
                                        "answers":  [
@@ -5521,7 +5748,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                            "-ous"
                                                                        ]
                                                       },
-                                       "english":  "of, relating to, or resembling membrane",
+                                       "english":  "Of, relating to, or resembling membrane",
                                        "answer":  "membranous",
                                        "term":  "Membranous",
                                        "type":  "vocabulary",
@@ -5532,7 +5759,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "gloss(o)":  {
-                                     "english":  "tongue",
+                                     "english":  "Tongue",
                                      "answer":  "gloss",
                                      "source":  "gloss(o).md",
                                      "answers":  [
@@ -5569,7 +5796,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                     "Laryng(o)"
                                                                 ]
                                                   },
-                                   "english":  "the modified upper part of the trachea that contains the vocal cords",
+                                   "english":  "The modified upper part of the trachea that contains the vocal cords",
                                    "answer":  "larynx",
                                    "term":  "Larynx",
                                    "type":  "vocabulary",
@@ -5577,7 +5804,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "후두",
                                    "answers":  [
                                                    "larynx"
-                                               ]
+                                               ],
+                                   "imageQuestions":  [
+                                                          {
+                                                              "number":  1,
+                                                              "source":  "Pasted image 20260331141804.png",
+                                                              "type":  "numbered",
+                                                              "src":  "question-images/larynx-group-1.png"
+                                                          }
+                                                      ]
                                },
                     "contraception":  {
                                           "morphology":  {
@@ -5591,7 +5826,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                        ]
                                                          },
-                                          "english":  "deliberate prevention of conception or impregnation",
+                                          "english":  "Deliberate prevention of conception or impregnation",
                                           "answer":  "contraception",
                                           "term":  "Contraception",
                                           "type":  "vocabulary",
@@ -5640,7 +5875,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "절개"
                                },
                     "-ule":  {
-                                 "english":  "little, small",
+                                 "english":  "Little, small",
                                  "answer":  "ule",
                                  "source":  "-ule.md",
                                  "answers":  [
@@ -5649,7 +5884,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                              ],
                                  "type":  "suffix",
                                  "term":  "-ule",
-                                 "korean":  "작은, 소(小)-"
+                                 "korean":  "작은, 소(小)"
                              },
                     "antibody":  {
                                      "morphology":  {
@@ -5663,7 +5898,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                   ]
                                                     },
-                                     "english":  "a protein produced in response to and acting against an antigen",
+                                     "english":  "A protein produced in response to and acting against an antigen",
                                      "answer":  "antibody",
                                      "term":  "Antibody",
                                      "type":  "vocabulary",
@@ -5716,7 +5951,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Gloss(o)"
                                                                     ]
                                                       },
-                                       "english":  "situated beneath the tongue",
+                                       "english":  "Situated beneath the tongue",
                                        "answer":  "subglossal",
                                        "term":  "Subglossal",
                                        "type":  "vocabulary",
@@ -5727,7 +5962,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "hyster(o)":  {
-                                      "english":  "Uterus",
+                                      "english":  "Womb",
                                       "answer":  "hyster",
                                       "source":  "hyster(o).md",
                                       "answers":  [
@@ -5763,7 +5998,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "ad-":  {
-                                "english":  "to, toward",
+                                "english":  "To, toward",
                                 "answer":  "ad",
                                 "source":  "ad-.md",
                                 "answers":  [
@@ -5775,7 +6010,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "korean":  "~쪽으로, 향하여"
                             },
                     "in-":  {
-                                "english":  "negative prefix, not, without",
+                                "english":  "Negative prefix, not, without",
                                 "answer":  "in",
                                 "source":  "in-.md",
                                 "answers":  [
@@ -5784,7 +6019,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                             ],
                                 "type":  "prefix",
                                 "term":  "in-",
-                                "korean":  "부정 접두어, 비-, 무-"
+                                "korean":  "부정 접두어, 비(非), 무(無)"
                             },
                     "peristalsis":  {
                                         "morphology":  {
@@ -5806,7 +6041,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "korean":  "꿈틀운동 또는 연동운동",
                                         "answers":  [
                                                         "peristalsis"
-                                                    ]
+                                                    ],
+                                        "imageQuestions":  [
+                                                               {
+                                                                   "source":  "Pasted image 20260331143307.png",
+                                                                   "type":  "plain",
+                                                                   "src":  "question-images/peristalsis-1.png"
+                                                               }
+                                                           ]
                                     },
                     "osteomalacia":  {
                                          "morphology":  {
@@ -5941,7 +6183,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "경화"
                                    },
                     "trache(o)":  {
-                                      "english":  "Trachea",
+                                      "english":  "Main airway tube leading to the lungs",
                                       "answer":  "trache",
                                       "source":  "trache(o).md",
                                       "answers":  [
@@ -5954,18 +6196,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "trache(o)",
                                       "korean":  "기관"
                                   },
-                    "-pepsia":  {
-                                    "english":  "Digestion",
-                                    "answer":  "pepsia",
-                                    "source":  "-pepsia.md",
-                                    "answers":  [
-                                                    "pepsia",
-                                                    "-pepsia"
-                                                ],
-                                    "type":  "suffix",
-                                    "term":  "-pepsia",
-                                    "korean":  "소화"
-                                },
+                    "poly-":  {
+                                  "english":  "Many, much",
+                                  "answer":  "poly",
+                                  "source":  "poly-.md",
+                                  "answers":  [
+                                                  "poly",
+                                                  "poly-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "poly-",
+                                  "korean":  "다"
+                              },
                     "glossal":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -5978,7 +6220,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                      "Gloss(o)"
                                                                  ]
                                                    },
-                                    "english":  "of or relating to the tongue",
+                                    "english":  "Of or relating to the tongue",
                                     "answer":  "glossal",
                                     "term":  "Glossal",
                                     "type":  "vocabulary",
@@ -6079,7 +6321,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "생성하는, 유발하는"
                                },
                     "amebic dysentery":  {
-                                             "english":  "acute human intestinal amebiasis caused by an amoeba",
+                                             "english":  "Acute human intestinal amebiasis caused by an amoeba",
                                              "answer":  "amebic dysentery",
                                              "source":  "Amebic dysentery.md",
                                              "answers":  [
@@ -6151,7 +6393,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                     ]
                                                    },
-                                    "english":  "of or relating to animal fat",
+                                    "english":  "Of or relating to animal fat",
                                     "answer":  "adipose",
                                     "term":  "Adipose",
                                     "type":  "vocabulary",
@@ -6323,7 +6565,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Dactyl(o)"
                                                                     ]
                                                       },
-                                       "english":  "union of two or more digits marked by webbing or fusion",
+                                       "english":  "Union of two or more digits marked by webbing or fusion",
                                        "answer":  "syndactyly",
                                        "term":  "Syndactyly",
                                        "type":  "vocabulary",
@@ -6346,7 +6588,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "korean":  "함께, 같이"
                              },
                     "pharmac(o)":  {
-                                       "english":  "drug, medicine",
+                                       "english":  "Drug, medicine",
                                        "answer":  "pharmac",
                                        "source":  "pharmac(o).md",
                                        "answers":  [
@@ -6464,7 +6706,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        ]
                                        },
                     "-tic":  {
-                                 "english":  "pertaining to",
+                                 "english":  "Pertaining to",
                                  "answer":  "tic",
                                  "source":  "-tic.md",
                                  "answers":  [
@@ -6487,7 +6729,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                           "Dactyl(o)"
                                                                       ]
                                                         },
-                                         "english":  "the condition of having more than the normal number of fingers or toes",
+                                         "english":  "The condition of having more than the normal number of fingers or toes",
                                          "answer":  "polydactylia",
                                          "term":  "Polydactylia",
                                          "type":  "vocabulary",
@@ -6558,7 +6800,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "측정(기)"
                                },
                     "palat(o)":  {
-                                     "english":  "Palate",
+                                     "english":  "Roof of the mouth",
                                      "answer":  "palat",
                                      "source":  "palat(o).md",
                                      "answers":  [
@@ -6673,7 +6915,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "형성"
                                  },
                     "sept(o)":  {
-                                    "english":  "contaminated, putrefied",
+                                    "english":  "Contaminated, putrefied",
                                     "answer":  "sept",
                                     "source":  "sept(o).md",
                                     "answers":  [
@@ -6734,7 +6976,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                       "Bacill(o)"
                                                                   ]
                                                     },
-                                     "english":  "a straight rod-shaped bacterium",
+                                     "english":  "A straight rod-shaped bacterium",
                                      "answer":  "bacillus",
                                      "term":  "Bacillus",
                                      "type":  "vocabulary",
@@ -6790,7 +7032,29 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "지혈집게, 지혈겸자",
                                      "answers":  [
                                                      "hemostat"
-                                                 ]
+                                                 ],
+                                     "imageQuestions":  [
+                                                            {
+                                                                "source":  "Pasted image 20260331142223.png",
+                                                                "type":  "plain",
+                                                                "src":  "question-images/hemostat-1.png"
+                                                            },
+                                                            {
+                                                                "source":  "Pasted image 20260331142242.png",
+                                                                "type":  "plain",
+                                                                "src":  "question-images/hemostat-2.png"
+                                                            },
+                                                            {
+                                                                "source":  "Pasted image 20260331142257.png",
+                                                                "type":  "plain",
+                                                                "src":  "question-images/hemostat-3.png"
+                                                            },
+                                                            {
+                                                                "source":  "Pasted image 20260331142311.png",
+                                                                "type":  "plain",
+                                                                "src":  "question-images/hemostat-4.png"
+                                                            }
+                                                        ]
                                  },
                     "autonomic nervous system":  {
                                                      "morphology":  {
@@ -6804,7 +7068,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                                   ]
                                                                     },
-                                                     "english":  "the part of the nervous system that controls involuntary vital functions",
+                                                     "english":  "The part of the nervous system that controls involuntary vital functions",
                                                      "answer":  "autonomic nervous system",
                                                      "term":  "Autonomic nervous system",
                                                      "type":  "vocabulary",
@@ -6831,10 +7095,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "term":  "Laparoscope",
                                         "type":  "vocabulary",
                                         "source":  "Laparoscope.md",
-                                        "korean":  "복강경 !Pasted image 20260323193452.png",
+                                        "korean":  "복강경",
                                         "answers":  [
                                                         "laparoscope"
-                                                    ]
+                                                    ],
+                                        "imageQuestions":  [
+                                                               {
+                                                                   "source":  "Pasted image 20260323193452.png",
+                                                                   "type":  "plain",
+                                                                   "src":  "question-images/laparoscope-1.png"
+                                                               }
+                                                           ]
                                     },
                     "pancytopenia":  {
                                          "morphology":  {
@@ -6859,7 +7130,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      ]
                                      },
                     "cata-":  {
-                                  "english":  "down, downward",
+                                  "english":  "Down, downward",
                                   "answer":  "cata",
                                   "source":  "cata-.md",
                                   "answers":  [
@@ -7112,18 +7383,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-stasis",
                                     "korean":  "멈춤, 억제"
                                 },
-                    "-ome":  {
-                                 "english":  "mass",
-                                 "answer":  "ome",
-                                 "source":  "-ome.md",
-                                 "answers":  [
-                                                 "ome",
-                                                 "-ome"
-                                             ],
-                                 "type":  "suffix",
-                                 "term":  "-ome",
-                                 "korean":  "덩어리, 집합"
-                             },
                     "carcinogenic":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -7147,7 +7406,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      ]
                                      },
                     "muscul(o)":  {
-                                      "english":  "Muscle",
+                                      "english":  "Contractile body tissue that produces motion",
                                       "answer":  "muscul",
                                       "source":  "muscul(o).md",
                                       "answers":  [
@@ -7220,7 +7479,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                    ]
                                                      },
-                                      "english":  "a disease characterized by severe diarrhea with blood and mucus",
+                                      "english":  "A disease characterized by severe diarrhea with blood and mucus",
                                       "answer":  "dysentery",
                                       "term":  "Dysentery",
                                       "type":  "vocabulary",
@@ -7242,7 +7501,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "lingu(o)"
                                                                     ]
                                                       },
-                                       "english":  "situated or administered under the tongue",
+                                       "english":  "Situated or administered under the tongue",
                                        "answer":  "sublingual",
                                        "term":  "Sublingual",
                                        "type":  "vocabulary",
@@ -7288,7 +7547,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                    ]
                                                      },
-                                      "english":  "movement toward the midline",
+                                      "english":  "Movement toward the midline",
                                       "answer":  "adduction",
                                       "term":  "Adduction",
                                       "type":  "vocabulary",
@@ -7296,7 +7555,19 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "korean":  "모음, 내전, 중심쪽으로",
                                       "answers":  [
                                                       "adduction"
-                                                  ]
+                                                  ],
+                                      "imageQuestions":  [
+                                                             {
+                                                                 "source":  "Pasted image 20260331143919.png",
+                                                                 "type":  "question-mark",
+                                                                 "src":  "question-images/adduction-1.png"
+                                                             },
+                                                             {
+                                                                 "source":  "Pasted image 20260331143846.png",
+                                                                 "type":  "question-mark",
+                                                                 "src":  "question-images/adduction-2.png"
+                                                             }
+                                                         ]
                                   },
                     "hyper-":  {
                                    "english":  "Above, excessive",
@@ -7325,7 +7596,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "협착"
                                 },
                     "pharyng(o)":  {
-                                       "english":  "pharynx",
+                                       "english":  "Pharynx",
                                        "answer":  "pharyng",
                                        "source":  "pharyng(o).md",
                                        "answers":  [
@@ -7361,7 +7632,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "arteri(o)":  {
-                                      "english":  "Artery",
+                                      "english":  "Blood vessel carrying blood from the heart through the body",
                                       "answer":  "arteri",
                                       "source":  "arteri(o).md",
                                       "answers":  [
@@ -7387,7 +7658,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "파열"
                                  },
                     "-ide":  {
-                                 "english":  "binary chemical compound",
+                                 "english":  "Binary chemical compound",
                                  "answer":  "ide",
                                  "source":  "-ide.md",
                                  "answers":  [
@@ -7424,7 +7695,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "Dactyl(o)"
                                                                     ]
                                                       },
-                                       "english":  "inflammation of fingers/toes",
+                                       "english":  "Inflammation of fingers/toes",
                                        "answer":  "dactylitis",
                                        "term":  "Dactylitis",
                                        "type":  "vocabulary",
@@ -7641,7 +7912,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                 ]
                                 },
                     "viral dysentery":  {
-                                            "english":  "dysentery caused by a virus",
+                                            "english":  "Dysentery caused by a virus",
                                             "answer":  "viral dysentery",
                                             "source":  "Viral dysentery.md",
                                             "answers":  [
@@ -7699,7 +7970,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                   ]
                                                     },
-                                     "english":  "a variable often familial disorder involving difficulty in reading",
+                                     "english":  "A variable often familial disorder involving difficulty in reading",
                                      "answer":  "dyslexia",
                                      "term":  "Dyslexia",
                                      "type":  "vocabulary",
@@ -7743,7 +8014,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "치질, 치핵"
                                    },
                     "-ia":  {
-                                "english":  "pathological condition",
+                                "english":  "Pathological condition",
                                 "answer":  "ia",
                                 "source":  "-ia.md",
                                 "answers":  [
@@ -7777,7 +8048,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "-ium":  {
-                                 "english":  "structure, tissue",
+                                 "english":  "Structure, tissue",
                                  "answer":  "ium",
                                  "source":  "-ium.md",
                                  "answers":  [
@@ -7847,7 +8118,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "korean":  "범-"
                              },
                     "col(o)":  {
-                                   "english":  "Colon",
+                                   "english":  "Large intestine",
                                    "answer":  "col",
                                    "source":  "col(o).md",
                                    "answers":  [
@@ -7861,7 +8132,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "대장, 큰창자"
                                },
                     "de-":  {
-                                "english":  "from, down from",
+                                "english":  "From, down from",
                                 "answer":  "de",
                                 "source":  "de-.md",
                                 "answers":  [
@@ -7906,7 +8177,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                            "korean":  "기관지확장증",
                                            "answers":  [
                                                            "bronchiectasis"
-                                                       ]
+                                                       ],
+                                           "imageQuestions":  [
+                                                                  {
+                                                                      "source":  "Pasted image 20260331143103.png",
+                                                                      "type":  "question-mark",
+                                                                      "src":  "question-images/bronchiectasis-1.png"
+                                                                  }
+                                                              ]
                                        },
                     "stoma":  {
                                   "morphology":  {
@@ -7928,7 +8206,14 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "korean":  "장루, 개구부",
                                   "answers":  [
                                                   "stoma"
-                                              ]
+                                              ],
+                                  "imageQuestions":  [
+                                                         {
+                                                             "source":  "Pasted image 20260331142625.png",
+                                                             "type":  "question-mark",
+                                                             "src":  "question-images/stoma-1.png"
+                                                         }
+                                                     ]
                               },
                     "-penia":  {
                                    "english":  "Deficiency",
@@ -7989,7 +8274,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "기록기"
                                },
                     "ipsi-":  {
-                                  "english":  "same side",
+                                  "english":  "Same side",
                                   "answer":  "ipsi",
                                   "source":  "ipsi-.md",
                                   "answers":  [
@@ -8012,7 +8297,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                       ]
                                                         },
-                                         "english":  "a broad-spectrum antibiotic",
+                                         "english":  "A broad-spectrum antibiotic",
                                          "answer":  "tetracycline",
                                          "term":  "Tetracycline",
                                          "type":  "vocabulary",
@@ -8034,7 +8319,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "hydr(o)"
                                                                      ]
                                                        },
-                                        "english":  "an abnormal depletion of body fluids",
+                                        "english":  "An abnormal depletion of body fluids",
                                         "answer":  "dehydration",
                                         "term":  "Dehydration",
                                         "type":  "vocabulary",
@@ -8056,7 +8341,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                  ]
                                                    },
-                                    "english":  "a substance that evokes an immune response and binds with antibodies or T cells",
+                                    "english":  "A substance that evokes an immune response and binds with antibodies or T cells",
                                     "answer":  "antigen",
                                     "term":  "Antigen",
                                     "type":  "vocabulary",
@@ -8066,28 +8351,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "antigen"
                                                 ]
                                 },
-                    "hyperphoria":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "hyper-"
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-phoria"
-                                                                        ],
-                                                           "roots":  [
-
-                                                                     ]
-                                                       },
-                                        "english":  "Latent strabismus in which the visual axis of one eye deviates upward in relation to the other",
-                                        "answer":  "hyperphoria",
-                                        "term":  "Hyperphoria",
-                                        "type":  "vocabulary",
-                                        "source":  "Hyperphoria.md",
-                                        "korean":  "상사위",
-                                        "answers":  [
-                                                        "hyperphoria"
-                                                    ]
-                                    },
+                    "-pepsia":  {
+                                    "english":  "Digestion",
+                                    "answer":  "pepsia",
+                                    "source":  "-pepsia.md",
+                                    "answers":  [
+                                                    "pepsia",
+                                                    "-pepsia"
+                                                ],
+                                    "type":  "suffix",
+                                    "term":  "-pepsia",
+                                    "korean":  "소화"
+                                },
                     "gastroenterology":  {
                                              "morphology":  {
                                                                 "prefixes":  [
@@ -8160,7 +8435,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "korean":  "위에, 부대/병발, 후"
                              },
                     "supra-":  {
-                                   "english":  "above, beyond",
+                                   "english":  "Above, beyond",
                                    "answer":  "supra",
                                    "source":  "supra-.md",
                                    "answers":  [
@@ -8180,10 +8455,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "-ia"
                                                                      ],
                                                         "roots":  [
-                                                                      "Somni(o)"
+                                                                      "somni(o)"
                                                                   ]
                                                     },
-                                     "english":  "prolonged and usually abnormal inability to get enough sleep",
+                                     "english":  "Prolonged and usually abnormal inability to get enough sleep",
                                      "answer":  "insomnia",
                                      "term":  "Insomnia",
                                      "type":  "vocabulary",
@@ -8205,11 +8480,11 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                      "Bronch(o)"
                                                                  ]
                                                    },
-                                    "english":  "the primary branches of the trachea leading into the lungs",
+                                    "english":  "The primary branches of the trachea leading into the lungs",
                                     "answer":  "bronchi",
-                                    "term":  "bronchi",
+                                    "term":  "Bronchi",
                                     "type":  "vocabulary",
-                                    "source":  "bronchi.md",
+                                    "source":  "Bronchi.md",
                                     "korean":  "기관지의 복수형",
                                     "answers":  [
                                                     "bronchi"
@@ -8227,11 +8502,11 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                    "fung(i)"
                                                                ]
                                                  },
-                                  "english":  "spore-producing organisms that lack chlorophyll",
+                                  "english":  "Spore-producing organisms that lack chlorophyll",
                                   "answer":  "fungi",
-                                  "term":  "fungi",
+                                  "term":  "Fungi",
                                   "type":  "vocabulary",
-                                  "source":  "fungi.md",
+                                  "source":  "Fungi.md",
                                   "korean":  "진균의 복수형",
                                   "answers":  [
                                                   "fungi"
@@ -8250,7 +8525,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "korean":  "이후의, 뒤의, 후의"
                               },
                     "spasm(o)":  {
-                                     "english":  "Spasm",
+                                     "english":  "Involuntary and abnormal muscular contraction",
                                      "answer":  "spasm",
                                      "source":  "spasm(o).md",
                                      "answers":  [
@@ -8283,11 +8558,11 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
 
                                                                      ]
                                                     },
-                                     "english":  "single-celled microorganisms",
+                                     "english":  "Single-celled microorganisms",
                                      "answer":  "bacteria",
-                                     "term":  "bacteria",
+                                     "term":  "Bacteria",
                                      "type":  "vocabulary",
-                                     "source":  "bacteria.md",
+                                     "source":  "Bacteria.md",
                                      "korean":  "세균, 세균의 복수형",
                                      "answers":  [
                                                      "bacteria"
@@ -8297,7 +8572,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
     "missingEntries":  [
 
                        ],
-    "generatedAt":  "2026-03-31 14:03:56",
+    "generatedAt":  "2026-04-01 14:56:13",
     "weeks":  [
                   {
                       "title":  "1주차 - 용어의 구성",
@@ -8698,7 +8973,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "dis-",
                                                      "in-",
                                                      "ipsi-",
-                                                     "non-",
                                                      "supra-",
                                                      "tachy-",
                                                      "tetra-",
@@ -8706,97 +8980,97 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "uni-"
                                                  ],
                                     "vocabulary":  [
-                                                       "ablactation",
-                                                       "adduction",
-                                                       "adipose",
-                                                       "amebic dysentery",
-                                                       "anabolism",
-                                                       "antecedent",
-                                                       "antibiotic",
-                                                       "antibody",
-                                                       "antigen",
-                                                       "antiseptic",
-                                                       "arteriole",
-                                                       "asphyxia",
-                                                       "autoimmunity",
-                                                       "autolysis",
-                                                       "autonomic nervous system",
-                                                       "bacillary dysentery",
-                                                       "bacilli",
-                                                       "bacillus",
-                                                       "bacteria",
-                                                       "bacterium",
-                                                       "bilateral",
-                                                       "bradycardia",
-                                                       "bradylexia",
-                                                       "bronchi",
-                                                       "bronchus",
-                                                       "cardiac",
-                                                       "cardiomegaly",
-                                                       "catabolism",
-                                                       "conference",
-                                                       "contraception",
-                                                       "contraceptive",
-                                                       "contralateral",
-                                                       "dactylic",
-                                                       "dactylitis",
-                                                       "degeneration",
-                                                       "dehydration",
-                                                       "disengagement",
-                                                       "ductule",
-                                                       "dysentery",
-                                                       "dyslexia",
-                                                       "engagement",
-                                                       "epiglottis",
-                                                       "esophagus",
-                                                       "fungi",
-                                                       "fungus",
-                                                       "glossal",
-                                                       "glossalgia",
-                                                       "glossitis",
-                                                       "glottis",
-                                                       "gullet",
-                                                       "helminthic dysentery",
-                                                       "insomnia",
-                                                       "ipsilateral",
-                                                       "laryngeal",
-                                                       "laryngopharynx",
-                                                       "larynx",
-                                                       "laterality",
-                                                       "membraneous",
-                                                       "membranous",
-                                                       "midline",
-                                                       "nasal cavity",
-                                                       "nasopharynx",
-                                                       "oral cavity",
-                                                       "oropharynx",
-                                                       "pericardium",
-                                                       "pharmacist",
-                                                       "pharmacologist",
-                                                       "pharyngeal",
-                                                       "pharyngolaryngeal",
-                                                       "pharynx",
-                                                       "polydactylia",
-                                                       "polydactyly",
-                                                       "quarantine",
-                                                       "subglossal",
-                                                       "subglottis",
-                                                       "sublingual",
-                                                       "supraglottis",
-                                                       "syndactylia",
-                                                       "syndactyly",
-                                                       "tachycardia",
-                                                       "tetracycline",
-                                                       "tonsillar",
-                                                       "tonsillotome",
-                                                       "trachea",
-                                                       "unconscious",
-                                                       "unilateral",
-                                                       "venule",
-                                                       "viral dysentery",
-                                                       "vocal cord",
-                                                       "vocal folds",
-                                                       "windpipe"
+                                                       "Ablactation",
+                                                       "Adduction",
+                                                       "Adipose",
+                                                       "Amebic dysentery",
+                                                       "Anabolism",
+                                                       "Antecedent",
+                                                       "Antibiotic",
+                                                       "Antibody",
+                                                       "Antigen",
+                                                       "Antiseptic",
+                                                       "Arteriole",
+                                                       "Asphyxia",
+                                                       "Autoimmunity",
+                                                       "Autolysis",
+                                                       "Autonomic nervous system",
+                                                       "Bacillary dysentery",
+                                                       "Bacilli",
+                                                       "Bacillus",
+                                                       "Bacteria",
+                                                       "Bacterium",
+                                                       "Bilateral",
+                                                       "Bradycardia",
+                                                       "Bradylexia",
+                                                       "Bronchi",
+                                                       "Bronchus",
+                                                       "Cardiac",
+                                                       "Cardiomegaly",
+                                                       "Catabolism",
+                                                       "Conference",
+                                                       "Contraception",
+                                                       "Contraceptive",
+                                                       "Contralateral",
+                                                       "Dactylic",
+                                                       "Dactylitis",
+                                                       "Degeneration",
+                                                       "Dehydration",
+                                                       "Disengagement",
+                                                       "Ductule",
+                                                       "Dysentery",
+                                                       "Dyslexia",
+                                                       "Engagement",
+                                                       "Epiglottis",
+                                                       "Esophagus",
+                                                       "Fungi",
+                                                       "Fungus",
+                                                       "Glossal",
+                                                       "Glossalgia",
+                                                       "Glossitis",
+                                                       "Glottis",
+                                                       "Gullet",
+                                                       "Helminthic dysentery",
+                                                       "Insomnia",
+                                                       "Ipsilateral",
+                                                       "Laryngeal",
+                                                       "Laryngopharynx",
+                                                       "Larynx",
+                                                       "Laterality",
+                                                       "Membraneous",
+                                                       "Membranous",
+                                                       "Midline",
+                                                       "Nasal cavity",
+                                                       "Nasopharynx",
+                                                       "Oral cavity",
+                                                       "Oropharynx",
+                                                       "Pericardium",
+                                                       "Pharmacist",
+                                                       "Pharmacologist",
+                                                       "Pharyngeal",
+                                                       "Pharyngolaryngeal",
+                                                       "Pharynx",
+                                                       "Polydactylia",
+                                                       "Polydactyly",
+                                                       "Quarantine",
+                                                       "Subglossal",
+                                                       "Subglottis",
+                                                       "Sublingual",
+                                                       "Supraglottis",
+                                                       "Syndactylia",
+                                                       "Syndactyly",
+                                                       "Tachycardia",
+                                                       "Tetracycline",
+                                                       "Tonsillar",
+                                                       "Tonsillotome",
+                                                       "Trachea",
+                                                       "Unconscious",
+                                                       "Unilateral",
+                                                       "Venule",
+                                                       "Viral dysentery",
+                                                       "Vocal cord",
+                                                       "Vocal folds",
+                                                       "Windpipe"
                                                    ],
                                     "suffixes":  [
                                                      "-ac",
@@ -8811,7 +9085,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "-ide",
                                                      "-ium",
                                                      "-lexia",
-                                                     "-ome",
                                                      "-ose",
                                                      "-ous",
                                                      "-tic",
