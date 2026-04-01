@@ -2362,7 +2362,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                  "src":  "question-images/abduction-1.png"
                                                              },
                                                              {
-                                                                 "source":  "Pasted image 20260331143732.png",
+                                                                 "source":  "Pasted image 20260331143846.png",
                                                                  "type":  "question-mark",
                                                                  "src":  "question-images/abduction-2.png"
                                                              }
@@ -7563,7 +7563,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                  "src":  "question-images/adduction-1.png"
                                                              },
                                                              {
-                                                                 "source":  "Pasted image 20260331143846.png",
+                                                                 "source":  "Pasted image 20260331143732.png",
                                                                  "type":  "question-mark",
                                                                  "src":  "question-images/adduction-2.png"
                                                              }
@@ -8572,7 +8572,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
     "missingEntries":  [
 
                        ],
-    "generatedAt":  "2026-04-01 14:56:13",
+    "generatedAt":  "2026-04-01 22:09:48",
     "weeks":  [
                   {
                       "title":  "1주차 - 용어의 구성",
