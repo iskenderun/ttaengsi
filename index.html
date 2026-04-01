@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>의학영어 땡시</title>
-  <link rel="stylesheet" href="./styles.css?v=20260401-5">
+  <link rel="stylesheet" href="./styles.css?v=20260401-8">
 </head>
 <body>
   <main class="app-shell">
@@ -23,7 +23,7 @@
       </div>
 
       <div class="grid">
-        <label class="field" data-help-key="range-mode">
+        <label class="field">
           <span>학습 방식</span>
           <select id="range-mode-select">
             <option value="cumulative" selected>누적 범위</option>
@@ -32,12 +32,12 @@
           </select>
         </label>
 
-        <label id="week-select-field" class="field" data-help-key="week-select">
+        <label id="week-select-field" class="field">
           <span>주차 선택</span>
           <select id="week-select"></select>
         </label>
 
-        <label class="field" data-help-key="question-count">
+        <label class="field">
           <span>문제 수</span>
           <select id="question-count">
             <option value="10">10문제</option>
@@ -63,7 +63,7 @@
       </label>
 
       <div class="mode-groups">
-        <fieldset class="mode-group" data-help-key="vocabulary-mode">
+        <fieldset class="mode-group">
           <legend>어휘</legend>
           <label class="checkbox">
             <input type="checkbox" value="vocabulary:korean" checked>
@@ -75,7 +75,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="mode-group" data-help-key="root-mode">
+        <fieldset class="mode-group">
           <legend>어근</legend>
           <label class="checkbox">
             <input type="checkbox" value="root:gloss" checked>
@@ -87,7 +87,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="mode-group" data-help-key="suffix-mode">
+        <fieldset class="mode-group">
           <legend>접미어</legend>
           <label class="checkbox">
             <input type="checkbox" value="suffix:gloss" checked>
@@ -99,7 +99,7 @@
           </label>
         </fieldset>
 
-        <fieldset class="mode-group" data-help-key="prefix-mode">
+        <fieldset class="mode-group">
           <legend>접두어</legend>
           <label class="checkbox">
             <input type="checkbox" value="prefix:gloss" checked>
@@ -113,11 +113,11 @@
       </div>
 
       <div class="bottom-toggles">
-        <label class="checkbox inline-checkbox" data-help-key="layout-mode">
+        <label class="checkbox inline-checkbox">
           <input id="layout-mode-checkbox" type="checkbox">
           <span>실전 레이아웃으로 시작</span>
         </label>
-        <label class="checkbox inline-checkbox" data-help-key="combining-vowel">
+        <label class="checkbox inline-checkbox">
           <input id="root-allow-combining-vowel" type="checkbox">
           <span>결합모음 포함형도 정답으로 인정</span>
         </label>
@@ -274,7 +274,7 @@
     </section>
   </main>
 
-  <script src="./quiz-data.js?v=20260401-5"></script>
-  <script src="./app.js?v=20260401-5"></script>
+  <script src="./quiz-data.js?v=20260401-8"></script>
+  <script src="./app.js?v=20260401-8"></script>
 </body>
 </html>

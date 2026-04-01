@@ -272,7 +272,6 @@
     updateRangeModeUI();
     updateQuestionCountUI();
     renderDataSummary();
-    attachHelpButtons();
     syncViewState();
     rangeModeSelect.addEventListener("change", handleRangeModeChange);
     weekSelect.addEventListener("change", () => {
@@ -344,10 +343,6 @@
         closeHelpModal();
       }
     });
-  }
-
-  function attachHelpButtons() {
-    return;
   }
 
   function openHelpModal(key) {
@@ -1912,18 +1907,34 @@
     }
 
     state.missed.forEach((item, index) => {
-      const promptLines = item.question.prompt.blocks
-        .map((block) => block.type === "image"
-          ? `${block.label}: 이미지가 제시되었습니다.`
-          : `${block.label}: ${cleanupDisplay(block.value)}`)
-        .join("<br>");
+      const promptBlocks = item.question.prompt.blocks
+        .map((block) => {
+          if (block.type === "image") {
+            return `
+              <section class="missed-block missed-block-image">
+                <span class="missed-label">${cleanupDisplay(block.label)}</span>
+                <div class="missed-image-frame">
+                  <img class="missed-image" src="${block.src}" alt="${cleanupDisplay(block.alt || "문제 이미지")}">
+                </div>
+              </section>
+            `;
+          }
+
+          return `
+            <section class="missed-block">
+              <span class="missed-label">${cleanupDisplay(block.label)}</span>
+              <div class="missed-value">${cleanupDisplay(block.value)}</div>
+            </section>
+          `;
+        })
+        .join("");
 
       const card = document.createElement("article");
       card.className = "missed-card";
       card.innerHTML = `
         <h3>${index + 1}. ${CATEGORY_LABELS[item.question.category]} · ${MODE_LABELS[item.question.mode]}</h3>
         <p>문제: ${item.question.prompt.title}</p>
-        <p>${promptLines}</p>
+        <div class="missed-prompt">${promptBlocks}</div>
         <p>정답: ${item.question.displayAnswer}</p>
         <p>내 답: ${cleanupDisplay(item.userInput)}</p>
       `;

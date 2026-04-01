@@ -254,13 +254,6 @@ body.view-result:not(.quiz-layout-exam) .missed-list {
   font-weight: 700;
 }
 
-.label-with-help {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
 .help-trigger {
   display: inline-flex;
   align-items: center;
@@ -553,8 +546,8 @@ button:disabled {
 
 .question-image-frame {
   display: inline-flex;
-  max-width: min(100%, 560px);
-  padding: 10px;
+  max-width: min(100%, 420px);
+  padding: 8px;
   border: 1px solid rgba(97, 71, 46, 0.18);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.82);
@@ -563,7 +556,7 @@ button:disabled {
 .question-image {
   display: block;
   max-width: 100%;
-  max-height: 420px;
+  max-height: 260px;
   object-fit: contain;
 }
 
@@ -798,6 +791,55 @@ button:disabled {
   line-height: 1.6;
 }
 
+.missed-prompt {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.missed-block {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 247, 233, 0.72);
+}
+
+.missed-block-image {
+  background: transparent;
+  padding: 0;
+}
+
+.missed-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.missed-value {
+  line-height: 1.65;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.missed-image-frame {
+  display: inline-flex;
+  max-width: min(100%, 360px);
+  padding: 8px;
+  border: 1px solid rgba(97, 71, 46, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.missed-image {
+  display: block;
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
 .hidden {
   display: none;
 }
@@ -970,15 +1012,15 @@ body.quiz-layout-exam .question-value {
 }
 
 body.quiz-layout-exam .question-image-frame {
-  max-width: min(100%, 430px);
-  padding: 6px;
+  max-width: min(100%, 340px);
+  padding: 4px;
   border-radius: 0;
   border: 1px solid #b8ad88;
   background: #fffdf2;
 }
 
 body.quiz-layout-exam .question-image {
-  max-height: 300px;
+  max-height: 220px;
 }
 
 body.quiz-layout-exam .answer-field {

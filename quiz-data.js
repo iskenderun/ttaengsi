@@ -5288,20 +5288,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "lact(o)",
                                     "korean":  "젖"
                                 },
-                    "somni(o)":  {
-                                     "english":  "Sleep",
-                                     "answer":  "somni",
-                                     "source":  "somni(o).md",
-                                     "answers":  [
-                                                     "somni",
-                                                     "somnio",
-                                                     "somni/o",
-                                                     "somni(o)"
-                                                 ],
-                                     "type":  "root",
-                                     "term":  "somni(o)",
-                                     "korean":  "수면"
-                                 },
                     "-phagia":  {
                                     "english":  "Swallowing, eating",
                                     "answer":  "phagia",
@@ -7303,6 +7289,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           "hematopoiesis"
                                                       ]
                                       },
+                    "somn(i)":  {
+                                    "english":  "Sleep",
+                                    "answer":  "somn",
+                                    "source":  "somn(i).md",
+                                    "answers":  [
+                                                    "somn",
+                                                    "somni",
+                                                    "somn/i",
+                                                    "somn(i)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "somn(i)",
+                                    "korean":  "수면"
+                                },
                     "rhinorrhea":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -8455,7 +8455,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                          "-ia"
                                                                      ],
                                                         "roots":  [
-                                                                      "somni(o)"
+                                                                      "somn(i)"
                                                                   ]
                                                     },
                                      "english":  "Prolonged and usually abnormal inability to get enough sleep",
@@ -8572,7 +8572,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
     "missingEntries":  [
 
                        ],
-    "generatedAt":  "2026-04-01 22:09:48",
+    "generatedAt":  "2026-04-01 22:30:20",
     "weeks":  [
                   {
                       "title":  "1주차 - 용어의 구성",
@@ -9106,7 +9106,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "pharmac(o)",
                                                   "pharyng(o)",
                                                   "sept(o)",
-                                                  "somni(o)"
+                                                  "somn(i)"
                                               ]
                                 }
                   }
