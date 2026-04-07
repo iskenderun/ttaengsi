@@ -20,8 +20,8 @@
   };
 
   const MODE_LABELS = {
-    korean: "한국어 뜻풀이",
-    definition: "영어 뜻풀이",
+    korean: "한국어 대응어",
+    definition: "영어 설명",
     image: "이미지",
     gloss: "영어 설명",
     cloze: "빈칸"
@@ -62,7 +62,7 @@
     "vocabulary-mode": {
       title: "어휘 문제",
       blocks: [
-        { label: "텍스트형", value: "한국어 대응어 또는 영어 뜻풀이를 보고 영어 어휘를 맞히는 문제입니다." },
+        { label: "텍스트형", value: "한국어 대응어 또는 영어 설명을 보고 영어 어휘를 맞히는 문제입니다." },
         { label: "이미지형", value: "이미지를 보고 관련 영어 어휘를 맞히는 문제입니다." },
         { label: "문제 구성", value: "어휘 텍스트형과 이미지형은 같은 세션에서 함께 섞여 출제될 수 있습니다." }
       ]
@@ -1184,8 +1184,8 @@
   function buildMorphologyGlossPrompt(entry) {
     const constraint = GLOSS_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
     const title = constraint
-      ? `${CATEGORY_LABELS[entry.type]}의 영어 설명을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오. 조건: ${constraint}`
-      : `${CATEGORY_LABELS[entry.type]}의 영어 설명을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오.`;
+      ? `영어 설명을 보고 ${CATEGORY_LABELS[entry.type]}를 쓰시오. 조건: ${constraint}`
+      : `영어 설명을 보고 ${CATEGORY_LABELS[entry.type]}를 쓰시오.`;
 
     return {
       title,
@@ -1198,8 +1198,8 @@
   function buildVocabularyPrompt(entry) {
     const constraint = VOCAB_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
     const title = constraint
-      ? `제시된 뜻풀이를 보고 해당 영어 어휘를 쓰시오. 조건: ${constraint}`
-      : "제시된 뜻풀이를 보고 해당 영어 어휘를 쓰시오.";
+      ? `뜻풀이를 보고 영어 어휘를 쓰시오. 조건: ${constraint}`
+      : "뜻풀이를 보고 영어 어휘를 쓰시오.";
     const choices = [];
 
     if (entry.korean) {
@@ -1208,7 +1208,7 @@
         prompt: {
           title,
           blocks: [
-            { label: "\uD55C\uAD6D\uC5B4", value: entry.korean }
+            { label: "한국어 대응어", value: entry.korean }
           ]
         }
       });
@@ -1220,7 +1220,7 @@
         prompt: {
           title,
           blocks: [
-            { label: "\uC601\uC5B4 \uB73B\uD480\uC774", value: entry.english }
+            { label: "영어 설명", value: entry.english }
           ]
         }
       });
@@ -1392,20 +1392,19 @@
     }
 
     const chosen = candidates[Math.floor(Math.random() * candidates.length)];
-    const blocks = [
-      buildMeaningBlock(chosen),
-      { label: "\uBE48\uCE78", value: chosen.masked }
-    ];
     const vocabConstraint = entry.type === "suffix"
       ? ""
       : VOCAB_PROMPT_CONSTRAINTS[(chosen.word || "").toLowerCase()];
     const title = vocabConstraint
-      ? `${CATEGORY_LABELS[entry.type]}가 들어간 전체 어휘의 빈칸을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오. 조건: ${vocabConstraint}`
-      : `${CATEGORY_LABELS[entry.type]}가 들어간 전체 어휘의 빈칸을 보고 해당 ${CATEGORY_LABELS[entry.type]}를 쓰시오.`;
+      ? `전체 어휘의 빈칸을 보고 ${CATEGORY_LABELS[entry.type]}를 쓰시오. 조건: ${vocabConstraint}`
+      : `전체 어휘의 빈칸을 보고 ${CATEGORY_LABELS[entry.type]}를 쓰시오.`;
 
     return {
       title,
-      blocks,
+      blocks: [
+        buildMeaningBlock(chosen),
+        { label: "\uBE48\uCE78", value: chosen.masked }
+      ],
       word: chosen.word
     };
   }
@@ -1922,34 +1921,11 @@
     }
 
     state.missed.forEach((item, index) => {
-      const promptBlocks = item.question.prompt.blocks
-        .map((block) => {
-          if (block.type === "image") {
-            return `
-              <section class="missed-block missed-block-image">
-                <span class="missed-label">${cleanupDisplay(block.label)}</span>
-                <div class="missed-image-frame">
-                  <img class="missed-image" src="${block.src}" alt="${cleanupDisplay(block.alt || "문제 이미지")}">
-                </div>
-              </section>
-            `;
-          }
-
-          return `
-            <section class="missed-block">
-              <span class="missed-label">${cleanupDisplay(block.label)}</span>
-              <div class="missed-value">${cleanupDisplay(block.value)}</div>
-            </section>
-          `;
-        })
-        .join("");
-
       const card = document.createElement("article");
       card.className = "missed-card";
       card.innerHTML = `
         <h3>${index + 1}. ${CATEGORY_LABELS[item.question.category]} · ${MODE_LABELS[item.question.mode]}</h3>
         <p>문제: ${item.question.prompt.title}</p>
-        <div class="missed-prompt">${promptBlocks}</div>
         <p>정답: ${item.question.displayAnswer}</p>
         <p>내 답: ${cleanupDisplay(item.userInput)}</p>
       `;
