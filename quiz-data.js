@@ -755,20 +755,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "arteriole"
                                                   ]
                                   },
-                    "sphincter(o)":  {
-                                         "english":  "Annular muscle that closes a bodily opening",
-                                         "answer":  "sphincter",
-                                         "source":  "sphincter(o).md",
-                                         "answers":  [
-                                                         "sphincter",
-                                                         "sphinctero",
-                                                         "sphincter/o",
-                                                         "sphincter(o)"
-                                                     ],
-                                         "type":  "root",
-                                         "term":  "sphincter(o)",
-                                         "korean":  "괄약근"
-                                     },
                     "neuralgia":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -1261,28 +1247,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "bacilli"
                                                 ]
                                 },
-                    "tachycardia":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "tachy-"
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-cardia"
-                                                                        ],
-                                                           "roots":  [
-
-                                                                     ]
-                                                       },
-                                        "english":  "Relatively rapid heart action",
-                                        "answer":  "tachycardia",
-                                        "term":  "Tachycardia",
-                                        "type":  "vocabulary",
-                                        "source":  "Tachycardia.md",
-                                        "korean":  "빈맥, 빠른 맥",
-                                        "answers":  [
-                                                        "tachycardia"
-                                                    ]
-                                    },
                     "atrophy":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -6048,17 +6012,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "Paralysis",
                                       "korean":  "마비"
                                   },
-                    "small bowel enema":  {
-                                              "english":  "Radiographic examination of the small intestine after infusion of contrast medium",
-                                              "answer":  "small bowel enema",
-                                              "source":  "Small bowel enema.md",
-                                              "answers":  [
-                                                              "small bowel enema"
-                                                          ],
-                                              "type":  "vocabulary",
-                                              "term":  "Small bowel enema",
-                                              "korean":  "작은 창자 관장"
-                                          },
+                    "tachycardia":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+                                                                            "tachy-"
+                                                                        ],
+                                                           "suffixes":  [
+                                                                            "-cardia"
+                                                                        ],
+                                                           "roots":  [
+
+                                                                     ]
+                                                       },
+                                        "english":  "Relatively rapid heart action",
+                                        "answer":  "tachycardia",
+                                        "term":  "Tachycardia",
+                                        "type":  "vocabulary",
+                                        "source":  "Tachycardia.md",
+                                        "korean":  "빈맥, 빠른 맥",
+                                        "answers":  [
+                                                        "tachycardia"
+                                                    ]
+                                    },
                     "-ist":  {
                                  "english":  "One who practices, specializes in, or is concerned with",
                                  "answer":  "ist",
@@ -6735,6 +6710,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-scopy",
                                    "korean":  "-경술"
                                },
+                    "sphincter":  {
+                                      "english":  "Annular muscle that closes a bodily opening",
+                                      "answer":  "sphincter",
+                                      "source":  "sphincter.md",
+                                      "answers":  [
+                                                      "sphincter"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "sphincter",
+                                      "korean":  "괄약근"
+                                  },
                     "-phobia":  {
                                     "english":  "Fear",
                                     "answer":  "phobia",
@@ -7414,7 +7400,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                               ],
                                                                  "roots":  [
                                                                                "Pylor(o)",
-                                                                               "Sphincter(o)"
+                                                                               "Sphincter"
                                                                            ]
                                                              },
                                               "english":  "The circular fold of mucous membrane containing a ring of circularly disposed muscle fibers that closes the pylorus",
@@ -11309,7 +11295,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
     "missingEntries":  [
 
                        ],
-    "generatedAt":  "2026-04-07 13:44:56",
+    "generatedAt":  "2026-04-07 14:11:56",
     "weeks":  [
                   {
                       "title":  "1주차 - 용어의 구성",
@@ -11632,7 +11618,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "Pyloric sphincter",
                                                        "Pyloric stenosis",
                                                        "Pylorospasm",
-                                                       "Small bowel enema",
                                                        "Spasmodic",
                                                        "Splenorrhexis",
                                                        "Stenosis",
@@ -11689,7 +11674,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "pylor(o)",
                                                   "scler(o)",
                                                   "splen(o)",
-                                                  "sphincter(o)",
+                                                  "sphincter",
                                                   "spasm(o)",
                                                   "sten(o)",
                                                   "stom(a)",

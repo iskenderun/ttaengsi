@@ -210,6 +210,24 @@
     }
   });
 
+  const MULTIWORD_VOCAB_RULES = Object.freeze({
+    "acquired immunodeficiency syndrome": Object.freeze({ mode: "whole" }),
+    "autonomic nervous system": Object.freeze({ mode: "whole" }),
+    "central nervous system": Object.freeze({ mode: "whole" }),
+    "peripheral nervous system": Object.freeze({ mode: "whole" }),
+    "nasal cavity": Object.freeze({ mode: "whole" }),
+    "oral cavity": Object.freeze({ mode: "whole" }),
+    "substantia nigra": Object.freeze({ mode: "whole" }),
+    "cerebellar hemisphere": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "cerebral hemisphere": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "muscular atrophy": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "paranasal sinus": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "venous stasis": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "pyloric sphincter": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "pyloric stenosis": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "precancerous lesion": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) })
+  });
+
   const state = {
     questions: [],
     currentIndex: 0,
@@ -796,7 +814,7 @@
       }
 
       if (selectedModeSet.has("vocabulary:korean")) {
-        const promptInfo = buildVocabularyPrompt(entry);
+        const promptInfo = buildVocabularyQuestionConfig(entry, allowCombiningVowel);
 
         questions.push(createQuestion({
           id: `vocabulary:korean:${entry.term}`,
@@ -805,9 +823,9 @@
           mode: promptInfo.mode,
           term: entry.term,
           prompt: promptInfo.prompt,
-          answer: entry.answer,
-          acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
-          displayAnswer: entry.term
+          answer: promptInfo.answer,
+          acceptedAnswers: promptInfo.acceptedAnswers,
+          displayAnswer: promptInfo.displayAnswer
         }));
       }
 
@@ -1195,6 +1213,22 @@
     };
   }
 
+  function buildVocabularyQuestionConfig(entry, allowCombiningVowel) {
+    const clozeConfig = buildVocabularyMultiwordClozeConfig(entry);
+    if (clozeConfig) {
+      return clozeConfig;
+    }
+
+    const promptInfo = buildVocabularyPrompt(entry);
+    return {
+      mode: promptInfo.mode,
+      prompt: promptInfo.prompt,
+      answer: entry.answer,
+      acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
+      displayAnswer: entry.term
+    };
+  }
+
   function buildVocabularyPrompt(entry) {
     const constraint = VOCAB_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
     const title = constraint
@@ -1227,6 +1261,54 @@
     }
 
     return choices[Math.floor(Math.random() * choices.length)];
+  }
+
+  function buildVocabularyMultiwordClozeConfig(entry) {
+    const words = entry.term.split(" ");
+    if (words.length < 2) {
+      return null;
+    }
+
+    const rule = MULTIWORD_VOCAB_RULES[entry.term.toLowerCase()];
+    if (rule && rule.mode === "whole") {
+      return null;
+    }
+
+    const blankWordIndexes = Array.isArray(rule?.blankWordIndexes) && rule.blankWordIndexes.length > 0
+      ? rule.blankWordIndexes
+      : [0];
+    const candidates = blankWordIndexes
+      .filter((index) => Number.isInteger(index) && index >= 0 && index < words.length)
+      .map((index) => {
+        const answerWord = words[index];
+        return {
+          index,
+          answerWord,
+          masked: words.map((word, wordIndex) => wordIndex === index ? "______" : word).join(" ")
+        };
+      });
+
+    if (candidates.length === 0) {
+      return null;
+    }
+
+    const chosen = candidates[Math.floor(Math.random() * candidates.length)];
+    const constraint = VOCAB_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
+    const title = constraint
+      ? `뜻풀이를 보고 빈칸에 들어갈 영어 어휘를 쓰시오. 조건: ${constraint}`
+      : "뜻풀이를 보고 빈칸에 들어갈 영어 어휘를 쓰시오.";
+    const blocks = [
+      buildMeaningBlock(entry),
+      { label: "빈칸", value: chosen.masked }
+    ];
+
+    return {
+      mode: "korean",
+      prompt: { title, blocks },
+      answer: chosen.answerWord.toLowerCase(),
+      acceptedAnswers: [normalizeAnswer(chosen.answerWord)],
+      displayAnswer: chosen.answerWord
+    };
   }
 
   function buildVocabularyImagePrompt(entry, imageInfo) {
@@ -1289,7 +1371,7 @@
 
     if (entryLike.korean) {
       choices.push({
-        label: "\uD55C\uAD6D\uC5B4",
+        label: "한국어 대응어",
         value: entryLike.korean,
         small: true
       });
@@ -1297,7 +1379,7 @@
 
     if (hasUsableEnglishClue(entryLike)) {
       choices.push({
-        label: "\uC601\uC5B4 \uB73B\uD480\uC774",
+        label: "영어 설명",
         value: entryLike.english,
         small: true
       });
