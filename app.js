@@ -1136,7 +1136,7 @@
     }
 
     const parts = [];
-    [entry.morphology.prefixes, entry.morphology.roots, entry.morphology.suffixes].forEach((bucket) => {
+    [entry.morphology.prefixes, entry.morphology.vocabulary, entry.morphology.roots, entry.morphology.suffixes].forEach((bucket) => {
       (bucket || []).forEach((part) => {
         const cleaned = cleanupDisplay(part).toLowerCase();
         if (cleaned) {

@@ -4,7 +4,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "morphology":  {
                                                          "prefixes":  [
                                                                           "peri-"
-                                                                      ]
+                                                                      ],
+                                                         "vocabulary":  [
+                                                                            "Natal"
+                                                                        ]
                                                      },
                                       "english":  "Occurring in the period shortly before, during, or after birth",
                                       "answer":  "perinatal",
@@ -487,6 +490,9 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                },
                     "cerebral hemisphere":  {
                                                 "morphology":  {
+                                                                   "prefixes":  [
+                                                                                    "hemi-"
+                                                                                ],
                                                                    "suffixes":  [
                                                                                     "-al"
                                                                                 ],
@@ -1135,7 +1141,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "morphology":  {
                                                         "prefixes":  [
                                                                          "pre-"
-                                                                     ]
+                                                                     ],
+                                                        "vocabulary":  [
+                                                                           "Natal"
+                                                                       ]
                                                     },
                                      "english":  "Occurring or existing before birth",
                                      "answer":  "prenatal",
@@ -1783,15 +1792,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                  ]
                                  },
                     "pandemic":  {
+                                     "morphology":  {
+                                                        "prefixes":  [
+                                                                         "pan-"
+                                                                     ],
+                                                        "suffixes":  [
+
+                                                                     ],
+                                                        "roots":  [
+
+                                                                  ]
+                                                    },
                                      "english":  "Occurring over a wide geographic area and affecting an exceptionally high proportion of the population",
                                      "answer":  "pandemic",
+                                     "term":  "Pandemic",
+                                     "type":  "vocabulary",
                                      "source":  "Pandemic.md",
+                                     "korean":  "범유행, 세계적 유행",
                                      "answers":  [
                                                      "pandemic"
-                                                 ],
-                                     "type":  "vocabulary",
-                                     "term":  "Pandemic",
-                                     "korean":  "범유행, 세계적 유행"
+                                                 ]
                                  },
                     "hepatoma":  {
                                      "morphology":  {
@@ -2106,7 +2126,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "morphology":  {
                                                          "prefixes":  [
                                                                           "post-"
-                                                                      ]
+                                                                      ],
+                                                         "vocabulary":  [
+                                                                            "Natal"
+                                                                        ]
                                                      },
                                       "english":  "Occurring or existing after birth",
                                       "answer":  "postnatal",
@@ -2587,7 +2610,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      },
                     "parenteral administration":  {
                                                       "morphology":  {
-
+                                                                         "prefixes":  [
+                                                                                          "para-"
+                                                                                      ],
+                                                                         "suffixes":  [
+                                                                                          "-al"
+                                                                                      ],
+                                                                         "roots":  [
+                                                                                       "Enter(o)"
+                                                                                   ]
                                                                      },
                                                       "english":  "Administration by a route other than the alimentary canal",
                                                       "answer":  "parenteral administration",
@@ -2656,7 +2687,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                               },
                     "paranasal sinus":  {
                                             "morphology":  {
-
+                                                               "prefixes":  [
+                                                                                "para-"
+                                                                            ],
+                                                               "suffixes":  [
+                                                                                "-al"
+                                                                            ],
+                                                               "roots":  [
+                                                                             "nas(o)"
+                                                                         ]
                                                            },
                                             "english":  "One of the air-filled cavities adjacent to the nasal cavity",
                                             "answer":  "paranasal sinus",
@@ -3231,7 +3270,16 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "morphology":  {
                                                            "prefixes":  [
                                                                             "super-"
-                                                                        ]
+                                                                        ],
+                                                           "vocabulary":  [
+                                                                              "Natant"
+                                                                          ],
+                                                           "suffixes":  [
+
+                                                                        ],
+                                                           "roots":  [
+
+                                                                     ]
                                                        },
                                         "english":  "The usually clear fluid above a sediment or precipitate",
                                         "answer":  "supernatant",
@@ -3480,7 +3528,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "morphology":  {
                                                            "prefixes":  [
                                                                             "intra-"
-                                                                        ]
+                                                                        ],
+                                                           "vocabulary":  [
+                                                                              "Venous"
+                                                                          ]
                                                        },
                                         "english":  "Situated, performed, or occurring within a vein",
                                         "answer":  "intravenous",
@@ -4134,7 +4185,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                          "morphology":  {
                                                             "prefixes":  [
                                                                              "infra-"
-                                                                         ]
+                                                                         ],
+                                                            "vocabulary":  [
+                                                                               "Orbital"
+                                                                           ]
                                                         },
                                          "english":  "Situated below the orbit of the eye",
                                          "answer":  "infraorbital",
@@ -5308,7 +5362,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                },
                     "intradermal injection":  {
                                                   "morphology":  {
-
+                                                                     "prefixes":  [
+                                                                                      "intra-"
+                                                                                  ],
+                                                                     "suffixes":  [
+                                                                                      "-al"
+                                                                                  ],
+                                                                     "roots":  [
+                                                                                   "Derm(o)"
+                                                                               ]
                                                                  },
                                                   "english":  "Injection into the skin",
                                                   "answer":  "intradermal injection",
@@ -5527,7 +5589,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "morphology":  {
                                                         "prefixes":  [
                                                                          "sub-"
-                                                                     ]
+                                                                     ],
+                                                        "vocabulary":  [
+                                                                           "Acute"
+                                                                       ]
                                                     },
                                      "english":  "Falling between acute and chronic in character especially when closer to acute",
                                      "answer":  "subacute",
@@ -5758,7 +5823,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  },
                     "intravenous injection":  {
                                                   "morphology":  {
+                                                                     "prefixes":  [
+                                                                                      "intra-"
+                                                                                  ],
+                                                                     "suffixes":  [
 
+                                                                                  ],
+                                                                     "roots":  [
+
+                                                                               ]
                                                                  },
                                                   "english":  "Injection into a vein",
                                                   "answer":  "intravenous injection",
@@ -5967,7 +6040,12 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    },
                     "melanin pigments":  {
                                              "morphology":  {
-
+                                                                "suffixes":  [
+                                                                                 "-in"
+                                                                             ],
+                                                                "roots":  [
+                                                                              "melan(o)"
+                                                                          ]
                                                             },
                                              "english":  "Dark biological pigments occurring in the skin, hair, feathers, scales, eyes, and some internal membranes",
                                              "answer":  "melanin pigments",
@@ -6601,7 +6679,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "morphology":  {
                                                            "prefixes":  [
                                                                             "hemi-"
-                                                                        ]
+                                                                        ],
+                                                           "vocabulary":  [
+                                                                              "Paresis"
+                                                                          ]
                                                        },
                                         "english":  "Weakness or partial paralysis affecting one side of the body",
                                         "answer":  "hemiparesis",
@@ -6670,7 +6751,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                          "morphology":  {
                                                             "prefixes":  [
                                                                              "pseudo-"
-                                                                         ]
+                                                                         ],
+                                                            "vocabulary":  [
+                                                                               "Cyesis"
+                                                                           ]
                                                         },
                                          "english":  "False belief of being pregnant accompanied by objective signs or reported symptoms of pregnancy",
                                          "answer":  "pseudocyesis",
@@ -7071,6 +7155,9 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                              "morphology":  {
                                                                 "prefixes":  [
                                                                                  "pseudo-"
+                                                                             ],
+                                                                "suffixes":  [
+                                                                                 "-ous"
                                                                              ]
                                                             },
                                              "english":  "Relating to or resembling a false membrane",
@@ -7205,6 +7292,12 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      },
                     "cerebellar hemisphere":  {
                                                   "morphology":  {
+                                                                     "prefixes":  [
+                                                                                      "hemi-"
+                                                                                  ],
+                                                                     "suffixes":  [
+
+                                                                                  ],
                                                                      "roots":  [
                                                                                    "cerebell(o)"
                                                                                ]
@@ -8379,7 +8472,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "morphology":  {
                                                            "prefixes":  [
                                                                             "para-"
-                                                                        ]
+                                                                        ],
+                                                           "vocabulary":  [
+                                                                              "Thyroid"
+                                                                          ]
                                                        },
                                         "english":  "Situated beside the thyroid gland",
                                         "answer":  "parathyroid",
@@ -8513,7 +8609,16 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  },
                     "polymorphonuclear leukocyte":  {
                                                         "morphology":  {
-
+                                                                           "prefixes":  [
+                                                                                            "poly-"
+                                                                                        ],
+                                                                           "suffixes":  [
+                                                                                            "-cyte"
+                                                                                        ],
+                                                                           "roots":  [
+                                                                                         "Morph(o)",
+                                                                                         "Leuk(o)"
+                                                                                     ]
                                                                        },
                                                         "english":  "A white blood cell with a multilobed nucleus, especially a neutrophil",
                                                         "answer":  "polymorphonuclear leukocyte",
@@ -9292,7 +9397,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    },
                     "venous stasis":  {
                                           "morphology":  {
+                                                             "prefixes":  [
 
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-stasis"
+                                                                          ],
+                                                             "roots":  [
+
+                                                                       ]
                                                          },
                                           "english":  "A slowing or stoppage of the flow of venous blood",
                                           "answer":  "venous stasis",
@@ -9414,7 +9527,12 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                              },
                     "precancerous lesion":  {
                                                 "morphology":  {
-
+                                                                   "prefixes":  [
+                                                                                    "pre-"
+                                                                                ],
+                                                                   "vocabulary":  [
+                                                                                      "Lesion"
+                                                                                  ]
                                                                },
                                                 "english":  "A lesion likely to become malignant if left untreated",
                                                 "answer":  "precancerous lesion",
@@ -9962,7 +10080,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "morphology":  {
                                                          "prefixes":  [
                                                                           "para-"
-                                                                      ]
+                                                                      ],
+                                                         "vocabulary":  [
+                                                                            "Nasal"
+                                                                        ]
                                                      },
                                       "english":  "Situated beside or near the nose",
                                       "answer":  "paranasal",
@@ -10176,7 +10297,16 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "morphology":  {
                                                         "prefixes":  [
                                                                          "neo-"
-                                                                     ]
+                                                                     ],
+                                                        "vocabulary":  [
+                                                                           "Natal"
+                                                                       ],
+                                                        "suffixes":  [
+
+                                                                     ],
+                                                        "roots":  [
+
+                                                                  ]
                                                     },
                                      "english":  "Of or relating to the newborn infant",
                                      "answer":  "neonatal",
@@ -10890,6 +11020,9 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    },
                     "oral administration":  {
                                                 "morphology":  {
+                                                                   "prefixes":  [
+
+                                                                                ],
                                                                    "suffixes":  [
                                                                                     "-al"
                                                                                 ],
@@ -11048,7 +11181,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  },
                     "peroral administration":  {
                                                    "morphology":  {
-
+                                                                      "prefixes":  [
+                                                                                       "per-"
+                                                                                   ],
+                                                                      "suffixes":  [
+                                                                                       "-al"
+                                                                                   ],
+                                                                      "roots":  [
+                                                                                    "or(o)"
+                                                                                ]
                                                                   },
                                                    "english":  "Administration by way of the mouth",
                                                    "answer":  "peroral administration",
@@ -11172,7 +11313,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                          "morphology":  {
                                                             "prefixes":  [
                                                                              "supra-"
-                                                                         ]
+                                                                         ],
+                                                            "vocabulary":  [
+                                                                               "Orbital"
+                                                                           ]
                                                         },
                                          "english":  "Situated above the orbit of the eye",
                                          "answer":  "supraorbital",
@@ -11295,7 +11439,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
     "missingEntries":  [
 
                        ],
-    "generatedAt":  "2026-04-07 14:11:56",
+    "generatedAt":  "2026-04-07 20:27:27",
     "weeks":  [
                   {
                       "title":  "1주차 - 용어의 구성",
@@ -11619,6 +11763,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "Pyloric stenosis",
                                                        "Pylorospasm",
                                                        "Spasmodic",
+                                                       "Sphincter",
                                                        "Splenorrhexis",
                                                        "Stenosis",
                                                        "Stoma",
@@ -11674,7 +11819,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "pylor(o)",
                                                   "scler(o)",
                                                   "splen(o)",
-                                                  "sphincter",
                                                   "spasm(o)",
                                                   "sten(o)",
                                                   "stom(a)",
