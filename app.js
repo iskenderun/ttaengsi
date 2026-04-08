@@ -716,47 +716,52 @@
   }
 
   function startQuiz() {
-    const selectedModes = Array.from(document.querySelectorAll(".mode-groups input[type=\"checkbox\"]:checked"))
-      .map((element) => element.value);
-    const scopeConfig = getScopeConfig(true);
-    const allowCombiningVowel = rootAllowCombiningVowelCheckbox.checked;
+    try {
+      const selectedModes = Array.from(document.querySelectorAll(".mode-groups input[type=\"checkbox\"]:checked"))
+        .map((element) => element.value);
+      const scopeConfig = getScopeConfig(true);
+      const allowCombiningVowel = rootAllowCombiningVowelCheckbox.checked;
 
-    if (!scopeConfig) {
-      return;
+      if (!scopeConfig) {
+        return;
+      }
+
+      if (selectedModes.length === 0) {
+        window.alert("최소 한 개 이상의 문제 형식을 선택해 주세요.");
+        return;
+      }
+
+      let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel);
+      if (questions.length === 0) {
+        window.alert("선택한 범위와 문제 형식으로 만들 수 있는 문제가 없습니다.");
+        return;
+      }
+
+      questions = shuffle(questions);
+      const questionLimit = getQuestionLimit(questions.length);
+      if (questionLimit === null) {
+        return;
+      }
+      questions = questions.slice(0, Math.min(questionLimit, questions.length));
+
+      state.questions = questions;
+      state.currentIndex = 0;
+      state.score = 0;
+      state.missed = [];
+      state.layoutMode = layoutModeCheckbox && layoutModeCheckbox.checked ? "exam" : "default";
+      scoreText.textContent = "0";
+
+      setupPanel.classList.add("hidden");
+      resultPanel.classList.add("hidden");
+      quizPanel.classList.remove("hidden");
+      applyLayoutMode();
+      syncViewState();
+
+      renderQuestion();
+    } catch (error) {
+      console.error("퀴즈 시작 실패", error);
+      window.alert("퀴즈를 시작하는 중 오류가 발생했습니다. 새로고침 후 다시 시도해 주세요.");
     }
-
-    if (selectedModes.length === 0) {
-      window.alert("최소 한 개 이상의 문제 형식을 선택해 주세요.");
-      return;
-    }
-
-    let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel);
-    if (questions.length === 0) {
-      window.alert("선택한 범위와 문제 형식으로 만들 수 있는 문제가 없습니다.");
-      return;
-    }
-
-    questions = shuffle(questions);
-    const questionLimit = getQuestionLimit(questions.length);
-    if (questionLimit === null) {
-      return;
-    }
-    questions = questions.slice(0, Math.min(questionLimit, questions.length));
-
-    state.questions = questions;
-    state.currentIndex = 0;
-    state.score = 0;
-    state.missed = [];
-    state.layoutMode = layoutModeCheckbox && layoutModeCheckbox.checked ? "exam" : "default";
-    scoreText.textContent = "0";
-
-    setupPanel.classList.add("hidden");
-    resultPanel.classList.add("hidden");
-    quizPanel.classList.remove("hidden");
-    applyLayoutMode();
-    syncViewState();
-
-    renderQuestion();
   }
 
   function openListView() {
@@ -814,35 +819,43 @@
       }
 
       if (selectedModeSet.has("vocabulary:korean")) {
-        const promptInfo = buildVocabularyQuestionConfig(entry, allowCombiningVowel);
+        try {
+          const promptInfo = buildVocabularyQuestionConfig(entry, allowCombiningVowel);
 
-        questions.push(createQuestion({
-          id: `vocabulary:korean:${entry.term}`,
-          week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
-          category: "vocabulary",
-          mode: promptInfo.mode,
-          term: entry.term,
-          prompt: promptInfo.prompt,
-          answer: promptInfo.answer,
-          acceptedAnswers: promptInfo.acceptedAnswers,
-          displayAnswer: promptInfo.displayAnswer
-        }));
+          questions.push(createQuestion({
+            id: `vocabulary:korean:${entry.term}`,
+            week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
+            category: "vocabulary",
+            mode: promptInfo.mode,
+            term: entry.term,
+            prompt: promptInfo.prompt,
+            answer: promptInfo.answer,
+            acceptedAnswers: promptInfo.acceptedAnswers,
+            displayAnswer: promptInfo.displayAnswer
+          }));
+        } catch (error) {
+          console.warn("어휘 텍스트형 문항 생성 실패", entry.term, error);
+        }
       }
 
       if (selectedModeSet.has("vocabulary:image") && Array.isArray(entry.imageQuestions)) {
         entry.imageQuestions.forEach((imageInfo, index) => {
-          const imageQuestionConfig = buildVocabularyImageQuestionConfig(entry, imageInfo, allowCombiningVowel);
-          questions.push(createQuestion({
-            id: `vocabulary:image:${entry.term}:${index}`,
-            week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
-            category: "vocabulary",
-            mode: "image",
-            term: entry.term,
-            prompt: imageQuestionConfig.prompt,
-            answer: imageQuestionConfig.answer,
-            acceptedAnswers: imageQuestionConfig.acceptedAnswers,
-            displayAnswer: imageQuestionConfig.displayAnswer
-          }));
+          try {
+            const imageQuestionConfig = buildVocabularyImageQuestionConfig(entry, imageInfo, allowCombiningVowel);
+            questions.push(createQuestion({
+              id: `vocabulary:image:${entry.term}:${index}`,
+              week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
+              category: "vocabulary",
+              mode: "image",
+              term: entry.term,
+              prompt: imageQuestionConfig.prompt,
+              answer: imageQuestionConfig.answer,
+              acceptedAnswers: imageQuestionConfig.acceptedAnswers,
+              displayAnswer: imageQuestionConfig.displayAnswer
+            }));
+          } catch (error) {
+            console.warn("어휘 이미지형 문항 생성 실패", entry.term, error);
+          }
         });
       }
     });
@@ -855,40 +868,48 @@
         }
 
         if (selectedModeSet.has(`${category}:gloss`) && entry.english && !isClozeOnlyTerm(entry)) {
-          const glossPrompt = buildMorphologyGlossPrompt(entry);
-          questions.push(createQuestion({
-            id: `${category}:gloss:${entry.term}`,
-            week: findIntroducedWeek(entry.term, CATEGORY_BUCKETS[category], scopeConfig),
-            category,
-            mode: "gloss",
-            term: entry.term,
-            prompt: glossPrompt,
-            answer: entry.answer,
-            acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
-            displayAnswer: entry.answer
-          }));
+          try {
+            const glossPrompt = buildMorphologyGlossPrompt(entry);
+            questions.push(createQuestion({
+              id: `${category}:gloss:${entry.term}`,
+              week: findIntroducedWeek(entry.term, CATEGORY_BUCKETS[category], scopeConfig),
+              category,
+              mode: "gloss",
+              term: entry.term,
+              prompt: glossPrompt,
+              answer: entry.answer,
+              acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
+              displayAnswer: entry.answer
+            }));
+          } catch (error) {
+            console.warn("형태소 영어 설명형 문항 생성 실패", entry.term, error);
+          }
         }
 
         if (selectedModeSet.has(`${category}:cloze`)) {
-          const cloze = buildClozePrompt(entry, morphologyVocabulary, scopeConfig, scopedTerms[CATEGORY_BUCKETS[category]], scopedTerms);
-          if (!cloze) {
-            return;
-          }
+          try {
+            const cloze = buildClozePrompt(entry, morphologyVocabulary, scopeConfig, scopedTerms[CATEGORY_BUCKETS[category]], scopedTerms);
+            if (!cloze) {
+              return;
+            }
 
-          questions.push(createQuestion({
-            id: `${category}:cloze:${entry.term}:${cloze.word}`,
-            week: findIntroducedWeek(entry.term, CATEGORY_BUCKETS[category], scopeConfig),
-            category,
-            mode: "cloze",
-            term: entry.term,
-            prompt: {
-              title: cloze.title,
-              blocks: cloze.blocks
-            },
-            answer: entry.answer,
-            acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
-            displayAnswer: entry.answer
-          }));
+            questions.push(createQuestion({
+              id: `${category}:cloze:${entry.term}:${cloze.word}`,
+              week: findIntroducedWeek(entry.term, CATEGORY_BUCKETS[category], scopeConfig),
+              category,
+              mode: "cloze",
+              term: entry.term,
+              prompt: {
+                title: cloze.title,
+                blocks: cloze.blocks
+              },
+              answer: entry.answer,
+              acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
+              displayAnswer: entry.answer
+            }));
+          } catch (error) {
+            console.warn("형태소 빈칸형 문항 생성 실패", entry.term, error);
+          }
         }
       });
     });
