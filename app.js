@@ -108,6 +108,7 @@
     "-a",
     "-ac",
     "-al",
+    "-ar",
     "-ation",
     "-ary",
     "-e",
@@ -148,15 +149,15 @@
     "lingu(o)": "정답에 알파벳 i를 포함하시오.",
     "con-": "정답에 알파벳 c를 포함하시오.",
     "syn-": "정답에 알파벳 s를 포함하시오.",
-    "anti-": "정답에 알파벳 c를 포함하지 마시오.",
-    "contra-": "정답에 알파벳 c를 포함하시오.",
-    "hypo-": "정답에 알파벳 y를 포함하시오.",
-    "infra-": "정답에 알파벳 f를 포함하시오.",
-    "intra-": "정답에 알파벳 t를 포함하시오.",
-    "endo-": "정답에 알파벳 d를 포함하시오.",
-    "sub-": "정답에 알파벳 s를 포함하시오.",
-    "-genic": "정답에 알파벳 c를 포함하시오.",
-    "-genous": "정답에 알파벳 u를 포함하시오.",
+    "anti-": "정답을 a로 시작하시오.",
+    "contra-": "정답을 c로 시작하시오.",
+    "hypo-": "정답을 h로 시작하시오.",
+    "infra-": "정답을 i로 시작하시오.",
+    "intra-": "정답을 i로 시작하시오.",
+    "endo-": "정답을 e로 시작하시오.",
+    "sub-": "정답을 s로 시작하시오.",
+    "-genic": "정답을 c로 끝내시오.",
+    "-genous": "정답을 s로 끝내시오.",
     "ecto-": "정답에 알파벳 c를 포함하시오.",
     "ex-": "정답에 알파벳 x를 포함하시오.",
     "hyper-": "정답에 알파벳 y를 포함하시오.",
@@ -165,6 +166,20 @@
     "ante-": "정답에 알파벳 n을 포함하시오.",
     "pre-": "정답에 연속 알파벳 re를 포함하시오.",
     "pro-": "정답에 알파벳 o를 포함하시오.",
+    "anter(o)": "정답에 알파벳 i를 포함하지 마시오.",
+    "anteri(o)": "정답에 알파벳 i를 포함하시오.",
+    "poster(o)": "정답을 r로 끝내시오.",
+    "posteri(o)": "정답을 i로 끝내시오.",
+    "infer(o)": "정답을 r로 끝내시오.",
+    "inferi(o)": "정답을 i로 끝내시오.",
+    "super(o)": "정답을 r로 끝내시오.",
+    "superi(o)": "정답을 i로 끝내시오.",
+    "exteri(o)": "정답을 i로 끝내시오.",
+    "extern(o)": "정답을 n으로 끝내시오.",
+    "interi(o)": "정답을 i로 끝내시오.",
+    "intern(o)": "정답을 n으로 끝내시오.",
+    "medi(o)": "정답에 알파벳 d를 포함하시오.",
+    "mesi(o)": "정답에 알파벳 s를 포함하시오.",
     "cellul(o)": "정답에 알파벳 u를 포함하시오.",
     "cyt(o)": "정답에 알파벳 y를 포함하시오.",
     "nas(o)": "정답에 알파벳 a를 포함하시오.",
@@ -172,7 +187,9 @@
     "hypn(o)": "정답에 알파벳 h를 포함하시오.",
     "somn(i)": "정답에 알파벳 s를 포함하시오.",
     "alb(o)": "정답에 알파벳 a를 포함하시오.",
-    "leuk(o)": "정답에 알파벳 e를 포함하시오."
+    "leuk(o)": "정답에 알파벳 e를 포함하시오.",
+    "abdomin(o)": "정답을 a로 시작하시오.",
+    "lapar(o)": "정답을 l로 시작하시오."
   });
   const VOCAB_PROMPT_CONSTRAINTS = Object.freeze({
     "hypodermic": "정답에 알파벳 h를 포함하시오.",
@@ -197,8 +214,14 @@
     "tetraplegia": "정답에 알파벳 t를 포함하시오.",
     "trachea": "정답에 알파벳 t를 포함하시오.",
     "windpipe": "정답에 알파벳 w를 포함하시오.",
-    "esophagus": "정답에 알파벳 s를 포함하시오.",
-    "gullet": "정답에 알파벳 g를 포함하시오."
+    "esophagus": "정답을 e로 시작하시오.",
+    "gullet": "정답을 g로 시작하시오.",
+    "frontal plane": "정답에 알파벳 f를 포함하시오.",
+    "coronal plane": "정답에 알파벳 c를 포함하시오.",
+    "transverse": "정답을 t로 시작하시오.",
+    "horizontal": "정답을 h로 시작하시오.",
+    "transverse plane": "정답을 t로 시작하시오.",
+    "horizontal plane": "정답을 h로 시작하시오."
   });
   const VOCAB_IMAGE_PROMPT_OVERRIDES = Object.freeze({
     electrocardiograph: {
@@ -225,6 +248,15 @@
     "nasal cavity": Object.freeze({ mode: "whole" }),
     "oral cavity": Object.freeze({ mode: "whole" }),
     "substantia nigra": Object.freeze({ mode: "whole" }),
+    "cerebrospinal fluid": Object.freeze({ mode: "whole" }),
+    "computed tomography": Object.freeze({ mode: "whole" }),
+    "otitis media": Object.freeze({ mode: "whole" }),
+    "stomach ulcer": Object.freeze({ mode: "whole" }),
+    "frontal plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "coronal plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "sagittal plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "transverse plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "horizontal plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
     "cerebellar hemisphere": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
     "cerebral hemisphere": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
     "muscular atrophy": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
@@ -232,7 +264,12 @@
     "venous stasis": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
     "pyloric sphincter": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
     "pyloric stenosis": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
-    "precancerous lesion": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) })
+    "precancerous lesion": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "inferior laryngeal nerve": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "posterior cerebral artery": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "distal phalanx": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "proximal phalanx": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "superior laryngeal nerve": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) })
   });
 
   const state = {
@@ -244,6 +281,7 @@
     advanceTimerId: null,
     locked: false,
     missed: [],
+    solvedQuestionIds: new Set(),
     selectedListTerm: null,
     layoutMode: "default",
     examAnswerDraft: ""
@@ -263,6 +301,7 @@
   const customQuestionCountInput = document.getElementById("custom-question-count");
   const rootAllowCombiningVowelCheckbox = document.getElementById("root-allow-combining-vowel");
   const layoutModeCheckbox = document.getElementById("layout-mode-checkbox");
+  const testModeCheckbox = document.getElementById("test-mode-checkbox");
   const listCategoryFilter = document.getElementById("list-category-filter");
   const dataSummary = document.getElementById("data-summary");
   const setupHelpButton = document.getElementById("setup-help-button");
@@ -738,11 +777,18 @@
         return;
       }
 
-      let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel);
-      if (questions.length === 0) {
-        window.alert("선택한 범위와 문제 형식으로 만들 수 있는 문제가 없습니다.");
-        return;
-      }
+        let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel);
+        if (testModeCheckbox && testModeCheckbox.checked) {
+          questions = questions.filter((question) => !state.solvedQuestionIds.has(question.id));
+        }
+        if (questions.length === 0) {
+          window.alert(
+            testModeCheckbox && testModeCheckbox.checked
+              ? "선택한 범위에서 새로 풀 문제가 없습니다. 새로고침하거나 테스트 모드를 해제해 주세요."
+              : "선택한 범위와 문제 형식으로 만들 수 있는 문제가 없습니다."
+          );
+          return;
+        }
 
       questions = shuffle(questions);
       const questionLimit = getQuestionLimit(questions.length);
@@ -1199,6 +1245,10 @@
   function getAcceptedAnswers(entry, allowCombiningVowel) {
     if (entry.type === "root" && !allowCombiningVowel) {
       return [entry.answer];
+    }
+
+    if (entry.type === "root" && /^(ventr\(i\)|ventr\(o\))$/i.test(entry.term)) {
+      return ["ventr", "ventri", "ventro", "ventr(i)", "ventr(o)"];
     }
 
     return entry.answers;
@@ -1959,6 +2009,7 @@
 
     if (isCorrect) {
       state.score += 1;
+      state.solvedQuestionIds.add(question.id);
       scoreText.textContent = String(state.score);
       if (!isExamLayout()) {
         feedback.className = "feedback ok";
