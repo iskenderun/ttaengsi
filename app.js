@@ -95,11 +95,11 @@
         { label: "적용 범위", value: "퀴즈를 시작한 뒤 문제 풀이 화면에만 적용됩니다." }
       ]
     },
-    "combining-vowel": {
-      title: "결합모음 정답 인정",
+    "study-modes": {
+      title: "학습/테스트 모드",
       blocks: [
-        { label: "기본값", value: "기본적으로는 결합모음을 제외한 어근 형태만 정답으로 처리합니다." },
-        { label: "체크 시", value: "예를 들어 gastr, gastro, gastr(o)처럼 결합모음 포함형도 정답으로 인정합니다." }
+        { label: "학습 모드", value: "정답 확인 뒤 다음 문제 버튼을 눌러야 넘어갑니다." },
+        { label: "테스트 모드", value: "새로고침 전까지 이미 맞힌 문제를 다음 출제에서 제외합니다." }
       ]
     }
   };
@@ -284,6 +284,7 @@
     solvedQuestionIds: new Set(),
     selectedListTerm: null,
     layoutMode: "default",
+    learningMode: false,
     examAnswerDraft: ""
   };
 
@@ -299,7 +300,7 @@
   const customWeekOptions = document.getElementById("custom-week-options");
   const customQuestionField = document.getElementById("custom-question-field");
   const customQuestionCountInput = document.getElementById("custom-question-count");
-  const rootAllowCombiningVowelCheckbox = document.getElementById("root-allow-combining-vowel");
+  const learningModeCheckbox = document.getElementById("learning-mode-checkbox");
   const layoutModeCheckbox = document.getElementById("layout-mode-checkbox");
   const testModeCheckbox = document.getElementById("test-mode-checkbox");
   const listCategoryFilter = document.getElementById("list-category-filter");
@@ -766,7 +767,7 @@
       const selectedModes = Array.from(document.querySelectorAll(".mode-groups input[type=\"checkbox\"]:checked"))
         .map((element) => element.value);
       const scopeConfig = getScopeConfig(true);
-      const allowCombiningVowel = rootAllowCombiningVowelCheckbox.checked;
+      const allowCombiningVowel = false;
 
       if (!scopeConfig) {
         return;
@@ -802,6 +803,7 @@
       state.score = 0;
       state.missed = [];
       state.layoutMode = layoutModeCheckbox && layoutModeCheckbox.checked ? "exam" : "default";
+      state.learningMode = Boolean(learningModeCheckbox && learningModeCheckbox.checked);
       scoreText.textContent = "0";
 
       setupPanel.classList.add("hidden");
@@ -1880,6 +1882,7 @@
     feedback.textContent = "";
     feedback.className = "feedback";
     nextButton.classList.add("hidden");
+    nextButton.textContent = "다음 문제";
     state.examAnswerDraft = "";
     answerInput.value = "";
     answerInput.disabled = false;
@@ -2030,6 +2033,12 @@
     answerInput.disabled = true;
     submitButton.disabled = true;
     skipButton.disabled = true;
+    if (state.learningMode) {
+      nextButton.textContent = state.currentIndex + 1 >= state.questions.length ? "결과 보기" : "다음 문제";
+      nextButton.classList.remove("hidden");
+      return;
+    }
+
     nextButton.classList.add("hidden");
     state.advanceTimerId = window.setTimeout(() => {
       state.advanceTimerId = null;
