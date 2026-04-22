@@ -1,17 +1,43 @@
 window.MEDICAL_ENGLISH_QUIZ_DATA = {
     "entries":  {
-                    "-pnea":  {
-                                  "english":  "Breathing",
-                                  "answer":  "pnea",
-                                  "source":  "-pnea.md",
-                                  "answers":  [
-                                                  "pnea",
-                                                  "-pnea"
-                                              ],
-                                  "type":  "suffix",
-                                  "term":  "-pnea",
-                                  "korean":  "호흡"
-                              },
+                    "umbilical cord":  {
+                                           "morphology":  {
+                                                              "prefixes":  [
+
+                                                                           ],
+                                                              "suffixes":  [
+                                                                               "-al"
+                                                                           ],
+                                                              "roots":  [
+
+                                                                        ]
+                                                          },
+                                           "english":  "The cord connecting a fetus with the placenta",
+                                           "answer":  "umbilical cord",
+                                           "term":  "Umbilical cord",
+                                           "type":  "vocabulary",
+                                           "source":  "Umbilical cord.md",
+                                           "korean":  "탯줄",
+                                           "answers":  [
+                                                           "umbilical cord"
+                                                       ]
+                                       },
+                    "biohazard":  {
+                                      "morphology":  {
+                                                         "roots":  [
+                                                                       "bi(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A biological substance or condition that is dangerous to living organisms",
+                                      "answer":  "biohazard",
+                                      "term":  "Biohazard",
+                                      "type":  "vocabulary",
+                                      "source":  "Biohazard.md",
+                                      "korean":  "생물학적 위험",
+                                      "answers":  [
+                                                      "biohazard"
+                                                  ]
+                                  },
                     "-um":  {
                                 "english":  "Structure, tissue",
                                 "answer":  "um",
@@ -25,17 +51,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "korean":  "구조, 조직, 단수형 어미"
                             },
                     "epigastric":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "epi-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-ic"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "Gastr(o)"
-                                                                    ]
-                                                      },
                                        "english":  "Relating to the upper middle region of the abdomen",
                                        "answer":  "epigastric",
                                        "term":  "Epigastric",
@@ -157,28 +172,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "frontal"
                                                 ]
                                 },
-                    "percutaneous":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "per-"
-                                                                         ],
-                                                            "suffixes":  [
-                                                                             "-ous"
-                                                                         ],
-                                                            "roots":  [
-                                                                          "Cutane(o)"
-                                                                      ]
-                                                        },
-                                         "english":  "Effected, occurring, or performed through the skin",
-                                         "answer":  "percutaneous",
-                                         "term":  "Percutaneous",
-                                         "type":  "vocabulary",
-                                         "source":  "Percutaneous.md",
-                                         "korean":  "경피의, 피부 경유",
-                                         "answers":  [
-                                                         "percutaneous"
-                                                     ]
-                                     },
                     "inferi(o)":  {
                                       "english":  "Below, lower",
                                       "answer":  "inferi",
@@ -193,6 +186,58 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "inferi(o)",
                                       "korean":  "아래, 하방"
                                   },
+                    "nephritis":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-itis"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Nephr(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Acute or chronic inflammation of the kidney caused by infection, degenerative process, or vascular disease",
+                                      "answer":  "nephritis",
+                                      "term":  "Nephritis",
+                                      "type":  "vocabulary",
+                                      "source":  "Nephritis.md",
+                                      "korean":  "신장염",
+                                      "answers":  [
+                                                      "nephritis"
+                                                  ]
+                                  },
+                    "iatrogenic":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-genic"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "iatr(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Induced by medical treatment or a physician",
+                                       "answer":  "iatrogenic",
+                                       "term":  "Iatrogenic",
+                                       "type":  "vocabulary",
+                                       "source":  "Iatrogenic.md",
+                                       "korean":  "의인의, 의원의",
+                                       "answers":  [
+                                                       "iatrogenic"
+                                                   ]
+                                   },
+                    "pus-forming":  {
+                                        "english":  "Producing pus",
+                                        "answer":  "pus-forming",
+                                        "source":  "Pus-forming.md",
+                                        "answers":  [
+                                                        "pus-forming"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Pus-forming",
+                                        "korean":  "화농의, 고름의"
+                                    },
                     "extrachromosomal genetic elements":  {
                                                               "english":  "Genetic materials that exist outside the chromosomes",
                                                               "answer":  "extrachromosomal genetic elements",
@@ -204,6 +249,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                               "term":  "Extrachromosomal genetic elements",
                                                               "korean":  "염색체 외 유전물질"
                                                           },
+                    "ecto-":  {
+                                  "english":  "Outside, outer",
+                                  "answer":  "ecto",
+                                  "source":  "ecto-.md",
+                                  "answers":  [
+                                                  "ecto",
+                                                  "ecto-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "ecto-",
+                                  "korean":  "외부의, 바깥의"
+                              },
                     "laryngeal":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -226,6 +283,101 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "laryngeal"
                                                   ]
                                   },
+                    "thoracocentesis":  {
+                                            "morphology":  {
+                                                               "prefixes":  [
+
+                                                                            ],
+                                                               "suffixes":  [
+                                                                                "-centesis"
+                                                                            ],
+                                                               "roots":  [
+                                                                             "Thorac(o)"
+                                                                         ]
+                                                           },
+                                            "english":  "Aspiration of fluid from the chest (as in empyema)",
+                                            "answer":  "thoracocentesis",
+                                            "term":  "Thoracocentesis",
+                                            "type":  "vocabulary",
+                                            "source":  "Thoracocentesis.md",
+                                            "korean":  "가슴천자, 흉강천자",
+                                            "answers":  [
+                                                            "thoracocentesis"
+                                                        ]
+                                        },
+                    "arthritis":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-itis"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "arthr(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Inflammation of a joint",
+                                      "answer":  "arthritis",
+                                      "term":  "Arthritis",
+                                      "type":  "vocabulary",
+                                      "source":  "Arthritis.md",
+                                      "korean":  "관절염",
+                                      "answers":  [
+                                                      "arthritis"
+                                                  ]
+                                  },
+                    "trache(o)":  {
+                                      "english":  "Main airway tube leading to the lungs",
+                                      "answer":  "trache",
+                                      "source":  "trache(o).md",
+                                      "answers":  [
+                                                      "trache",
+                                                      "tracheo",
+                                                      "trache/o",
+                                                      "trache(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "trache(o)",
+                                      "korean":  "기관"
+                                  },
+                    "phoria":  {
+                                   "morphology":  {
+                                                      "suffixes":  [
+                                                                       "-phoria"
+                                                                   ]
+                                                  },
+                                   "english":  "Any of various tendencies of the lines of vision to deviate from the normal when binocular fusion is prevented",
+                                   "answer":  "phoria",
+                                   "term":  "Phoria",
+                                   "type":  "vocabulary",
+                                   "source":  "Phoria.md",
+                                   "korean":  "사위, 잠복사시",
+                                   "answers":  [
+                                                   "phoria"
+                                               ]
+                               },
+                    "-rrhagia":  {
+                                     "english":  "Abnormal or excessive discharge or flow",
+                                     "answer":  "rrhagia",
+                                     "source":  "-rrhagia.md",
+                                     "answers":  [
+                                                     "rrhagia",
+                                                     "-rrhagia"
+                                                 ],
+                                     "type":  "suffix",
+                                     "term":  "-rrhagia",
+                                     "korean":  "비정상적 또는 과도한 흐름"
+                                 },
+                    "paedo-":  {
+                                   "english":  "Child",
+                                   "answer":  "paedo",
+                                   "source":  "paedo-.md",
+                                   "answers":  [
+                                                   "paedo",
+                                                   "paedo-"
+                                               ],
+                                   "type":  "prefix",
+                                   "term":  "paedo-",
+                                   "korean":  "어린이"
+                               },
                     "catabolism":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -248,38 +400,30 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "catabolism"
                                                    ]
                                    },
-                    "viscer(o)":  {
-                                      "english":  "Internal organs",
-                                      "answer":  "viscer",
-                                      "source":  "viscer(o).md",
-                                      "answers":  [
-                                                      "viscer",
-                                                      "viscero",
-                                                      "viscer/o",
-                                                      "viscer(o)"
-                                                  ],
-                                      "type":  "root",
-                                      "term":  "viscer(o)",
-                                      "korean":  "내장, 내장기관"
-                                  },
+                    "stom(a)":  {
+                                    "english":  "Mouth, opening",
+                                    "answer":  "stom",
+                                    "source":  "stom(a).md",
+                                    "answers":  [
+                                                    "stom",
+                                                    "stoma",
+                                                    "stom/a",
+                                                    "stom(a)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "stom(a)",
+                                    "korean":  "입, 개구부"
+                                },
                     "mesoderm":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "meso-"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "Derm(o)"
-                                                                  ]
-                                                    },
                                      "english":  "The middle of the three primary germ layers of an embryo",
                                      "answer":  "mesoderm",
-                                     "term":  "Mesoderm",
-                                     "type":  "vocabulary",
                                      "source":  "Mesoderm.md",
-                                     "korean":  "중배엽",
                                      "answers":  [
                                                      "mesoderm"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Mesoderm",
+                                     "korean":  "중배엽"
                                  },
                     "oste(o)":  {
                                     "english":  "Bone",
@@ -295,36 +439,42 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "oste(o)",
                                     "korean":  "뼈"
                                 },
-                    "nasopharynx":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-
-                                                                        ],
-                                                           "suffixes":  [
-
-                                                                        ],
-                                                           "roots":  [
-                                                                         "Pharyng(o)"
-                                                                     ]
-                                                       },
-                                        "english":  "The upper part of the pharynx continuous with the nasal passages",
-                                        "answer":  "nasopharynx",
-                                        "term":  "Nasopharynx",
-                                        "type":  "vocabulary",
-                                        "source":  "Nasopharynx.md",
-                                        "korean":  "비인두",
-                                        "answers":  [
-                                                        "nasopharynx"
-                                                    ],
-                                        "imageQuestions":  [
-                                                               {
-                                                                   "number":  3,
-                                                                   "source":  "Pasted image 20260331144207.png",
-                                                                   "type":  "numbered",
-                                                                   "src":  "question-images/pharynx-group-1.png"
-                                                               }
-                                                           ]
-                                    },
+                    "adenopathy":  {
+                                       "morphology":  {
+                                                          "roots":  [
+                                                                        "aden(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Disease or enlargement of a gland, especially a lymph node",
+                                       "answer":  "adenopathy",
+                                       "term":  "Adenopathy",
+                                       "type":  "vocabulary",
+                                       "source":  "Adenopathy.md",
+                                       "korean":  "샘병증, 림프절 팽대",
+                                       "answers":  [
+                                                       "adenopathy"
+                                                   ]
+                                   },
+                    "thrombocytopenia":  {
+                                             "morphology":  {
+                                                                "suffixes":  [
+                                                                                 "-penia"
+                                                                             ],
+                                                                "roots":  [
+                                                                              "thromb(o)",
+                                                                              "cyt(o)"
+                                                                          ]
+                                                            },
+                                             "english":  "Deficiency of platelets in the blood",
+                                             "answer":  "thrombocytopenia",
+                                             "term":  "Thrombocytopenia",
+                                             "type":  "vocabulary",
+                                             "source":  "Thrombocytopenia.md",
+                                             "korean":  "저혈소판증",
+                                             "answers":  [
+                                                             "thrombocytopenia"
+                                                         ]
+                                         },
                     "supernatant":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -396,35 +546,74 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "insomnia"
                                                  ]
                                  },
-                    "ather(o)":  {
-                                     "english":  "Fatty plaque, gruel",
-                                     "answer":  "ather",
-                                     "source":  "ather(o).md",
-                                     "answers":  [
-                                                     "ather",
-                                                     "athero",
-                                                     "ather/o",
-                                                     "ather(o)"
-                                                 ],
-                                     "type":  "root",
-                                     "term":  "ather(o)",
-                                     "korean":  "죽상물질, 죽"
-                                 },
-                    "hemisphere":  {
+                    "peritonitis":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-itis"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "peritone(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Inflammation of the peritoneum",
+                                        "answer":  "peritonitis",
+                                        "term":  "Peritonitis",
+                                        "type":  "vocabulary",
+                                        "source":  "Peritonitis.md",
+                                        "korean":  "복막염",
+                                        "answers":  [
+                                                        "peritonitis"
+                                                    ]
+                                    },
+                    "cardiovascular disease":  {
+                                                   "morphology":  {
+                                                                      "suffixes":  [
+                                                                                       "-ar"
+                                                                                   ],
+                                                                      "roots":  [
+                                                                                    "Cardi(o)",
+                                                                                    "vascul(o)"
+                                                                                ]
+                                                                  },
+                                                   "english":  "Disease of the heart and blood vessels",
+                                                   "answer":  "cardiovascular disease",
+                                                   "term":  "Cardiovascular disease",
+                                                   "type":  "vocabulary",
+                                                   "source":  "Cardiovascular disease.md",
+                                                   "korean":  "심혈관질환",
+                                                   "answers":  [
+                                                                   "cardiovascular disease"
+                                                               ]
+                                               },
+                    "immunology":  {
                                        "morphology":  {
-                                                          "prefixes":  [
-                                                                           "hemi-"
-                                                                       ]
+                                                          "suffixes":  [
+                                                                           "-ology"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "immun(o)"
+                                                                    ]
                                                       },
+                                       "english":  "The science concerned with immunity and immune responses",
+                                       "answer":  "immunology",
+                                       "term":  "Immunology",
+                                       "type":  "vocabulary",
+                                       "source":  "Immunology.md",
+                                       "korean":  "면역학",
+                                       "answers":  [
+                                                       "immunology"
+                                                   ]
+                                   },
+                    "hemisphere":  {
                                        "english":  "One half of a sphere or of a divided organ such as the brain",
                                        "answer":  "hemisphere",
-                                       "term":  "Hemisphere",
-                                       "type":  "vocabulary",
                                        "source":  "Hemisphere.md",
-                                       "korean":  "반구, 뇌 반쪽",
                                        "answers":  [
                                                        "hemisphere"
-                                                   ]
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Hemisphere",
+                                       "korean":  "반구, 뇌 반쪽"
                                    },
                     "bilateral":  {
                                       "morphology":  {
@@ -518,6 +707,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "mal-",
                                  "korean":  "나쁜"
                              },
+                    "homologous":  {
+                                       "english":  "Corresponding in structure, origin, or genetic relation",
+                                       "answer":  "homologous",
+                                       "source":  "Homologous.md",
+                                       "answers":  [
+                                                       "homologous"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Homologous",
+                                       "korean":  "상동의"
+                                   },
+                    "dietician":  {
+                                      "english":  "A specialist in dietetics",
+                                      "answer":  "dietician",
+                                      "source":  "Dietician.md",
+                                      "answers":  [
+                                                      "dietician"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Dietician",
+                                      "korean":  "영양사"
+                                  },
                     "hemodialysis":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -594,28 +805,42 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-ide",
                                  "korean":  "이원 화합물"
                              },
-                    "thrombocyte":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-cyte"
-                                                                        ],
-                                                           "roots":  [
-                                                                         "Thromb(o)"
-                                                                     ]
-                                                       },
-                                        "english":  "Platelet",
-                                        "answer":  "thrombocyte",
-                                        "term":  "Thrombocyte",
-                                        "type":  "vocabulary",
-                                        "source":  "Thrombocyte.md",
-                                        "korean":  "혈소판",
-                                        "answers":  [
-                                                        "thrombocyte"
-                                                    ]
-                                    },
+                    "central supply room":  {
+                                                "english":  "A hospital unit that issues and dispenses sterile medical supplies and instruments",
+                                                "answer":  "central supply room",
+                                                "source":  "Central supply room.md",
+                                                "answers":  [
+                                                                "central supply room"
+                                                            ],
+                                                "type":  "vocabulary",
+                                                "term":  "Central supply room",
+                                                "korean":  "중앙공급실"
+                                            },
+                    "first aid":  {
+                                      "english":  "Emergency care or treatment given before regular medical aid can be obtained",
+                                      "answer":  "first aid",
+                                      "source":  "First aid.md",
+                                      "answers":  [
+                                                      "first aid"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "First aid",
+                                      "korean":  "응급처치"
+                                  },
+                    "phil(o)":  {
+                                    "english":  "Fond, loving",
+                                    "answer":  "phil",
+                                    "source":  "phil(o).md",
+                                    "answers":  [
+                                                    "phil",
+                                                    "philo",
+                                                    "phil/o",
+                                                    "phil(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "phil(o)",
+                                    "korean":  "좋아하는, 친화성"
+                                },
                     "rectocele":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -638,6 +863,41 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "rectocele"
                                                   ]
                                   },
+                    "sagittal plane":  {
+                                           "morphology":  {
+                                                              "prefixes":  [
+
+                                                                           ],
+                                                              "suffixes":  [
+                                                                               "-al"
+                                                                           ],
+                                                              "roots":  [
+
+                                                                        ]
+                                                          },
+                                           "english":  "A vertical plane that divides the body into left and right parts",
+                                           "answer":  "sagittal plane",
+                                           "term":  "Sagittal plane",
+                                           "type":  "vocabulary",
+                                           "source":  "Sagittal plane.md",
+                                           "korean":  "시상면",
+                                           "answers":  [
+                                                           "sagittal plane"
+                                                       ],
+                                           "imageQuestions":  [
+                                                                  {
+                                                                      "source":  "Pasted image 20260414162853.png",
+                                                                      "type":  "plain",
+                                                                      "src":  "question-images/sagittal-plane-1.png"
+                                                                  },
+                                                                  {
+                                                                      "number":  2,
+                                                                      "source":  "Pasted image 20260414162645.png",
+                                                                      "type":  "numbered",
+                                                                      "src":  "question-images/body-plane-group-1.png"
+                                                                  }
+                                                              ]
+                                       },
                     "pseud(o)":  {
                                      "english":  "False",
                                      "answer":  "pseud",
@@ -652,6 +912,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "pseud(o)",
                                      "korean":  "거짓의"
                                  },
+                    "orthopedics":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+                                                                            "ortho-"
+                                                                        ],
+                                                           "suffixes":  [
+                                                                            "-ic"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "ped(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "The branch of medicine concerned with correction or prevention of skeletal deformities",
+                                        "answer":  "orthopedics",
+                                        "term":  "Orthopedics",
+                                        "type":  "vocabulary",
+                                        "source":  "Orthopedics.md",
+                                        "korean":  "정형외과",
+                                        "answers":  [
+                                                        "orthopedics"
+                                                    ]
+                                    },
                     "cerebellar":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -674,6 +956,31 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "cerebellar"
                                                    ]
                                    },
+                    "axill(o)":  {
+                                     "english":  "Axilla",
+                                     "answer":  "axill",
+                                     "source":  "axill(o).md",
+                                     "answers":  [
+                                                     "axill",
+                                                     "axillo",
+                                                     "axill/o",
+                                                     "axill(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "axill(o)",
+                                     "korean":  "겨드랑이"
+                                 },
+                    "surgery":  {
+                                    "english":  "The branch of medicine concerned with operative treatment",
+                                    "answer":  "surgery",
+                                    "source":  "Surgery.md",
+                                    "answers":  [
+                                                    "surgery"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Surgery",
+                                    "korean":  "외과학"
+                                },
                     "lact(o)":  {
                                     "english":  "Milk",
                                     "answer":  "lact",
@@ -711,39 +1018,38 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "macromolecule":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "macro-"
-                                                                          ]
-                                                         },
                                           "english":  "A very large molecule, especially one with a polymeric structure",
                                           "answer":  "macromolecule",
-                                          "term":  "Macromolecule",
-                                          "type":  "vocabulary",
                                           "source":  "Macromolecule.md",
-                                          "korean":  "고분자",
                                           "answers":  [
                                                           "macromolecule"
-                                                      ]
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Macromolecule",
+                                          "korean":  "고분자"
                                       },
+                    "hypo-":  {
+                                  "english":  "Under, below, deficient",
+                                  "answer":  "hypo",
+                                  "source":  "hypo-.md",
+                                  "answers":  [
+                                                  "hypo",
+                                                  "hypo-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "hypo-",
+                                  "korean":  "아래, 부족한"
+                              },
                     "peritoneum":  {
-                                       "morphology":  {
-                                                          "suffixes":  [
-                                                                           "-um"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "peritone(o)"
-                                                                    ]
-                                                      },
                                        "english":  "The smooth transparent membrane that lines the abdominal cavity and covers the abdominal organs",
                                        "answer":  "peritoneum",
-                                       "term":  "Peritoneum",
-                                       "type":  "vocabulary",
                                        "source":  "Peritoneum.md",
-                                       "korean":  "복막",
                                        "answers":  [
                                                        "peritoneum"
-                                                   ]
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Peritoneum",
+                                       "korean":  "복막"
                                    },
                     "thromb(o)":  {
                                       "english":  "Clot",
@@ -759,65 +1065,41 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "thromb(o)",
                                       "korean":  "혈전"
                                   },
-                    "gastralgia":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-algia"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "Gastr(o)"
-                                                                    ]
-                                                      },
-                                       "english":  "Pain in the stomach",
-                                       "answer":  "gastralgia",
-                                       "term":  "Gastralgia",
-                                       "type":  "vocabulary",
-                                       "source":  "Gastralgia.md",
-                                       "korean":  "위통",
-                                       "answers":  [
-                                                       "gastralgia"
-                                                   ]
-                                   },
+                    "infer(o)":  {
+                                     "english":  "Below, lower",
+                                     "answer":  "infer",
+                                     "source":  "infer(o).md",
+                                     "answers":  [
+                                                     "infer",
+                                                     "infero",
+                                                     "infer/o",
+                                                     "infer(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "infer(o)",
+                                     "korean":  "아래, 하방"
+                                 },
                     "supraorbital":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "supra-"
-                                                                         ],
-                                                            "vocabulary":  [
-                                                                               "Orbital"
-                                                                           ]
-                                                        },
                                          "english":  "Situated above the orbit of the eye",
                                          "answer":  "supraorbital",
-                                         "term":  "Supraorbital",
-                                         "type":  "vocabulary",
                                          "source":  "Supraorbital.md",
-                                         "korean":  "안와상의",
                                          "answers":  [
                                                          "supraorbital"
-                                                     ]
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Supraorbital",
+                                         "korean":  "안와상의"
                                      },
                     "paranasal":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "para-"
-                                                                      ],
-                                                         "vocabulary":  [
-                                                                            "Nasal"
-                                                                        ]
-                                                     },
                                       "english":  "Situated beside or near the nose",
                                       "answer":  "paranasal",
-                                      "term":  "Paranasal",
-                                      "type":  "vocabulary",
                                       "source":  "Paranasal.md",
-                                      "korean":  "코곁의, 부비의",
                                       "answers":  [
                                                       "paranasal"
-                                                  ]
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Paranasal",
+                                      "korean":  "코곁의, 부비의"
                                   },
                     "lapar(o)":  {
                                      "english":  "Abdomen",
@@ -834,26 +1116,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "복부"
                                  },
                     "mesentery":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "meso-"
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-y"
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Enter(o)"
-                                                                   ]
-                                                     },
                                       "english":  "A fold of the peritoneum which attaches the stomach, small intestine, pancreas, spleen, and the other organs to the posterior wall of the abdomen",
                                       "answer":  "mesentery",
-                                      "term":  "Mesentery",
-                                      "type":  "vocabulary",
                                       "source":  "Mesentery.md",
-                                      "korean":  "장간막",
                                       "answers":  [
                                                       "mesentery"
-                                                  ]
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Mesentery",
+                                      "korean":  "장간막"
                                   },
                     "membraneous":  {
                                         "morphology":  {
@@ -871,6 +1142,42 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "membraneous"
                                                     ]
                                     },
+                    "path(o)":  {
+                                    "english":  "Disease",
+                                    "answer":  "path",
+                                    "source":  "path(o).md",
+                                    "answers":  [
+                                                    "path",
+                                                    "patho",
+                                                    "path/o",
+                                                    "path(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "path(o)",
+                                    "korean":  "질병"
+                                },
+                    "myocardial ischemia":  {
+                                                "morphology":  {
+                                                                   "suffixes":  [
+                                                                                    "-al",
+                                                                                    "-emia"
+                                                                                ],
+                                                                   "roots":  [
+                                                                                 "my(o)",
+                                                                                 "Cardi(o)",
+                                                                                 "isch(o)"
+                                                                             ]
+                                                               },
+                                                "english":  "Ischemia of the heart muscle",
+                                                "answer":  "myocardial ischemia",
+                                                "term":  "Myocardial ischemia",
+                                                "type":  "vocabulary",
+                                                "source":  "Myocardial ischemia.md",
+                                                "korean":  "심근허혈",
+                                                "answers":  [
+                                                                "myocardial ischemia"
+                                                            ]
+                                            },
                     "ipsilateral":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -925,24 +1232,68 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "syn-",
                                  "korean":  "함께, 같이"
                              },
-                    "hemiparesis":  {
+                    "electrolyte":  {
                                         "morphology":  {
-                                                           "prefixes":  [
-                                                                            "hemi-"
-                                                                        ],
-                                                           "vocabulary":  [
-                                                                              "Paresis"
-                                                                          ]
+                                                           "roots":  [
+                                                                         "Electr(o)"
+                                                                     ]
                                                        },
+                                        "english":  "A substance that conducts electricity when dissolved and dissociated into ions",
+                                        "answer":  "electrolyte",
+                                        "term":  "Electrolyte",
+                                        "type":  "vocabulary",
+                                        "source":  "Electrolyte.md",
+                                        "korean":  "전해질",
+                                        "answers":  [
+                                                        "electrolyte"
+                                                    ]
+                                    },
+                    "pne(o)":  {
+                                   "english":  "Breath, respiration",
+                                   "answer":  "pne",
+                                   "source":  "pne(o).md",
+                                   "answers":  [
+                                                   "pne",
+                                                   "pneo",
+                                                   "pne/o",
+                                                   "pne(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "pne(o)",
+                                   "korean":  "호흡"
+                               },
+                    "hyperglycemia":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+                                                                              "hyper-"
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-emia"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "glyc(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Excess sugar in the blood",
+                                          "answer":  "hyperglycemia",
+                                          "term":  "Hyperglycemia",
+                                          "type":  "vocabulary",
+                                          "source":  "Hyperglycemia.md",
+                                          "korean":  "고혈당증",
+                                          "answers":  [
+                                                          "hyperglycemia"
+                                                      ]
+                                      },
+                    "hemiparesis":  {
                                         "english":  "Weakness or partial paralysis affecting one side of the body",
                                         "answer":  "hemiparesis",
-                                        "term":  "Hemiparesis",
-                                        "type":  "vocabulary",
                                         "source":  "Hemiparesis.md",
-                                        "korean":  "반부전마비, 반신불완전마비",
                                         "answers":  [
                                                         "hemiparesis"
-                                                    ]
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Hemiparesis",
+                                        "korean":  "반부전마비, 반신불완전마비"
                                     },
                     "hydrocephalus":  {
                                           "morphology":  {
@@ -965,6 +1316,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                           "korean":  "수두증",
                                           "answers":  [
                                                           "hydrocephalus"
+                                                      ]
+                                      },
+                    "psychosomatic":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-ic"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "psych(o)",
+                                                                           "somat(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Relating to bodily symptoms influenced by mental factors",
+                                          "answer":  "psychosomatic",
+                                          "term":  "Psychosomatic",
+                                          "type":  "vocabulary",
+                                          "source":  "Psychosomatic.md",
+                                          "korean":  "정신신체의",
+                                          "answers":  [
+                                                          "psychosomatic"
                                                       ]
                                       },
                     "posterior":  {
@@ -1036,23 +1407,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "korean":  "없음"
                             },
                     "perinatal":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "peri-"
-                                                                      ],
-                                                         "vocabulary":  [
-                                                                            "Natal"
-                                                                        ]
-                                                     },
                                       "english":  "Occurring in the period shortly before, during, or after birth",
                                       "answer":  "perinatal",
-                                      "term":  "Perinatal",
-                                      "type":  "vocabulary",
                                       "source":  "Perinatal.md",
-                                      "korean":  "출생전후기의, 주산기의",
                                       "answers":  [
                                                       "perinatal"
-                                                  ]
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Perinatal",
+                                      "korean":  "출생전후기의, 주산기의"
                                   },
                     "bacteriostatic":  {
                                            "morphology":  {
@@ -1088,17 +1451,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "-or",
                                 "korean":  "~에 관한, ~에 위치한"
                             },
-                    "substantia nigra":  {
-                                             "english":  "A layer of deeply pigmented gray matter situated in the midbrain and containing dopamine-producing nerve cells",
-                                             "answer":  "substantia nigra",
-                                             "source":  "Substantia nigra.md",
-                                             "answers":  [
-                                                             "substantia nigra"
-                                                         ],
-                                             "type":  "vocabulary",
-                                             "term":  "Substantia nigra",
-                                             "korean":  "흑(색)질"
-                                         },
+                    "secti(o)":  {
+                                     "english":  "Divide, to cut",
+                                     "answer":  "secti",
+                                     "source":  "secti(o).md",
+                                     "answers":  [
+                                                     "secti",
+                                                     "sectio",
+                                                     "secti/o",
+                                                     "secti(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "secti(o)",
+                                     "korean":  "나누다, 자르다"
+                                 },
                     "-lysis":  {
                                    "english":  "To break, separate",
                                    "answer":  "lysis",
@@ -1111,6 +1477,35 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-lysis",
                                    "korean":  "파괴, 분리"
                                },
+                    "tonsillectomy":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-ectomy"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "Tonsill(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "The surgical removal of the tonsils",
+                                          "answer":  "tonsillectomy",
+                                          "term":  "Tonsillectomy",
+                                          "type":  "vocabulary",
+                                          "source":  "Tonsillectomy.md",
+                                          "korean":  "편도절제(술)",
+                                          "answers":  [
+                                                          "tonsillectomy"
+                                                      ],
+                                          "imageQuestions":  [
+                                                                 {
+                                                                     "source":  "Pasted image 20260331143028.png",
+                                                                     "type":  "question-mark",
+                                                                     "src":  "question-images/tonsillectomy-1.png"
+                                                                 }
+                                                             ]
+                                      },
                     "extrachromosomal":  {
                                              "english":  "Located or occurring outside the chromosomes",
                                              "answer":  "extrachromosomal",
@@ -1122,59 +1517,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                              "term":  "Extrachromosomal",
                                              "korean":  "염색체 외의"
                                          },
-                    "disengagement":  {
+                    "enterocolitis":  {
                                           "morphology":  {
-                                                             "prefixes":  [
-                                                                              "dis-"
-                                                                          ],
                                                              "suffixes":  [
-
+                                                                              "-itis"
                                                                           ],
                                                              "roots":  [
-
+                                                                           "Enter(o)",
+                                                                           "col(o)"
                                                                        ]
                                                          },
-                                          "english":  "Release from attachment or connection",
-                                          "answer":  "disengagement",
-                                          "term":  "Disengagement",
+                                          "english":  "Inflammation of the small intestine and colon",
+                                          "answer":  "enterocolitis",
+                                          "term":  "Enterocolitis",
                                           "type":  "vocabulary",
-                                          "source":  "Disengagement.md",
-                                          "korean":  "분만",
+                                          "source":  "Enterocolitis.md",
+                                          "korean":  "소장대장염",
                                           "answers":  [
-                                                          "disengagement"
+                                                          "enterocolitis"
                                                       ]
                                       },
-                    "pseudomembranous":  {
-                                             "morphology":  {
-                                                                "prefixes":  [
-                                                                                 "pseudo-"
-                                                                             ],
-                                                                "suffixes":  [
-                                                                                 "-ous"
-                                                                             ]
-                                                            },
-                                             "english":  "Relating to or resembling a false membrane",
-                                             "answer":  "pseudomembranous",
-                                             "term":  "Pseudomembranous",
-                                             "type":  "vocabulary",
-                                             "source":  "Pseudomembranous.md",
-                                             "korean":  "거짓막의",
-                                             "answers":  [
-                                                             "pseudomembranous"
-                                                         ]
-                                         },
-                    "un-":  {
-                                "english":  "Negative prefix, not",
-                                "answer":  "un",
-                                "source":  "un-.md",
-                                "answers":  [
-                                                "un",
-                                                "un-"
-                                            ],
-                                "type":  "prefix",
-                                "term":  "un-",
-                                "korean":  "부정 접두어, 비(非), 무(無)"
-                            },
                     "integumentary system":  {
                                                  "english":  "The body system that includes the skin and related structures",
                                                  "answer":  "integumentary system",
@@ -1186,6 +1548,83 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                  "term":  "Integumentary system",
                                                  "korean":  "피부계통, 외피계"
                                              },
+                    "polydactyly":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+                                                                            "poly-"
+                                                                        ],
+                                                           "suffixes":  [
+
+                                                                        ],
+                                                           "roots":  [
+                                                                         "Dactyl(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "The condition of having more than the normal number of fingers or toes",
+                                        "answer":  "polydactyly",
+                                        "term":  "Polydactyly",
+                                        "type":  "vocabulary",
+                                        "source":  "Polydactyly.md",
+                                        "korean":  "가락과다증, 다지증",
+                                        "answers":  [
+                                                        "polydactyly"
+                                                    ]
+                                    },
+                    "seps(o)":  {
+                                    "english":  "Rot, decay",
+                                    "answer":  "seps",
+                                    "source":  "seps(o).md",
+                                    "answers":  [
+                                                    "seps",
+                                                    "sepso",
+                                                    "seps/o",
+                                                    "seps(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "seps(o)",
+                                    "korean":  "부패"
+                                },
+                    "pseudomembranous":  {
+                                             "english":  "Relating to or resembling a false membrane",
+                                             "answer":  "pseudomembranous",
+                                             "source":  "Pseudomembranous.md",
+                                             "answers":  [
+                                                             "pseudomembranous"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Pseudomembranous",
+                                             "korean":  "거짓막의"
+                                         },
+                    "gauze":  {
+                                  "english":  "A thin open-mesh fabric used for dressings",
+                                  "answer":  "gauze",
+                                  "source":  "Gauze.md",
+                                  "answers":  [
+                                                  "gauze"
+                                              ],
+                                  "type":  "vocabulary",
+                                  "term":  "Gauze",
+                                  "korean":  "거즈, 면망사"
+                              },
+                    "cis-activation":  {
+                                           "morphology":  {
+                                                              "prefixes":  [
+                                                                               "cis-"
+                                                                           ],
+                                                              "suffixes":  [
+                                                                               "-ation"
+                                                                           ]
+                                                          },
+                                           "english":  "Activation of a gene by an activator located on the same chromosome",
+                                           "answer":  "cis-activation",
+                                           "term":  "Cis-activation",
+                                           "type":  "vocabulary",
+                                           "source":  "Cis-activation.md",
+                                           "korean":  "cis-활성화",
+                                           "answers":  [
+                                                           "cis-activation"
+                                                       ]
+                                       },
                     "anemia":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -1249,6 +1688,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "neonatal"
                                                  ]
                                  },
+                    "muc(o)":  {
+                                   "english":  "Mucus, mucous membrane",
+                                   "answer":  "muc",
+                                   "source":  "muc(o).md",
+                                   "answers":  [
+                                                   "muc",
+                                                   "muco",
+                                                   "muc/o",
+                                                   "muc(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "muc(o)",
+                                   "korean":  "점액, 점막"
+                               },
                     "pupil":  {
                                   "english":  "The contractile aperture in the iris of the eye",
                                   "answer":  "pupil",
@@ -1260,28 +1713,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "Pupil",
                                   "korean":  "동공"
                               },
-                    "hysterectomy":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-
-                                                                         ],
-                                                            "suffixes":  [
-                                                                             "-ectomy"
-                                                                         ],
-                                                            "roots":  [
-                                                                          "Hyster(o)"
-                                                                      ]
-                                                        },
-                                         "english":  "Surgical removal of the uterus",
-                                         "answer":  "hysterectomy",
-                                         "term":  "Hysterectomy",
-                                         "type":  "vocabulary",
-                                         "source":  "Hysterectomy.md",
-                                         "korean":  "자궁절제(술)",
-                                         "answers":  [
-                                                         "hysterectomy"
-                                                     ]
-                                     },
+                    "bandage":  {
+                                    "english":  "A strip or piece of material used to cover, bind, or support a body part",
+                                    "answer":  "bandage",
+                                    "source":  "Bandage.md",
+                                    "answers":  [
+                                                    "bandage"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Bandage",
+                                    "korean":  "붕대"
+                                },
                     "cost(o)":  {
                                     "english":  "Rib",
                                     "answer":  "cost",
@@ -1297,26 +1739,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "갈비뼈"
                                 },
                     "microencephaly":  {
-                                           "morphology":  {
-                                                              "prefixes":  [
-                                                                               "micro-"
-                                                                           ],
-                                                              "suffixes":  [
-                                                                               "-y"
-                                                                           ],
-                                                              "roots":  [
-                                                                            "encephal(o)"
-                                                                        ]
-                                                          },
                                            "english":  "A congenital condition in which the head and brain are abnormally small",
                                            "answer":  "microencephaly",
-                                           "term":  "Microencephaly",
-                                           "type":  "vocabulary",
                                            "source":  "Microencephaly.md",
-                                           "korean":  "소뇌증",
                                            "answers":  [
                                                            "microencephaly"
-                                                       ]
+                                                       ],
+                                           "type":  "vocabulary",
+                                           "term":  "Microencephaly",
+                                           "korean":  "소뇌증"
                                        },
                     "splenorrhexis":  {
                                           "morphology":  {
@@ -1362,18 +1793,68 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "bronchitis"
                                                    ]
                                    },
-                    "tachy-":  {
-                                   "english":  "Rapid",
-                                   "answer":  "tachy",
-                                   "source":  "tachy-.md",
-                                   "answers":  [
-                                                   "tachy",
-                                                   "tachy-"
-                                               ],
-                                   "type":  "prefix",
-                                   "term":  "tachy-",
-                                   "korean":  "빠른"
-                               },
+                    "ureteral stone":  {
+                                           "morphology":  {
+                                                              "suffixes":  [
+                                                                               "-al"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "ureter(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "A stone in the ureter",
+                                           "answer":  "ureteral stone",
+                                           "term":  "Ureteral stone",
+                                           "type":  "vocabulary",
+                                           "source":  "Ureteral stone.md",
+                                           "korean":  "요관돌, 요관결석",
+                                           "answers":  [
+                                                           "ureteral stone"
+                                                       ]
+                                       },
+                    "cardiovascular surgery":  {
+                                                   "morphology":  {
+                                                                      "suffixes":  [
+                                                                                       "-ar"
+                                                                                   ],
+                                                                      "roots":  [
+                                                                                    "Cardi(o)",
+                                                                                    "vascul(o)"
+                                                                                ]
+                                                                  },
+                                                   "english":  "Surgery concerned with the heart and blood vessels",
+                                                   "answer":  "cardiovascular surgery",
+                                                   "term":  "Cardiovascular surgery",
+                                                   "type":  "vocabulary",
+                                                   "source":  "Cardiovascular surgery.md",
+                                                   "korean":  "심장혈관외과학",
+                                                   "answers":  [
+                                                                   "cardiovascular surgery"
+                                                               ]
+                                               },
+                    "stretcher":  {
+                                      "english":  "A device for carrying a sick or injured person",
+                                      "answer":  "stretcher",
+                                      "source":  "Stretcher.md",
+                                      "answers":  [
+                                                      "stretcher"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Stretcher",
+                                      "korean":  "들것, 환자운반차"
+                                  },
+                    "pro-":  {
+                                 "english":  "In front of, before, preceding",
+                                 "answer":  "pro",
+                                 "source":  "pro-.md",
+                                 "answers":  [
+                                                 "pro",
+                                                 "pro-"
+                                             ],
+                                 "type":  "prefix",
+                                 "term":  "pro-",
+                                 "korean":  "앞의, 이전의, 선행하는"
+                             },
                     "-phagia":  {
                                     "english":  "Swallowing, eating",
                                     "answer":  "phagia",
@@ -1386,6 +1867,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-phagia",
                                     "korean":  "삼킴, 먹음"
                                 },
+                    "general practitioner":  {
+                                                 "english":  "A physician whose practice is not limited to a specialty",
+                                                 "answer":  "general practitioner",
+                                                 "source":  "General practitioner.md",
+                                                 "answers":  [
+                                                                 "general practitioner"
+                                                             ],
+                                                 "type":  "vocabulary",
+                                                 "term":  "General practitioner",
+                                                 "korean":  "일반의, GP"
+                                             },
                     "laryng(o)":  {
                                       "english":  "Voice box",
                                       "answer":  "laryng",
@@ -1400,28 +1892,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "laryng(o)",
                                       "korean":  "후두"
                                   },
-                    "pathogenic":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-genic"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "Path(o)"
-                                                                    ]
-                                                      },
-                                       "english":  "Causing or capable of causing disease",
-                                       "answer":  "pathogenic",
-                                       "term":  "Pathogenic",
-                                       "type":  "vocabulary",
-                                       "source":  "Pathogenic.md",
-                                       "korean":  "병원성-",
-                                       "answers":  [
-                                                       "pathogenic"
-                                                   ]
-                                   },
+                    "ather(o)":  {
+                                     "english":  "Fatty plaque, gruel",
+                                     "answer":  "ather",
+                                     "source":  "ather(o).md",
+                                     "answers":  [
+                                                     "ather",
+                                                     "athero",
+                                                     "ather/o",
+                                                     "ather(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "ather(o)",
+                                     "korean":  "죽상물질, 죽"
+                                 },
                     "ect(o)":  {
                                    "english":  "Outside, outer",
                                    "answer":  "ect",
@@ -1436,6 +1920,34 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "ect(o)",
                                    "korean":  "외부의, 바깥의"
                                },
+                    "retro-":  {
+                                   "english":  "Back, behind",
+                                   "answer":  "retro",
+                                   "source":  "retro-.md",
+                                   "answers":  [
+                                                   "retro",
+                                                   "retro-"
+                                               ],
+                                   "type":  "prefix",
+                                   "term":  "retro-",
+                                   "korean":  "뒤의, 뒤로"
+                               },
+                    "pneumonia":  {
+                                      "morphology":  {
+                                                         "roots":  [
+                                                                       "pneumon(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Inflammation of lung tissue",
+                                      "answer":  "pneumonia",
+                                      "term":  "Pneumonia",
+                                      "type":  "vocabulary",
+                                      "source":  "Pneumonia.md",
+                                      "korean":  "폐렴",
+                                      "answers":  [
+                                                      "pneumonia"
+                                                  ]
+                                  },
                     "bradycardia":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -1480,28 +1992,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                              "arteriosclerosis"
                                                          ]
                                          },
-                    "biopsy":  {
-                                   "morphology":  {
-                                                      "prefixes":  [
-
-                                                                   ],
-                                                      "suffixes":  [
-                                                                       "-opsy"
-                                                                   ],
-                                                      "roots":  [
-                                                                    "Bi(o)"
-                                                                ]
-                                                  },
-                                   "english":  "The removal and examination of tissue, cells, or fluids from the living body",
-                                   "answer":  "biopsy",
-                                   "term":  "Biopsy",
-                                   "type":  "vocabulary",
-                                   "source":  "Biopsy.md",
-                                   "korean":  "생검",
-                                   "answers":  [
-                                                   "biopsy"
-                                               ]
-                               },
                     "intravenous injection":  {
                                                   "morphology":  {
                                                                      "prefixes":  [
@@ -1538,6 +2028,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "or(o)",
                                   "korean":  "입"
                               },
+                    "hematuria":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-uria"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "hemat(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Blood in the urine",
+                                      "answer":  "hematuria",
+                                      "term":  "Hematuria",
+                                      "type":  "vocabulary",
+                                      "source":  "Hematuria.md",
+                                      "korean":  "혈뇨",
+                                      "answers":  [
+                                                      "hematuria"
+                                                  ]
+                                  },
                     "superi(o)":  {
                                       "english":  "Above, upper",
                                       "answer":  "superi",
@@ -1552,6 +2061,32 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "superi(o)",
                                       "korean":  "위, 상방"
                                   },
+                    "pyel(o)":  {
+                                    "english":  "Renal pelvis",
+                                    "answer":  "pyel",
+                                    "source":  "pyel(o).md",
+                                    "answers":  [
+                                                    "pyel",
+                                                    "pyelo",
+                                                    "pyel/o",
+                                                    "pyel(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "pyel(o)",
+                                    "korean":  "신우, 콩팥깔때기"
+                                },
+                    "pedo-":  {
+                                  "english":  "Child",
+                                  "answer":  "pedo",
+                                  "source":  "pedo-.md",
+                                  "answers":  [
+                                                  "pedo",
+                                                  "pedo-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "pedo-",
+                                  "korean":  "어린이"
+                              },
                     "chronicity":  {
                                        "english":  "The condition of lasting for a long time or recurring over time",
                                        "answer":  "chronicity",
@@ -1563,6 +2098,53 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "Chronicity",
                                        "korean":  "만성 상태"
                                    },
+                    "x-ray room":  {
+                                       "english":  "A room used for x-ray imaging",
+                                       "answer":  "x-ray room",
+                                       "source":  "X-ray room.md",
+                                       "answers":  [
+                                                       "x-ray room"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "X-ray room",
+                                       "korean":  "방사 촬영실"
+                                   },
+                    "venous":  {
+                                   "english":  "Of, relating to, or full of veins",
+                                   "answer":  "venous",
+                                   "source":  "Venous.md",
+                                   "answers":  [
+                                                   "venous"
+                                               ],
+                                   "type":  "vocabulary",
+                                   "term":  "Venous",
+                                   "korean":  "정맥의"
+                               },
+                    "radiographic technologist":  {
+                                                      "english":  "A technologist trained to perform radiographic imaging",
+                                                      "answer":  "radiographic technologist",
+                                                      "source":  "Radiographic technologist.md",
+                                                      "answers":  [
+                                                                      "radiographic technologist"
+                                                                  ],
+                                                      "type":  "vocabulary",
+                                                      "term":  "Radiographic technologist",
+                                                      "korean":  "방사선과 기사"
+                                                  },
+                    "ur(o)":  {
+                                  "english":  "Urine",
+                                  "answer":  "ur",
+                                  "source":  "ur(o).md",
+                                  "answers":  [
+                                                  "ur",
+                                                  "uro",
+                                                  "ur/o",
+                                                  "ur(o)"
+                                              ],
+                                  "type":  "root",
+                                  "term":  "ur(o)",
+                                  "korean":  "소변"
+                              },
                     "coccyx":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -1593,6 +2175,47 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           }
                                                       ]
                                },
+                    "phagocyte":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-cyte"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Phag(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A cell that engulfs and consumes foreign material and debris",
+                                      "answer":  "phagocyte",
+                                      "term":  "Phagocyte",
+                                      "type":  "vocabulary",
+                                      "source":  "Phagocyte.md",
+                                      "korean":  "포식세포",
+                                      "answers":  [
+                                                      "phagocyte"
+                                                  ]
+                                  },
+                    "pediatrics":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ic"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "ped(i)"
+                                                                    ]
+                                                      },
+                                       "english":  "The branch of medicine concerned with children",
+                                       "answer":  "pediatrics",
+                                       "term":  "Pediatrics",
+                                       "type":  "vocabulary",
+                                       "source":  "Pediatrics.md",
+                                       "korean":  "소아과학, 소아과",
+                                       "answers":  [
+                                                       "pediatrics"
+                                                   ]
+                                   },
                     "pseudo-":  {
                                     "english":  "False",
                                     "answer":  "pseudo",
@@ -1605,6 +2228,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "pseudo-",
                                     "korean":  "거짓의"
                                 },
+                    "idiotype":  {
+                                     "english":  "The unique antigenic character of an antibody molecule",
+                                     "answer":  "idiotype",
+                                     "source":  "Idiotype.md",
+                                     "answers":  [
+                                                     "idiotype"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Idiotype",
+                                     "korean":  "개별특이형"
+                                 },
+                    "glandular tissue":  {
+                                             "english":  "Tissue composed of or relating to glands",
+                                             "answer":  "glandular tissue",
+                                             "source":  "Glandular tissue.md",
+                                             "answers":  [
+                                                             "glandular tissue"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Glandular tissue",
+                                             "korean":  "샘조직"
+                                         },
                     "sacrum":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -1715,6 +2360,29 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                    "collateral circulation"
                                                                ]
                                                },
+                    "mortuary":  {
+                                     "english":  "A place where dead bodies are kept before burial or cremation",
+                                     "answer":  "mortuary",
+                                     "source":  "Mortuary.md",
+                                     "answers":  [
+                                                     "mortuary"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Mortuary",
+                                     "korean":  "영안실"
+                                 },
+                    "per-":  {
+                                 "english":  "Through",
+                                 "answer":  "per",
+                                 "source":  "per-.md",
+                                 "answers":  [
+                                                 "per",
+                                                 "per-"
+                                             ],
+                                 "type":  "prefix",
+                                 "term":  "per-",
+                                 "korean":  "통하여"
+                             },
                     "heterophoria":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -1737,6 +2405,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "heterophoria"
                                                      ]
                                      },
+                    "information desk":  {
+                                             "english":  "A desk where information is provided to patients or visitors",
+                                             "answer":  "information desk",
+                                             "source":  "Information desk.md",
+                                             "answers":  [
+                                                             "information desk"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Information desk",
+                                             "korean":  "안내 데스크"
+                                         },
                     "enterorrhexis":  {
                                           "morphology":  {
                                                              "prefixes":  [
@@ -1795,6 +2474,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "exteri(o)",
                                       "korean":  "바깥쪽, 외부"
                                   },
+                    "dentistry":  {
+                                      "english":  "The profession or science dealing with teeth and oral disease",
+                                      "answer":  "dentistry",
+                                      "source":  "Dentistry.md",
+                                      "answers":  [
+                                                      "dentistry"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Dentistry",
+                                      "korean":  "치과학, 치의학"
+                                  },
                     "hem(o)":  {
                                    "english":  "Blood",
                                    "answer":  "hem",
@@ -1834,6 +2524,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "Natal",
                                   "korean":  "출생의"
                               },
+                    "dissection":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+                                                                           "dis-"
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-tion"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "secti(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The act of cutting apart or separating tissues",
+                                       "answer":  "dissection",
+                                       "term":  "Dissection",
+                                       "type":  "vocabulary",
+                                       "source":  "Dissection.md",
+                                       "korean":  "해부, 박리, 절개, 절제",
+                                       "answers":  [
+                                                       "dissection"
+                                                   ]
+                                   },
                     "vocal cord":  {
                                        "english":  "Either of the lower pair of vocal cords that produce voice",
                                        "answer":  "vocal cord",
@@ -1846,55 +2558,47 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "korean":  "성대"
                                    },
                     "semiconscious":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "semi-"
-                                                                          ]
-                                                         },
                                           "english":  "Only partly conscious",
                                           "answer":  "semiconscious",
-                                          "term":  "Semiconscious",
-                                          "type":  "vocabulary",
                                           "source":  "Semiconscious.md",
-                                          "korean":  "반의식의",
                                           "answers":  [
                                                           "semiconscious"
-                                                      ]
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Semiconscious",
+                                          "korean":  "반의식의"
                                       },
-                    "-cidal":  {
-                                   "english":  "Killing, destroying",
-                                   "answer":  "cidal",
-                                   "source":  "-cidal.md",
-                                   "answers":  [
-                                                   "cidal",
-                                                   "-cidal"
-                                               ],
-                                   "type":  "suffix",
-                                   "term":  "-cidal",
-                                   "korean":  "살균-"
-                               },
-                    "osteomalacia":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-
-                                                                         ],
-                                                            "suffixes":  [
-                                                                             "-malacia"
-                                                                         ],
-                                                            "roots":  [
-                                                                          "Oste(o)"
-                                                                      ]
-                                                        },
-                                         "english":  "Softening of the bones due to defective mineralization",
-                                         "answer":  "osteomalacia",
-                                         "term":  "Osteomalacia",
-                                         "type":  "vocabulary",
-                                         "source":  "Osteomalacia.md",
-                                         "korean":  "골연화증",
-                                         "answers":  [
-                                                         "osteomalacia"
-                                                     ]
-                                     },
+                    "sarcoid":  {
+                                    "morphology":  {
+                                                       "suffixes":  [
+                                                                        "-oid"
+                                                                    ],
+                                                       "roots":  [
+                                                                     "sarc(o)"
+                                                                 ]
+                                                   },
+                                    "english":  "An inflammatory disease marked by formation of granulomas in the lungs, lymph nodes, and other organs",
+                                    "answer":  "sarcoid",
+                                    "term":  "Sarcoid",
+                                    "type":  "vocabulary",
+                                    "source":  "Sarcoid.md",
+                                    "korean":  "사르코이드",
+                                    "answers":  [
+                                                    "sarcoid"
+                                                ]
+                                },
+                    "-a":  {
+                               "english":  "Noun ending",
+                               "answer":  "a",
+                               "source":  "-a.md",
+                               "answers":  [
+                                               "a",
+                                               "-a"
+                                           ],
+                               "type":  "suffix",
+                               "term":  "-a",
+                               "korean":  "명사형 어미"
+                           },
                     "-genic":  {
                                    "english":  "Producing, causing",
                                    "answer":  "genic",
@@ -1929,25 +2633,45 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "spinal cord"
                                                     ]
                                     },
-                    "pubis":  {
-                                  "english":  "The anterior part of the hip bone",
-                                  "answer":  "pubis",
-                                  "term":  "Pubis",
-                                  "type":  "vocabulary",
-                                  "source":  "Pubis.md",
-                                  "korean":  "두덩뼈, 치골",
-                                  "answers":  [
-                                                  "pubis"
-                                              ],
-                                  "imageQuestions":  [
-                                                         {
-                                                             "number":  4,
-                                                             "source":  "Pasted image 20260414162456.png",
-                                                             "type":  "numbered",
-                                                             "src":  "question-images/pelvis-bone-group-1.png"
-                                                         }
-                                                     ]
-                              },
+                    "abdominocentesis":  {
+                                             "morphology":  {
+                                                                "suffixes":  [
+                                                                                 "-centesis"
+                                                                             ],
+                                                                "roots":  [
+                                                                              "abdomin(o)"
+                                                                          ]
+                                                            },
+                                             "english":  "Puncture of the abdominal cavity for removal of fluid",
+                                             "answer":  "abdominocentesis",
+                                             "term":  "Abdominocentesis",
+                                             "type":  "vocabulary",
+                                             "source":  "Abdominocentesis.md",
+                                             "korean":  "복강천자술",
+                                             "answers":  [
+                                                             "abdominocentesis"
+                                                         ]
+                                         },
+                    "microscopic anatomy":  {
+                                                "morphology":  {
+                                                                   "prefixes":  [
+                                                                                    "micro-",
+                                                                                    "ana-"
+                                                                                ],
+                                                                   "suffixes":  [
+                                                                                    "-tomy"
+                                                                                ]
+                                                               },
+                                                "english":  "The study of cells and tissues on the microscopic level",
+                                                "answer":  "microscopic anatomy",
+                                                "term":  "Microscopic anatomy",
+                                                "type":  "vocabulary",
+                                                "source":  "Microscopic anatomy.md",
+                                                "korean":  "현미해부학",
+                                                "answers":  [
+                                                                "microscopic anatomy"
+                                                            ]
+                                            },
                     "cervical cancer":  {
                                             "morphology":  {
                                                                "prefixes":  [
@@ -1970,6 +2694,69 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                             "cervical cancer"
                                                         ]
                                         },
+                    "aseptic":  {
+                                    "morphology":  {
+                                                       "prefixes":  [
+                                                                        "a-"
+                                                                    ],
+                                                       "suffixes":  [
+                                                                        "-ic"
+                                                                    ],
+                                                       "roots":  [
+                                                                     "sept(o)"
+                                                                 ]
+                                                   },
+                                    "english":  "Free from pathogenic microorganisms",
+                                    "answer":  "aseptic",
+                                    "term":  "Aseptic",
+                                    "type":  "vocabulary",
+                                    "source":  "Aseptic.md",
+                                    "korean":  "무균의",
+                                    "answers":  [
+                                                    "aseptic"
+                                                ]
+                                },
+                    "radiology":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-ology"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "radi(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "The branch of medicine concerned with radiant energy in diagnosis and treatment",
+                                      "answer":  "radiology",
+                                      "term":  "Radiology",
+                                      "type":  "vocabulary",
+                                      "source":  "Radiology.md",
+                                      "korean":  "방사선과학, 영상의학",
+                                      "answers":  [
+                                                      "radiology"
+                                                  ]
+                                  },
+                    "caudad":  {
+                                   "morphology":  {
+                                                      "prefixes":  [
+
+                                                                   ],
+                                                      "suffixes":  [
+                                                                       "-ad"
+                                                                   ],
+                                                      "roots":  [
+                                                                    "caud(o)"
+                                                                ]
+                                                  },
+                                   "english":  "Toward the tail or caudal end",
+                                   "answer":  "caudad",
+                                   "term":  "Caudad",
+                                   "type":  "vocabulary",
+                                   "source":  "Caudad.md",
+                                   "korean":  "꼬리쪽을 향하여",
+                                   "answers":  [
+                                                   "caudad"
+                                               ]
+                               },
                     "leukemia":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -2004,6 +2791,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "exo-",
                                  "korean":  "외부의, 바깥의"
                              },
+                    "blepharoptosis":  {
+                                           "morphology":  {
+                                                              "prefixes":  [
+
+                                                                           ],
+                                                              "suffixes":  [
+                                                                               "-ptosis"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "Blephar(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "Drooping of the upper eyelid",
+                                           "answer":  "blepharoptosis",
+                                           "term":  "Blepharoptosis",
+                                           "type":  "vocabulary",
+                                           "source":  "Blepharoptosis.md",
+                                           "korean":  "눈꺼풀처짐, 안검하수",
+                                           "answers":  [
+                                                           "blepharoptosis"
+                                                       ]
+                                       },
                     "leukocyte":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -2026,22 +2835,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "leukocyte"
                                                   ]
                                   },
-                    "interaction":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "inter-"
-                                                                        ]
-                                                       },
-                                        "english":  "Reciprocal action or influence",
-                                        "answer":  "interaction",
-                                        "term":  "Interaction",
-                                        "type":  "vocabulary",
-                                        "source":  "Interaction.md",
-                                        "korean":  "상호작용",
-                                        "answers":  [
-                                                        "interaction"
-                                                    ]
-                                    },
                     "cephalometry":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -2078,6 +2871,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "chron(o)",
                                      "korean":  "시간"
                                  },
+                    "morph(o)":  {
+                                     "english":  "Form",
+                                     "answer":  "morph",
+                                     "source":  "morph(o).md",
+                                     "answers":  [
+                                                     "morph",
+                                                     "morpho",
+                                                     "morph/o",
+                                                     "morph(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "morph(o)",
+                                     "korean":  "형태"
+                                 },
                     "spasmodic":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -2100,6 +2907,44 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "spasmodic"
                                                   ]
                                   },
+                    "carcinoma":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-oma"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "carcin(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A malignant tumor of epithelial origin",
+                                      "answer":  "carcinoma",
+                                      "term":  "Carcinoma",
+                                      "type":  "vocabulary",
+                                      "source":  "Carcinoma.md",
+                                      "korean":  "암종",
+                                      "answers":  [
+                                                      "carcinoma"
+                                                  ]
+                                  },
+                    "chronometry":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-metry"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "chron(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Measurement of time",
+                                        "answer":  "chronometry",
+                                        "term":  "Chronometry",
+                                        "type":  "vocabulary",
+                                        "source":  "Chronometry.md",
+                                        "korean":  "시간측정법",
+                                        "answers":  [
+                                                        "chronometry"
+                                                    ]
+                                    },
                     "salmonellosis":  {
                                           "morphology":  {
                                                              "prefixes":  [
@@ -2156,6 +3001,43 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "-pexy",
                                   "korean":  "고정(술)"
                               },
+                    "cis(o)":  {
+                                   "english":  "To cut",
+                                   "answer":  "cis",
+                                   "source":  "cis(o).md",
+                                   "answers":  [
+                                                   "cis",
+                                                   "ciso",
+                                                   "cis/o",
+                                                   "cis(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "cis(o)",
+                                   "korean":  "자르다"
+                               },
+                    "-uria":  {
+                                  "english":  "Urine condition",
+                                  "answer":  "uria",
+                                  "source":  "-uria.md",
+                                  "answers":  [
+                                                  "uria",
+                                                  "-uria"
+                                              ],
+                                  "type":  "suffix",
+                                  "term":  "-uria",
+                                  "korean":  "소변 상태"
+                              },
+                    "physical therapist":  {
+                                               "english":  "A person professionally trained to administer physical therapy",
+                                               "answer":  "physical therapist",
+                                               "source":  "Physical therapist.md",
+                                               "answers":  [
+                                                               "physical therapist"
+                                                           ],
+                                               "type":  "vocabulary",
+                                               "term":  "Physical therapist",
+                                               "korean":  "물리치료사"
+                                           },
                     "macr(o)":  {
                                     "english":  "Large, enlarged",
                                     "answer":  "macr",
@@ -2170,17 +3052,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "macr(o)",
                                     "korean":  "큰"
                                 },
-                    "hemorrhoid":  {
-                                       "english":  "An abnormal mass of dilated and engorged blood vessels in swollen tissue that occurs internally in the anal canal or externally around the anus, that may be marked by bleeding, pain, or itching, and that when occurring internally often protrude through the outer sphincter of the anus and when occurring externally may lead to thrombosis; usually used in plural",
-                                       "answer":  "hemorrhoid",
-                                       "source":  "Hemorrhoid.md",
-                                       "answers":  [
-                                                       "hemorrhoid"
-                                                   ],
-                                       "type":  "vocabulary",
-                                       "term":  "Hemorrhoid",
-                                       "korean":  "치질, 치핵"
-                                   },
+                    "-taxis":  {
+                                   "english":  "Moving response by an organism toward or away from a stimulus",
+                                   "answer":  "taxis",
+                                   "source":  "-taxis.md",
+                                   "answers":  [
+                                                   "taxis",
+                                                   "-taxis"
+                                               ],
+                                   "type":  "suffix",
+                                   "term":  "-taxis",
+                                   "korean":  "주성"
+                               },
                     "neo-":  {
                                  "english":  "New, recent",
                                  "answer":  "neo",
@@ -2215,6 +3098,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "gastrodynia"
                                                     ]
                                     },
+                    "morphology":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ology"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "morph(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The study of form and structure",
+                                       "answer":  "morphology",
+                                       "term":  "Morphology",
+                                       "type":  "vocabulary",
+                                       "source":  "Morphology.md",
+                                       "korean":  "형태학",
+                                       "answers":  [
+                                                       "morphology"
+                                                   ]
+                                   },
+                    "allergy":  {
+                                    "english":  "Abnormal sensitivity to a substance",
+                                    "answer":  "allergy",
+                                    "source":  "Allergy.md",
+                                    "answers":  [
+                                                    "allergy"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Allergy",
+                                    "korean":  "알레르기"
+                                },
                     "erythroblast":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -2299,6 +3212,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           "bacteriocidal"
                                                       ]
                                       },
+                    "infectious disease":  {
+                                               "english":  "Disease caused by a pathogen and capable of transmission",
+                                               "answer":  "infectious disease",
+                                               "source":  "Infectious disease.md",
+                                               "answers":  [
+                                                               "infectious disease"
+                                                           ],
+                                               "type":  "vocabulary",
+                                               "term":  "Infectious disease",
+                                               "korean":  "감염병"
+                                           },
                     "dyslexia":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -2321,6 +3245,56 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "dyslexia"
                                                  ]
                                  },
+                    "pharyng(o)":  {
+                                       "english":  "Throat",
+                                       "answer":  "pharyng",
+                                       "source":  "pharyng(o).md",
+                                       "answers":  [
+                                                       "pharyng",
+                                                       "pharyngo",
+                                                       "pharyng/o",
+                                                       "pharyng(o)"
+                                                   ],
+                                       "type":  "root",
+                                       "term":  "pharyng(o)",
+                                       "korean":  "인두"
+                                   },
+                    "antenatal":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+                                                                          "ante-"
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-al"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "nat(i)"
+                                                                   ]
+                                                     },
+                                      "english":  "Occurring or existing before birth",
+                                      "answer":  "antenatal",
+                                      "term":  "Antenatal",
+                                      "type":  "vocabulary",
+                                      "source":  "Antenatal.md",
+                                      "korean":  "산전의",
+                                      "answers":  [
+                                                      "antenatal"
+                                                  ]
+                                  },
+                    "arthr(o)":  {
+                                     "english":  "Joint",
+                                     "answer":  "arthr",
+                                     "source":  "arthr(o).md",
+                                     "answers":  [
+                                                     "arthr",
+                                                     "arthro",
+                                                     "arthr/o",
+                                                     "arthr(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "arthr(o)",
+                                     "korean":  "관절"
+                                 },
                     "micr(o)":  {
                                     "english":  "Small",
                                     "answer":  "micr",
@@ -2335,6 +3309,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "micr(o)",
                                     "korean":  "작은"
                                 },
+                    "dietitian":  {
+                                      "english":  "A specialist in dietetics",
+                                      "answer":  "dietitian",
+                                      "source":  "Dietitian.md",
+                                      "answers":  [
+                                                      "dietitian"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Dietitian",
+                                      "korean":  "영양사"
+                                  },
                     "-plasty":  {
                                     "english":  "Surgical repair",
                                     "answer":  "plasty",
@@ -2347,6 +3332,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-plasty",
                                     "korean":  "외과적 복원(술), 성형(술)"
                                 },
+                    "onc(o)":  {
+                                   "english":  "Tumor",
+                                   "answer":  "onc",
+                                   "source":  "onc(o).md",
+                                   "answers":  [
+                                                   "onc",
+                                                   "onco",
+                                                   "onc/o",
+                                                   "onc(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "onc(o)",
+                                   "korean":  "종양"
+                               },
                     "-ad":  {
                                 "english":  "Toward",
                                 "answer":  "ad",
@@ -2359,6 +3358,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "-ad",
                                 "korean":  "~을 향하여"
                             },
+                    "pulmon(o)":  {
+                                      "english":  "Lung",
+                                      "answer":  "pulmon",
+                                      "source":  "pulmon(o).md",
+                                      "answers":  [
+                                                      "pulmon",
+                                                      "pulmono",
+                                                      "pulmon/o",
+                                                      "pulmon(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "pulmon(o)",
+                                      "korean":  "폐"
+                                  },
                     "craniotomy":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -2423,20 +3436,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "macro-",
                                    "korean":  "큰"
                                },
-                    "intern(o)":  {
-                                      "english":  "Inside, internal",
-                                      "answer":  "intern",
-                                      "source":  "intern(o).md",
-                                      "answers":  [
-                                                      "intern",
-                                                      "interno",
-                                                      "intern/o",
-                                                      "intern(o)"
-                                                  ],
-                                      "type":  "root",
-                                      "term":  "intern(o)",
-                                      "korean":  "안쪽, 내부"
-                                  },
                     "intradermal injection":  {
                                                   "morphology":  {
                                                                      "prefixes":  [
@@ -2459,28 +3458,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                   "intradermal injection"
                                                               ]
                                               },
-                    "laterality":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-
-                                                                       ],
-                                                          "suffixes":  [
-
-                                                                       ],
-                                                          "roots":  [
-
-                                                                    ]
-                                                      },
-                                       "english":  "The preference or dominance of one side of the body over the other",
-                                       "answer":  "laterality",
-                                       "term":  "Laterality",
-                                       "type":  "vocabulary",
-                                       "source":  "Laterality.md",
-                                       "korean":  "쪽치우침, 편측성",
-                                       "answers":  [
-                                                       "laterality"
-                                                   ]
-                                   },
+                    "suppurative":  {
+                                        "english":  "Producing or associated with pus",
+                                        "answer":  "suppurative",
+                                        "source":  "Suppurative.md",
+                                        "answers":  [
+                                                        "suppurative"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Suppurative",
+                                        "korean":  "화농의, 고름의"
+                                    },
                     "viral dysentery":  {
                                             "english":  "Dysentery caused by a virus",
                                             "answer":  "viral dysentery",
@@ -2504,6 +3492,22 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "-emia",
                                   "korean":  "혈증, 혈액 상태"
                               },
+                    "acupuncture":  {
+                                        "morphology":  {
+                                                           "roots":  [
+                                                                         "acu(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Treatment by inserting fine needles into specific points on the body",
+                                        "answer":  "acupuncture",
+                                        "term":  "Acupuncture",
+                                        "type":  "vocabulary",
+                                        "source":  "Acupuncture.md",
+                                        "korean":  "침술",
+                                        "answers":  [
+                                                        "acupuncture"
+                                                    ]
+                                    },
                     "bi(o)":  {
                                   "english":  "Life",
                                   "answer":  "bi",
@@ -2540,6 +3544,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "antibiotic"
                                                    ]
                                    },
+                    "penicillin":  {
+                                       "english":  "Any of several antibiotics produced by molds of the genus Penicillium or made synthetically",
+                                       "answer":  "penicillin",
+                                       "source":  "Penicillin.md",
+                                       "answers":  [
+                                                       "penicillin"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Penicillin",
+                                       "korean":  "페니실린"
+                                   },
                     "-coccus":  {
                                     "english":  "Round-shaped bacterium",
                                     "answer":  "coccus",
@@ -2552,20 +3567,55 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-coccus",
                                     "korean":  "알균"
                                 },
-                    "cutane(o)":  {
-                                      "english":  "Skin",
-                                      "answer":  "cutane",
-                                      "source":  "Cutane(o).md",
-                                      "answers":  [
-                                                      "cutane",
-                                                      "cutaneo",
-                                                      "cutane/o",
-                                                      "cutane(o)"
-                                                  ],
-                                      "type":  "root",
-                                      "term":  "Cutane(o)",
-                                      "korean":  "피부"
-                                  },
+                    "glossodynia":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-dynia"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "gloss(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Pain in the tongue",
+                                        "answer":  "glossodynia",
+                                        "term":  "Glossodynia",
+                                        "type":  "vocabulary",
+                                        "source":  "Glossodynia.md",
+                                        "korean":  "혀통증, 설통",
+                                        "answers":  [
+                                                        "glossodynia"
+                                                    ]
+                                    },
+                    "practical nurse":  {
+                                            "english":  "A nurse trained to perform basic nursing care",
+                                            "answer":  "practical nurse",
+                                            "source":  "Practical nurse.md",
+                                            "answers":  [
+                                                            "practical nurse"
+                                                        ],
+                                            "type":  "vocabulary",
+                                            "term":  "Practical nurse",
+                                            "korean":  "간호조무사"
+                                        },
+                    "chiropractic":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-ic"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "chir(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Treatment especially of the spine by manual adjustment",
+                                         "answer":  "chiropractic",
+                                         "term":  "Chiropractic",
+                                         "type":  "vocabulary",
+                                         "source":  "Chiropractic.md",
+                                         "korean":  "지압요법, 척주 지압요법",
+                                         "answers":  [
+                                                         "chiropractic"
+                                                     ]
+                                     },
                     "amniocentesis":  {
                                           "morphology":  {
                                                              "prefixes":  [
@@ -2624,6 +3674,31 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                            "carcinogenesis"
                                                        ]
                                        },
+                    "lymph(o)":  {
+                                     "english":  "Lymph",
+                                     "answer":  "lymph",
+                                     "source":  "lymph(o).md",
+                                     "answers":  [
+                                                     "lymph",
+                                                     "lympho",
+                                                     "lymph/o",
+                                                     "lymph(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "lymph(o)",
+                                     "korean":  "림프"
+                                 },
+                    "nurse center":  {
+                                         "english":  "A hospital area serving as the nurses\u0027 station",
+                                         "answer":  "nurse center",
+                                         "source":  "Nurse center.md",
+                                         "answers":  [
+                                                         "nurse center"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Nurse center",
+                                         "korean":  "간호사실"
+                                     },
                     "diarrhea":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -2710,6 +3785,59 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-ist",
                                  "korean":  "전문가, 종사자, ~하는 사람"
                              },
+                    "unilateral":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+                                                                           "uni-"
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-al"
+                                                                       ],
+                                                          "roots":  [
+
+                                                                    ]
+                                                      },
+                                       "english":  "Affecting one side of the body",
+                                       "answer":  "unilateral",
+                                       "term":  "Unilateral",
+                                       "type":  "vocabulary",
+                                       "source":  "Unilateral.md",
+                                       "korean":  "한쪽의, 편측의, 일측성의",
+                                       "answers":  [
+                                                       "unilateral"
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "number":  1,
+                                                                  "source":  "Pasted image 20260331144508.png",
+                                                                  "type":  "numbered",
+                                                                  "src":  "question-images/direction-group-1.png"
+                                                              }
+                                                          ]
+                                   },
+                    "prescription":  {
+                                         "english":  "A written direction for preparation and use of medicine",
+                                         "answer":  "prescription",
+                                         "source":  "Prescription.md",
+                                         "answers":  [
+                                                         "prescription"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Prescription",
+                                         "korean":  "처방, 처방전"
+                                     },
+                    "post-":  {
+                                  "english":  "After, following, behind",
+                                  "answer":  "post",
+                                  "source":  "post-.md",
+                                  "answers":  [
+                                                  "post",
+                                                  "post-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "post-",
+                                  "korean":  "이후의, 뒤의, 후의"
+                              },
                     "autopsy":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -2760,78 +3888,151 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "dactyl(o)",
                                       "korean":  "손발가락, 지"
                                   },
+                    "laryngotomy":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-tomy"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "laryng(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Incision into the larynx",
+                                        "answer":  "laryngotomy",
+                                        "term":  "Laryngotomy",
+                                        "type":  "vocabulary",
+                                        "source":  "Laryngotomy.md",
+                                        "korean":  "후두절개술",
+                                        "answers":  [
+                                                        "laryngotomy"
+                                                    ]
+                                    },
                     "intraperitoneal injection":  {
-                                                      "morphology":  {
-                                                                         "prefixes":  [
-                                                                                          "intra-"
-                                                                                      ],
-                                                                         "suffixes":  [
-                                                                                          "-al"
-                                                                                      ],
-                                                                         "roots":  [
-                                                                                       "peritone(o)"
-                                                                                   ]
-                                                                     },
                                                       "english":  "Injection into the peritoneal cavity",
                                                       "answer":  "intraperitoneal injection",
-                                                      "term":  "Intraperitoneal injection",
-                                                      "type":  "vocabulary",
                                                       "source":  "Intraperitoneal injection.md",
-                                                      "korean":  "복강내 주사; IP",
                                                       "answers":  [
                                                                       "intraperitoneal injection"
-                                                                  ]
+                                                                  ],
+                                                      "type":  "vocabulary",
+                                                      "term":  "Intraperitoneal injection",
+                                                      "korean":  "복강내 주사; IP"
                                                   },
-                    "thyr(o)":  {
-                                    "english":  "Gland in the neck that regulates metabolism",
-                                    "answer":  "thyr",
-                                    "source":  "thyr(o).md",
+                    "bili(o)":  {
+                                    "english":  "Bile",
+                                    "answer":  "bili",
+                                    "source":  "bili(o).md",
                                     "answers":  [
-                                                    "thyr",
-                                                    "thyro",
-                                                    "thyr/o",
-                                                    "thyr(o)"
+                                                    "bili",
+                                                    "bilio",
+                                                    "bili/o",
+                                                    "bili(o)"
                                                 ],
                                     "type":  "root",
-                                    "term":  "thyr(o)",
-                                    "korean":  "갑상선"
+                                    "term":  "bili(o)",
+                                    "korean":  "담즙"
                                 },
-                    "myel(o)":  {
-                                    "english":  "Spinal cord",
-                                    "answer":  "myel",
-                                    "source":  "myel(o).md",
-                                    "answers":  [
-                                                    "myel",
-                                                    "myelo",
-                                                    "myel/o",
-                                                    "myel(o)"
-                                                ],
-                                    "type":  "root",
-                                    "term":  "myel(o)",
-                                    "korean":  "척수"
-                                },
-                    "blepharoptosis":  {
-                                           "morphology":  {
-                                                              "prefixes":  [
-
-                                                                           ],
-                                                              "suffixes":  [
-                                                                               "-ptosis"
-                                                                           ],
-                                                              "roots":  [
-                                                                            "Blephar(o)"
-                                                                        ]
-                                                          },
-                                           "english":  "Drooping of the upper eyelid",
-                                           "answer":  "blepharoptosis",
-                                           "term":  "Blepharoptosis",
-                                           "type":  "vocabulary",
-                                           "source":  "Blepharoptosis.md",
-                                           "korean":  "눈꺼풀처짐, 안검하수",
-                                           "answers":  [
-                                                           "blepharoptosis"
-                                                       ]
-                                       },
+                    "orthopedic surgery":  {
+                                               "morphology":  {
+                                                                  "prefixes":  [
+                                                                                   "ortho-"
+                                                                               ],
+                                                                  "suffixes":  [
+                                                                                   "-ic"
+                                                                               ],
+                                                                  "roots":  [
+                                                                                "ped(o)"
+                                                                            ]
+                                                              },
+                                               "english":  "Surgery concerned with disorders of the musculoskeletal system",
+                                               "answer":  "orthopedic surgery",
+                                               "term":  "Orthopedic surgery",
+                                               "type":  "vocabulary",
+                                               "source":  "Orthopedic surgery.md",
+                                               "korean":  "정형외과학",
+                                               "answers":  [
+                                                               "orthopedic surgery"
+                                                           ]
+                                           },
+                    "podalgia":  {
+                                     "morphology":  {
+                                                        "suffixes":  [
+                                                                         "-algia"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "pod(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "Pain in the foot",
+                                     "answer":  "podalgia",
+                                     "term":  "Podalgia",
+                                     "type":  "vocabulary",
+                                     "source":  "Podalgia.md",
+                                     "korean":  "발 통증",
+                                     "answers":  [
+                                                     "podalgia"
+                                                 ]
+                                 },
+                    "clinical pathology":  {
+                                               "morphology":  {
+                                                                  "suffixes":  [
+                                                                                   "-ology"
+                                                                               ],
+                                                                  "roots":  [
+                                                                                "path(o)"
+                                                                            ]
+                                                              },
+                                               "english":  "The medical specialty concerned with laboratory diagnosis of disease",
+                                               "answer":  "clinical pathology",
+                                               "term":  "Clinical pathology",
+                                               "type":  "vocabulary",
+                                               "source":  "Clinical pathology.md",
+                                               "korean":  "임상병리학",
+                                               "answers":  [
+                                                               "clinical pathology"
+                                                           ]
+                                           },
+                    "cerebellum":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-um"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "cerebell(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The part of the brain concerned especially with coordination of movement",
+                                       "answer":  "cerebellum",
+                                       "term":  "Cerebellum",
+                                       "type":  "vocabulary",
+                                       "source":  "Cerebellum.md",
+                                       "korean":  "소뇌",
+                                       "answers":  [
+                                                       "cerebellum"
+                                                   ]
+                                   },
+                    "subglossal":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+                                                                           "sub-"
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-al"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Gloss(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Situated beneath the tongue",
+                                       "answer":  "subglossal",
+                                       "term":  "Subglossal",
+                                       "type":  "vocabulary",
+                                       "source":  "Subglossal.md",
+                                       "korean":  "혀밑의",
+                                       "answers":  [
+                                                       "subglossal"
+                                                   ]
+                                   },
                     "-meter":  {
                                    "english":  "Instrument for measuring",
                                    "answer":  "meter",
@@ -2843,6 +4044,39 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "type":  "suffix",
                                    "term":  "-meter",
                                    "korean":  "측정(기)"
+                               },
+                    "prodrome":  {
+                                     "morphology":  {
+                                                        "prefixes":  [
+                                                                         "pro-"
+                                                                     ],
+                                                        "suffixes":  [
+                                                                         "-drome"
+                                                                     ],
+                                                        "roots":  [
+
+                                                                  ]
+                                                    },
+                                     "english":  "One or more symptoms that signal the impending onset of disease or illness",
+                                     "answer":  "prodrome",
+                                     "term":  "Prodrome",
+                                     "type":  "vocabulary",
+                                     "source":  "Prodrome.md",
+                                     "korean":  "전구증상",
+                                     "answers":  [
+                                                     "prodrome"
+                                                 ]
+                                 },
+                    "genome":  {
+                                   "english":  "The complete genetic material of an organism",
+                                   "answer":  "genome",
+                                   "source":  "Genome.md",
+                                   "answers":  [
+                                                   "genome"
+                                               ],
+                                   "type":  "vocabulary",
+                                   "term":  "Genome",
+                                   "korean":  "유전체"
                                },
                     "abnormal":  {
                                      "morphology":  {
@@ -2866,25 +4100,83 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "abnormal"
                                                  ]
                                  },
+                    "esthesi(o)":  {
+                                       "english":  "Sensation, feeling",
+                                       "answer":  "esthesi",
+                                       "source":  "esthesi(o).md",
+                                       "answers":  [
+                                                       "esthesi",
+                                                       "esthesio",
+                                                       "esthesi/o",
+                                                       "esthesi(o)"
+                                                   ],
+                                       "type":  "root",
+                                       "term":  "esthesi(o)",
+                                       "korean":  "감각"
+                                   },
                     "melanin pigments":  {
-                                             "morphology":  {
-                                                                "suffixes":  [
-                                                                                 "-in"
-                                                                             ],
-                                                                "roots":  [
-                                                                              "melan(o)"
-                                                                          ]
-                                                            },
                                              "english":  "Dark biological pigments occurring in the skin, hair, feathers, scales, eyes, and some internal membranes",
                                              "answer":  "melanin pigments",
-                                             "term":  "Melanin pigments",
-                                             "type":  "vocabulary",
                                              "source":  "Melanin pigments.md",
-                                             "korean":  "멜라닌 색소",
                                              "answers":  [
                                                              "melanin pigments"
-                                                         ]
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Melanin pigments",
+                                             "korean":  "멜라닌 색소"
                                          },
+                    "renography":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-graphy"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "ren(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Radiographic imaging or recording of the kidney",
+                                       "answer":  "renography",
+                                       "term":  "Renography",
+                                       "type":  "vocabulary",
+                                       "source":  "Renography.md",
+                                       "korean":  "콩팥촬영술",
+                                       "answers":  [
+                                                       "renography"
+                                                   ]
+                                   },
+                    "tripod":  {
+                                   "english":  "A three-legged support",
+                                   "answer":  "tripod",
+                                   "source":  "Tripod.md",
+                                   "answers":  [
+                                                   "tripod"
+                                               ],
+                                   "type":  "vocabulary",
+                                   "term":  "Tripod",
+                                   "korean":  "삼각대"
+                               },
+                    "metamorphosis":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+                                                                              "meta-"
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-osis"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "morph(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "A change of form or structure",
+                                          "answer":  "metamorphosis",
+                                          "term":  "Metamorphosis",
+                                          "type":  "vocabulary",
+                                          "source":  "Metamorphosis.md",
+                                          "korean":  "탈바꿈, 변태",
+                                          "answers":  [
+                                                          "metamorphosis"
+                                                      ]
+                                      },
                     "spin(o)":  {
                                     "english":  "Spine, vertebral column",
                                     "answer":  "spin",
@@ -2941,6 +4233,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "chondr(o)",
                                       "korean":  "연골"
                                   },
+                    "pathogenesis":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-genesis"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "path(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "The mechanism or process by which disease develops",
+                                         "answer":  "pathogenesis",
+                                         "term":  "Pathogenesis",
+                                         "type":  "vocabulary",
+                                         "source":  "Pathogenesis.md",
+                                         "korean":  "발병기전",
+                                         "answers":  [
+                                                         "pathogenesis"
+                                                     ]
+                                     },
                     "medial":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -2971,6 +4282,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           }
                                                       ]
                                },
+                    "record librarian":  {
+                                             "english":  "A person responsible for medical records",
+                                             "answer":  "record librarian",
+                                             "source":  "Record librarian.md",
+                                             "answers":  [
+                                                             "record librarian"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Record librarian",
+                                             "korean":  "의무기록사"
+                                         },
                     "-clysis":  {
                                     "english":  "Washing out, irrigation",
                                     "answer":  "clysis",
@@ -2983,6 +4305,29 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-clysis",
                                     "korean":  "세척, 관류"
                                 },
+                    "pharyngolaryngeal":  {
+                                              "morphology":  {
+                                                                 "prefixes":  [
+
+                                                                              ],
+                                                                 "suffixes":  [
+                                                                                  "-eal"
+                                                                              ],
+                                                                 "roots":  [
+                                                                               "Pharyng(o)",
+                                                                               "Laryng(o)"
+                                                                           ]
+                                                             },
+                                              "english":  "Of or common to both the larynx and the pharynx",
+                                              "answer":  "pharyngolaryngeal",
+                                              "term":  "Pharyngolaryngeal",
+                                              "type":  "vocabulary",
+                                              "source":  "Pharyngolaryngeal.md",
+                                              "korean":  "인후두의",
+                                              "answers":  [
+                                                              "pharyngolaryngeal"
+                                                          ]
+                                          },
                     "bronchi":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -3026,6 +4371,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "answers":  [
                                                       "anabolism"
                                                   ]
+                                  },
+                    "physician":  {
+                                      "english":  "A person skilled in the art of healing",
+                                      "answer":  "physician",
+                                      "source":  "Physician.md",
+                                      "answers":  [
+                                                      "physician"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Physician",
+                                      "korean":  "의사"
                                   },
                     "cheil(o)":  {
                                      "english":  "Lip",
@@ -3077,28 +4433,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "chem(o)",
                                     "korean":  "화학"
                                 },
-                    "caudad":  {
-                                   "morphology":  {
-                                                      "prefixes":  [
-
-                                                                   ],
-                                                      "suffixes":  [
-                                                                       "-ad"
-                                                                   ],
-                                                      "roots":  [
-                                                                    "caud(o)"
-                                                                ]
-                                                  },
-                                   "english":  "Toward the tail or caudal end",
-                                   "answer":  "caudad",
-                                   "term":  "Caudad",
-                                   "type":  "vocabulary",
-                                   "source":  "Caudad.md",
-                                   "korean":  "꼬리쪽을 향하여",
-                                   "answers":  [
-                                                   "caudad"
-                                               ]
-                               },
+                    "chir(o)":  {
+                                    "english":  "Hand",
+                                    "answer":  "chir",
+                                    "source":  "chir(o).md",
+                                    "answers":  [
+                                                    "chir",
+                                                    "chiro",
+                                                    "chir/o",
+                                                    "chir(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "chir(o)",
+                                    "korean":  "손"
+                                },
                     "stoma":  {
                                   "morphology":  {
                                                      "prefixes":  [
@@ -3170,6 +4518,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "esophag(o)",
                                        "korean":  "식도"
                                    },
+                    "osteomyelitis":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-itis"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "oste(o)",
+                                                                           "myel(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Inflammation of bone and bone marrow",
+                                          "answer":  "osteomyelitis",
+                                          "term":  "Osteomyelitis",
+                                          "type":  "vocabulary",
+                                          "source":  "Osteomyelitis.md",
+                                          "korean":  "골수염",
+                                          "answers":  [
+                                                          "osteomyelitis"
+                                                      ]
+                                      },
                     "dorsal":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -3200,24 +4568,38 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           }
                                                       ]
                                },
+                    "palatorrhaphy":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-rrhaphy"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "Palat(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Suturing of the palate",
+                                          "answer":  "palatorrhaphy",
+                                          "term":  "Palatorrhaphy",
+                                          "type":  "vocabulary",
+                                          "source":  "Palatorrhaphy.md",
+                                          "korean":  "입천장꿰맴술, 구개봉합술",
+                                          "answers":  [
+                                                          "palatorrhaphy"
+                                                      ]
+                                      },
                     "albumin":  {
-                                    "morphology":  {
-                                                       "suffixes":  [
-                                                                        "-in"
-                                                                    ],
-                                                       "roots":  [
-                                                                     "alb(o)"
-                                                                 ]
-                                                   },
                                     "english":  "A simple water-soluble protein found in blood plasma, egg white, milk, and many plant and animal tissues",
                                     "answer":  "albumin",
-                                    "term":  "Albumin",
-                                    "type":  "vocabulary",
                                     "source":  "Albumin.md",
-                                    "korean":  "알부민",
                                     "answers":  [
                                                     "albumin"
-                                                ]
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Albumin",
+                                    "korean":  "알부민"
                                 },
                     "syndrome":  {
                                      "morphology":  {
@@ -3264,20 +4646,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "hypotension":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "hypo-"
-                                                                        ]
-                                                       },
                                         "english":  "Abnormally low blood pressure",
                                         "answer":  "hypotension",
-                                        "term":  "Hypotension",
-                                        "type":  "vocabulary",
                                         "source":  "Hypotension.md",
-                                        "korean":  "저혈압",
                                         "answers":  [
                                                         "hypotension"
-                                                    ]
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Hypotension",
+                                        "korean":  "저혈압"
                                     },
                     "erythr(o)":  {
                                       "english":  "Red",
@@ -3305,18 +4682,42 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "super-",
                                    "korean":  "위의, 상부의"
                                },
-                    "poly-":  {
-                                  "english":  "Many, much",
-                                  "answer":  "poly",
-                                  "source":  "poly-.md",
-                                  "answers":  [
-                                                  "poly",
-                                                  "poly-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "poly-",
-                                  "korean":  "다"
-                              },
+                    "vascul(o)":  {
+                                      "english":  "Blood vessel",
+                                      "answer":  "vascul",
+                                      "source":  "vascul(o).md",
+                                      "answers":  [
+                                                      "vascul",
+                                                      "vasculo",
+                                                      "vascul/o",
+                                                      "vascul(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "vascul(o)",
+                                      "korean":  "혈관"
+                                  },
+                    "helminthic dysentery":  {
+                                                 "english":  "Dysentery caused by helminths",
+                                                 "answer":  "helminthic dysentery",
+                                                 "source":  "Helminthic dysentery.md",
+                                                 "answers":  [
+                                                                 "helminthic dysentery"
+                                                             ],
+                                                 "type":  "vocabulary",
+                                                 "term":  "Helminthic dysentery",
+                                                 "korean":  "연충이질"
+                                             },
+                    "ice bag":  {
+                                    "english":  "A bag filled with ice and applied to the body",
+                                    "answer":  "ice bag",
+                                    "source":  "Ice bag.md",
+                                    "answers":  [
+                                                    "ice bag"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Ice bag",
+                                    "korean":  "얼음주머니"
+                                },
                     "necr(o)":  {
                                     "english":  "Death",
                                     "answer":  "necr",
@@ -3343,59 +4744,81 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "de-",
                                 "korean":  "~로부터, 아래로"
                             },
-                    "prodrome":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "pro-"
-                                                                     ],
-                                                        "suffixes":  [
-                                                                         "-drome"
-                                                                     ],
-                                                        "roots":  [
+                    "lumbosacral":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
 
-                                                                  ]
-                                                    },
-                                     "english":  "One or more symptoms that signal the impending onset of disease or illness",
-                                     "answer":  "prodrome",
-                                     "term":  "Prodrome",
-                                     "type":  "vocabulary",
-                                     "source":  "Prodrome.md",
-                                     "korean":  "전구증상",
-                                     "answers":  [
-                                                     "prodrome"
-                                                 ]
-                                 },
+                                                                        ],
+                                                           "suffixes":  [
+                                                                            "-al"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "lumb(o)",
+                                                                         "sacr(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Having to do with the lumbar and sacral regions",
+                                        "answer":  "lumbosacral",
+                                        "term":  "Lumbosacral",
+                                        "type":  "vocabulary",
+                                        "source":  "Lumbosacral.md",
+                                        "korean":  "허리엉치의, 요천추의",
+                                        "answers":  [
+                                                        "lumbosacral"
+                                                    ]
+                                    },
                     "transplantation":  {
-                                            "morphology":  {
-                                                               "prefixes":  [
-                                                                                "trans-"
-                                                                            ],
-                                                               "suffixes":  [
-                                                                                "-ation"
-                                                                            ]
-                                                           },
                                             "english":  "The act or process of transferring tissue or an organ from one site to another",
                                             "answer":  "transplantation",
-                                            "term":  "Transplantation",
-                                            "type":  "vocabulary",
                                             "source":  "Transplantation.md",
-                                            "korean":  "이식",
                                             "answers":  [
                                                             "transplantation"
-                                                        ]
+                                                        ],
+                                            "type":  "vocabulary",
+                                            "term":  "Transplantation",
+                                            "korean":  "이식"
                                         },
-                    "ecto-":  {
-                                  "english":  "Outside, outer",
-                                  "answer":  "ecto",
-                                  "source":  "ecto-.md",
-                                  "answers":  [
-                                                  "ecto",
-                                                  "ecto-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "ecto-",
-                                  "korean":  "외부의, 바깥의"
-                              },
+                    "dermatitis":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-itis"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Dermat(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Inflammation of the skin",
+                                       "answer":  "dermatitis",
+                                       "term":  "Dermatitis",
+                                       "type":  "vocabulary",
+                                       "source":  "Dermatitis.md",
+                                       "korean":  "피부염",
+                                       "answers":  [
+                                                       "dermatitis"
+                                                   ]
+                                   },
+                    "pathogenic":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-genic"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Path(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Causing or capable of causing disease",
+                                       "answer":  "pathogenic",
+                                       "term":  "Pathogenic",
+                                       "type":  "vocabulary",
+                                       "source":  "Pathogenic.md",
+                                       "korean":  "병원성-",
+                                       "answers":  [
+                                                       "pathogenic"
+                                                   ]
+                                   },
                     "rhinitis":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -3418,6 +4841,61 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "rhinitis"
                                                  ]
                                  },
+                    "crutch":  {
+                                   "english":  "A support used to assist walking",
+                                   "answer":  "crutch",
+                                   "source":  "Crutch.md",
+                                   "answers":  [
+                                                   "crutch"
+                                               ],
+                                   "type":  "vocabulary",
+                                   "term":  "Crutch",
+                                   "korean":  "목발"
+                               },
+                    "umbilical":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-al"
+                                                                      ],
+                                                         "roots":  [
+
+                                                                   ]
+                                                     },
+                                      "english":  "Having to do with the umbilicus, or navel",
+                                      "answer":  "umbilical",
+                                      "term":  "Umbilical",
+                                      "type":  "vocabulary",
+                                      "source":  "Umbilical.md",
+                                      "korean":  "배꼽의",
+                                      "answers":  [
+                                                      "umbilical"
+                                                  ],
+                                      "imageQuestions":  [
+                                                             {
+                                                                 "number":  5,
+                                                                 "source":  "Pasted image 20260414172053.png",
+                                                                 "type":  "numbered",
+                                                                 "src":  "question-images/abdominal-region-group-1.png"
+                                                             }
+                                                         ]
+                                  },
+                    "ped(i)":  {
+                                   "english":  "Foot",
+                                   "answer":  "ped",
+                                   "source":  "ped(i).md",
+                                   "answers":  [
+                                                   "ped",
+                                                   "pedi",
+                                                   "ped/i",
+                                                   "ped(i)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "ped(i)",
+                                   "korean":  "발"
+                               },
                     "-oma":  {
                                  "english":  "Tumor, mass",
                                  "answer":  "oma",
@@ -3430,46 +4908,16 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-oma",
                                  "korean":  "종양, 덩이"
                              },
-                    "tonsillar":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-
-                                                                      ],
-                                                         "suffixes":  [
-
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Tonsill(o)"
-                                                                   ]
-                                                     },
-                                      "english":  "Of or relating to or affecting the tonsils",
-                                      "answer":  "tonsillar",
-                                      "term":  "Tonsillar",
-                                      "type":  "vocabulary",
-                                      "source":  "Tonsillar.md",
-                                      "korean":  "편도선의",
-                                      "answers":  [
-                                                      "tonsillar"
-                                                  ]
-                                  },
                     "exogenous":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "ex-"
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-genous"
-                                                                      ]
-                                                     },
                                       "english":  "Produced or originating outside the organism",
                                       "answer":  "exogenous",
-                                      "term":  "Exogenous",
-                                      "type":  "vocabulary",
                                       "source":  "Exogenous.md",
-                                      "korean":  "외인(성)의",
                                       "answers":  [
                                                       "exogenous"
-                                                  ]
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Exogenous",
+                                      "korean":  "외인(성)의"
                                   },
                     "peripheral":  {
                                        "english":  "Situated away from the center",
@@ -3482,20 +4930,39 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "Peripheral",
                                        "korean":  "말초의, 주변의"
                                    },
-                    "neur(o)":  {
-                                    "english":  "Band of nervous tissue conducting impulses",
-                                    "answer":  "neur",
-                                    "source":  "neur(o).md",
-                                    "answers":  [
-                                                    "neur",
-                                                    "neuro",
-                                                    "neur/o",
-                                                    "neur(o)"
-                                                ],
-                                    "type":  "root",
-                                    "term":  "neur(o)",
-                                    "korean":  "신경"
-                                },
+                    "gross anatomy":  {
+                                          "english":  "Anatomy studied without the use of the microscope, especially by dissection",
+                                          "answer":  "gross anatomy",
+                                          "source":  "Gross anatomy.md",
+                                          "answers":  [
+                                                          "gross anatomy"
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Gross anatomy",
+                                          "korean":  "육안해부학"
+                                      },
+                    "proximal phalanx":  {
+                                             "morphology":  {
+                                                                "prefixes":  [
+
+                                                                             ],
+                                                                "suffixes":  [
+                                                                                 "-al"
+                                                                             ],
+                                                                "roots":  [
+                                                                              "proxim(o)"
+                                                                          ]
+                                                            },
+                                             "english":  "The phalanx closest to the hand or foot",
+                                             "answer":  "proximal phalanx",
+                                             "term":  "Proximal phalanx",
+                                             "type":  "vocabulary",
+                                             "source":  "Proximal phalanx.md",
+                                             "korean":  "첫마디뼈",
+                                             "answers":  [
+                                                             "proximal phalanx"
+                                                         ]
+                                         },
                     "-phoria":  {
                                     "english":  "To bear, carry",
                                     "answer":  "phoria",
@@ -3556,24 +5023,30 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "abdominal"
                                                   ]
                                   },
+                    "somn(o)":  {
+                                    "english":  "Sleeping",
+                                    "answer":  "somn",
+                                    "source":  "somn(o).md",
+                                    "answers":  [
+                                                    "somn",
+                                                    "somno",
+                                                    "somn/o",
+                                                    "somn(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "somn(o)",
+                                    "korean":  "수면"
+                                },
                     "expectoration":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "ex-"
-                                                                          ],
-                                                             "suffixes":  [
-                                                                              "-ation"
-                                                                          ]
-                                                         },
                                           "english":  "The act of coughing up and spitting out material from the respiratory tract",
                                           "answer":  "expectoration",
-                                          "term":  "Expectoration",
-                                          "type":  "vocabulary",
                                           "source":  "Expectoration.md",
-                                          "korean":  "가래배출, 담객출",
                                           "answers":  [
                                                           "expectoration"
-                                                      ]
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Expectoration",
+                                          "korean":  "가래배출, 담객출"
                                       },
                     "ilium":  {
                                   "morphology":  {
@@ -3619,6 +5092,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "splen(o)",
                                      "korean":  "비장"
                                  },
+                    "neutrophil":  {
+                                       "english":  "A granulocyte that is the chief phagocytic white blood cell of the blood",
+                                       "answer":  "neutrophil",
+                                       "source":  "Neutrophil.md",
+                                       "answers":  [
+                                                       "neutrophil"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Neutrophil",
+                                       "korean":  "호중구"
+                                   },
                     "gastric":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -3653,6 +5137,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "-ic",
                                 "korean":  "~에 대한, ~의"
                             },
+                    "pedophilia":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+                                                                           "pedo-"
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-philia"
+                                                                       ]
+                                                      },
+                                       "english":  "Sexual attraction to children",
+                                       "answer":  "pedophilia",
+                                       "term":  "Pedophilia",
+                                       "type":  "vocabulary",
+                                       "source":  "Pedophilia.md",
+                                       "korean":  "소아성애증",
+                                       "answers":  [
+                                                       "pedophilia"
+                                                   ]
+                                   },
                     "-genous":  {
                                     "english":  "Producing, yielding",
                                     "answer":  "genous",
@@ -3745,28 +5248,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-gen",
                                  "korean":  "생성하는 것"
                              },
-                    "pharmacologist":  {
-                                           "morphology":  {
-                                                              "prefixes":  [
+                    "hyperemesis":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+                                                                            "hyper-"
+                                                                        ],
+                                                           "suffixes":  [
+                                                                            "-emesis"
+                                                                        ],
+                                                           "roots":  [
 
-                                                                           ],
-                                                              "suffixes":  [
-                                                                               "-ologist"
-                                                                           ],
-                                                              "roots":  [
-                                                                            "Pharmac(o)"
-                                                                        ]
-                                                          },
-                                           "english":  "A specialist in pharmacology",
-                                           "answer":  "pharmacologist",
-                                           "term":  "Pharmacologist",
-                                           "type":  "vocabulary",
-                                           "source":  "Pharmacologist.md",
-                                           "korean":  "약리학자",
-                                           "answers":  [
-                                                           "pharmacologist"
-                                                       ]
-                                       },
+                                                                     ]
+                                                       },
+                                        "english":  "Excessive vomiting",
+                                        "answer":  "hyperemesis",
+                                        "term":  "Hyperemesis",
+                                        "type":  "vocabulary",
+                                        "source":  "Hyperemesis.md",
+                                        "korean":  "과다구토, 입덧",
+                                        "answers":  [
+                                                        "hyperemesis"
+                                                    ]
+                                    },
                     "-therapy":  {
                                      "english":  "Treatment",
                                      "answer":  "therapy",
@@ -3780,23 +5283,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "치료, 요법"
                                  },
                     "precancerous lesion":  {
-                                                "morphology":  {
-                                                                   "prefixes":  [
-                                                                                    "pre-"
-                                                                                ],
-                                                                   "vocabulary":  [
-                                                                                      "Lesion"
-                                                                                  ]
-                                                               },
                                                 "english":  "A lesion likely to become malignant if left untreated",
                                                 "answer":  "precancerous lesion",
-                                                "term":  "Precancerous lesion",
-                                                "type":  "vocabulary",
                                                 "source":  "Precancerous lesion.md",
-                                                "korean":  "전암성병터",
                                                 "answers":  [
                                                                 "precancerous lesion"
-                                                            ]
+                                                            ],
+                                                "type":  "vocabulary",
+                                                "term":  "Precancerous lesion",
+                                                "korean":  "전암성병터"
                                             },
                     "trans-":  {
                                    "english":  "Across, through, beyond",
@@ -3832,20 +5327,22 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "pericarditis"
                                                      ]
                                      },
-                    "enter(o)":  {
-                                     "english":  "Intestine",
-                                     "answer":  "enter",
-                                     "source":  "Enter(o).md",
-                                     "answers":  [
-                                                     "enter",
-                                                     "entero",
-                                                     "enter/o",
-                                                     "enter(o)"
-                                                 ],
-                                     "type":  "root",
-                                     "term":  "Enter(o)",
-                                     "korean":  "장"
-                                 },
+                    "gonad":  {
+                                  "morphology":  {
+                                                     "roots":  [
+                                                                   "gon(o)"
+                                                               ]
+                                                 },
+                                  "english":  "A reproductive gland that produces gametes",
+                                  "answer":  "gonad",
+                                  "term":  "Gonad",
+                                  "type":  "vocabulary",
+                                  "source":  "Gonad.md",
+                                  "korean":  "생식샘, 성선",
+                                  "answers":  [
+                                                  "gonad"
+                                              ]
+                              },
                     "infra-":  {
                                    "english":  "Below, under",
                                    "answer":  "infra",
@@ -3871,6 +5368,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "type":  "root",
                                     "term":  "leuk(o)",
                                     "korean":  "흰, 백색"
+                                },
+                    "paresis":  {
+                                    "english":  "Slight or partial paralysis",
+                                    "answer":  "paresis",
+                                    "source":  "Paresis.md",
+                                    "answers":  [
+                                                    "paresis"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Paresis",
+                                    "korean":  "불완전 마비"
                                 },
                     "gastroenteric":  {
                                           "morphology":  {
@@ -3966,40 +5474,64 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                  "electroencephalogram"
                                                              ]
                                              },
-                    "sagittal":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-
-                                                                     ],
-                                                        "suffixes":  [
-                                                                         "-al"
-                                                                     ],
-                                                        "roots":  [
-
-                                                                  ]
-                                                    },
-                                     "english":  "Having to do with a plane that divides the body into left and right parts",
-                                     "answer":  "sagittal",
-                                     "term":  "Sagittal",
-                                     "type":  "vocabulary",
-                                     "source":  "Sagittal.md",
-                                     "korean":  "시상의",
-                                     "answers":  [
-                                                     "sagittal"
-                                                 ]
-                                 },
-                    "per-":  {
-                                 "english":  "Through",
-                                 "answer":  "per",
-                                 "source":  "per-.md",
-                                 "answers":  [
-                                                 "per",
-                                                 "per-"
-                                             ],
-                                 "type":  "prefix",
-                                 "term":  "per-",
-                                 "korean":  "통하여"
-                             },
+                    "surgical knife":  {
+                                           "english":  "A knife used in surgery",
+                                           "answer":  "surgical knife",
+                                           "source":  "Surgical knife.md",
+                                           "answers":  [
+                                                           "surgical knife"
+                                                       ],
+                                           "type":  "vocabulary",
+                                           "term":  "Surgical knife",
+                                           "korean":  "메스"
+                                       },
+                    "ultrasonography":  {
+                                            "morphology":  {
+                                                               "prefixes":  [
+                                                                                "ultra-"
+                                                                            ],
+                                                               "suffixes":  [
+                                                                                "-graphy"
+                                                                            ],
+                                                               "roots":  [
+                                                                             "Son(o)"
+                                                                         ]
+                                                           },
+                                            "english":  "The diagnostic or therapeutic use of ultrasound and especially a noninvasive technique involving the formation of a two-dimensional image used for the examination and measurement of internal body structures and the detection of bodily abnormalities",
+                                            "answer":  "ultrasonography",
+                                            "term":  "Ultrasonography",
+                                            "type":  "vocabulary",
+                                            "source":  "Ultrasonography.md",
+                                            "korean":  "초음파촬영(술)",
+                                            "answers":  [
+                                                            "ultrasonography"
+                                                        ]
+                                        },
+                    "intern(o)":  {
+                                      "english":  "Inside, internal",
+                                      "answer":  "intern",
+                                      "source":  "intern(o).md",
+                                      "answers":  [
+                                                      "intern",
+                                                      "interno",
+                                                      "intern/o",
+                                                      "intern(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "intern(o)",
+                                      "korean":  "안쪽, 내부"
+                                  },
+                    "internal medicine subspecialties":  {
+                                                             "english":  "Subspecialty fields within internal medicine",
+                                                             "answer":  "internal medicine subspecialties",
+                                                             "source":  "Internal medicine subspecialties.md",
+                                                             "answers":  [
+                                                                             "internal medicine subspecialties"
+                                                                         ],
+                                                             "type":  "vocabulary",
+                                                             "term":  "Internal medicine subspecialties",
+                                                             "korean":  "내과 분과"
+                                                         },
                     "superior laryngeal nerve":  {
                                                      "morphology":  {
                                                                         "prefixes":  [
@@ -4046,21 +5578,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "hemoptysis"
                                                    ]
                                    },
+                    "-philia":  {
+                                    "english":  "Fondness or attraction",
+                                    "answer":  "philia",
+                                    "source":  "-philia.md",
+                                    "answers":  [
+                                                    "philia",
+                                                    "-philia"
+                                                ],
+                                    "type":  "suffix",
+                                    "term":  "-philia",
+                                    "korean":  "친화성, 좋아함"
+                                },
                     "malpractice":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "mal-"
-                                                                        ]
-                                                       },
                                         "english":  "Improper or negligent professional treatment or conduct, especially by a physician",
                                         "answer":  "malpractice",
-                                        "term":  "Malpractice",
-                                        "type":  "vocabulary",
                                         "source":  "Malpractice.md",
-                                        "korean":  "의료과실, 잘못된 의료행위",
                                         "answers":  [
                                                         "malpractice"
-                                                    ]
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Malpractice",
+                                        "korean":  "의료과실, 잘못된 의료행위"
                                     },
                     "anatomy":  {
                                     "morphology":  {
@@ -4084,6 +5623,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "anatomy"
                                                 ]
                                 },
+                    "hemophilia":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-philia"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Hem(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "A hereditary bleeding disorder marked by delayed clotting of blood",
+                                       "answer":  "hemophilia",
+                                       "term":  "Hemophilia",
+                                       "type":  "vocabulary",
+                                       "source":  "Hemophilia.md",
+                                       "korean":  "혈우병",
+                                       "answers":  [
+                                                       "hemophilia"
+                                                   ]
+                                   },
                     "heter(o)":  {
                                      "english":  "Other, different",
                                      "answer":  "heter",
@@ -4122,6 +5680,58 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "ab-",
                                 "korean":  "중심에서 멀어짐"
                             },
+                    "nasopharynx":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+
+                                                                        ],
+                                                           "suffixes":  [
+
+                                                                        ],
+                                                           "roots":  [
+                                                                         "Pharyng(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "The upper part of the pharynx continuous with the nasal passages",
+                                        "answer":  "nasopharynx",
+                                        "term":  "Nasopharynx",
+                                        "type":  "vocabulary",
+                                        "source":  "Nasopharynx.md",
+                                        "korean":  "비인두",
+                                        "answers":  [
+                                                        "nasopharynx"
+                                                    ],
+                                        "imageQuestions":  [
+                                                               {
+                                                                   "number":  3,
+                                                                   "source":  "Pasted image 20260331144207.png",
+                                                                   "type":  "numbered",
+                                                                   "src":  "question-images/pharynx-group-1.png"
+                                                               }
+                                                           ]
+                                    },
+                    "chest surgery":  {
+                                          "english":  "Surgery concerned with the chest",
+                                          "answer":  "chest surgery",
+                                          "source":  "Chest surgery.md",
+                                          "answers":  [
+                                                          "chest surgery"
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Chest surgery",
+                                          "korean":  "흉부외과학"
+                                      },
+                    "head nurse":  {
+                                       "english":  "A nurse in charge of a ward or nursing unit",
+                                       "answer":  "head nurse",
+                                       "source":  "Head nurse.md",
+                                       "answers":  [
+                                                       "head nurse"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Head nurse",
+                                       "korean":  "수간호사"
+                                   },
                     "caud(o)":  {
                                     "english":  "Tail",
                                     "answer":  "caud",
@@ -4195,6 +5805,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "Orbit",
                                   "korean":  "안와"
                               },
+                    "acu(o)":  {
+                                   "english":  "Needle",
+                                   "answer":  "acu",
+                                   "source":  "acu(o).md",
+                                   "answers":  [
+                                                   "acu",
+                                                   "acuo",
+                                                   "acu/o",
+                                                   "acu(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "acu(o)",
+                                   "korean":  "바늘"
+                               },
                     "appendicitis":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -4231,50 +5855,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "rhin(o)",
                                     "korean":  "코"
                                 },
-                    "phagocyte":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-cyte"
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Phag(o)"
-                                                                   ]
-                                                     },
-                                      "english":  "A cell that engulfs and consumes foreign material and debris",
-                                      "answer":  "phagocyte",
-                                      "term":  "Phagocyte",
-                                      "type":  "vocabulary",
-                                      "source":  "Phagocyte.md",
-                                      "korean":  "포식세포",
-                                      "answers":  [
-                                                      "phagocyte"
-                                                  ]
-                                  },
-                    "inguinal hernia":  {
-                                            "morphology":  {
-                                                               "prefixes":  [
-
-                                                                            ],
-                                                               "suffixes":  [
-                                                                                "-al"
-                                                                            ],
-                                                               "roots":  [
-                                                                             "inguin(o)"
-                                                                         ]
-                                                           },
-                                            "english":  "A hernia in the groin in which tissue, often intestine, bulges through a weak area",
-                                            "answer":  "inguinal hernia",
-                                            "term":  "Inguinal hernia",
-                                            "type":  "vocabulary",
-                                            "source":  "Inguinal hernia.md",
-                                            "korean":  "샅굴탈장, 샅굴헤르니아",
-                                            "answers":  [
-                                                            "inguinal hernia"
-                                                        ]
-                                        },
+                    "fung(i)":  {
+                                    "english":  "Mushroom",
+                                    "answer":  "fung",
+                                    "source":  "fung(i).md",
+                                    "answers":  [
+                                                    "fung",
+                                                    "fungi",
+                                                    "fung/i",
+                                                    "fung(i)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "fung(i)",
+                                    "korean":  "진균, 곰팡이"
+                                },
                     "glottis":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -4327,6 +5921,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           "ophthalmology"
                                                       ]
                                       },
+                    "granuloma":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-oma"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "granul(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A small nodular aggregation of immune cells",
+                                      "answer":  "granuloma",
+                                      "term":  "Granuloma",
+                                      "type":  "vocabulary",
+                                      "source":  "Granuloma.md",
+                                      "korean":  "육아종",
+                                      "answers":  [
+                                                      "granuloma"
+                                                  ]
+                                  },
                     "acr(o)":  {
                                    "english":  "Extremity, height, tip",
                                    "answer":  "acr",
@@ -4341,42 +5954,38 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "acr(o)",
                                    "korean":  "말단, 높이, 끝"
                                },
-                    "transverse":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "trans-"
-                                                                       ],
-                                                          "suffixes":  [
-
-                                                                       ],
-                                                          "roots":  [
-
-                                                                    ]
-                                                      },
-                                       "english":  "Situated or lying across; in anatomy, related to a plane dividing upper and lower parts",
-                                       "answer":  "transverse",
-                                       "term":  "Transverse",
-                                       "type":  "vocabulary",
-                                       "source":  "Transverse.md",
-                                       "korean":  "가로의, 횡단의",
-                                       "answers":  [
-                                                       "transverse"
-                                                   ]
-                                   },
-                    "men(o)":  {
-                                   "english":  "Menstruation",
-                                   "answer":  "men",
-                                   "source":  "men(o).md",
-                                   "answers":  [
-                                                   "men",
-                                                   "meno",
-                                                   "men/o",
-                                                   "men(o)"
-                                               ],
-                                   "type":  "root",
-                                   "term":  "men(o)",
-                                   "korean":  "월경"
-                               },
+                    "cervicovaginal":  {
+                                           "morphology":  {
+                                                              "suffixes":  [
+                                                                               "-al"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "cervic(o)",
+                                                                            "vagin(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "Relating to the uterine cervix and vagina",
+                                           "answer":  "cervicovaginal",
+                                           "term":  "Cervicovaginal",
+                                           "type":  "vocabulary",
+                                           "source":  "Cervicovaginal.md",
+                                           "korean":  "자궁목질의",
+                                           "answers":  [
+                                                           "cervicovaginal"
+                                                       ]
+                                       },
+                    "-genesis":  {
+                                     "english":  "Forming",
+                                     "answer":  "genesis",
+                                     "source":  "-genesis.md",
+                                     "answers":  [
+                                                     "genesis",
+                                                     "-genesis"
+                                                 ],
+                                     "type":  "suffix",
+                                     "term":  "-genesis",
+                                     "korean":  "형성"
+                                 },
                     "posteri(o)":  {
                                        "english":  "Back, behind",
                                        "answer":  "posteri",
@@ -4391,6 +6000,39 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "posteri(o)",
                                        "korean":  "뒤쪽, 후방"
                                    },
+                    "hysterectomy":  {
+                                         "morphology":  {
+                                                            "prefixes":  [
+
+                                                                         ],
+                                                            "suffixes":  [
+                                                                             "-ectomy"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "Hyster(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Surgical removal of the uterus",
+                                         "answer":  "hysterectomy",
+                                         "term":  "Hysterectomy",
+                                         "type":  "vocabulary",
+                                         "source":  "Hysterectomy.md",
+                                         "korean":  "자궁절제(술)",
+                                         "answers":  [
+                                                         "hysterectomy"
+                                                     ]
+                                     },
+                    "stethoscope":  {
+                                        "english":  "An instrument used for listening to sounds within the body",
+                                        "answer":  "stethoscope",
+                                        "source":  "Stethoscope.md",
+                                        "answers":  [
+                                                        "stethoscope"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Stethoscope",
+                                        "korean":  "청진기"
+                                    },
                     "hypoplasia":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -4565,6 +6207,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "Lith(o)",
                                     "korean":  "돌, 석"
                                 },
+                    "tetra-":  {
+                                   "english":  "Four",
+                                   "answer":  "tetra",
+                                   "source":  "tetra-.md",
+                                   "answers":  [
+                                                   "tetra",
+                                                   "tetra-"
+                                               ],
+                                   "type":  "prefix",
+                                   "term":  "tetra-",
+                                   "korean":  "넷의"
+                               },
                     "meta-":  {
                                   "english":  "Change of position or condition",
                                   "answer":  "meta",
@@ -4599,6 +6253,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "cardiac"
                                                 ]
                                 },
+                    "absorbent cotton":  {
+                                             "english":  "Cotton prepared to absorb fluids",
+                                             "answer":  "absorbent cotton",
+                                             "source":  "Absorbent cotton.md",
+                                             "answers":  [
+                                                             "absorbent cotton"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Absorbent cotton",
+                                             "korean":  "탈지면"
+                                         },
                     "-crine":  {
                                    "english":  "Secretion",
                                    "answer":  "crine",
@@ -4679,46 +6344,16 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "멈춤, 억제"
                                 },
                     "metastasis":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "meta-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-stasis"
-                                                                       ]
-                                                      },
                                        "english":  "The spread of cancer cells to another part of the body",
                                        "answer":  "metastasis",
-                                       "term":  "Metastasis",
-                                       "type":  "vocabulary",
                                        "source":  "Metastasis.md",
-                                       "korean":  "암세포가 다른 장기로 옮겨 퍼진 것, 전이",
                                        "answers":  [
                                                        "metastasis"
-                                                   ]
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Metastasis",
+                                       "korean":  "암세포가 다른 장기로 옮겨 퍼진 것, 전이"
                                    },
-                    "arteriole":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-
-                                                                      ],
-                                                         "suffixes":  [
-
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Arteri(o)"
-                                                                   ]
-                                                     },
-                                      "english":  "A small terminal branch of an artery that ends in capillaries",
-                                      "answer":  "arteriole",
-                                      "term":  "Arteriole",
-                                      "type":  "vocabulary",
-                                      "source":  "Arteriole.md",
-                                      "korean":  "소동맥",
-                                      "answers":  [
-                                                      "arteriole"
-                                                  ]
-                                  },
                     "enema":  {
                                   "english":  "The injection of liquid into the rectum and colon by way of the anus",
                                   "answer":  "enema",
@@ -4821,36 +6456,52 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                "term":  "Acquired immunodeficiency syndrome",
                                                                "korean":  "후천면역결핍증후군, 에이즈"
                                                            },
-                    "-ous":  {
-                                 "english":  "Pertaining to, containing",
-                                 "answer":  "ous",
-                                 "source":  "-ous.md",
-                                 "answers":  [
-                                                 "ous",
-                                                 "-ous"
-                                             ],
-                                 "type":  "suffix",
-                                 "term":  "-ous",
-                                 "korean":  "~에 대한, ~을 포함한"
-                             },
+                    "embryology":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ology"
+                                                                       ]
+                                                      },
+                                       "english":  "The study of development during the embryonic and fetal stages of life",
+                                       "answer":  "embryology",
+                                       "term":  "Embryology",
+                                       "type":  "vocabulary",
+                                       "source":  "Embryology.md",
+                                       "korean":  "발생학",
+                                       "answers":  [
+                                                       "embryology"
+                                                   ]
+                                   },
+                    "maxillofacial":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-al"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "maxill(o)",
+                                                                           "faci(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Relating to the maxilla and face",
+                                          "answer":  "maxillofacial",
+                                          "term":  "Maxillofacial",
+                                          "type":  "vocabulary",
+                                          "source":  "Maxillofacial.md",
+                                          "korean":  "위턱얼굴의, 상악안면의",
+                                          "answers":  [
+                                                          "maxillofacial"
+                                                      ]
+                                      },
                     "melanin":  {
-                                    "morphology":  {
-                                                       "suffixes":  [
-                                                                        "-in"
-                                                                    ],
-                                                       "roots":  [
-                                                                     "melan(o)"
-                                                                 ]
-                                                   },
                                     "english":  "A usually dark brown or black pigment that gives color to skin, hair, feathers, and eyes",
                                     "answer":  "melanin",
-                                    "term":  "Melanin",
-                                    "type":  "vocabulary",
                                     "source":  "Melanin.md",
-                                    "korean":  "멜라닌",
                                     "answers":  [
                                                     "melanin"
-                                                ]
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Melanin",
+                                    "korean":  "멜라닌"
                                 },
                     "bronchiectasis":  {
                                            "morphology":  {
@@ -4881,32 +6532,51 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                   }
                                                               ]
                                        },
-                    "scler(o)":  {
-                                     "english":  "Hard, sclera",
-                                     "answer":  "scler",
-                                     "source":  "scler(o).md",
-                                     "answers":  [
-                                                     "scler",
-                                                     "sclero",
-                                                     "scler/o",
-                                                     "scler(o)"
-                                                 ],
-                                     "type":  "root",
-                                     "term":  "scler(o)",
-                                     "korean":  "단단한 것, 공막"
-                                 },
-                    "-ologist":  {
-                                     "english":  "One who studies",
-                                     "answer":  "ologist",
-                                     "source":  "-ologist.md",
-                                     "answers":  [
-                                                     "ologist",
-                                                     "-ologist"
-                                                 ],
-                                     "type":  "suffix",
-                                     "term":  "-ologist",
-                                     "korean":  "학자, 전문의"
-                                 },
+                    "-pnea":  {
+                                  "english":  "Breathing",
+                                  "answer":  "pnea",
+                                  "source":  "-pnea.md",
+                                  "answers":  [
+                                                  "pnea",
+                                                  "-pnea"
+                                              ],
+                                  "type":  "suffix",
+                                  "term":  "-pnea",
+                                  "korean":  "호흡"
+                              },
+                    "pulmonology":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-ology"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "pulmon(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "The branch of medicine concerned with the lungs and respiratory system",
+                                        "answer":  "pulmonology",
+                                        "term":  "Pulmonology",
+                                        "type":  "vocabulary",
+                                        "source":  "Pulmonology.md",
+                                        "korean":  "호흡기학",
+                                        "answers":  [
+                                                        "pulmonology"
+                                                    ]
+                                    },
+                    "pod(o)":  {
+                                   "english":  "Foot",
+                                   "answer":  "pod",
+                                   "source":  "pod(o).md",
+                                   "answers":  [
+                                                   "pod",
+                                                   "podo",
+                                                   "pod/o",
+                                                   "pod(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "pod(o)",
+                                   "korean":  "발"
+                               },
                     "hydrophobia":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -4929,6 +6599,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "hydrophobia"
                                                     ]
                                     },
+                    "obstetrics and gynecology":  {
+                                                      "morphology":  {
+                                                                         "suffixes":  [
+                                                                                          "-ology"
+                                                                                      ],
+                                                                         "roots":  [
+                                                                                       "gynec(o)"
+                                                                                   ]
+                                                                     },
+                                                      "english":  "A branch of medicine that specializes in care during pregnancy and childbirth and in diseases of the female reproductive system",
+                                                      "answer":  "obstetrics and gynecology",
+                                                      "term":  "Obstetrics and gynecology",
+                                                      "type":  "vocabulary",
+                                                      "source":  "Obstetrics and gynecology.md",
+                                                      "korean":  "산부인과학, OBGY",
+                                                      "answers":  [
+                                                                      "obstetrics and gynecology"
+                                                                  ]
+                                                  },
                     "hyperplasia":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -4952,26 +6641,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "subcutaneous injection":  {
-                                                   "morphology":  {
-                                                                      "prefixes":  [
-                                                                                       "sub-"
-                                                                                   ],
-                                                                      "suffixes":  [
-                                                                                       "-ous"
-                                                                                   ],
-                                                                      "roots":  [
-                                                                                    "Cutane(o)"
-                                                                                ]
-                                                                  },
                                                    "english":  "Injection beneath the skin",
                                                    "answer":  "subcutaneous injection",
-                                                   "term":  "Subcutaneous injection",
-                                                   "type":  "vocabulary",
                                                    "source":  "Subcutaneous injection.md",
-                                                   "korean":  "피하 주사",
                                                    "answers":  [
                                                                    "subcutaneous injection"
-                                                               ]
+                                                               ],
+                                                   "type":  "vocabulary",
+                                                   "term":  "Subcutaneous injection",
+                                                   "korean":  "피하 주사"
                                                },
                     "nephr(o)":  {
                                      "english":  "Kidney",
@@ -4999,6 +6677,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "-phil",
                                   "korean":  "~을 좋아하는, 친화성이 있는"
                               },
+                    "ven(o)":  {
+                                   "english":  "Vein",
+                                   "answer":  "ven",
+                                   "source":  "ven(o).md",
+                                   "answers":  [
+                                                   "ven",
+                                                   "veno",
+                                                   "ven/o",
+                                                   "ven(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "ven(o)",
+                                   "korean":  "정맥"
+                               },
                     "cerebellar hemisphere":  {
                                                   "morphology":  {
                                                                      "prefixes":  [
@@ -5065,6 +6757,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "epidermis"
                                                   ]
                                   },
+                    "axillary artery":  {
+                                            "morphology":  {
+                                                               "suffixes":  [
+                                                                                "-ary"
+                                                                            ],
+                                                               "roots":  [
+                                                                             "axill(o)",
+                                                                             "arteri(o)"
+                                                                         ]
+                                                           },
+                                            "english":  "An artery of the axilla",
+                                            "answer":  "axillary artery",
+                                            "term":  "Axillary artery",
+                                            "type":  "vocabulary",
+                                            "source":  "Axillary artery.md",
+                                            "korean":  "겨드랑동맥",
+                                            "answers":  [
+                                                            "axillary artery"
+                                                        ]
+                                        },
                     "ipsi-":  {
                                   "english":  "Same side",
                                   "answer":  "ipsi",
@@ -5090,26 +6802,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "기록기"
                                },
                     "peroral":  {
-                                    "morphology":  {
-                                                       "prefixes":  [
-                                                                        "per-"
-                                                                    ],
-                                                       "suffixes":  [
-                                                                        "-al"
-                                                                    ],
-                                                       "roots":  [
-                                                                     "or(o)"
-                                                                 ]
-                                                   },
                                     "english":  "By way of the mouth",
                                     "answer":  "peroral",
-                                    "term":  "Peroral",
-                                    "type":  "vocabulary",
                                     "source":  "Peroral.md",
-                                    "korean":  "경구의",
                                     "answers":  [
                                                     "peroral"
-                                                ]
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Peroral",
+                                    "korean":  "경구의"
                                 },
                     "eu-":  {
                                 "english":  "Good, well",
@@ -5145,6 +6846,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "Stasis",
                                    "korean":  "정지, 정체, 울혈"
                                },
+                    "public health":  {
+                                          "english":  "The science and practice of protecting and improving community health",
+                                          "answer":  "public health",
+                                          "source":  "Public health.md",
+                                          "answers":  [
+                                                          "public health"
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Public health",
+                                          "korean":  "공중보건"
+                                      },
                     "-stomy":  {
                                    "english":  "Formation of a new opening",
                                    "answer":  "stomy",
@@ -5157,6 +6869,39 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-stomy",
                                    "korean":  "창냄(술)"
                                },
+                    "cytoplasm":  {
+                                      "morphology":  {
+                                                         "roots":  [
+                                                                       "cyt(o)",
+                                                                       "plasm(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "The organized complex of substances outside the nucleus of a cell",
+                                      "answer":  "cytoplasm",
+                                      "term":  "Cytoplasm",
+                                      "type":  "vocabulary",
+                                      "source":  "Cytoplasm.md",
+                                      "korean":  "세포질",
+                                      "answers":  [
+                                                      "cytoplasm"
+                                                  ]
+                                  },
+                    "mortality":  {
+                                      "morphology":  {
+                                                         "roots":  [
+                                                                       "mort(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Death rate",
+                                      "answer":  "mortality",
+                                      "term":  "Mortality",
+                                      "type":  "vocabulary",
+                                      "source":  "Mortality.md",
+                                      "korean":  "사망률",
+                                      "answers":  [
+                                                      "mortality"
+                                                  ]
+                                  },
                     "hypercholesterolemia":  {
                                                  "morphology":  {
                                                                     "prefixes":  [
@@ -5207,28 +6952,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "extern(o)",
                                       "korean":  "바깥쪽, 외부"
                                   },
-                    "intercellular junction":  {
-                                                   "morphology":  {
-                                                                      "prefixes":  [
-                                                                                       "inter-"
-                                                                                   ],
-                                                                      "suffixes":  [
-                                                                                       "-ar"
-                                                                                   ],
-                                                                      "roots":  [
-                                                                                    "cellul(o)"
-                                                                                ]
-                                                                  },
-                                                   "english":  "A specialized connection between adjacent cells",
-                                                   "answer":  "intercellular junction",
-                                                   "term":  "Intercellular junction",
-                                                   "type":  "vocabulary",
-                                                   "source":  "Intercellular junction.md",
-                                                   "korean":  "세포간연결",
-                                                   "answers":  [
-                                                                   "intercellular junction"
-                                                               ]
-                                               },
+                    "granulomas":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-oma"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "granul(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Small nodular aggregations of immune cells",
+                                       "answer":  "granulomas",
+                                       "term":  "Granulomas",
+                                       "type":  "vocabulary",
+                                       "source":  "Granulomas.md",
+                                       "korean":  "육아종",
+                                       "answers":  [
+                                                       "granulomas"
+                                                   ]
+                                   },
                     "cerebell(o)":  {
                                         "english":  "Cerebellum",
                                         "answer":  "cerebell",
@@ -5244,40 +6986,38 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "korean":  "소뇌"
                                     },
                     "melanoma":  {
-                                     "morphology":  {
-                                                        "suffixes":  [
-                                                                         "-oma"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "melan(o)"
-                                                                  ]
-                                                    },
                                      "english":  "A tumour arising from the melanocytic system of the skin and other organs",
                                      "answer":  "melanoma",
-                                     "term":  "Melanoma",
-                                     "type":  "vocabulary",
                                      "source":  "Melanoma.md",
-                                     "korean":  "흑색종",
                                      "answers":  [
                                                      "melanoma"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Melanoma",
+                                     "korean":  "흑색종"
                                  },
-                    "hypertension":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "hyper-"
+                    "inguinal hernia":  {
+                                            "morphology":  {
+                                                               "prefixes":  [
+
+                                                                            ],
+                                                               "suffixes":  [
+                                                                                "-al"
+                                                                            ],
+                                                               "roots":  [
+                                                                             "inguin(o)"
                                                                          ]
-                                                        },
-                                         "english":  "Abnormally high blood pressure",
-                                         "answer":  "hypertension",
-                                         "term":  "Hypertension",
-                                         "type":  "vocabulary",
-                                         "source":  "Hypertension.md",
-                                         "korean":  "고혈압",
-                                         "answers":  [
-                                                         "hypertension"
-                                                     ]
-                                     },
+                                                           },
+                                            "english":  "A hernia in the groin in which tissue, often intestine, bulges through a weak area",
+                                            "answer":  "inguinal hernia",
+                                            "term":  "Inguinal hernia",
+                                            "type":  "vocabulary",
+                                            "source":  "Inguinal hernia.md",
+                                            "korean":  "샅굴탈장, 샅굴헤르니아",
+                                            "answers":  [
+                                                            "inguinal hernia"
+                                                        ]
+                                        },
                     "craniectomy":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -5342,18 +7082,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "poli(o)",
                                     "korean":  "뇌의 회색질"
                                 },
-                    "post-":  {
-                                  "english":  "After, following, behind",
-                                  "answer":  "post",
-                                  "source":  "post-.md",
-                                  "answers":  [
-                                                  "post",
-                                                  "post-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "post-",
-                                  "korean":  "이후의, 뒤의, 후의"
-                              },
+                    "internal medicine":  {
+                                              "english":  "The medical specialty concerned with diagnosis and nonsurgical treatment of diseases in adults",
+                                              "answer":  "internal medicine",
+                                              "source":  "Internal medicine.md",
+                                              "answers":  [
+                                                              "internal medicine"
+                                                          ],
+                                              "type":  "vocabulary",
+                                              "term":  "Internal medicine",
+                                              "korean":  "내과학"
+                                          },
                     "ana-":  {
                                  "english":  "Up, apart",
                                  "answer":  "ana",
@@ -5402,6 +7141,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "infusion"
                                                  ]
                                  },
+                    "iatr(o)":  {
+                                    "english":  "Physician or medicine",
+                                    "answer":  "iatr",
+                                    "source":  "iatr(o).md",
+                                    "answers":  [
+                                                    "iatr",
+                                                    "iatro",
+                                                    "iatr/o",
+                                                    "iatr(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "iatr(o)",
+                                    "korean":  "의사, 의학"
+                                },
                     "tonsillotome":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -5424,22 +7177,48 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "tonsillotome"
                                                      ]
                                      },
-                    "phoria":  {
-                                   "morphology":  {
-                                                      "suffixes":  [
-                                                                       "-phoria"
-                                                                   ]
-                                                  },
-                                   "english":  "Any of various tendencies of the lines of vision to deviate from the normal when binocular fusion is prevented",
-                                   "answer":  "phoria",
-                                   "term":  "Phoria",
-                                   "type":  "vocabulary",
-                                   "source":  "Phoria.md",
-                                   "korean":  "사위, 잠복사시",
-                                   "answers":  [
-                                                   "phoria"
-                                               ]
-                               },
+                    "fetal":  {
+                                  "english":  "Relating to a fetus",
+                                  "answer":  "fetal",
+                                  "source":  "Fetal.md",
+                                  "answers":  [
+                                                  "fetal"
+                                              ],
+                                  "type":  "vocabulary",
+                                  "term":  "Fetal",
+                                  "korean":  "태아의"
+                              },
+                    "hemorrhoid":  {
+                                       "english":  "An abnormal mass of dilated and engorged blood vessels in swollen tissue that occurs internally in the anal canal or externally around the anus, that may be marked by bleeding, pain, or itching, and that when occurring internally often protrude through the outer sphincter of the anus and when occurring externally may lead to thrombosis; usually used in plural",
+                                       "answer":  "hemorrhoid",
+                                       "source":  "Hemorrhoid.md",
+                                       "answers":  [
+                                                       "hemorrhoid"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Hemorrhoid",
+                                       "korean":  "치질, 치핵"
+                                   },
+                    "tracheobronchitis":  {
+                                              "morphology":  {
+                                                                 "suffixes":  [
+                                                                                  "-itis"
+                                                                              ],
+                                                                 "roots":  [
+                                                                               "trache(o)",
+                                                                               "bronch(o)"
+                                                                           ]
+                                                             },
+                                              "english":  "Inflammation of the trachea and bronchi",
+                                              "answer":  "tracheobronchitis",
+                                              "term":  "Tracheobronchitis",
+                                              "type":  "vocabulary",
+                                              "source":  "Tracheobronchitis.md",
+                                              "korean":  "기관기관지염",
+                                              "answers":  [
+                                                              "tracheobronchitis"
+                                                          ]
+                                          },
                     "-ician":  {
                                    "english":  "Specialist, practitioner",
                                    "answer":  "ician",
@@ -5474,6 +7253,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "acromegaly"
                                                    ]
                                    },
+                    "granulocyte":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-cyte"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "granul(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "A white blood cell containing cytoplasmic granules",
+                                        "answer":  "granulocyte",
+                                        "term":  "Granulocyte",
+                                        "type":  "vocabulary",
+                                        "source":  "Granulocyte.md",
+                                        "korean":  "과립구",
+                                        "answers":  [
+                                                        "granulocyte"
+                                                    ]
+                                    },
                     "-partum":  {
                                     "english":  "Labor",
                                     "answer":  "partum",
@@ -5486,6 +7284,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-partum",
                                     "korean":  "분만"
                                 },
+                    "basin":  {
+                                  "english":  "A bowl-shaped container used in patient care",
+                                  "answer":  "basin",
+                                  "source":  "Basin.md",
+                                  "answers":  [
+                                                  "basin"
+                                              ],
+                                  "type":  "vocabulary",
+                                  "term":  "Basin",
+                                  "korean":  "대야"
+                              },
+                    "physiology":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ology"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "physi(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The science of the functions of living organisms and their parts",
+                                       "answer":  "physiology",
+                                       "term":  "Physiology",
+                                       "type":  "vocabulary",
+                                       "source":  "Physiology.md",
+                                       "korean":  "생리학",
+                                       "answers":  [
+                                                       "physiology"
+                                                   ]
+                                   },
                     "ot(o)":  {
                                   "english":  "Ear",
                                   "answer":  "ot",
@@ -5584,36 +7412,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           }
                                                       ]
                                },
-                    "supraglottis":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "supra-"
-                                                                         ],
-                                                            "suffixes":  [
-
-                                                                         ],
-                                                            "roots":  [
-
-                                                                      ]
-                                                        },
-                                         "english":  "The part situated above the glottis",
-                                         "answer":  "supraglottis",
-                                         "term":  "Supraglottis",
-                                         "type":  "vocabulary",
-                                         "source":  "Supraglottis.md",
-                                         "korean":  "성문위부",
-                                         "answers":  [
-                                                         "supraglottis"
-                                                     ],
-                                         "imageQuestions":  [
-                                                                {
-                                                                    "number":  4,
-                                                                    "source":  "Pasted image 20260331141804.png",
-                                                                    "type":  "numbered",
-                                                                    "src":  "question-images/larynx-group-1.png"
-                                                                }
-                                                            ]
-                                     },
+                    "cyst(o)":  {
+                                    "english":  "Bladder; cyst",
+                                    "answer":  "cyst",
+                                    "source":  "cyst(o).md",
+                                    "answers":  [
+                                                    "cyst",
+                                                    "cysto",
+                                                    "cyst/o",
+                                                    "cyst(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "cyst(o)",
+                                    "korean":  "방광, 낭"
+                                },
                     "cervix":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -5657,6 +7469,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "answers":  [
                                                      "dactylic"
                                                  ]
+                                 },
+                    "enter(o)":  {
+                                     "english":  "Intestine",
+                                     "answer":  "enter",
+                                     "source":  "Enter(o).md",
+                                     "answers":  [
+                                                     "enter",
+                                                     "entero",
+                                                     "enter/o",
+                                                     "enter(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "Enter(o)",
+                                     "korean":  "장"
                                  },
                     "-osis":  {
                                   "english":  "Abnormal condition",
@@ -5706,6 +7532,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    "allude"
                                                ]
                                },
+                    "computerized tomography":  {
+                                                    "morphology":  {
+                                                                       "suffixes":  [
+                                                                                        "-graphy"
+                                                                                    ],
+                                                                       "roots":  [
+                                                                                     "Tom(o)"
+                                                                                 ]
+                                                                   },
+                                                    "english":  "A procedure that uses a computer linked to an x-ray machine to make detailed pictures of areas inside the body",
+                                                    "answer":  "computerized tomography",
+                                                    "term":  "Computerized tomography",
+                                                    "type":  "vocabulary",
+                                                    "source":  "Computerized tomography.md",
+                                                    "korean":  "컴퓨터단층촬영술, 전산화단층촬영술, CT",
+                                                    "answers":  [
+                                                                    "computerized tomography"
+                                                                ]
+                                                },
                     "-in":  {
                                 "english":  "Substance",
                                 "answer":  "in",
@@ -5754,40 +7599,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "term":  "peritone(o)",
                                         "korean":  "복막"
                                     },
-                    "osteotome":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-tome"
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Oste(o)"
-                                                                   ]
-                                                     },
-                                      "english":  "A chisel without a bevel that is used for cutting bone",
-                                      "answer":  "osteotome",
-                                      "term":  "Osteotome",
-                                      "type":  "vocabulary",
-                                      "source":  "Osteotome.md",
-                                      "korean":  "뼈절단기",
-                                      "answers":  [
-                                                      "osteotome"
-                                                  ]
-                                  },
-                    "ante-":  {
-                                  "english":  "Before, in front of, forward",
-                                  "answer":  "ante",
-                                  "source":  "ante-.md",
-                                  "answers":  [
-                                                  "ante",
-                                                  "ante-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "ante-",
-                                  "korean":  "앞에, 이전에, 전방의"
-                              },
+                    "amni(o)":  {
+                                    "english":  "Amnion (=amniotic membrane)",
+                                    "answer":  "amni",
+                                    "source":  "amni(o).md",
+                                    "answers":  [
+                                                    "amni",
+                                                    "amnio",
+                                                    "amni/o",
+                                                    "amni(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "amni(o)",
+                                    "korean":  "양막"
+                                },
                     "thoracic surgery":  {
                                              "morphology":  {
                                                                 "prefixes":  [
@@ -5810,6 +7635,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                              "thoracic surgery"
                                                          ]
                                          },
+                    "operating room":  {
+                                           "english":  "A room equipped for surgical operations",
+                                           "answer":  "operating room",
+                                           "source":  "Operating room.md",
+                                           "answers":  [
+                                                           "operating room"
+                                                       ],
+                                           "type":  "vocabulary",
+                                           "term":  "Operating room",
+                                           "korean":  "수술실"
+                                       },
                     "atrophy":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -5832,6 +7668,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "atrophy"
                                                 ]
                                 },
+                    "physiotherapy":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-therapy"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "physi(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Treatment of disease or injury by physical means",
+                                          "answer":  "physiotherapy",
+                                          "term":  "Physiotherapy",
+                                          "type":  "vocabulary",
+                                          "source":  "Physiotherapy.md",
+                                          "korean":  "물리요법, 물리치료",
+                                          "answers":  [
+                                                          "physiotherapy"
+                                                      ]
+                                      },
                     "bacillus":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -5890,28 +7745,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "cephalad"
                                                  ]
                                  },
-                    "neuralgia":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-algia"
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Neur(o)"
-                                                                   ]
-                                                     },
-                                      "english":  "Acute paroxysmal pain radiating along the course of one or more nerves usually without demonstrable changes in the nerve structure",
-                                      "answer":  "neuralgia",
-                                      "term":  "Neuralgia",
-                                      "type":  "vocabulary",
-                                      "source":  "Neuralgia.md",
-                                      "korean":  "신경통",
-                                      "answers":  [
-                                                      "neuralgia"
-                                                  ]
-                                  },
+                    "dispensary":  {
+                                       "english":  "A place where medicines are prepared or dispensed",
+                                       "answer":  "dispensary",
+                                       "source":  "Dispensary.md",
+                                       "answers":  [
+                                                       "dispensary"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Dispensary",
+                                       "korean":  "조제실, 약국"
+                                   },
                     "rhinorrhea":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -5934,28 +7778,65 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "rhinorrhea"
                                                    ]
                                    },
-                    "pelvic cavity":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
+                    "cholelithiasis":  {
+                                           "morphology":  {
+                                                              "prefixes":  [
 
-                                                                          ],
-                                                             "suffixes":  [
-                                                                              "-ic"
-                                                                          ],
-                                                             "roots":  [
-                                                                           "pelv(o)"
-                                                                       ]
-                                                         },
-                                          "english":  "The cavity below the abdominal cavity that contains pelvic organs",
-                                          "answer":  "pelvic cavity",
-                                          "term":  "Pelvic cavity",
-                                          "type":  "vocabulary",
-                                          "source":  "Pelvic cavity.md",
-                                          "korean":  "골반강, 골반안",
-                                          "answers":  [
-                                                          "pelvic cavity"
-                                                      ]
-                                      },
+                                                                           ],
+                                                              "suffixes":  [
+                                                                               "-iasis"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "Chol(e)",
+                                                                            "Lith(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "Production of gallstones; also the resulting abnormal condition",
+                                           "answer":  "cholelithiasis",
+                                           "term":  "Cholelithiasis",
+                                           "type":  "vocabulary",
+                                           "source":  "Cholelithiasis.md",
+                                           "korean":  "담석증, 쓸개돌증",
+                                           "answers":  [
+                                                           "cholelithiasis"
+                                                       ]
+                                       },
+                    "lithotomy":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-tomy"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Lith(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Incision or operation for removal of a stone",
+                                      "answer":  "lithotomy",
+                                      "term":  "Lithotomy",
+                                      "type":  "vocabulary",
+                                      "source":  "Lithotomy.md",
+                                      "korean":  "결석제거술, 돌제거술",
+                                      "answers":  [
+                                                      "lithotomy"
+                                                  ]
+                                  },
+                    "gastroesophageal reflux disease":  {
+                                                            "morphology":  {
+                                                                               "roots":  [
+                                                                                             "Gastr(o)",
+                                                                                             "esophag(o)"
+                                                                                         ]
+                                                                           },
+                                                            "english":  "A chronic condition that is characterized by frequent episodes of acid reflux usually accompanied by heartburn and often by irritation or inflammation of the esophageal epithelium",
+                                                            "answer":  "gastroesophageal reflux disease",
+                                                            "term":  "Gastroesophageal reflux disease",
+                                                            "type":  "vocabulary",
+                                                            "source":  "Gastroesophageal reflux disease.md",
+                                                            "korean":  "위식도역류질환, GERD",
+                                                            "answers":  [
+                                                                            "gastroesophageal reflux disease"
+                                                                        ]
+                                                        },
                     "hemat(o)":  {
                                      "english":  "Blood",
                                      "answer":  "hemat",
@@ -6065,6 +7946,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "dors(o)",
                                     "korean":  "등쪽"
                                 },
+                    "oncology":  {
+                                     "morphology":  {
+                                                        "suffixes":  [
+                                                                         "-ology"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "onc(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "The study and treatment of tumors",
+                                     "answer":  "oncology",
+                                     "term":  "Oncology",
+                                     "type":  "vocabulary",
+                                     "source":  "Oncology.md",
+                                     "korean":  "종양학",
+                                     "answers":  [
+                                                     "oncology"
+                                                 ]
+                                 },
                     "ultra-":  {
                                    "english":  "Beyond, excessive",
                                    "answer":  "ultra",
@@ -6118,6 +8018,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "Anterior",
                                      "korean":  "앞의, 전의"
                                  },
+                    "rect(o)":  {
+                                    "english":  "Rectum",
+                                    "answer":  "rect",
+                                    "source":  "rect(o).md",
+                                    "answers":  [
+                                                    "rect",
+                                                    "recto",
+                                                    "rect/o",
+                                                    "rect(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "rect(o)",
+                                    "korean":  "직장"
+                                },
                     "ventrad":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -6174,6 +8088,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                         "polymorphonuclear leukocyte"
                                                                     ]
                                                     },
+                    "pubis":  {
+                                  "english":  "The anterior part of the hip bone",
+                                  "answer":  "pubis",
+                                  "term":  "Pubis",
+                                  "type":  "vocabulary",
+                                  "source":  "Pubis.md",
+                                  "korean":  "두덩뼈, 치골",
+                                  "answers":  [
+                                                  "pubis"
+                                              ],
+                                  "imageQuestions":  [
+                                                         {
+                                                             "number":  4,
+                                                             "source":  "Pasted image 20260414162456.png",
+                                                             "type":  "numbered",
+                                                             "src":  "question-images/pelvis-bone-group-1.png"
+                                                         }
+                                                     ]
+                              },
                     "paralysis":  {
                                       "english":  "Loss of the ability to move all or part of the body",
                                       "answer":  "paralysis",
@@ -6229,41 +8162,44 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "syndactylia"
                                                     ]
                                     },
-                    "sagittal plane":  {
-                                           "morphology":  {
-                                                              "prefixes":  [
-
-                                                                           ],
-                                                              "suffixes":  [
-                                                                               "-al"
-                                                                           ],
-                                                              "roots":  [
-
-                                                                        ]
-                                                          },
-                                           "english":  "A vertical plane that divides the body into left and right parts",
-                                           "answer":  "sagittal plane",
-                                           "term":  "Sagittal plane",
-                                           "type":  "vocabulary",
-                                           "source":  "Sagittal plane.md",
-                                           "korean":  "시상면",
-                                           "answers":  [
-                                                           "sagittal plane"
-                                                       ],
-                                           "imageQuestions":  [
-                                                                  {
-                                                                      "source":  "Pasted image 20260414162853.png",
-                                                                      "type":  "plain",
-                                                                      "src":  "question-images/sagittal-plane-1.png"
-                                                                  },
-                                                                  {
-                                                                      "number":  2,
-                                                                      "source":  "Pasted image 20260414162645.png",
-                                                                      "type":  "numbered",
-                                                                      "src":  "question-images/body-plane-group-1.png"
-                                                                  }
-                                                              ]
-                                       },
+                    "myeloma":  {
+                                    "morphology":  {
+                                                       "suffixes":  [
+                                                                        "-oma"
+                                                                    ],
+                                                       "roots":  [
+                                                                     "myel(o)"
+                                                                 ]
+                                                   },
+                                    "english":  "A tumor of bone marrow",
+                                    "answer":  "myeloma",
+                                    "term":  "Myeloma",
+                                    "type":  "vocabulary",
+                                    "source":  "Myeloma.md",
+                                    "korean":  "골수종",
+                                    "answers":  [
+                                                    "myeloma"
+                                                ]
+                                },
+                    "eosinophil":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-phil"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "eosin(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "A granulocyte that stains with eosin",
+                                       "answer":  "eosinophil",
+                                       "term":  "Eosinophil",
+                                       "type":  "vocabulary",
+                                       "source":  "Eosinophil.md",
+                                       "korean":  "호산구",
+                                       "answers":  [
+                                                       "eosinophil"
+                                                   ]
+                                   },
                     "dermat(o)":  {
                                       "english":  "Skin",
                                       "answer":  "dermat",
@@ -6290,6 +8226,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "-ia",
                                 "korean":  "병적 상태"
                             },
+                    "gen(o)":  {
+                                   "english":  "To produce",
+                                   "answer":  "gen",
+                                   "source":  "gen(o).md",
+                                   "answers":  [
+                                                   "gen",
+                                                   "geno",
+                                                   "gen/o",
+                                                   "gen(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "gen(o)",
+                                   "korean":  "생성하다"
+                               },
                     "interior":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -6312,28 +8262,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "interior"
                                                  ]
                                  },
-                    "hyperemesis":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "hyper-"
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-emesis"
-                                                                        ],
-                                                           "roots":  [
-
-                                                                     ]
-                                                       },
-                                        "english":  "Excessive vomiting",
-                                        "answer":  "hyperemesis",
-                                        "term":  "Hyperemesis",
-                                        "type":  "vocabulary",
-                                        "source":  "Hyperemesis.md",
-                                        "korean":  "과다구토, 입덧",
-                                        "answers":  [
-                                                        "hyperemesis"
-                                                    ]
-                                    },
                     "venule":  {
                                    "morphology":  {
                                                       "suffixes":  [
@@ -6350,6 +8278,50 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    "venule"
                                                ]
                                },
+                    "men(o)":  {
+                                   "english":  "Menstruation",
+                                   "answer":  "men",
+                                   "source":  "men(o).md",
+                                   "answers":  [
+                                                   "men",
+                                                   "meno",
+                                                   "men/o",
+                                                   "men(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "men(o)",
+                                   "korean":  "월경"
+                               },
+                    "pharynx":  {
+                                    "morphology":  {
+                                                       "prefixes":  [
+
+                                                                    ],
+                                                       "suffixes":  [
+
+                                                                    ],
+                                                       "roots":  [
+                                                                     "Pharyng(o)"
+                                                                 ]
+                                                   },
+                                    "english":  "The muscular tubular passage from the back of the nasal cavity and mouth to the esophagus",
+                                    "answer":  "pharynx",
+                                    "term":  "Pharynx",
+                                    "type":  "vocabulary",
+                                    "source":  "Pharynx.md",
+                                    "korean":  "인두",
+                                    "answers":  [
+                                                    "pharynx"
+                                                ],
+                                    "imageQuestions":  [
+                                                           {
+                                                               "number":  1,
+                                                               "source":  "Pasted image 20260331141822.png",
+                                                               "type":  "numbered",
+                                                               "src":  "question-images/pharynx-single-group-1.png"
+                                                           }
+                                                       ]
+                                },
                     "ventr(i)":  {
                                      "english":  "Belly side",
                                      "answer":  "ventr",
@@ -6364,6 +8336,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "ventr(i)",
                                      "korean":  "배쪽, 복측"
                                  },
+                    "-y":  {
+                               "english":  "Process, operation",
+                               "answer":  "y",
+                               "source":  "-y.md",
+                               "answers":  [
+                                               "y",
+                                               "-y"
+                                           ],
+                               "type":  "suffix",
+                               "term":  "-y",
+                               "korean":  "검사, 시술"
+                           },
                     "hepatitis":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -6386,6 +8370,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "hepatitis"
                                                   ]
                                   },
+                    "pneum(o)":  {
+                                     "english":  "Lung",
+                                     "answer":  "pneum",
+                                     "source":  "pneum(o).md",
+                                     "answers":  [
+                                                     "pneum",
+                                                     "pneumo",
+                                                     "pneum/o",
+                                                     "pneum(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "pneum(o)",
+                                     "korean":  "폐"
+                                 },
                     "antecedent":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -6422,6 +8420,63 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "crani(o)",
                                      "korean":  "머리뼈, 두개골"
                                  },
+                    "resection":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+                                                                          "re-"
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-tion"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "secti(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Surgical removal of part of an organ or structure",
+                                      "answer":  "resection",
+                                      "term":  "Resection",
+                                      "type":  "vocabulary",
+                                      "source":  "Resection.md",
+                                      "korean":  "절제술",
+                                      "answers":  [
+                                                      "resection"
+                                                  ]
+                                  },
+                    "histology":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-ology"
+                                                                      ]
+                                                     },
+                                      "english":  "The study of cells and tissues on the microscopic level",
+                                      "answer":  "histology",
+                                      "term":  "Histology",
+                                      "type":  "vocabulary",
+                                      "source":  "Histology.md",
+                                      "korean":  "조직학",
+                                      "answers":  [
+                                                      "histology"
+                                                  ]
+                                  },
+                    "polymorphism":  {
+                                         "morphology":  {
+                                                            "prefixes":  [
+                                                                             "poly-"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "morph(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Occurrence in more than one form",
+                                         "answer":  "polymorphism",
+                                         "term":  "Polymorphism",
+                                         "type":  "vocabulary",
+                                         "source":  "Polymorphism.md",
+                                         "korean":  "다형태",
+                                         "answers":  [
+                                                         "polymorphism"
+                                                     ]
+                                     },
                     "son(o)":  {
                                    "english":  "Sound",
                                    "answer":  "son",
@@ -6502,18 +8557,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "dysentery"
                                                   ]
                                   },
-                    "micro-":  {
-                                   "english":  "Small",
-                                   "answer":  "micro",
-                                   "source":  "micro-.md",
-                                   "answers":  [
-                                                   "micro",
-                                                   "micro-"
-                                               ],
-                                   "type":  "prefix",
-                                   "term":  "micro-",
-                                   "korean":  "작은"
-                               },
                     "-blast":  {
                                    "english":  "Embryonic, immature",
                                    "answer":  "blast",
@@ -6526,6 +8569,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-blast",
                                    "korean":  "배아의, 미성숙한"
                                },
+                    "parasitology":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-ology"
+                                                                         ]
+                                                        },
+                                         "english":  "The study of parasites",
+                                         "answer":  "parasitology",
+                                         "term":  "Parasitology",
+                                         "type":  "vocabulary",
+                                         "source":  "Parasitology.md",
+                                         "korean":  "기생충학",
+                                         "answers":  [
+                                                         "parasitology"
+                                                     ]
+                                     },
+                    "cellul(o)":  {
+                                      "english":  "Cell",
+                                      "answer":  "cellul",
+                                      "source":  "cellul(o).md",
+                                      "answers":  [
+                                                      "cellul",
+                                                      "cellulo",
+                                                      "cellul/o",
+                                                      "cellul(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "cellul(o)",
+                                      "korean":  "세포"
+                                  },
                     "mesi(o)":  {
                                     "english":  "Middle, medial",
                                     "answer":  "mesi",
@@ -6693,24 +8766,30 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                             }
                                                         ]
                                  },
+                    "ureter(o)":  {
+                                      "english":  "Ureter",
+                                      "answer":  "ureter",
+                                      "source":  "ureter(o).md",
+                                      "answers":  [
+                                                      "ureter",
+                                                      "uretero",
+                                                      "ureter/o",
+                                                      "ureter(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "ureter(o)",
+                                      "korean":  "요관"
+                                  },
                     "paraplegia":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "para-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-plegia"
-                                                                       ]
-                                                      },
                                        "english":  "Partial or complete paralysis of the lower half of the body involving both legs",
                                        "answer":  "paraplegia",
-                                       "term":  "Paraplegia",
-                                       "type":  "vocabulary",
                                        "source":  "Paraplegia.md",
-                                       "korean":  "하반신 마비",
                                        "answers":  [
                                                        "paraplegia"
-                                                   ]
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Paraplegia",
+                                       "korean":  "하반신 마비"
                                    },
                     "anter(o)":  {
                                      "english":  "Front",
@@ -6770,51 +8849,88 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "odontodynia"
                                                     ]
                                     },
-                    "hematoma":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
+                    "percutaneous":  {
+                                         "english":  "Effected, occurring, or performed through the skin",
+                                         "answer":  "percutaneous",
+                                         "source":  "Percutaneous.md",
+                                         "answers":  [
+                                                         "percutaneous"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Percutaneous",
+                                         "korean":  "경피의, 피부 경유"
+                                     },
+                    "pharmacology":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-ology"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "pharmac(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "The science of drugs and their effects",
+                                         "answer":  "pharmacology",
+                                         "term":  "Pharmacology",
+                                         "type":  "vocabulary",
+                                         "source":  "Pharmacology.md",
+                                         "korean":  "약리학",
+                                         "answers":  [
+                                                         "pharmacology"
+                                                     ]
+                                     },
+                    "fungus":  {
+                                   "morphology":  {
+                                                      "prefixes":  [
 
-                                                                     ],
-                                                        "suffixes":  [
-                                                                         "-oma"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "Hemat(o)"
-                                                                  ]
-                                                    },
-                                     "english":  "A mass of usually clotted blood that forms in a tissue, organ, or body space as a result of a broken blood vessel",
-                                     "answer":  "hematoma",
-                                     "term":  "Hematoma",
-                                     "type":  "vocabulary",
-                                     "source":  "Hematoma.md",
-                                     "korean":  "혈종",
-                                     "answers":  [
-                                                     "hematoma"
-                                                 ]
-                                 },
-                    "pyloric stenosis":  {
-                                             "morphology":  {
-                                                                "prefixes":  [
-
-                                                                             ],
-                                                                "suffixes":  [
-
-                                                                             ],
-                                                                "roots":  [
-                                                                              "Pylor(o)",
-                                                                              "Sten(o)"
-                                                                          ]
-                                                            },
-                                             "english":  "Narrowing of the pyloric opening",
-                                             "answer":  "pyloric stenosis",
-                                             "term":  "Pyloric stenosis",
-                                             "type":  "vocabulary",
-                                             "source":  "Pyloric stenosis.md",
-                                             "korean":  "유문 협착",
-                                             "answers":  [
-                                                             "pyloric stenosis"
-                                                         ]
-                                         },
+                                                                   ],
+                                                      "suffixes":  [
+                                                                       "-us"
+                                                                   ],
+                                                      "roots":  [
+                                                                    "fung(i)"
+                                                                ]
+                                                  },
+                                   "english":  "Any of a kingdom of spore-producing organisms that lack chlorophyll",
+                                   "answer":  "fungus",
+                                   "term":  "Fungus",
+                                   "type":  "vocabulary",
+                                   "source":  "Fungus.md",
+                                   "korean":  "진균, 곰팡이류",
+                                   "answers":  [
+                                                   "fungus"
+                                               ]
+                               },
+                    "intensive care unit":  {
+                                                "english":  "A unit in a hospital providing intensive care for critically ill or injured patients, staffed by specially trained medical personnel and equipped for continuous monitoring and life support",
+                                                "answer":  "intensive care unit",
+                                                "source":  "Intensive care unit.md",
+                                                "answers":  [
+                                                                "intensive care unit"
+                                                            ],
+                                                "type":  "vocabulary",
+                                                "term":  "Intensive care unit",
+                                                "korean":  "중환자실, ICU"
+                                            },
+                    "chondrocyte":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-cyte"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "chondr(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "A cartilage cell",
+                                        "answer":  "chondrocyte",
+                                        "term":  "Chondrocyte",
+                                        "type":  "vocabulary",
+                                        "source":  "Chondrocyte.md",
+                                        "korean":  "연골세포",
+                                        "answers":  [
+                                                        "chondrocyte"
+                                                    ]
+                                    },
                     "hydr(o)":  {
                                     "english":  "Water",
                                     "answer":  "hydr",
@@ -6851,18 +8967,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "hepatomegaly"
                                                      ]
                                      },
-                    "hypo-":  {
-                                  "english":  "Under, below, deficient",
-                                  "answer":  "hypo",
-                                  "source":  "hypo-.md",
-                                  "answers":  [
-                                                  "hypo",
-                                                  "hypo-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "hypo-",
-                                  "korean":  "아래, 부족한"
-                              },
+                    "interaction":  {
+                                        "english":  "Reciprocal action or influence",
+                                        "answer":  "interaction",
+                                        "source":  "Interaction.md",
+                                        "answers":  [
+                                                        "interaction"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Interaction",
+                                        "korean":  "상호작용"
+                                    },
                     "-gram":  {
                                   "english":  "Record",
                                   "answer":  "gram",
@@ -6875,64 +8990,54 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "-gram",
                                   "korean":  "기록, 도"
                               },
-                    "-genesis":  {
-                                     "english":  "Forming",
-                                     "answer":  "genesis",
-                                     "source":  "-genesis.md",
-                                     "answers":  [
-                                                     "genesis",
-                                                     "-genesis"
-                                                 ],
-                                     "type":  "suffix",
-                                     "term":  "-genesis",
-                                     "korean":  "형성"
-                                 },
-                    "trachea":  {
-                                    "morphology":  {
-                                                       "prefixes":  [
-
-                                                                    ],
-                                                       "suffixes":  [
-
-                                                                    ],
-                                                       "roots":  [
-                                                                     "Trache(o)"
-                                                                 ]
-                                                   },
-                                    "english":  "The main trunk of the system of tubes by which air passes to and from the lungs",
-                                    "answer":  "trachea",
-                                    "term":  "Trachea",
-                                    "type":  "vocabulary",
-                                    "source":  "Trachea.md",
-                                    "korean":  "기관",
-                                    "answers":  [
-                                                    "trachea"
-                                                ],
-                                    "imageQuestions":  [
-                                                           {
-                                                               "number":  2,
-                                                               "source":  "Pasted image 20260331141804.png",
-                                                               "type":  "numbered",
-                                                               "src":  "question-images/larynx-group-1.png"
-                                                           }
-                                                       ]
-                                },
+                    "cutane(o)":  {
+                                      "english":  "Skin",
+                                      "answer":  "cutane",
+                                      "source":  "Cutane(o).md",
+                                      "answers":  [
+                                                      "cutane",
+                                                      "cutaneo",
+                                                      "cutane/o",
+                                                      "cutane(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "Cutane(o)",
+                                      "korean":  "피부"
+                                  },
+                    "paed-":  {
+                                  "english":  "Child",
+                                  "answer":  "paed",
+                                  "source":  "paed-.md",
+                                  "answers":  [
+                                                  "paed",
+                                                  "paed-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "paed-",
+                                  "korean":  "어린이"
+                              },
                     "precancerous":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "pre-"
-                                                                         ]
-                                                        },
                                          "english":  "Of, relating to, or being a condition that may precede cancer",
                                          "answer":  "precancerous",
-                                         "term":  "Precancerous",
-                                         "type":  "vocabulary",
                                          "source":  "Precancerous.md",
-                                         "korean":  "전암의",
                                          "answers":  [
                                                          "precancerous"
-                                                     ]
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Precancerous",
+                                         "korean":  "전암의"
                                      },
+                    "general paralysis":  {
+                                              "english":  "Complete loss of muscle function involving the whole body",
+                                              "answer":  "general paralysis",
+                                              "source":  "General paralysis.md",
+                                              "answers":  [
+                                                              "general paralysis"
+                                                          ],
+                                              "type":  "vocabulary",
+                                              "term":  "General paralysis",
+                                              "korean":  "전신마비"
+                                          },
                     "coronal plane":  {
                                           "morphology":  {
                                                              "prefixes":  [
@@ -7001,6 +9106,23 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "unconscious"
                                                     ]
                                     },
+                    "psychiatry":  {
+                                       "morphology":  {
+                                                          "roots":  [
+                                                                        "psych(o)",
+                                                                        "iatr(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The branch of medicine concerned with mental disorders",
+                                       "answer":  "psychiatry",
+                                       "term":  "Psychiatry",
+                                       "type":  "vocabulary",
+                                       "source":  "Psychiatry.md",
+                                       "korean":  "정신과학",
+                                       "answers":  [
+                                                       "psychiatry"
+                                                   ]
+                                   },
                     "-ology":  {
                                    "english":  "Study of",
                                    "answer":  "ology",
@@ -7013,6 +9135,45 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-ology",
                                    "korean":  "학문"
                                },
+                    "encephalomyelitis":  {
+                                              "morphology":  {
+                                                                 "suffixes":  [
+                                                                                  "-itis"
+                                                                              ],
+                                                                 "roots":  [
+                                                                               "encephal(o)",
+                                                                               "myel(o)"
+                                                                           ]
+                                                             },
+                                              "english":  "Inflammation of the brain and spinal cord",
+                                              "answer":  "encephalomyelitis",
+                                              "term":  "Encephalomyelitis",
+                                              "type":  "vocabulary",
+                                              "source":  "Encephalomyelitis.md",
+                                              "korean":  "뇌척수염",
+                                              "answers":  [
+                                                              "encephalomyelitis"
+                                                          ]
+                                          },
+                    "radiotherapy":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-therapy"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "radi(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Treatment of disease by radiation",
+                                         "answer":  "radiotherapy",
+                                         "term":  "Radiotherapy",
+                                         "type":  "vocabulary",
+                                         "source":  "Radiotherapy.md",
+                                         "korean":  "방사선치료, 방사선요법",
+                                         "answers":  [
+                                                         "radiotherapy"
+                                                     ]
+                                     },
                     "blephar(o)":  {
                                        "english":  "Eyelid",
                                        "answer":  "blephar",
@@ -7027,26 +9188,34 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "blephar(o)",
                                        "korean":  "눈꺼풀"
                                    },
-                    "subglossal":  {
+                    "plaster":  {
+                                    "english":  "A material used to make a rigid cast",
+                                    "answer":  "plaster",
+                                    "source":  "Plaster.md",
+                                    "answers":  [
+                                                    "plaster"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Plaster",
+                                    "korean":  "석고"
+                                },
+                    "glycosuria":  {
                                        "morphology":  {
-                                                          "prefixes":  [
-                                                                           "sub-"
-                                                                       ],
                                                           "suffixes":  [
-                                                                           "-al"
+                                                                           "-uria"
                                                                        ],
                                                           "roots":  [
-                                                                        "Gloss(o)"
+                                                                        "glyc(o)"
                                                                     ]
                                                       },
-                                       "english":  "Situated beneath the tongue",
-                                       "answer":  "subglossal",
-                                       "term":  "Subglossal",
+                                       "english":  "Presence of sugar in the urine",
+                                       "answer":  "glycosuria",
+                                       "term":  "Glycosuria",
                                        "type":  "vocabulary",
-                                       "source":  "Subglossal.md",
-                                       "korean":  "혀밑의",
+                                       "source":  "Glycosuria.md",
+                                       "korean":  "당뇨",
                                        "answers":  [
-                                                       "subglossal"
+                                                       "glycosuria"
                                                    ]
                                    },
                     "dialysis":  {
@@ -7105,6 +9274,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-ation",
                                    "korean":  "작용, 과정"
                                },
+                    "sphygmos":  {
+                                     "morphology":  {
+                                                        "roots":  [
+                                                                      "sphygm(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "Pulse",
+                                     "answer":  "sphygmos",
+                                     "term":  "Sphygmos",
+                                     "type":  "vocabulary",
+                                     "source":  "Sphygmos.md",
+                                     "korean":  "맥박",
+                                     "answers":  [
+                                                     "sphygmos"
+                                                 ]
+                                 },
+                    "odont(o)":  {
+                                     "english":  "Tooth",
+                                     "answer":  "odont",
+                                     "source":  "odont(o).md",
+                                     "answers":  [
+                                                     "odont",
+                                                     "odonto",
+                                                     "odont/o",
+                                                     "odont(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "odont(o)",
+                                     "korean":  "치아"
+                                 },
                     "-al":  {
                                 "english":  "Pertaining to",
                                 "answer":  "al",
@@ -7139,20 +9338,40 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "gastroscope"
                                                     ]
                                     },
-                    "path(o)":  {
-                                    "english":  "Disease",
-                                    "answer":  "path",
-                                    "source":  "path(o).md",
-                                    "answers":  [
-                                                    "path",
-                                                    "patho",
-                                                    "path/o",
-                                                    "path(o)"
-                                                ],
-                                    "type":  "root",
-                                    "term":  "path(o)",
-                                    "korean":  "질병"
-                                },
+                    "biopsy":  {
+                                   "morphology":  {
+                                                      "prefixes":  [
+
+                                                                   ],
+                                                      "suffixes":  [
+                                                                       "-opsy"
+                                                                   ],
+                                                      "roots":  [
+                                                                    "Bi(o)"
+                                                                ]
+                                                  },
+                                   "english":  "The removal and examination of tissue, cells, or fluids from the living body",
+                                   "answer":  "biopsy",
+                                   "term":  "Biopsy",
+                                   "type":  "vocabulary",
+                                   "source":  "Biopsy.md",
+                                   "korean":  "생검",
+                                   "answers":  [
+                                                   "biopsy"
+                                               ]
+                               },
+                    "ortho-":  {
+                                   "english":  "Straight, correct, right",
+                                   "answer":  "ortho",
+                                   "source":  "ortho-.md",
+                                   "answers":  [
+                                                   "ortho",
+                                                   "ortho-"
+                                               ],
+                                   "type":  "prefix",
+                                   "term":  "ortho-",
+                                   "korean":  "곧은, 바른"
+                               },
                     "collateral":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -7257,6 +9476,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                  }
                                                              ]
                                       },
+                    "vertebrae":  {
+                                      "english":  "The bones that make up the vertebral column",
+                                      "answer":  "vertebrae",
+                                      "source":  "Vertebrae.md",
+                                      "answers":  [
+                                                      "vertebrae"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Vertebrae",
+                                      "korean":  "척추뼈"
+                                  },
+                    "psychosis":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-osis"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "psych(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A serious mental disorder characterized by impaired contact with reality",
+                                      "answer":  "psychosis",
+                                      "term":  "Psychosis",
+                                      "type":  "vocabulary",
+                                      "source":  "Psychosis.md",
+                                      "korean":  "정신병",
+                                      "answers":  [
+                                                      "psychosis"
+                                                  ]
+                                  },
                     "glossal":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -7373,6 +9622,47 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "semi-",
                                   "korean":  "부분적, 불완전한"
                               },
+                    "lymphocyte":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-cyte"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "lymph(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "A white blood cell of the lymphoid series",
+                                       "answer":  "lymphocyte",
+                                       "term":  "Lymphocyte",
+                                       "type":  "vocabulary",
+                                       "source":  "Lymphocyte.md",
+                                       "korean":  "림프구",
+                                       "answers":  [
+                                                       "lymphocyte"
+                                                   ]
+                                   },
+                    "pleural cavity":  {
+                                           "english":  "The space between the layers of pleura around the lungs",
+                                           "answer":  "pleural cavity",
+                                           "source":  "Pleural cavity.md",
+                                           "answers":  [
+                                                           "pleural cavity"
+                                                       ],
+                                           "type":  "vocabulary",
+                                           "term":  "Pleural cavity",
+                                           "korean":  "흉막강"
+                                       },
+                    "endoscopic room":  {
+                                            "english":  "A hospital room used for endoscopy",
+                                            "answer":  "endoscopic room",
+                                            "source":  "Endoscopic room.md",
+                                            "answers":  [
+                                                            "endoscopic room"
+                                                        ],
+                                            "type":  "vocabulary",
+                                            "term":  "Endoscopic room",
+                                            "korean":  "내시경실"
+                                        },
                     "spher(o)":  {
                                      "english":  "Sphere",
                                      "answer":  "spher",
@@ -7401,25 +9691,68 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "proxim(o)",
                                       "korean":  "몸쪽, 근위"
                                   },
-                    "hypnosis":  {
-                                     "morphology":  {
-                                                        "suffixes":  [
-                                                                         "-osis"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "hypn(o)"
-                                                                  ]
-                                                    },
-                                     "english":  "A trancelike state that resembles sleep but is induced by suggestion",
-                                     "answer":  "hypnosis",
-                                     "term":  "Hypnosis",
-                                     "type":  "vocabulary",
-                                     "source":  "Hypnosis.md",
-                                     "korean":  "최면상태",
-                                     "answers":  [
-                                                     "hypnosis"
-                                                 ]
-                                 },
+                    "sticking plaster":  {
+                                             "english":  "An adhesive strip used to cover or secure a dressing",
+                                             "answer":  "sticking plaster",
+                                             "source":  "Sticking plaster.md",
+                                             "answers":  [
+                                                             "sticking plaster"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Sticking plaster",
+                                             "korean":  "반창고"
+                                         },
+                    "viscer(o)":  {
+                                      "english":  "Internal organs",
+                                      "answer":  "viscer",
+                                      "source":  "viscer(o).md",
+                                      "answers":  [
+                                                      "viscer",
+                                                      "viscero",
+                                                      "viscer/o",
+                                                      "viscer(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "viscer(o)",
+                                      "korean":  "내장, 내장기관"
+                                  },
+                    "pyelonephritis":  {
+                                           "morphology":  {
+                                                              "suffixes":  [
+                                                                               "-itis"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "pyel(o)",
+                                                                            "nephr(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "Inflammation of the renal pelvis and kidney",
+                                           "answer":  "pyelonephritis",
+                                           "term":  "Pyelonephritis",
+                                           "type":  "vocabulary",
+                                           "source":  "Pyelonephritis.md",
+                                           "korean":  "신우신염, 깔때기콩팥염",
+                                           "answers":  [
+                                                           "pyelonephritis"
+                                                       ]
+                                       },
+                    "nephrotoxicity":  {
+                                           "morphology":  {
+                                                              "roots":  [
+                                                                            "nephr(o)",
+                                                                            "Tox(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "Toxicity to the kidney",
+                                           "answer":  "nephrotoxicity",
+                                           "term":  "Nephrotoxicity",
+                                           "type":  "vocabulary",
+                                           "source":  "Nephrotoxicity.md",
+                                           "korean":  "콩팥독성, 신독성",
+                                           "answers":  [
+                                                           "nephrotoxicity"
+                                                       ]
+                                       },
                     "collateral vessel":  {
                                               "morphology":  {
                                                                  "prefixes":  [
@@ -7486,6 +9819,23 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                       "parenteral administration"
                                                                   ]
                                                   },
+                    "pneumothorax":  {
+                                         "morphology":  {
+                                                            "roots":  [
+                                                                          "pneum(o)",
+                                                                          "thorac(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Presence of air in the pleural cavity causing lung collapse",
+                                         "answer":  "pneumothorax",
+                                         "term":  "Pneumothorax",
+                                         "type":  "vocabulary",
+                                         "source":  "Pneumothorax.md",
+                                         "korean":  "공기가슴증, 기흉",
+                                         "answers":  [
+                                                         "pneumothorax"
+                                                     ]
+                                     },
                     "in-":  {
                                 "english":  "Negative prefix, not, without",
                                 "answer":  "in",
@@ -7535,6 +9885,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "intra-",
                                    "korean":  "내부의"
                                },
+                    "phob(o)":  {
+                                    "english":  "Fear or strong dislike",
+                                    "answer":  "phob",
+                                    "source":  "phob(o).md",
+                                    "answers":  [
+                                                    "phob",
+                                                    "phobo",
+                                                    "phob/o",
+                                                    "phob(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "phob(o)",
+                                    "korean":  "공포, 혐오"
+                                },
                     "thermometer":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -7557,6 +9921,99 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "thermometer"
                                                     ]
                                     },
+                    "phalanx":  {
+                                    "english":  "A bone of a finger or toe",
+                                    "answer":  "phalanx",
+                                    "source":  "Phalanx.md",
+                                    "answers":  [
+                                                    "phalanx"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Phalanx",
+                                    "korean":  "손발가락뼈"
+                                },
+                    "hydrophobic":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-ic"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "hydr(o)",
+                                                                         "phob(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Lacking affinity for water",
+                                        "answer":  "hydrophobic",
+                                        "term":  "Hydrophobic",
+                                        "type":  "vocabulary",
+                                        "source":  "Hydrophobic.md",
+                                        "korean":  "소수성",
+                                        "answers":  [
+                                                        "hydrophobic"
+                                                    ]
+                                    },
+                    "otorhinolaryngology":  {
+                                                "morphology":  {
+                                                                   "suffixes":  [
+                                                                                    "-ology"
+                                                                                ],
+                                                                   "roots":  [
+                                                                                 "ot(o)",
+                                                                                 "rhin(o)",
+                                                                                 "laryng(o)"
+                                                                             ]
+                                                               },
+                                                "english":  "A medical specialty concerned especially with the ear, nose, and throat and related parts of the head and neck",
+                                                "answer":  "otorhinolaryngology",
+                                                "term":  "Otorhinolaryngology",
+                                                "type":  "vocabulary",
+                                                "source":  "Otorhinolaryngology.md",
+                                                "korean":  "이비인후과학, ENT",
+                                                "answers":  [
+                                                                "otorhinolaryngology"
+                                                            ]
+                                            },
+                    "osteotome":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-tome"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Oste(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A chisel without a bevel that is used for cutting bone",
+                                      "answer":  "osteotome",
+                                      "term":  "Osteotome",
+                                      "type":  "vocabulary",
+                                      "source":  "Osteotome.md",
+                                      "korean":  "뼈절단기",
+                                      "answers":  [
+                                                      "osteotome"
+                                                  ]
+                                  },
+                    "synchronizer":  {
+                                         "morphology":  {
+                                                            "prefixes":  [
+                                                                             "syn-"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "chron(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "A device that makes things occur at the same time",
+                                         "answer":  "synchronizer",
+                                         "term":  "Synchronizer",
+                                         "type":  "vocabulary",
+                                         "source":  "Synchronizer.md",
+                                         "korean":  "동기장치",
+                                         "answers":  [
+                                                         "synchronizer"
+                                                     ]
+                                     },
                     "postpartum depression":  {
                                                   "morphology":  {
                                                                      "prefixes":  [
@@ -7593,18 +10050,33 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "cyan(o)",
                                     "korean":  "청색"
                                 },
-                    "re-":  {
-                                "english":  "Back",
-                                "answer":  "re",
-                                "source":  "re-.md",
-                                "answers":  [
-                                                "re",
-                                                "re-"
-                                            ],
-                                "type":  "prefix",
-                                "term":  "re-",
-                                "korean":  "뒤로, 다시"
-                            },
+                    "paramedic":  {
+                                      "english":  "A trained health worker who provides emergency medical care",
+                                      "answer":  "paramedic",
+                                      "source":  "Paramedic.md",
+                                      "answers":  [
+                                                      "paramedic"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Paramedic",
+                                      "korean":  "응급구조사, 의료보조인"
+                                  },
+                    "neurosurgery":  {
+                                         "morphology":  {
+                                                            "roots":  [
+                                                                          "neur(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Surgery of the nervous system",
+                                         "answer":  "neurosurgery",
+                                         "term":  "Neurosurgery",
+                                         "type":  "vocabulary",
+                                         "source":  "Neurosurgery.md",
+                                         "korean":  "신경외과학",
+                                         "answers":  [
+                                                         "neurosurgery"
+                                                     ]
+                                     },
                     "-drome":  {
                                    "english":  "To run, in a course",
                                    "answer":  "drome",
@@ -7647,50 +10119,90 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                               }
                                                           ]
                                    },
+                    "pedialgia":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-algia"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "ped(i)"
+                                                                   ]
+                                                     },
+                                      "english":  "Pain in the foot",
+                                      "answer":  "pedialgia",
+                                      "term":  "Pedialgia",
+                                      "type":  "vocabulary",
+                                      "source":  "Pedialgia.md",
+                                      "korean":  "발 통증",
+                                      "answers":  [
+                                                      "pedialgia"
+                                                  ]
+                                  },
                     "plasmid":  {
-                                    "morphology":  {
-                                                       "roots":  [
-                                                                     "plasm(o)"
-                                                                 ]
-                                                   },
                                     "english":  "An extrachromosomal ring of DNA especially in bacteria that replicates autonomously",
                                     "answer":  "plasmid",
-                                    "term":  "Plasmid",
-                                    "type":  "vocabulary",
                                     "source":  "Plasmid.md",
-                                    "korean":  "플라스미드",
                                     "answers":  [
                                                     "plasmid"
-                                                ]
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Plasmid",
+                                    "korean":  "플라스미드"
                                 },
-                    "cellul(o)":  {
-                                      "english":  "Cell",
-                                      "answer":  "cellul",
-                                      "source":  "cellul(o).md",
+                    "embryonic":  {
+                                      "english":  "Relating to an embryo",
+                                      "answer":  "embryonic",
+                                      "source":  "Embryonic.md",
                                       "answers":  [
-                                                      "cellul",
-                                                      "cellulo",
-                                                      "cellul/o",
-                                                      "cellul(o)"
+                                                      "embryonic"
                                                   ],
-                                      "type":  "root",
-                                      "term":  "cellul(o)",
-                                      "korean":  "세포"
+                                      "type":  "vocabulary",
+                                      "term":  "Embryonic",
+                                      "korean":  "배아의"
                                   },
-                    "troph(o)":  {
-                                     "english":  "Nourishment, enlargement (growth)",
-                                     "answer":  "troph",
-                                     "source":  "troph(o).md",
-                                     "answers":  [
-                                                     "troph",
-                                                     "tropho",
-                                                     "troph/o",
-                                                     "troph(o)"
-                                                 ],
-                                     "type":  "root",
-                                     "term":  "troph(o)",
-                                     "korean":  "영양, 커짐"
-                                 },
+                    "gonorrhea":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-rrhea"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "gon(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A sexually transmitted infection caused by Neisseria gonorrhoeae",
+                                      "answer":  "gonorrhea",
+                                      "term":  "Gonorrhea",
+                                      "type":  "vocabulary",
+                                      "source":  "Gonorrhea.md",
+                                      "korean":  "임질",
+                                      "answers":  [
+                                                      "gonorrhea"
+                                                  ]
+                                  },
+                    "cis-":  {
+                                 "english":  "This side, on the near side, opposite of trans-",
+                                 "answer":  "cis",
+                                 "source":  "cis-.md",
+                                 "answers":  [
+                                                 "cis",
+                                                 "cis-"
+                                             ],
+                                 "type":  "prefix",
+                                 "term":  "cis-",
+                                 "korean":  "같은 쪽, 가까운 쪽"
+                             },
+                    "poly-":  {
+                                  "english":  "Many, much",
+                                  "answer":  "poly",
+                                  "source":  "poly-.md",
+                                  "answers":  [
+                                                  "poly",
+                                                  "poly-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "poly-",
+                                  "korean":  "다"
+                              },
                     "-us":  {
                                 "english":  "Latin-derived singular noun ending",
                                 "answer":  "us",
@@ -7751,17 +10263,39 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           "contraception"
                                                       ]
                                       },
-                    "venous":  {
-                                   "english":  "Of, relating to, or full of veins",
-                                   "answer":  "venous",
-                                   "source":  "Venous.md",
-                                   "answers":  [
-                                                   "venous"
-                                               ],
-                                   "type":  "vocabulary",
-                                   "term":  "Venous",
-                                   "korean":  "정맥의"
-                               },
+                    "thyr(o)":  {
+                                    "english":  "Gland in the neck that regulates metabolism",
+                                    "answer":  "thyr",
+                                    "source":  "thyr(o).md",
+                                    "answers":  [
+                                                    "thyr",
+                                                    "thyro",
+                                                    "thyr/o",
+                                                    "thyr(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "thyr(o)",
+                                    "korean":  "갑상선"
+                                },
+                    "costal cartilage":  {
+                                             "morphology":  {
+                                                                "suffixes":  [
+                                                                                 "-al"
+                                                                             ],
+                                                                "roots":  [
+                                                                              "cost(o)"
+                                                                          ]
+                                                            },
+                                             "english":  "Cartilage connecting the ribs with the sternum",
+                                             "answer":  "costal cartilage",
+                                             "term":  "Costal cartilage",
+                                             "type":  "vocabulary",
+                                             "source":  "Costal cartilage.md",
+                                             "korean":  "갈비연골",
+                                             "answers":  [
+                                                             "costal cartilage"
+                                                         ]
+                                         },
                     "con-":  {
                                  "english":  "With, together",
                                  "answer":  "con",
@@ -7774,6 +10308,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "con-",
                                  "korean":  "함께, 같이"
                              },
+                    "ren(o)":  {
+                                   "english":  "Kidney",
+                                   "answer":  "ren",
+                                   "source":  "ren(o).md",
+                                   "answers":  [
+                                                   "ren",
+                                                   "reno",
+                                                   "ren/o",
+                                                   "ren(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "ren(o)",
+                                   "korean":  "콩팥, 신장"
+                               },
                     "-phobia":  {
                                     "english":  "Fear",
                                     "answer":  "phobia",
@@ -7820,17 +10368,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "visceral"
                                                  ]
                                  },
-                    "helminthic dysentery":  {
-                                                 "english":  "Dysentery caused by helminths",
-                                                 "answer":  "helminthic dysentery",
-                                                 "source":  "Helminthic dysentery.md",
-                                                 "answers":  [
-                                                                 "helminthic dysentery"
-                                                             ],
-                                                 "type":  "vocabulary",
-                                                 "term":  "Helminthic dysentery",
-                                                 "korean":  "연충이질"
-                                             },
+                    "oropharynx":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+
+                                                                       ],
+                                                          "suffixes":  [
+
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Pharyng(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The part of the pharynx below the soft palate and above the epiglottis",
+                                       "answer":  "oropharynx",
+                                       "term":  "Oropharynx",
+                                       "type":  "vocabulary",
+                                       "source":  "Oropharynx.md",
+                                       "korean":  "구인두",
+                                       "answers":  [
+                                                       "oropharynx"
+                                                   ],
+                                       "imageQuestions":  [
+                                                              {
+                                                                  "number":  4,
+                                                                  "source":  "Pasted image 20260331144207.png",
+                                                                  "type":  "numbered",
+                                                                  "src":  "question-images/pharynx-group-1.png"
+                                                              }
+                                                          ]
+                                   },
                     "top(o)":  {
                                    "english":  "Place",
                                    "answer":  "top",
@@ -7857,40 +10424,41 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "contra-",
                                     "korean":  "반대, 금기 관련"
                                 },
+                    "somat(o)":  {
+                                     "english":  "Body",
+                                     "answer":  "somat",
+                                     "source":  "somat(o).md",
+                                     "answers":  [
+                                                     "somat",
+                                                     "somato",
+                                                     "somat/o",
+                                                     "somat(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "somat(o)",
+                                     "korean":  "몸"
+                                 },
                     "albino":  {
-                                   "morphology":  {
-                                                      "roots":  [
-                                                                    "alb(o)"
-                                                                ]
-                                                  },
                                    "english":  "A person affected with albinism",
                                    "answer":  "albino",
-                                   "term":  "Albino",
-                                   "type":  "vocabulary",
                                    "source":  "Albino.md",
-                                   "korean":  "백색증환자",
                                    "answers":  [
                                                    "albino"
-                                               ]
+                                               ],
+                                   "type":  "vocabulary",
+                                   "term":  "Albino",
+                                   "korean":  "백색증환자"
                                },
                     "euphoria":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "eu-"
-                                                                     ],
-                                                        "suffixes":  [
-                                                                         "-phoria"
-                                                                     ]
-                                                    },
                                      "english":  "A feeling of well-being or elation that is not based on reality or proportionate circumstances",
                                      "answer":  "euphoria",
-                                     "term":  "Euphoria",
-                                     "type":  "vocabulary",
                                      "source":  "Euphoria.md",
-                                     "korean":  "이상행복감, 이상황홀감, 들뜬 기분",
                                      "answers":  [
                                                      "euphoria"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Euphoria",
+                                     "korean":  "이상행복감, 이상황홀감, 들뜬 기분"
                                  },
                     "peripheral nervous system":  {
                                                       "english":  "The part of the nervous system outside the brain and spinal cord",
@@ -7903,6 +10471,22 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "term":  "Peripheral nervous system",
                                                       "korean":  "말초신경계"
                                                   },
+                    "rectosigmoid":  {
+                                         "morphology":  {
+                                                            "roots":  [
+                                                                          "rect(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Relating to the rectum and sigmoid colon",
+                                         "answer":  "rectosigmoid",
+                                         "term":  "Rectosigmoid",
+                                         "type":  "vocabulary",
+                                         "source":  "Rectosigmoid.md",
+                                         "korean":  "직장구불결장의, 곧창자구불창자의",
+                                         "answers":  [
+                                                         "rectosigmoid"
+                                                     ]
+                                     },
                     "hemopoiesis":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -7959,38 +10543,58 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "hypodermic"
                                                    ]
                                    },
+                    "venous blood":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-ous"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "ven(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Blood in the veins",
+                                         "answer":  "venous blood",
+                                         "term":  "Venous blood",
+                                         "type":  "vocabulary",
+                                         "source":  "Venous blood.md",
+                                         "korean":  "정맥혈액, 정맥피",
+                                         "answers":  [
+                                                         "venous blood"
+                                                     ]
+                                     },
                     "paranoia":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "para-"
-                                                                     ]
-                                                    },
                                      "english":  "Mental illness characterized by delusions or by excessive suspiciousness and distrust",
                                      "answer":  "paranoia",
-                                     "term":  "Paranoia",
-                                     "type":  "vocabulary",
                                      "source":  "Paranoia.md",
-                                     "korean":  "편집증",
                                      "answers":  [
                                                      "paranoia"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Paranoia",
+                                     "korean":  "편집증"
                                  },
                     "insulin":  {
-                                    "morphology":  {
-                                                       "suffixes":  [
-                                                                        "-in"
-                                                                    ]
-                                                   },
                                     "english":  "A hormone that is produced by the pancreas and is necessary for the normal use of glucose by the body",
                                     "answer":  "insulin",
-                                    "term":  "Insulin",
-                                    "type":  "vocabulary",
                                     "source":  "Insulin.md",
-                                    "korean":  "인슐린",
                                     "answers":  [
                                                     "insulin"
-                                                ]
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Insulin",
+                                    "korean":  "인슐린"
                                 },
+                    "ward":  {
+                                 "english":  "A separate room or area in a hospital for patients with the same type of medical condition",
+                                 "answer":  "ward",
+                                 "source":  "Ward.md",
+                                 "answers":  [
+                                                 "ward"
+                                             ],
+                                 "type":  "vocabulary",
+                                 "term":  "Ward",
+                                 "korean":  "병동"
+                             },
                     "lumbar":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -8040,23 +10644,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       ]
                                },
                     "menstruation":  {
-                                         "morphology":  {
-                                                            "suffixes":  [
-                                                                             "-ation"
-                                                                         ],
-                                                            "roots":  [
-                                                                          "men(o)"
-                                                                      ]
-                                                        },
                                          "english":  "The periodic discharge of blood and tissue from the uterus in nonpregnant females of reproductive age",
                                          "answer":  "menstruation",
-                                         "term":  "Menstruation",
-                                         "type":  "vocabulary",
                                          "source":  "Menstruation.md",
-                                         "korean":  "월경",
                                          "answers":  [
                                                          "menstruation"
-                                                     ]
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Menstruation",
+                                         "korean":  "월경"
                                      },
                     "-ptosis":  {
                                     "english":  "Drooping",
@@ -8070,28 +10666,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-ptosis",
                                     "korean":  "늘어짐, 처짐"
                                 },
-                    "palatorrhaphy":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-
-                                                                          ],
-                                                             "suffixes":  [
-                                                                              "-rrhaphy"
-                                                                          ],
-                                                             "roots":  [
-                                                                           "Palat(o)"
-                                                                       ]
-                                                         },
-                                          "english":  "Suturing of the palate",
-                                          "answer":  "palatorrhaphy",
-                                          "term":  "Palatorrhaphy",
-                                          "type":  "vocabulary",
-                                          "source":  "Palatorrhaphy.md",
-                                          "korean":  "입천장꿰맴술, 구개봉합술",
-                                          "answers":  [
-                                                          "palatorrhaphy"
-                                                      ]
-                                      },
+                    "bronchostenosis":  {
+                                            "morphology":  {
+                                                               "suffixes":  [
+                                                                                "-osis"
+                                                                            ],
+                                                               "roots":  [
+                                                                             "bronch(o)",
+                                                                             "sten(o)"
+                                                                         ]
+                                                           },
+                                            "english":  "Narrowing of a bronchus",
+                                            "answer":  "bronchostenosis",
+                                            "term":  "Bronchostenosis",
+                                            "type":  "vocabulary",
+                                            "source":  "Bronchostenosis.md",
+                                            "korean":  "기관지협착",
+                                            "answers":  [
+                                                            "bronchostenosis"
+                                                        ]
+                                        },
                     "glossalgia":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -8114,36 +10708,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "glossalgia"
                                                    ]
                                    },
-                    "umbilical":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-al"
-                                                                      ],
-                                                         "roots":  [
-
-                                                                   ]
-                                                     },
-                                      "english":  "Having to do with the umbilicus, or navel",
-                                      "answer":  "umbilical",
-                                      "term":  "Umbilical",
-                                      "type":  "vocabulary",
-                                      "source":  "Umbilical.md",
-                                      "korean":  "배꼽의",
-                                      "answers":  [
-                                                      "umbilical"
-                                                  ],
-                                      "imageQuestions":  [
-                                                             {
-                                                                 "number":  5,
-                                                                 "source":  "Pasted image 20260414172053.png",
-                                                                 "type":  "numbered",
-                                                                 "src":  "question-images/abdominal-region-group-1.png"
-                                                             }
-                                                         ]
-                                  },
+                    "orth(o)":  {
+                                    "english":  "Straight, correct, right",
+                                    "answer":  "orth",
+                                    "source":  "orth(o).md",
+                                    "answers":  [
+                                                    "orth",
+                                                    "ortho",
+                                                    "orth/o",
+                                                    "orth(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "orth(o)",
+                                    "korean":  "곧은, 바른"
+                                },
                     "subcutaneous":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -8178,6 +10756,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "-ar",
                                 "korean":  "~의, ~에 관한"
                             },
+                    "cytology":  {
+                                     "morphology":  {
+                                                        "suffixes":  [
+                                                                         "-ology"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "cyt(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "The study of cells",
+                                     "answer":  "cytology",
+                                     "term":  "Cytology",
+                                     "type":  "vocabulary",
+                                     "source":  "Cytology.md",
+                                     "korean":  "세포학",
+                                     "answers":  [
+                                                     "cytology"
+                                                 ]
+                                 },
                     "larynx":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -8222,28 +10819,51 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "cyt(o)",
                                    "korean":  "세포"
                                },
-                    "periosteum":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "peri-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-um"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "oste(o)"
-                                                                    ]
-                                                      },
-                                       "english":  "The membrane of connective tissue surrounding a bone",
-                                       "answer":  "periosteum",
-                                       "term":  "Periosteum",
-                                       "type":  "vocabulary",
-                                       "source":  "Periosteum.md",
-                                       "korean":  "골막",
-                                       "answers":  [
-                                                       "periosteum"
-                                                   ]
-                                   },
+                    "-opathy":  {
+                                    "english":  "Disease",
+                                    "answer":  "opathy",
+                                    "source":  "-opathy.md",
+                                    "answers":  [
+                                                    "opathy",
+                                                    "-opathy"
+                                                ],
+                                    "type":  "suffix",
+                                    "term":  "-opathy",
+                                    "korean":  "병증"
+                                },
+                    "peritoneal dialysis":  {
+                                                "morphology":  {
+                                                                   "suffixes":  [
+                                                                                    "-al"
+                                                                                ],
+                                                                   "roots":  [
+                                                                                 "peritone(o)"
+                                                                             ]
+                                                               },
+                                                "english":  "Dialysis performed through the peritoneum",
+                                                "answer":  "peritoneal dialysis",
+                                                "term":  "Peritoneal dialysis",
+                                                "type":  "vocabulary",
+                                                "source":  "Peritoneal dialysis.md",
+                                                "korean":  "복막투석",
+                                                "answers":  [
+                                                                "peritoneal dialysis"
+                                                            ]
+                                            },
+                    "derm(o)":  {
+                                    "english":  "Skin",
+                                    "answer":  "derm",
+                                    "source":  "Derm(o).md",
+                                    "answers":  [
+                                                    "derm",
+                                                    "dermo",
+                                                    "derm/o",
+                                                    "derm(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "Derm(o)",
+                                    "korean":  "피부"
+                                },
                     "pyloric sphincter":  {
                                               "morphology":  {
                                                                  "prefixes":  [
@@ -8294,23 +10914,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                          "korean":  "콜레스테롤"
                                      },
                     "xanthoma":  {
-                                     "morphology":  {
-                                                        "suffixes":  [
-                                                                         "-oma"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "xanth(o)"
-                                                                  ]
-                                                    },
                                      "english":  "A fatty irregular yellow patch or nodule containing lipid-filled foam cells that occurs on the skin or in internal tissue",
                                      "answer":  "xanthoma",
-                                     "term":  "Xanthoma",
-                                     "type":  "vocabulary",
                                      "source":  "Xanthoma.md",
-                                     "korean":  "황색종",
                                      "answers":  [
                                                      "xanthoma"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Xanthoma",
+                                     "korean":  "황색종"
                                  },
                     "chemotherapy":  {
                                          "morphology":  {
@@ -8334,28 +10946,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "chemotherapy"
                                                      ]
                                      },
-                    "antepartum":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "ante-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-partum"
-                                                                       ],
-                                                          "roots":  [
-
-                                                                    ]
-                                                      },
-                                       "english":  "Relating to the period before parturition: before childbirth",
-                                       "answer":  "antepartum",
-                                       "term":  "Antepartum",
-                                       "type":  "vocabulary",
-                                       "source":  "Antepartum.md",
-                                       "korean":  "분만전",
-                                       "answers":  [
-                                                       "antepartum"
-                                                   ]
-                                   },
+                    "isch(o)":  {
+                                    "english":  "Deficiency, suppression",
+                                    "answer":  "isch",
+                                    "source":  "isch(o).md",
+                                    "answers":  [
+                                                    "isch",
+                                                    "ischo",
+                                                    "isch/o",
+                                                    "isch(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "isch(o)",
+                                    "korean":  "결핍, 억제"
+                                },
                     "myc(o)":  {
                                    "english":  "Fungus",
                                    "answer":  "myc",
@@ -8382,28 +10986,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "hemi-",
                                   "korean":  "반"
                               },
-                    "microbiology":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "micro-"
-                                                                         ],
-                                                            "suffixes":  [
-                                                                             "-ology"
-                                                                         ],
-                                                            "roots":  [
-                                                                          "bi(o)"
-                                                                      ]
-                                                        },
-                                         "english":  "A branch of biology dealing with microorganisms",
-                                         "answer":  "microbiology",
-                                         "term":  "Microbiology",
-                                         "type":  "vocabulary",
-                                         "source":  "Microbiology.md",
-                                         "korean":  "미생물학",
-                                         "answers":  [
-                                                         "microbiology"
-                                                     ]
-                                     },
+                    "-cidal":  {
+                                   "english":  "Killing, destroying",
+                                   "answer":  "cidal",
+                                   "source":  "-cidal.md",
+                                   "answers":  [
+                                                   "cidal",
+                                                   "-cidal"
+                                               ],
+                                   "type":  "suffix",
+                                   "term":  "-cidal",
+                                   "korean":  "살균-"
+                               },
                     "epi-":  {
                                  "english":  "Upon, on, above, in addition, after",
                                  "answer":  "epi",
@@ -8445,6 +11039,37 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                              }
                                                          ]
                                   },
+                    "hepatobiliary":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-ary"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "Hepat(o)",
+                                                                           "bili(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Relating to the liver and bile or bile ducts",
+                                          "answer":  "hepatobiliary",
+                                          "term":  "Hepatobiliary",
+                                          "type":  "vocabulary",
+                                          "source":  "Hepatobiliary.md",
+                                          "korean":  "간담즙의, 간담도의",
+                                          "answers":  [
+                                                          "hepatobiliary"
+                                                      ]
+                                      },
+                    "cast":  {
+                                 "english":  "A rigid dressing used to immobilize a body part",
+                                 "answer":  "cast",
+                                 "source":  "Cast.md",
+                                 "answers":  [
+                                                 "cast"
+                                             ],
+                                 "type":  "vocabulary",
+                                 "term":  "Cast",
+                                 "korean":  "고정붕대, 기브스"
+                             },
                     "polio-":  {
                                    "english":  "Gray matter of the brain",
                                    "answer":  "polio",
@@ -8472,21 +11097,27 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "korean":  "근육"
                               },
                     "quadriplegia":  {
-                                         "morphology":  {
-                                                            "suffixes":  [
-                                                                             "-plegia"
-                                                                         ]
-                                                        },
                                          "english":  "Partial or complete paralysis of both the arms and legs",
                                          "answer":  "quadriplegia",
-                                         "term":  "Quadriplegia",
-                                         "type":  "vocabulary",
                                          "source":  "Quadriplegia.md",
-                                         "korean":  "사지마비",
                                          "answers":  [
                                                          "quadriplegia"
-                                                     ]
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Quadriplegia",
+                                         "korean":  "사지마비"
                                      },
+                    "sickroom":  {
+                                     "english":  "A room for a sick person",
+                                     "answer":  "sickroom",
+                                     "source":  "Sickroom.md",
+                                     "answers":  [
+                                                     "sickroom"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Sickroom",
+                                     "korean":  "병실"
+                                 },
                     "anteri(o)":  {
                                       "english":  "Front",
                                       "answer":  "anteri",
@@ -8500,6 +11131,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "type":  "root",
                                       "term":  "anteri(o)",
                                       "korean":  "앞쪽, 전방"
+                                  },
+                    "postnatal":  {
+                                      "english":  "Occurring or existing after birth",
+                                      "answer":  "postnatal",
+                                      "source":  "Postnatal.md",
+                                      "answers":  [
+                                                      "postnatal"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Postnatal",
+                                      "korean":  "생후의"
                                   },
                     "contralateral":  {
                                           "morphology":  {
@@ -8589,28 +11231,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                         "term":  "encephal(o)",
                                         "korean":  ""
                                     },
-                    "polydactyly":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "poly-"
-                                                                        ],
-                                                           "suffixes":  [
-
-                                                                        ],
-                                                           "roots":  [
-                                                                         "Dactyl(o)"
-                                                                     ]
-                                                       },
-                                        "english":  "The condition of having more than the normal number of fingers or toes",
-                                        "answer":  "polydactyly",
-                                        "term":  "Polydactyly",
-                                        "type":  "vocabulary",
-                                        "source":  "Polydactyly.md",
-                                        "korean":  "가락과다증, 다지증",
-                                        "answers":  [
-                                                        "polydactyly"
-                                                    ]
-                                    },
+                    "idiopathic":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+                                                                           "idio-"
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-ic"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "path(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Arising spontaneously or from an unknown cause",
+                                       "answer":  "idiopathic",
+                                       "term":  "Idiopathic",
+                                       "type":  "vocabulary",
+                                       "source":  "Idiopathic.md",
+                                       "korean":  "특발성, 원인불명",
+                                       "answers":  [
+                                                       "idiopathic"
+                                                   ]
+                                   },
                     "-ose":  {
                                  "english":  "Pertaining to",
                                  "answer":  "ose",
@@ -8636,38 +11278,57 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "korean":  "분리"
                              },
                     "subacute":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "sub-"
-                                                                     ],
-                                                        "vocabulary":  [
-                                                                           "Acute"
-                                                                       ]
-                                                    },
                                      "english":  "Falling between acute and chronic in character especially when closer to acute",
                                      "answer":  "subacute",
-                                     "term":  "Subacute",
-                                     "type":  "vocabulary",
                                      "source":  "Subacute.md",
-                                     "korean":  "아급성",
                                      "answers":  [
                                                      "subacute"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Subacute",
+                                     "korean":  "아급성"
+                                 },
+                    "symmetry":  {
+                                     "morphology":  {
+                                                        "prefixes":  [
+                                                                         "syn-"
+                                                                     ],
+                                                        "suffixes":  [
+                                                                         "-metry"
+                                                                     ],
+                                                        "roots":  [
+
+                                                                  ]
+                                                    },
+                                     "english":  "Correspondence in size, shape, and relative position of parts on opposite sides",
+                                     "answer":  "symmetry",
+                                     "term":  "Symmetry",
+                                     "type":  "vocabulary",
+                                     "source":  "Symmetry.md",
+                                     "korean":  "대칭",
+                                     "answers":  [
+                                                     "symmetry"
                                                  ]
                                  },
-                    "infer(o)":  {
-                                     "english":  "Below, lower",
-                                     "answer":  "infer",
-                                     "source":  "infer(o).md",
-                                     "answers":  [
-                                                     "infer",
-                                                     "infero",
-                                                     "infer/o",
-                                                     "infer(o)"
-                                                 ],
-                                     "type":  "root",
-                                     "term":  "infer(o)",
-                                     "korean":  "아래, 하방"
-                                 },
+                    "chemotaxis":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-taxis"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "chem(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Movement of an organism or cell toward or away from a chemical stimulus",
+                                       "answer":  "chemotaxis",
+                                       "term":  "Chemotaxis",
+                                       "type":  "vocabulary",
+                                       "source":  "Chemotaxis.md",
+                                       "korean":  "화학주성",
+                                       "answers":  [
+                                                       "chemotaxis"
+                                                   ]
+                                   },
                     "sublingual":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -8713,28 +11374,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                    "electroencephalography"
                                                                ]
                                                },
-                    "proximal phalanx":  {
-                                             "morphology":  {
-                                                                "prefixes":  [
+                    "antepartum":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+                                                                           "ante-"
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-partum"
+                                                                       ],
+                                                          "roots":  [
 
-                                                                             ],
-                                                                "suffixes":  [
-                                                                                 "-al"
-                                                                             ],
-                                                                "roots":  [
-                                                                              "proxim(o)"
-                                                                          ]
-                                                            },
-                                             "english":  "The phalanx closest to the hand or foot",
-                                             "answer":  "proximal phalanx",
-                                             "term":  "Proximal phalanx",
-                                             "type":  "vocabulary",
-                                             "source":  "Proximal phalanx.md",
-                                             "korean":  "첫마디뼈",
-                                             "answers":  [
-                                                             "proximal phalanx"
-                                                         ]
-                                         },
+                                                                    ]
+                                                      },
+                                       "english":  "Relating to the period before parturition: before childbirth",
+                                       "answer":  "antepartum",
+                                       "term":  "Antepartum",
+                                       "type":  "vocabulary",
+                                       "source":  "Antepartum.md",
+                                       "korean":  "분만전",
+                                       "answers":  [
+                                                       "antepartum"
+                                                   ]
+                                   },
                     "immoderate":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -8757,47 +11418,85 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "immoderate"
                                                    ]
                                    },
-                    "nephritis":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
+                    "hematoma":  {
+                                     "morphology":  {
+                                                        "prefixes":  [
 
-                                                                      ],
+                                                                     ],
+                                                        "suffixes":  [
+                                                                         "-oma"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "Hemat(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "A mass of usually clotted blood that forms in a tissue, organ, or body space as a result of a broken blood vessel",
+                                     "answer":  "hematoma",
+                                     "term":  "Hematoma",
+                                     "type":  "vocabulary",
+                                     "source":  "Hematoma.md",
+                                     "korean":  "혈종",
+                                     "answers":  [
+                                                     "hematoma"
+                                                 ]
+                                 },
+                    "manometer":  {
+                                      "morphology":  {
                                                          "suffixes":  [
-                                                                          "-itis"
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Nephr(o)"
-                                                                   ]
+                                                                          "-meter"
+                                                                      ]
                                                      },
-                                      "english":  "Acute or chronic inflammation of the kidney caused by infection, degenerative process, or vascular disease",
-                                      "answer":  "nephritis",
-                                      "term":  "Nephritis",
+                                      "english":  "An instrument for measuring pressure",
+                                      "answer":  "manometer",
+                                      "term":  "Manometer",
                                       "type":  "vocabulary",
-                                      "source":  "Nephritis.md",
-                                      "korean":  "신장염",
+                                      "source":  "Manometer.md",
+                                      "korean":  "압력계",
                                       "answers":  [
-                                                      "nephritis"
+                                                      "manometer"
                                                   ]
                                   },
+                    "troph(o)":  {
+                                     "english":  "Nourishment, enlargement (growth)",
+                                     "answer":  "troph",
+                                     "source":  "troph(o).md",
+                                     "answers":  [
+                                                     "troph",
+                                                     "tropho",
+                                                     "troph/o",
+                                                     "troph(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "troph(o)",
+                                     "korean":  "영양, 커짐"
+                                 },
                     "melanocyte":  {
-                                       "morphology":  {
-                                                          "suffixes":  [
-                                                                           "-cyte"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "melan(o)"
-                                                                    ]
-                                                      },
                                        "english":  "Special cells in the skin and the eye that synthesize melanin pigments",
                                        "answer":  "melanocyte",
-                                       "term":  "Melanocyte",
-                                       "type":  "vocabulary",
                                        "source":  "Melanocyte.md",
-                                       "korean":  "멜라닌세포",
                                        "answers":  [
                                                        "melanocyte"
-                                                   ]
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Melanocyte",
+                                       "korean":  "멜라닌세포"
                                    },
+                    "mucopurulent":  {
+                                         "morphology":  {
+                                                            "roots":  [
+                                                                          "muc(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Containing mucus and pus",
+                                         "answer":  "mucopurulent",
+                                         "term":  "Mucopurulent",
+                                         "type":  "vocabulary",
+                                         "source":  "Mucopurulent.md",
+                                         "korean":  "점액고름의, 점액농의",
+                                         "answers":  [
+                                                         "mucopurulent"
+                                                     ]
+                                     },
                     "computed tomography":  {
                                                 "morphology":  {
                                                                    "prefixes":  [
@@ -8879,46 +11578,49 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "somn(i)",
                                     "korean":  "수면"
                                 },
+                    "incision":  {
+                                     "english":  "A cut made into tissue",
+                                     "answer":  "incision",
+                                     "source":  "Incision.md",
+                                     "answers":  [
+                                                     "incision"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Incision",
+                                     "korean":  "절개"
+                                 },
                     "polymorphonuclear":  {
-                                              "morphology":  {
-                                                                 "prefixes":  [
-                                                                                  "poly-"
-                                                                              ],
-                                                                 "roots":  [
-                                                                               "morph(o)"
-                                                                           ]
-                                                             },
                                               "english":  "Having nuclei of various forms",
                                               "answer":  "polymorphonuclear",
-                                              "term":  "Polymorphonuclear",
-                                              "type":  "vocabulary",
                                               "source":  "Polymorphonuclear.md",
-                                              "korean":  "다형핵의",
                                               "answers":  [
                                                               "polymorphonuclear"
-                                                          ]
+                                                          ],
+                                              "type":  "vocabulary",
+                                              "term":  "Polymorphonuclear",
+                                              "korean":  "다형핵의"
                                           },
                     "parenteral":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "para-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-al"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "Enter(o)"
-                                                                    ]
-                                                      },
                                        "english":  "Introduced into the body by a route other than the alimentary canal",
                                        "answer":  "parenteral",
-                                       "term":  "Parenteral",
-                                       "type":  "vocabulary",
                                        "source":  "Parenteral.md",
-                                       "korean":  "비경구의, 위장관계를 통하지 않는",
                                        "answers":  [
                                                        "parenteral"
-                                                   ]
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Parenteral",
+                                       "korean":  "비경구의, 위장관계를 통하지 않는"
+                                   },
+                    "specialist":  {
+                                       "english":  "A physician whose practice is limited to a particular branch of medicine",
+                                       "answer":  "specialist",
+                                       "source":  "Specialist.md",
+                                       "answers":  [
+                                                       "specialist"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Specialist",
+                                       "korean":  "전문의"
                                    },
                     "-pepsia":  {
                                     "english":  "Digestion",
@@ -9004,18 +11706,29 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "cheiloplasty"
                                                      ]
                                      },
-                    "pan-":  {
-                                 "english":  "All",
-                                 "answer":  "pan",
-                                 "source":  "pan-.md",
-                                 "answers":  [
-                                                 "pan",
-                                                 "pan-"
-                                             ],
-                                 "type":  "prefix",
-                                 "term":  "pan-",
-                                 "korean":  "범-"
-                             },
+                    "occupational medicine":  {
+                                                  "english":  "The branch of medicine concerned with work-related health and disease",
+                                                  "answer":  "occupational medicine",
+                                                  "source":  "Occupational medicine.md",
+                                                  "answers":  [
+                                                                  "occupational medicine"
+                                                              ],
+                                                  "type":  "vocabulary",
+                                                  "term":  "Occupational medicine",
+                                                  "korean":  "산업의학, 직업의학"
+                                              },
+                    "-cardia":  {
+                                    "english":  "Heart action or location(of a specified type)",
+                                    "answer":  "cardia",
+                                    "source":  "-cardia.md",
+                                    "answers":  [
+                                                    "cardia",
+                                                    "-cardia"
+                                                ],
+                                    "type":  "suffix",
+                                    "term":  "-cardia",
+                                    "korean":  "심장 작용, 위치"
+                                },
                     "-cyte":  {
                                   "english":  "Cell",
                                   "answer":  "cyte",
@@ -9028,41 +11741,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "-cyte",
                                   "korean":  "세포"
                               },
-                    "pharyngolaryngeal":  {
-                                              "morphology":  {
-                                                                 "prefixes":  [
-
-                                                                              ],
-                                                                 "suffixes":  [
-                                                                                  "-eal"
-                                                                              ],
-                                                                 "roots":  [
-                                                                               "Pharyng(o)",
-                                                                               "Laryng(o)"
-                                                                           ]
-                                                             },
-                                              "english":  "Of or common to both the larynx and the pharynx",
-                                              "answer":  "pharyngolaryngeal",
-                                              "term":  "Pharyngolaryngeal",
-                                              "type":  "vocabulary",
-                                              "source":  "Pharyngolaryngeal.md",
-                                              "korean":  "인후두의",
-                                              "answers":  [
-                                                              "pharyngolaryngeal"
-                                                          ]
-                                          },
-                    "-ptysis":  {
-                                    "english":  "Spitting",
-                                    "answer":  "ptysis",
-                                    "source":  "-ptysis.md",
-                                    "answers":  [
-                                                    "ptysis",
-                                                    "-ptysis"
-                                                ],
-                                    "type":  "suffix",
-                                    "term":  "-ptysis",
-                                    "korean":  "뱉음"
-                                },
+                    "nuclear medicine":  {
+                                             "english":  "The medical specialty using radioactive substances in diagnosis and treatment",
+                                             "answer":  "nuclear medicine",
+                                             "source":  "Nuclear medicine.md",
+                                             "answers":  [
+                                                             "nuclear medicine"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Nuclear medicine",
+                                             "korean":  "핵의학"
+                                         },
                     "muscul(o)":  {
                                       "english":  "Contractile body tissue that produces motion",
                                       "answer":  "muscul",
@@ -9227,36 +11916,58 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           }
                                                       ]
                                },
-                    "paramedic":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "para-"
-                                                                      ]
-                                                     },
-                                      "english":  "A trained health worker who provides emergency medical care",
-                                      "answer":  "paramedic",
-                                      "term":  "Paramedic",
-                                      "type":  "vocabulary",
-                                      "source":  "Paramedic.md",
-                                      "korean":  "응급구조사, 의료보조인",
-                                      "answers":  [
-                                                      "paramedic"
-                                                  ]
-                                  },
-                    "stom(a)":  {
-                                    "english":  "Mouth, opening",
-                                    "answer":  "stom",
-                                    "source":  "stom(a).md",
-                                    "answers":  [
-                                                    "stom",
-                                                    "stoma",
-                                                    "stom/a",
-                                                    "stom(a)"
-                                                ],
-                                    "type":  "root",
-                                    "term":  "stom(a)",
-                                    "korean":  "입, 개구부"
-                                },
+                    "gynec(o)":  {
+                                     "english":  "Female",
+                                     "answer":  "gynec",
+                                     "source":  "gynec(o).md",
+                                     "answers":  [
+                                                     "gynec",
+                                                     "gyneco",
+                                                     "gynec/o",
+                                                     "gynec(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "gynec(o)",
+                                     "korean":  "여성"
+                                 },
+                    "pan-":  {
+                                 "english":  "All",
+                                 "answer":  "pan",
+                                 "source":  "pan-.md",
+                                 "answers":  [
+                                                 "pan",
+                                                 "pan-"
+                                             ],
+                                 "type":  "prefix",
+                                 "term":  "pan-",
+                                 "korean":  "범-"
+                             },
+                    "scler(o)":  {
+                                     "english":  "Hard, sclera",
+                                     "answer":  "scler",
+                                     "source":  "scler(o).md",
+                                     "answers":  [
+                                                     "scler",
+                                                     "sclero",
+                                                     "scler/o",
+                                                     "scler(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "scler(o)",
+                                     "korean":  "단단한 것, 공막"
+                                 },
+                    "idio-":  {
+                                  "english":  "Self, one\u0027s own",
+                                  "answer":  "idio",
+                                  "source":  "idio-.md",
+                                  "answers":  [
+                                                  "idio",
+                                                  "idio-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "idio-",
+                                  "korean":  "자기, 고유"
+                              },
                     "autoimmunity":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -9279,6 +11990,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "autoimmunity"
                                                      ]
                                      },
+                    "conference":  {
+                                       "english":  "A meeting of two or more persons for discussing matters of common concern",
+                                       "answer":  "conference",
+                                       "source":  "Conference.md",
+                                       "answers":  [
+                                                       "conference"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Conference",
+                                       "korean":  "회의"
+                                   },
                     "-poiesis":  {
                                      "english":  "Production, formation",
                                      "answer":  "poiesis",
@@ -9291,6 +12013,46 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "-poiesis",
                                      "korean":  "생산, 형성"
                                  },
+                    "hydrophilic":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-ic"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "hydr(o)",
+                                                                         "phil(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Having an affinity for water",
+                                        "answer":  "hydrophilic",
+                                        "term":  "Hydrophilic",
+                                        "type":  "vocabulary",
+                                        "source":  "Hydrophilic.md",
+                                        "korean":  "친수성",
+                                        "answers":  [
+                                                        "hydrophilic"
+                                                    ]
+                                    },
+                    "urogenital":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-al"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "ur(o)",
+                                                                        "gen(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Relating to the urinary and genital organs",
+                                       "answer":  "urogenital",
+                                       "term":  "Urogenital",
+                                       "type":  "vocabulary",
+                                       "source":  "Urogenital.md",
+                                       "korean":  "비뇨생식의, 비뇨생식기의",
+                                       "answers":  [
+                                                       "urogenital"
+                                                   ]
+                                   },
                     "tracheostomy":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -9361,6 +12123,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                             }
                                                         ]
                                  },
+                    "clinical laboratory":  {
+                                                "english":  "A laboratory for clinical testing and analysis",
+                                                "answer":  "clinical laboratory",
+                                                "source":  "Clinical laboratory.md",
+                                                "answers":  [
+                                                                "clinical laboratory"
+                                                            ],
+                                                "type":  "vocabulary",
+                                                "term":  "Clinical laboratory",
+                                                "korean":  "임상검사실"
+                                            },
                     "autolysis":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -9383,6 +12156,31 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "autolysis"
                                                   ]
                                   },
+                    "mort(o)":  {
+                                    "english":  "Death",
+                                    "answer":  "mort",
+                                    "source":  "mort(o).md",
+                                    "answers":  [
+                                                    "mort",
+                                                    "morto",
+                                                    "mort/o",
+                                                    "mort(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "mort(o)",
+                                    "korean":  "죽음"
+                                },
+                    "admitting department":  {
+                                                 "english":  "A hospital department or desk where patients are admitted",
+                                                 "answer":  "admitting department",
+                                                 "source":  "Admitting department.md",
+                                                 "answers":  [
+                                                                 "admitting department"
+                                                             ],
+                                                 "type":  "vocabulary",
+                                                 "term":  "Admitting department",
+                                                 "korean":  "입원창구"
+                                             },
                     "poster(o)":  {
                                       "english":  "Back, behind",
                                       "answer":  "poster",
@@ -9397,35 +12195,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "poster(o)",
                                       "korean":  "뒤쪽, 후방"
                                   },
-                    "tonsillectomy":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
+                    "stenosis":  {
+                                     "morphology":  {
+                                                        "prefixes":  [
 
-                                                                          ],
-                                                             "suffixes":  [
-                                                                              "-ectomy"
-                                                                          ],
-                                                             "roots":  [
-                                                                           "Tonsill(o)"
-                                                                       ]
-                                                         },
-                                          "english":  "The surgical removal of the tonsils",
-                                          "answer":  "tonsillectomy",
-                                          "term":  "Tonsillectomy",
-                                          "type":  "vocabulary",
-                                          "source":  "Tonsillectomy.md",
-                                          "korean":  "편도절제(술)",
-                                          "answers":  [
-                                                          "tonsillectomy"
-                                                      ],
-                                          "imageQuestions":  [
-                                                                 {
-                                                                     "source":  "Pasted image 20260331143028.png",
-                                                                     "type":  "question-mark",
-                                                                     "src":  "question-images/tonsillectomy-1.png"
-                                                                 }
-                                                             ]
-                                      },
+                                                                     ],
+                                                        "suffixes":  [
+                                                                         "-osis"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "Sten(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "A narrowing or constriction of the diameter of a bodily passage or orifice",
+                                     "answer":  "stenosis",
+                                     "term":  "Stenosis",
+                                     "type":  "vocabulary",
+                                     "source":  "Stenosis.md",
+                                     "korean":  "협착",
+                                     "answers":  [
+                                                     "stenosis"
+                                                 ]
+                                 },
                     "-e":  {
                                "english":  "Instrument",
                                "answer":  "e",
@@ -9505,6 +12296,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "carcinogen"
                                                    ]
                                    },
+                    "epidemiology":  {
+                                         "morphology":  {
+                                                            "prefixes":  [
+                                                                             "epi-"
+                                                                         ],
+                                                            "suffixes":  [
+                                                                             "-ology"
+                                                                         ]
+                                                        },
+                                         "english":  "The study of the occurrence, distribution, causes, and control of disease in populations",
+                                         "answer":  "epidemiology",
+                                         "term":  "Epidemiology",
+                                         "type":  "vocabulary",
+                                         "source":  "Epidemiology.md",
+                                         "korean":  "역학",
+                                         "answers":  [
+                                                         "epidemiology"
+                                                     ]
+                                     },
                     "-stat":  {
                                   "english":  "Agent that stops or controls",
                                   "answer":  "stat",
@@ -9531,6 +12341,50 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "pelv(o)",
                                     "korean":  "골반"
                                 },
+                    "neur(o)":  {
+                                    "english":  "Band of nervous tissue conducting impulses",
+                                    "answer":  "neur",
+                                    "source":  "neur(o).md",
+                                    "answers":  [
+                                                    "neur",
+                                                    "neuro",
+                                                    "neur/o",
+                                                    "neur(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "neur(o)",
+                                    "korean":  "신경"
+                                },
+                    "consulting room":  {
+                                            "english":  "A room where a patient consults a clinician",
+                                            "answer":  "consulting room",
+                                            "source":  "Consulting room.md",
+                                            "answers":  [
+                                                            "consulting room"
+                                                        ],
+                                            "type":  "vocabulary",
+                                            "term":  "Consulting room",
+                                            "korean":  "상담실"
+                                        },
+                    "trans-activation":  {
+                                             "morphology":  {
+                                                                "prefixes":  [
+                                                                                 "trans-"
+                                                                             ],
+                                                                "suffixes":  [
+                                                                                 "-ation"
+                                                                             ]
+                                                            },
+                                             "english":  "Increased gene expression directed by diffusible regulatory proteins acting in trans",
+                                             "answer":  "trans-activation",
+                                             "term":  "Trans-activation",
+                                             "type":  "vocabulary",
+                                             "source":  "Trans-activation.md",
+                                             "korean":  "trans-활성화",
+                                             "answers":  [
+                                                             "trans-activation"
+                                                         ]
+                                         },
                     "pancytopenia":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -9553,6 +12407,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "pancytopenia"
                                                      ]
                                      },
+                    "meso-":  {
+                                  "english":  "Middle",
+                                  "answer":  "meso",
+                                  "source":  "meso-.md",
+                                  "answers":  [
+                                                  "meso",
+                                                  "meso-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "meso-",
+                                  "korean":  "중간"
+                              },
                     "staphylococcus":  {
                                            "morphology":  {
                                                               "prefixes":  [
@@ -9660,19 +12526,16 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "inguinal"
                                                  ]
                                  },
-                    "odont(o)":  {
-                                     "english":  "Tooth",
-                                     "answer":  "odont",
-                                     "source":  "odont(o).md",
+                    "cyanosis":  {
+                                     "english":  "Bluish discoloration of the skin or mucous membranes due to insufficient oxygen in the blood",
+                                     "answer":  "cyanosis",
+                                     "source":  "Cyanosis.md",
                                      "answers":  [
-                                                     "odont",
-                                                     "odonto",
-                                                     "odont/o",
-                                                     "odont(o)"
+                                                     "cyanosis"
                                                  ],
-                                     "type":  "root",
-                                     "term":  "odont(o)",
-                                     "korean":  "치아"
+                                     "type":  "vocabulary",
+                                     "term":  "Cyanosis",
+                                     "korean":  "청색증"
                                  },
                     "tetracycline":  {
                                          "morphology":  {
@@ -9696,69 +12559,61 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "tetracycline"
                                                      ]
                                      },
-                    "esophageal":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-
-                                                                       ],
-                                                          "suffixes":  [
-
-                                                                       ],
-                                                          "roots":  [
-                                                                        "Esophag(o)"
-                                                                    ]
-                                                      },
-                                       "english":  "Of or relating to the esophagus",
-                                       "answer":  "esophageal",
-                                       "term":  "Esophageal",
-                                       "type":  "vocabulary",
-                                       "source":  "Esophageal.md",
-                                       "korean":  "식도의",
-                                       "answers":  [
-                                                       "esophageal"
-                                                   ]
-                                   },
-                    "postnatal":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "post-"
-                                                                      ],
-                                                         "vocabulary":  [
-                                                                            "Natal"
-                                                                        ]
-                                                     },
-                                      "english":  "Occurring or existing after birth",
-                                      "answer":  "postnatal",
-                                      "term":  "Postnatal",
-                                      "type":  "vocabulary",
-                                      "source":  "Postnatal.md",
-                                      "korean":  "생후의",
-                                      "answers":  [
-                                                      "postnatal"
-                                                  ]
-                                  },
-                    "symmetry":  {
+                    "asphyxia":  {
                                      "morphology":  {
                                                         "prefixes":  [
-                                                                         "syn-"
+                                                                         "a-"
                                                                      ],
                                                         "suffixes":  [
-                                                                         "-metry"
+
                                                                      ],
                                                         "roots":  [
 
                                                                   ]
                                                     },
-                                     "english":  "Correspondence in size, shape, and relative position of parts on opposite sides",
-                                     "answer":  "symmetry",
-                                     "term":  "Symmetry",
+                                     "english":  "The state of not being able to breathe",
+                                     "answer":  "asphyxia",
+                                     "term":  "Asphyxia",
                                      "type":  "vocabulary",
-                                     "source":  "Symmetry.md",
-                                     "korean":  "대칭",
+                                     "source":  "Asphyxia.md",
+                                     "korean":  "질식, 가사",
                                      "answers":  [
-                                                     "symmetry"
+                                                     "asphyxia"
                                                  ]
                                  },
+                    "gynecology":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ology"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "gynec(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The branch of medicine dealing with diseases and routine care of the female reproductive system",
+                                       "answer":  "gynecology",
+                                       "term":  "Gynecology",
+                                       "type":  "vocabulary",
+                                       "source":  "Gynecology.md",
+                                       "korean":  "부인과학",
+                                       "answers":  [
+                                                       "gynecology"
+                                                   ]
+                                   },
+                    "radi(o)":  {
+                                    "english":  "Radiation, x-ray",
+                                    "answer":  "radi",
+                                    "source":  "radi(o).md",
+                                    "answers":  [
+                                                    "radi",
+                                                    "radio",
+                                                    "radi/o",
+                                                    "radi(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "radi(o)",
+                                    "korean":  "방사선, 엑스선"
+                                },
                     "cerebrospinal fluid":  {
                                                 "morphology":  {
                                                                    "prefixes":  [
@@ -9777,7 +12632,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                 "term":  "Cerebrospinal fluid",
                                                 "type":  "vocabulary",
                                                 "source":  "Cerebrospinal fluid.md",
-                                                "korean":  "뇌척수액",
+                                                "korean":  "뇌척수액, CSF",
                                                 "answers":  [
                                                                 "cerebrospinal fluid"
                                                             ]
@@ -9796,34 +12651,50 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "pharmac(o)",
                                        "korean":  "약물, 약"
                                    },
-                    "pharyng(o)":  {
-                                       "english":  "Throat",
-                                       "answer":  "pharyng",
-                                       "source":  "pharyng(o).md",
-                                       "answers":  [
-                                                       "pharyng",
-                                                       "pharyngo",
-                                                       "pharyng/o",
-                                                       "pharyng(o)"
-                                                   ],
-                                       "type":  "root",
-                                       "term":  "pharyng(o)",
-                                       "korean":  "인두"
-                                   },
-                    "fung(i)":  {
-                                    "english":  "Mushroom",
-                                    "answer":  "fung",
-                                    "source":  "fung(i).md",
-                                    "answers":  [
-                                                    "fung",
-                                                    "fungi",
-                                                    "fung/i",
-                                                    "fung(i)"
-                                                ],
-                                    "type":  "root",
-                                    "term":  "fung(i)",
-                                    "korean":  "진균, 곰팡이"
-                                },
+                    "arteriole":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+
+                                                                      ],
+                                                         "suffixes":  [
+
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Arteri(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "A small terminal branch of an artery that ends in capillaries",
+                                      "answer":  "arteriole",
+                                      "term":  "Arteriole",
+                                      "type":  "vocabulary",
+                                      "source":  "Arteriole.md",
+                                      "korean":  "소동맥",
+                                      "answers":  [
+                                                      "arteriole"
+                                                  ]
+                                  },
+                    "sagittal":  {
+                                     "morphology":  {
+                                                        "prefixes":  [
+
+                                                                     ],
+                                                        "suffixes":  [
+                                                                         "-al"
+                                                                     ],
+                                                        "roots":  [
+
+                                                                  ]
+                                                    },
+                                     "english":  "Having to do with a plane that divides the body into left and right parts",
+                                     "answer":  "sagittal",
+                                     "term":  "Sagittal",
+                                     "type":  "vocabulary",
+                                     "source":  "Sagittal.md",
+                                     "korean":  "시상의",
+                                     "answers":  [
+                                                     "sagittal"
+                                                 ]
+                                 },
                     "adenoma":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -9846,6 +12717,31 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "adenoma"
                                                 ]
                                 },
+                    "periosteum":  {
+                                       "english":  "The membrane of connective tissue surrounding a bone",
+                                       "answer":  "periosteum",
+                                       "source":  "Periosteum.md",
+                                       "answers":  [
+                                                       "periosteum"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Periosteum",
+                                       "korean":  "골막"
+                                   },
+                    "gon(o)":  {
+                                   "english":  "Sexual, semen",
+                                   "answer":  "gon",
+                                   "source":  "gon(o).md",
+                                   "answers":  [
+                                                   "gon",
+                                                   "gono",
+                                                   "gon/o",
+                                                   "gon(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "gon(o)",
+                                   "korean":  "성, 정액"
+                               },
                     "-tic":  {
                                  "english":  "Pertaining to",
                                  "answer":  "tic",
@@ -9858,17 +12754,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-tic",
                                  "korean":  "~에 대한, ~의"
                              },
-                    "natant":  {
-                                   "english":  "Swimming or floating",
-                                   "answer":  "natant",
-                                   "source":  "Natant.md",
-                                   "answers":  [
-                                                   "natant"
-                                               ],
-                                   "type":  "vocabulary",
-                                   "term":  "Natant",
-                                   "korean":  "부유하는"
-                               },
+                    "intravenous":  {
+                                        "english":  "Situated, performed, or occurring within a vein",
+                                        "answer":  "intravenous",
+                                        "source":  "Intravenous.md",
+                                        "answers":  [
+                                                        "intravenous"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Intravenous",
+                                        "korean":  "정맥내의"
+                                    },
                     "bradylexia":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -9891,36 +12787,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "bradylexia"
                                                    ]
                                    },
-                    "pharynx":  {
-                                    "morphology":  {
-                                                       "prefixes":  [
-
-                                                                    ],
-                                                       "suffixes":  [
-
-                                                                    ],
-                                                       "roots":  [
-                                                                     "Pharyng(o)"
-                                                                 ]
-                                                   },
-                                    "english":  "The muscular tubular passage from the back of the nasal cavity and mouth to the esophagus",
-                                    "answer":  "pharynx",
-                                    "term":  "Pharynx",
-                                    "type":  "vocabulary",
-                                    "source":  "Pharynx.md",
-                                    "korean":  "인두",
-                                    "answers":  [
-                                                    "pharynx"
-                                                ],
-                                    "imageQuestions":  [
-                                                           {
-                                                               "number":  1,
-                                                               "source":  "Pasted image 20260331141822.png",
-                                                               "type":  "numbered",
-                                                               "src":  "question-images/pharynx-single-group-1.png"
-                                                           }
-                                                       ]
-                                },
+                    "delivery room":  {
+                                          "english":  "A hospital room used for childbirth",
+                                          "answer":  "delivery room",
+                                          "source":  "Delivery room.md",
+                                          "answers":  [
+                                                          "delivery room"
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Delivery room",
+                                          "korean":  "분만실"
+                                      },
                     "electrocardiogram":  {
                                               "morphology":  {
                                                                  "prefixes":  [
@@ -9939,11 +12816,52 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                               "term":  "Electrocardiogram",
                                               "type":  "vocabulary",
                                               "source":  "Electrocardiogram.md",
-                                              "korean":  "심전도",
+                                              "korean":  "심전도, ECG, EKG",
                                               "answers":  [
                                                               "electrocardiogram"
                                                           ]
                                           },
+                    "pharmacist":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-ist"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Pharmac(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "A health-care professional licensed to prepare and dispense drugs",
+                                       "answer":  "pharmacist",
+                                       "term":  "Pharmacist",
+                                       "type":  "vocabulary",
+                                       "source":  "Pharmacist.md",
+                                       "korean":  "약사",
+                                       "answers":  [
+                                                       "pharmacist"
+                                                   ]
+                                   },
+                    "chondromalacia":  {
+                                           "morphology":  {
+                                                              "suffixes":  [
+                                                                               "-malacia"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "chondr(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "Softening of cartilage",
+                                           "answer":  "chondromalacia",
+                                           "term":  "Chondromalacia",
+                                           "type":  "vocabulary",
+                                           "source":  "Chondromalacia.md",
+                                           "korean":  "연골연화증",
+                                           "answers":  [
+                                                           "chondromalacia"
+                                                       ]
+                                       },
                     "ectopic pregnancy":  {
                                               "english":  "A pregnancy in which the fertilized egg implants outside the uterus",
                                               "answer":  "ectopic pregnancy",
@@ -9967,6 +12885,42 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-ual",
                                  "korean":  "~의, ~와 관련된"
                              },
+                    "arthropod":  {
+                                      "morphology":  {
+                                                         "roots":  [
+                                                                       "arthr(o)",
+                                                                       "pod(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "An animal with a segmented body and jointed appendages",
+                                      "answer":  "arthropod",
+                                      "term":  "Arthropod",
+                                      "type":  "vocabulary",
+                                      "source":  "Arthropod.md",
+                                      "korean":  "절지동물",
+                                      "answers":  [
+                                                      "arthropod"
+                                                  ]
+                                  },
+                    "sphygmomanometer":  {
+                                             "morphology":  {
+                                                                "suffixes":  [
+                                                                                 "-meter"
+                                                                             ],
+                                                                "roots":  [
+                                                                              "sphygm(o)"
+                                                                          ]
+                                                            },
+                                             "english":  "An instrument for measuring blood pressure",
+                                             "answer":  "sphygmomanometer",
+                                             "term":  "Sphygmomanometer",
+                                             "type":  "vocabulary",
+                                             "source":  "Sphygmomanometer.md",
+                                             "korean":  "혈압계",
+                                             "answers":  [
+                                                             "sphygmomanometer"
+                                                         ]
+                                         },
                     "-cele":  {
                                   "english":  "Hernia",
                                   "answer":  "cele",
@@ -9980,101 +12934,123 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "korean":  "탈장"
                               },
                     "intercourse":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "inter-"
-                                                                        ]
-                                                       },
                                         "english":  "Sexual union between individuals",
                                         "answer":  "intercourse",
-                                        "term":  "Intercourse",
-                                        "type":  "vocabulary",
                                         "source":  "Intercourse.md",
-                                        "korean":  "성교",
                                         "answers":  [
                                                         "intercourse"
-                                                    ]
-                                    },
-                    "hypersomnia":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "hyper-"
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-ia"
-                                                                        ],
-                                                           "roots":  [
-                                                                         "somn(i)"
-                                                                     ]
-                                                       },
-                                        "english":  "Sleep of excessive depth or duration",
-                                        "answer":  "hypersomnia",
-                                        "term":  "Hypersomnia",
+                                                    ],
                                         "type":  "vocabulary",
-                                        "source":  "Hypersomnia.md",
-                                        "korean":  "과다수면",
-                                        "answers":  [
-                                                        "hypersomnia"
-                                                    ]
+                                        "term":  "Intercourse",
+                                        "korean":  "성교"
                                     },
-                    "antispasmodic":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "anti-"
-                                                                          ],
-                                                             "suffixes":  [
+                    "transverse":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+                                                                           "trans-"
+                                                                       ],
+                                                          "suffixes":  [
 
-                                                                          ],
-                                                             "roots":  [
-                                                                           "Spasm(o)"
-                                                                       ]
-                                                         },
-                                          "english":  "Capable of preventing or relieving spasms or convulsions",
-                                          "answer":  "antispasmodic",
-                                          "term":  "Antispasmodic",
-                                          "type":  "vocabulary",
-                                          "source":  "Antispasmodic.md",
-                                          "korean":  "진경제, 경련 완화성의",
-                                          "answers":  [
-                                                          "antispasmodic"
-                                                      ]
-                                      },
-                    "suprahepatic":  {
+                                                                       ],
+                                                          "roots":  [
+
+                                                                    ]
+                                                      },
+                                       "english":  "Situated or lying across; in anatomy, related to a plane dividing upper and lower parts",
+                                       "answer":  "transverse",
+                                       "term":  "Transverse",
+                                       "type":  "vocabulary",
+                                       "source":  "Transverse.md",
+                                       "korean":  "가로의, 횡단의",
+                                       "answers":  [
+                                                       "transverse"
+                                                   ]
+                                   },
+                    "angiogenesis":  {
                                          "morphology":  {
-                                                            "prefixes":  [
-                                                                             "supra-"
-                                                                         ],
                                                             "suffixes":  [
-                                                                             "-ic"
+                                                                             "-genesis"
                                                                          ],
                                                             "roots":  [
-                                                                          "Hepat(o)"
+                                                                          "angi(o)"
                                                                       ]
                                                         },
-                                         "english":  "Situated above the liver",
-                                         "answer":  "suprahepatic",
-                                         "term":  "Suprahepatic",
+                                         "english":  "Formation or development of blood vessels",
+                                         "answer":  "angiogenesis",
+                                         "term":  "Angiogenesis",
                                          "type":  "vocabulary",
-                                         "source":  "Suprahepatic.md",
-                                         "korean":  "간위의",
+                                         "source":  "Angiogenesis.md",
+                                         "korean":  "혈관생성",
                                          "answers":  [
-                                                         "suprahepatic"
+                                                         "angiogenesis"
                                                      ]
                                      },
-                    "rect(o)":  {
-                                    "english":  "Rectum",
-                                    "answer":  "rect",
-                                    "source":  "rect(o).md",
+                    "rehabilitation medicine":  {
+                                                    "english":  "The medical specialty concerned with restoring function after disease or injury",
+                                                    "answer":  "rehabilitation medicine",
+                                                    "source":  "Rehabilitation medicine.md",
+                                                    "answers":  [
+                                                                    "rehabilitation medicine"
+                                                                ],
+                                                    "type":  "vocabulary",
+                                                    "term":  "Rehabilitation medicine",
+                                                    "korean":  "재활의학"
+                                                },
+                    "suprahepatic":  {
+                                         "english":  "Situated above the liver",
+                                         "answer":  "suprahepatic",
+                                         "source":  "Suprahepatic.md",
+                                         "answers":  [
+                                                         "suprahepatic"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Suprahepatic",
+                                         "korean":  "간위의"
+                                     },
+                    "myel(o)":  {
+                                    "english":  "Spinal cord",
+                                    "answer":  "myel",
+                                    "source":  "myel(o).md",
                                     "answers":  [
-                                                    "rect",
-                                                    "recto",
-                                                    "rect/o",
-                                                    "rect(o)"
+                                                    "myel",
+                                                    "myelo",
+                                                    "myel/o",
+                                                    "myel(o)"
                                                 ],
                                     "type":  "root",
-                                    "term":  "rect(o)",
-                                    "korean":  "직장"
+                                    "term":  "myel(o)",
+                                    "korean":  "척수"
                                 },
+                    "plasma analysis":  {
+                                            "morphology":  {
+                                                               "roots":  [
+                                                                             "plasm(o)"
+                                                                         ]
+                                                           },
+                                            "english":  "Analysis of plasma, the fluid part of blood",
+                                            "answer":  "plasma analysis",
+                                            "term":  "Plasma analysis",
+                                            "type":  "vocabulary",
+                                            "source":  "Plasma analysis.md",
+                                            "korean":  "혈장분석",
+                                            "answers":  [
+                                                            "plasma analysis"
+                                                        ]
+                                        },
+                    "nat(i)":  {
+                                   "english":  "Birth",
+                                   "answer":  "nat",
+                                   "source":  "nat(i).md",
+                                   "answers":  [
+                                                   "nat",
+                                                   "nati",
+                                                   "nat/i",
+                                                   "nat(i)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "nat(i)",
+                                   "korean":  "출생"
+                               },
                     "col(o)":  {
                                    "english":  "Large intestine",
                                    "answer":  "col",
@@ -10158,6 +13134,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "membranous"
                                                    ]
                                    },
+                    "preventive medicine":  {
+                                                "english":  "The branch of medicine concerned with preventing disease",
+                                                "answer":  "preventive medicine",
+                                                "source":  "Preventive medicine.md",
+                                                "answers":  [
+                                                                "preventive medicine"
+                                                            ],
+                                                "type":  "vocabulary",
+                                                "term":  "Preventive medicine",
+                                                "korean":  "예방의학"
+                                            },
                     "carcinogenic":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -10202,18 +13189,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "cardiology"
                                                    ]
                                    },
-                    "retro-":  {
-                                   "english":  "Back, behind",
-                                   "answer":  "retro",
-                                   "source":  "retro-.md",
-                                   "answers":  [
-                                                   "retro",
-                                                   "retro-"
-                                               ],
-                                   "type":  "prefix",
-                                   "term":  "retro-",
-                                   "korean":  "뒤의, 뒤로"
-                               },
+                    "-ptysis":  {
+                                    "english":  "Spitting",
+                                    "answer":  "ptysis",
+                                    "source":  "-ptysis.md",
+                                    "answers":  [
+                                                    "ptysis",
+                                                    "-ptysis"
+                                                ],
+                                    "type":  "suffix",
+                                    "term":  "-ptysis",
+                                    "korean":  "뱉음"
+                                },
                     "dyspepsia":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -10237,23 +13224,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   ]
                                   },
                     "bradypnea":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "brady-"
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-pnea"
-                                                                      ]
-                                                     },
                                       "english":  "Abnormally slow breathing",
                                       "answer":  "bradypnea",
-                                      "term":  "Bradypnea",
-                                      "type":  "vocabulary",
                                       "source":  "Bradypnea.md",
-                                      "korean":  "느린 호흡",
                                       "answers":  [
                                                       "bradypnea"
-                                                  ]
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Bradypnea",
+                                      "korean":  "느린 호흡"
                                   },
                     "hypertrophy":  {
                                         "morphology":  {
@@ -10277,36 +13256,42 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "hypertrophy"
                                                     ]
                                     },
-                    "oropharynx":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
+                    "tonsillar":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
 
-                                                                       ],
-                                                          "suffixes":  [
+                                                                      ],
+                                                         "suffixes":  [
 
-                                                                       ],
-                                                          "roots":  [
-                                                                        "Pharyng(o)"
-                                                                    ]
-                                                      },
-                                       "english":  "The part of the pharynx below the soft palate and above the epiglottis",
-                                       "answer":  "oropharynx",
-                                       "term":  "Oropharynx",
-                                       "type":  "vocabulary",
-                                       "source":  "Oropharynx.md",
-                                       "korean":  "구인두",
-                                       "answers":  [
-                                                       "oropharynx"
-                                                   ],
-                                       "imageQuestions":  [
-                                                              {
-                                                                  "number":  4,
-                                                                  "source":  "Pasted image 20260331144207.png",
-                                                                  "type":  "numbered",
-                                                                  "src":  "question-images/pharynx-group-1.png"
-                                                              }
-                                                          ]
-                                   },
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Tonsill(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Of or relating to or affecting the tonsils",
+                                      "answer":  "tonsillar",
+                                      "term":  "Tonsillar",
+                                      "type":  "vocabulary",
+                                      "source":  "Tonsillar.md",
+                                      "korean":  "편도선의",
+                                      "answers":  [
+                                                      "tonsillar"
+                                                  ]
+                                  },
+                    "vagin(o)":  {
+                                     "english":  "Vagina",
+                                     "answer":  "vagin",
+                                     "source":  "vagin(o).md",
+                                     "answers":  [
+                                                     "vagin",
+                                                     "vagino",
+                                                     "vagin/o",
+                                                     "vagin(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "vagin(o)",
+                                     "korean":  "질"
+                                 },
                     "hypophysis":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -10380,32 +13365,61 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "antibody"
                                                  ]
                                  },
-                    "morph(o)":  {
-                                     "english":  "Form",
-                                     "answer":  "morph",
-                                     "source":  "morph(o).md",
+                    "ectoderm":  {
+                                     "english":  "The outermost of the three primary germ layers of an embryo",
+                                     "answer":  "ectoderm",
+                                     "source":  "Ectoderm.md",
                                      "answers":  [
-                                                     "morph",
-                                                     "morpho",
-                                                     "morph/o",
-                                                     "morph(o)"
+                                                     "ectoderm"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Ectoderm",
+                                     "korean":  "외배엽"
+                                 },
+                    "eosin(o)":  {
+                                     "english":  "A red acidic dye",
+                                     "answer":  "eosin",
+                                     "source":  "eosin(o).md",
+                                     "answers":  [
+                                                     "eosin",
+                                                     "eosino",
+                                                     "eosin/o",
+                                                     "eosin(o)"
                                                  ],
                                      "type":  "root",
-                                     "term":  "morph(o)",
-                                     "korean":  "형태"
+                                     "term":  "eosin(o)",
+                                     "korean":  "에오신"
                                  },
-                    "meso-":  {
-                                  "english":  "Middle",
-                                  "answer":  "meso",
-                                  "source":  "meso-.md",
-                                  "answers":  [
-                                                  "meso",
-                                                  "meso-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "meso-",
-                                  "korean":  "중간"
-                              },
+                    "family medicine":  {
+                                            "english":  "The medical specialty providing continuing general health care for individuals and families",
+                                            "answer":  "family medicine",
+                                            "source":  "Family medicine.md",
+                                            "answers":  [
+                                                            "family medicine"
+                                                        ],
+                                            "type":  "vocabulary",
+                                            "term":  "Family medicine",
+                                            "korean":  "가정의학"
+                                        },
+                    "pathogen":  {
+                                     "morphology":  {
+                                                        "suffixes":  [
+                                                                         "-gen"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "path(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "A disease-producing agent",
+                                     "answer":  "pathogen",
+                                     "term":  "Pathogen",
+                                     "type":  "vocabulary",
+                                     "source":  "Pathogen.md",
+                                     "korean":  "병원체",
+                                     "answers":  [
+                                                     "pathogen"
+                                                 ]
+                                 },
                     "-opsy":  {
                                   "english":  "To view",
                                   "answer":  "opsy",
@@ -10440,20 +13454,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "pericardium"
                                                     ]
                                     },
-                    "amni(o)":  {
-                                    "english":  "Amnion (=amniotic membrane)",
-                                    "answer":  "amni",
-                                    "source":  "amni(o).md",
-                                    "answers":  [
-                                                    "amni",
-                                                    "amnio",
-                                                    "amni/o",
-                                                    "amni(o)"
-                                                ],
-                                    "type":  "root",
-                                    "term":  "amni(o)",
-                                    "korean":  "양막"
-                                },
+                    "natant":  {
+                                   "english":  "Swimming or floating",
+                                   "answer":  "natant",
+                                   "source":  "Natant.md",
+                                   "answers":  [
+                                                   "natant"
+                                               ],
+                                   "type":  "vocabulary",
+                                   "term":  "Natant",
+                                   "korean":  "부유하는"
+                               },
                     "pre-":  {
                                  "english":  "Before, in front of",
                                  "answer":  "pre",
@@ -10466,6 +13477,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "pre-",
                                  "korean":  "앞의, 전의"
                              },
+                    "waiting room":  {
+                                         "english":  "A room where patients or visitors wait",
+                                         "answer":  "waiting room",
+                                         "source":  "Waiting room.md",
+                                         "answers":  [
+                                                         "waiting room"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Waiting room",
+                                         "korean":  "대기실"
+                                     },
                     "alb(o)":  {
                                    "english":  "White",
                                    "answer":  "alb",
@@ -10480,6 +13502,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "alb(o)",
                                    "korean":  "백색"
                                },
+                    "pharmacologist":  {
+                                           "morphology":  {
+                                                              "prefixes":  [
+
+                                                                           ],
+                                                              "suffixes":  [
+                                                                               "-ologist"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "Pharmac(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "A specialist in pharmacology",
+                                           "answer":  "pharmacologist",
+                                           "term":  "Pharmacologist",
+                                           "type":  "vocabulary",
+                                           "source":  "Pharmacologist.md",
+                                           "korean":  "약리학자",
+                                           "answers":  [
+                                                           "pharmacologist"
+                                                       ]
+                                       },
                     "polydactylia":  {
                                          "morphology":  {
                                                             "prefixes":  [
@@ -10502,17 +13546,53 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "polydactylia"
                                                      ]
                                      },
-                    "conference":  {
-                                       "english":  "A meeting of two or more persons for discussing matters of common concern",
-                                       "answer":  "conference",
-                                       "source":  "Conference.md",
-                                       "answers":  [
-                                                       "conference"
-                                                   ],
-                                       "type":  "vocabulary",
-                                       "term":  "Conference",
-                                       "korean":  "회의"
-                                   },
+                    "pedicure":  {
+                                     "morphology":  {
+                                                        "roots":  [
+                                                                      "ped(i)"
+                                                                  ]
+                                                    },
+                                     "english":  "Care or treatment of the feet",
+                                     "answer":  "pedicure",
+                                     "term":  "Pedicure",
+                                     "type":  "vocabulary",
+                                     "source":  "Pedicure.md",
+                                     "korean":  "발 치료, 족지압술",
+                                     "answers":  [
+                                                     "pedicure"
+                                                 ]
+                                 },
+                    "adenocarcinoma":  {
+                                           "morphology":  {
+                                                              "suffixes":  [
+                                                                               "-oma"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "aden(o)",
+                                                                            "carcin(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "A carcinoma originating in glandular tissue",
+                                           "answer":  "adenocarcinoma",
+                                           "term":  "Adenocarcinoma",
+                                           "type":  "vocabulary",
+                                           "source":  "Adenocarcinoma.md",
+                                           "korean":  "샘암종, 선암종",
+                                           "answers":  [
+                                                           "adenocarcinoma"
+                                                       ]
+                                       },
+                    "innate":  {
+                                   "english":  "Existing from birth",
+                                   "answer":  "innate",
+                                   "source":  "Innate.md",
+                                   "answers":  [
+                                                   "innate"
+                                               ],
+                                   "type":  "vocabulary",
+                                   "term":  "Innate",
+                                   "korean":  "선천의"
+                               },
                     "peroral administration":  {
                                                    "morphology":  {
                                                                       "prefixes":  [
@@ -10557,29 +13637,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "dehydration"
                                                     ]
                                     },
-                    "lumbosacral":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-al"
-                                                                        ],
-                                                           "roots":  [
-                                                                         "lumb(o)",
-                                                                         "sacr(o)"
-                                                                     ]
-                                                       },
-                                        "english":  "Having to do with the lumbar and sacral regions",
-                                        "answer":  "lumbosacral",
-                                        "term":  "Lumbosacral",
-                                        "type":  "vocabulary",
-                                        "source":  "Lumbosacral.md",
-                                        "korean":  "허리엉치의, 요천추의",
-                                        "answers":  [
-                                                        "lumbosacral"
-                                                    ]
-                                    },
+                    "anesthesiology":  {
+                                           "morphology":  {
+                                                              "prefixes":  [
+                                                                               "an-"
+                                                                           ],
+                                                              "suffixes":  [
+                                                                               "-ology"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "esthesi(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "The medical specialty concerned with anesthesia and anesthetics",
+                                           "answer":  "anesthesiology",
+                                           "term":  "Anesthesiology",
+                                           "type":  "vocabulary",
+                                           "source":  "Anesthesiology.md",
+                                           "korean":  "마취과학",
+                                           "answers":  [
+                                                           "anesthesiology"
+                                                       ]
+                                       },
                     "nasal cavity":  {
                                          "english":  "The vaulted chamber extending from the external nares to the pharynx",
                                          "answer":  "nasal cavity",
@@ -10610,25 +13689,51 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "Oviduct",
                                     "korean":  "자궁관, 난관"
                                 },
+                    "endocrinology":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+                                                                              "endo-"
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-crine",
+                                                                              "-ology"
+                                                                          ]
+                                                         },
+                                          "english":  "The branch of medicine concerned with endocrine glands and hormones",
+                                          "answer":  "endocrinology",
+                                          "term":  "Endocrinology",
+                                          "type":  "vocabulary",
+                                          "source":  "Endocrinology.md",
+                                          "korean":  "내분비학",
+                                          "answers":  [
+                                                          "endocrinology"
+                                                      ]
+                                      },
                     "pseudocyesis":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "pseudo-"
-                                                                         ],
-                                                            "vocabulary":  [
-                                                                               "Cyesis"
-                                                                           ]
-                                                        },
                                          "english":  "False belief of being pregnant accompanied by objective signs or reported symptoms of pregnancy",
                                          "answer":  "pseudocyesis",
-                                         "term":  "Pseudocyesis",
-                                         "type":  "vocabulary",
                                          "source":  "Pseudocyesis.md",
-                                         "korean":  "거짓임신, 가임신, 상상임신",
                                          "answers":  [
                                                          "pseudocyesis"
-                                                     ]
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Pseudocyesis",
+                                         "korean":  "거짓임신, 가임신, 상상임신"
                                      },
+                    "faci(o)":  {
+                                    "english":  "Face",
+                                    "answer":  "faci",
+                                    "source":  "faci(o).md",
+                                    "answers":  [
+                                                    "faci",
+                                                    "facio",
+                                                    "faci/o",
+                                                    "faci(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "faci(o)",
+                                    "korean":  "얼굴"
+                                },
                     "stomach ulcer":  {
                                           "english":  "A break or sore in the lining of the stomach",
                                           "answer":  "stomach ulcer",
@@ -10640,6 +13745,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                           "term":  "Stomach ulcer",
                                           "korean":  "위궤양"
                                       },
+                    "nephrology":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ology"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "nephr(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The branch of medicine concerned with the kidney",
+                                       "answer":  "nephrology",
+                                       "term":  "Nephrology",
+                                       "type":  "vocabulary",
+                                       "source":  "Nephrology.md",
+                                       "korean":  "신장학",
+                                       "answers":  [
+                                                       "nephrology"
+                                                   ]
+                                   },
                     "dys-":  {
                                  "english":  "Bad, painful, difficult, abnormal",
                                  "answer":  "dys",
@@ -10653,20 +13777,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "korean":  "나쁜, 통증성의, 어려운, 비정상적인"
                              },
                     "malabsorption":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "mal-"
-                                                                          ]
-                                                         },
                                           "english":  "Faulty or inadequate absorption of nutrients from the intestinal tract",
                                           "answer":  "malabsorption",
-                                          "term":  "Malabsorption",
-                                          "type":  "vocabulary",
                                           "source":  "Malabsorption.md",
-                                          "korean":  "흡수장애",
                                           "answers":  [
                                                           "malabsorption"
-                                                      ]
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Malabsorption",
+                                          "korean":  "흡수장애"
                                       },
                     "-ec":  {
                                 "english":  "Out",
@@ -10725,45 +13844,27 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     ]
                                     },
                     "parathyroid":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "para-"
-                                                                        ],
-                                                           "vocabulary":  [
-                                                                              "Thyroid"
-                                                                          ]
-                                                       },
                                         "english":  "Situated beside the thyroid gland",
                                         "answer":  "parathyroid",
-                                        "term":  "Parathyroid",
-                                        "type":  "vocabulary",
                                         "source":  "Parathyroid.md",
-                                        "korean":  "부갑상선",
                                         "answers":  [
                                                         "parathyroid"
-                                                    ]
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Parathyroid",
+                                        "korean":  "부갑상선"
                                     },
-                    "fungus":  {
-                                   "morphology":  {
-                                                      "prefixes":  [
-
-                                                                   ],
-                                                      "suffixes":  [
-                                                                       "-us"
-                                                                   ],
-                                                      "roots":  [
-                                                                    "fung(i)"
-                                                                ]
-                                                  },
-                                   "english":  "Any of a kingdom of spore-producing organisms that lack chlorophyll",
-                                   "answer":  "fungus",
-                                   "term":  "Fungus",
-                                   "type":  "vocabulary",
-                                   "source":  "Fungus.md",
-                                   "korean":  "진균, 곰팡이류",
+                    "micro-":  {
+                                   "english":  "Small",
+                                   "answer":  "micro",
+                                   "source":  "micro-.md",
                                    "answers":  [
-                                                   "fungus"
-                                               ]
+                                                   "micro",
+                                                   "micro-"
+                                               ],
+                                   "type":  "prefix",
+                                   "term":  "micro-",
+                                   "korean":  "작은"
                                },
                     "muscular atrophy":  {
                                              "morphology":  {
@@ -10787,6 +13888,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                              "muscular atrophy"
                                                          ]
                                          },
+                    "mucocutaneous":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-ous"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "muc(o)",
+                                                                           "Cutane(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Relating to mucous membrane and skin",
+                                          "answer":  "mucocutaneous",
+                                          "term":  "Mucocutaneous",
+                                          "type":  "vocabulary",
+                                          "source":  "Mucocutaneous.md",
+                                          "korean":  "점막피부의",
+                                          "answers":  [
+                                                          "mucocutaneous"
+                                                      ]
+                                      },
                     "engagement":  {
                                        "english":  "The phase of childbirth in which the fetal head passes into the cavity of the true pelvis",
                                        "answer":  "engagement",
@@ -10847,6 +13968,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    "myopia"
                                                ]
                                },
+                    "outpatient clinic":  {
+                                              "english":  "A clinic for patients who are not hospitalized",
+                                              "answer":  "outpatient clinic",
+                                              "source":  "Outpatient clinic.md",
+                                              "answers":  [
+                                                              "outpatient clinic"
+                                                          ],
+                                              "type":  "vocabulary",
+                                              "term":  "Outpatient clinic",
+                                              "korean":  "외래진료실"
+                                          },
+                    "laboratory technician":  {
+                                                  "english":  "A technician who performs laboratory tests",
+                                                  "answer":  "laboratory technician",
+                                                  "source":  "Laboratory technician.md",
+                                                  "answers":  [
+                                                                  "laboratory technician"
+                                                              ],
+                                                  "type":  "vocabulary",
+                                                  "term":  "Laboratory technician",
+                                                  "korean":  "실험실 기사, 검사실 기사"
+                                              },
                     "hypotrophy":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -10920,43 +14063,38 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "korean":  "측정, 계측"
                                },
                     "ultraviolet":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "ultra-"
-                                                                        ]
-                                                       },
                                         "english":  "Situated beyond the violet end of the visible spectrum",
                                         "answer":  "ultraviolet",
-                                        "term":  "Ultraviolet",
-                                        "type":  "vocabulary",
                                         "source":  "Ultraviolet.md",
-                                        "korean":  "자외선",
                                         "answers":  [
                                                         "ultraviolet"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Ultraviolet",
+                                        "korean":  "자외선"
+                                    },
+                    "thrombocyte":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+
+                                                                        ],
+                                                           "suffixes":  [
+                                                                            "-cyte"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "Thromb(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Platelet",
+                                        "answer":  "thrombocyte",
+                                        "term":  "Thrombocyte",
+                                        "type":  "vocabulary",
+                                        "source":  "Thrombocyte.md",
+                                        "korean":  "혈소판",
+                                        "answers":  [
+                                                        "thrombocyte"
                                                     ]
                                     },
-                    "bronchiolitis":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-
-                                                                          ],
-                                                             "suffixes":  [
-                                                                              "-itis"
-                                                                          ],
-                                                             "roots":  [
-                                                                           "Bronchiol(o)"
-                                                                       ]
-                                                         },
-                                          "english":  "Inflammation of the bronchioles",
-                                          "answer":  "bronchiolitis",
-                                          "term":  "Bronchiolitis",
-                                          "type":  "vocabulary",
-                                          "source":  "Bronchiolitis.md",
-                                          "korean":  "세기관지염",
-                                          "answers":  [
-                                                          "bronchiolitis"
-                                                      ]
-                                      },
                     "gullet":  {
                                    "english":  "Esophagus, broadly throat",
                                    "answer":  "gullet",
@@ -11009,6 +14147,62 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "Orbital",
                                     "korean":  "안와의"
                                 },
+                    "ischemia":  {
+                                     "morphology":  {
+                                                        "suffixes":  [
+                                                                         "-emia"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "isch(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "Deficient supply of blood to a body part",
+                                     "answer":  "ischemia",
+                                     "term":  "Ischemia",
+                                     "type":  "vocabulary",
+                                     "source":  "Ischemia.md",
+                                     "korean":  "허혈",
+                                     "answers":  [
+                                                     "ischemia"
+                                                 ]
+                                 },
+                    "gnos(o)":  {
+                                    "english":  "Knowledge",
+                                    "answer":  "gnos",
+                                    "source":  "gnos(o).md",
+                                    "answers":  [
+                                                    "gnos",
+                                                    "gnoso",
+                                                    "gnos/o",
+                                                    "gnos(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "gnos(o)",
+                                    "korean":  "지식"
+                                },
+                    "chart":  {
+                                  "english":  "A patient\u0027s medical record",
+                                  "answer":  "chart",
+                                  "source":  "Chart.md",
+                                  "answers":  [
+                                                  "chart"
+                                              ],
+                                  "type":  "vocabulary",
+                                  "term":  "Chart",
+                                  "korean":  "진료기록부"
+                              },
+                    "-ous":  {
+                                 "english":  "Pertaining to, containing",
+                                 "answer":  "ous",
+                                 "source":  "-ous.md",
+                                 "answers":  [
+                                                 "ous",
+                                                 "-ous"
+                                             ],
+                                 "type":  "suffix",
+                                 "term":  "-ous",
+                                 "korean":  "~에 대한, ~을 포함한"
+                             },
                     "dactylitis":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -11031,18 +14225,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "dactylitis"
                                                    ]
                                    },
-                    "-a":  {
-                               "english":  "Noun ending",
-                               "answer":  "a",
-                               "source":  "-a.md",
-                               "answers":  [
-                                               "a",
-                                               "-a"
-                                           ],
-                               "type":  "suffix",
-                               "term":  "-a",
-                               "korean":  "명사형 어미"
-                           },
+                    "supra-":  {
+                                   "english":  "Above, beyond",
+                                   "answer":  "supra",
+                                   "source":  "supra-.md",
+                                   "answers":  [
+                                                   "supra",
+                                                   "supra-"
+                                               ],
+                                   "type":  "prefix",
+                                   "term":  "supra-",
+                                   "korean":  "위, 초과, 상위"
+                               },
                     "cranial":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -11085,34 +14279,56 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "ex-",
                                 "korean":  "밖으로, ~로부터"
                             },
+                    "disengagement":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+                                                                              "dis-"
+                                                                          ],
+                                                             "suffixes":  [
+
+                                                                          ],
+                                                             "roots":  [
+
+                                                                       ]
+                                                         },
+                                          "english":  "Release from attachment or connection",
+                                          "answer":  "disengagement",
+                                          "term":  "Disengagement",
+                                          "type":  "vocabulary",
+                                          "source":  "Disengagement.md",
+                                          "korean":  "분만",
+                                          "answers":  [
+                                                          "disengagement"
+                                                      ]
+                                      },
                     "infrared":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "infra-"
-                                                                     ]
-                                                    },
                                      "english":  "Situated outside the visible spectrum at its red end",
                                      "answer":  "infrared",
-                                     "term":  "Infrared",
-                                     "type":  "vocabulary",
                                      "source":  "Infrared.md",
-                                     "korean":  "적외선",
                                      "answers":  [
                                                      "infrared"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Infrared",
+                                     "korean":  "적외선"
                                  },
-                    "-cardia":  {
-                                    "english":  "Heart action or location(of a specified type)",
-                                    "answer":  "cardia",
-                                    "source":  "-cardia.md",
-                                    "answers":  [
-                                                    "cardia",
-                                                    "-cardia"
-                                                ],
-                                    "type":  "suffix",
-                                    "term":  "-cardia",
-                                    "korean":  "심장 작용, 위치"
-                                },
+                    "biochemistry":  {
+                                         "morphology":  {
+                                                            "roots":  [
+                                                                          "bi(o)",
+                                                                          "chem(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "The chemistry of living organisms and life processes",
+                                         "answer":  "biochemistry",
+                                         "term":  "Biochemistry",
+                                         "type":  "vocabulary",
+                                         "source":  "Biochemistry.md",
+                                         "korean":  "생화학",
+                                         "answers":  [
+                                                         "biochemistry"
+                                                     ]
+                                     },
                     "hypn(o)":  {
                                     "english":  "Sleep",
                                     "answer":  "hypn",
@@ -11139,6 +14355,63 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-plegia",
                                     "korean":  "마비"
                                 },
+                    "pulmonary function test":  {
+                                                    "morphology":  {
+                                                                       "roots":  [
+                                                                                     "pulmon(o)"
+                                                                                 ]
+                                                                   },
+                                                    "english":  "A test or group of tests that measures how well the lungs are working",
+                                                    "answer":  "pulmonary function test",
+                                                    "term":  "Pulmonary function test",
+                                                    "type":  "vocabulary",
+                                                    "source":  "Pulmonary function test.md",
+                                                    "korean":  "폐기능검사, PFT",
+                                                    "answers":  [
+                                                                    "pulmonary function test"
+                                                                ]
+                                                },
+                    "trachea":  {
+                                    "morphology":  {
+                                                       "prefixes":  [
+
+                                                                    ],
+                                                       "suffixes":  [
+
+                                                                    ],
+                                                       "roots":  [
+                                                                     "Trache(o)"
+                                                                 ]
+                                                   },
+                                    "english":  "The main trunk of the system of tubes by which air passes to and from the lungs",
+                                    "answer":  "trachea",
+                                    "term":  "Trachea",
+                                    "type":  "vocabulary",
+                                    "source":  "Trachea.md",
+                                    "korean":  "기관",
+                                    "answers":  [
+                                                    "trachea"
+                                                ],
+                                    "imageQuestions":  [
+                                                           {
+                                                               "number":  2,
+                                                               "source":  "Pasted image 20260331141804.png",
+                                                               "type":  "numbered",
+                                                               "src":  "question-images/larynx-group-1.png"
+                                                           }
+                                                       ]
+                                },
+                    "microbiology":  {
+                                         "english":  "A branch of biology dealing with microorganisms",
+                                         "answer":  "microbiology",
+                                         "source":  "Microbiology.md",
+                                         "answers":  [
+                                                         "microbiology"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Microbiology",
+                                         "korean":  "미생물학"
+                                     },
                     "-fusion":  {
                                     "english":  "To pour",
                                     "answer":  "fusion",
@@ -11152,24 +14425,27 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "korean":  "주입"
                                 },
                     "exocrine":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "ex-"
-                                                                     ],
-                                                        "suffixes":  [
-                                                                         "-crine"
-                                                                     ]
-                                                    },
                                      "english":  "Secreting outward or through a duct",
                                      "answer":  "exocrine",
-                                     "term":  "Exocrine",
-                                     "type":  "vocabulary",
                                      "source":  "Exocrine.md",
-                                     "korean":  "외분비의",
                                      "answers":  [
                                                      "exocrine"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Exocrine",
+                                     "korean":  "외분비의"
                                  },
+                    "radiographic room":  {
+                                              "english":  "A room used for radiographic imaging",
+                                              "answer":  "radiographic room",
+                                              "source":  "Radiographic room.md",
+                                              "answers":  [
+                                                              "radiographic room"
+                                                          ],
+                                              "type":  "vocabulary",
+                                              "term":  "Radiographic room",
+                                              "korean":  "방사 촬영실"
+                                          },
                     "-gnosis":  {
                                     "english":  "Recognize, know (disease condition)",
                                     "answer":  "gnosis",
@@ -11182,31 +14458,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-gnosis",
                                     "korean":  "인식, 앎"
                                 },
-                    "bacill(o)":  {
-                                      "english":  "A straight rod-shaped bacterium",
-                                      "answer":  "bacill",
-                                      "source":  "bacill(o).md",
-                                      "answers":  [
-                                                      "bacill",
-                                                      "bacillo",
-                                                      "bacill/o",
-                                                      "bacill(o)"
-                                                  ],
-                                      "type":  "root",
-                                      "term":  "bacill(o)",
-                                      "korean":  "막대균"
-                                  },
-                    "vertebrae":  {
-                                      "english":  "The bones that make up the vertebral column",
-                                      "answer":  "vertebrae",
-                                      "source":  "Vertebrae.md",
-                                      "answers":  [
-                                                      "vertebrae"
-                                                  ],
-                                      "type":  "vocabulary",
-                                      "term":  "Vertebrae",
-                                      "korean":  "척추뼈"
-                                  },
+                    "genotype":  {
+                                     "english":  "The genetic constitution of an organism or cell",
+                                     "answer":  "genotype",
+                                     "source":  "Genotype.md",
+                                     "answers":  [
+                                                     "genotype"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Genotype",
+                                     "korean":  "유전형"
+                                 },
                     "caudal":  {
                                    "morphology":  {
                                                       "prefixes":  [
@@ -11237,6 +14499,41 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           }
                                                       ]
                                },
+                    "arthralgia":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-algia"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "arthr(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Pain in a joint",
+                                       "answer":  "arthralgia",
+                                       "term":  "Arthralgia",
+                                       "type":  "vocabulary",
+                                       "source":  "Arthralgia.md",
+                                       "korean":  "관절통",
+                                       "answers":  [
+                                                       "arthralgia"
+                                                   ]
+                                   },
+                    "thorax":  {
+                                   "morphology":  {
+                                                      "roots":  [
+                                                                    "thorac(o)"
+                                                                ]
+                                                  },
+                                   "english":  "The chest",
+                                   "answer":  "thorax",
+                                   "term":  "Thorax",
+                                   "type":  "vocabulary",
+                                   "source":  "Thorax.md",
+                                   "korean":  "가슴",
+                                   "answers":  [
+                                                   "thorax"
+                                               ]
+                               },
                     "cranium":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -11259,24 +14556,39 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "cranium"
                                                 ]
                                 },
+                    "immortal":  {
+                                     "english":  "Not subject to death",
+                                     "answer":  "immortal",
+                                     "source":  "Immortal.md",
+                                     "answers":  [
+                                                     "immortal"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Immortal",
+                                     "korean":  "죽지 않는"
+                                 },
+                    "-ectasis":  {
+                                     "english":  "Dilatation",
+                                     "answer":  "ectasis",
+                                     "source":  "-ectasis.md",
+                                     "answers":  [
+                                                     "ectasis",
+                                                     "-ectasis"
+                                                 ],
+                                     "type":  "suffix",
+                                     "term":  "-ectasis",
+                                     "korean":  "확장"
+                                 },
                     "prenatal":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "pre-"
-                                                                     ],
-                                                        "vocabulary":  [
-                                                                           "Natal"
-                                                                       ]
-                                                    },
                                      "english":  "Occurring or existing before birth",
                                      "answer":  "prenatal",
-                                     "term":  "Prenatal",
-                                     "type":  "vocabulary",
                                      "source":  "Prenatal.md",
-                                     "korean":  "출생전의",
                                      "answers":  [
                                                      "prenatal"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Prenatal",
+                                     "korean":  "출생전의"
                                  },
                     "enteroclysis":  {
                                          "morphology":  {
@@ -11307,36 +14619,27 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                 }
                                                             ]
                                      },
-                    "supra-":  {
-                                   "english":  "Above, beyond",
-                                   "answer":  "supra",
-                                   "source":  "supra-.md",
-                                   "answers":  [
-                                                   "supra",
-                                                   "supra-"
-                                               ],
-                                   "type":  "prefix",
-                                   "term":  "supra-",
-                                   "korean":  "위, 초과, 상위"
-                               },
+                    "rehabilitation center":  {
+                                                  "english":  "A center for rehabilitation treatment",
+                                                  "answer":  "rehabilitation center",
+                                                  "source":  "Rehabilitation center.md",
+                                                  "answers":  [
+                                                                  "rehabilitation center"
+                                                              ],
+                                                  "type":  "vocabulary",
+                                                  "term":  "Rehabilitation center",
+                                                  "korean":  "재활센터"
+                                              },
                     "glaucoma":  {
-                                     "morphology":  {
-                                                        "suffixes":  [
-                                                                         "-oma"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "glauc(o)"
-                                                                  ]
-                                                    },
                                      "english":  "A condition of increased pressure within the eyeball, causing gradual loss of sight",
                                      "answer":  "glaucoma",
-                                     "term":  "Glaucoma",
-                                     "type":  "vocabulary",
                                      "source":  "Glaucoma.md",
-                                     "korean":  "녹내장",
                                      "answers":  [
                                                      "glaucoma"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Glaucoma",
+                                     "korean":  "녹내장"
                                  },
                     "hematemesis":  {
                                         "morphology":  {
@@ -11360,17 +14663,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "hematemesis"
                                                     ]
                                     },
-                    "general paralysis":  {
-                                              "english":  "Complete loss of muscle function involving the whole body",
-                                              "answer":  "general paralysis",
-                                              "source":  "General paralysis.md",
-                                              "answers":  [
-                                                              "general paralysis"
-                                                          ],
-                                              "type":  "vocabulary",
-                                              "term":  "General paralysis",
-                                              "korean":  "전신마비"
-                                          },
+                    "blood pressure gauge":  {
+                                                 "english":  "An instrument for measuring blood pressure",
+                                                 "answer":  "blood pressure gauge",
+                                                 "source":  "Blood pressure gauge.md",
+                                                 "answers":  [
+                                                                 "blood pressure gauge"
+                                                             ],
+                                                 "type":  "vocabulary",
+                                                 "term":  "Blood pressure gauge",
+                                                 "korean":  "혈압계"
+                                             },
                     "neutr(o)":  {
                                      "english":  "Neutral",
                                      "answer":  "neutr",
@@ -11385,25 +14688,6 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "neutr(o)",
                                      "korean":  "중성"
                                  },
-                    "microscope":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "micro-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-scope"
-                                                                       ]
-                                                      },
-                                       "english":  "An instrument used for viewing very small objects",
-                                       "answer":  "microscope",
-                                       "term":  "Microscope",
-                                       "type":  "vocabulary",
-                                       "source":  "Microscope.md",
-                                       "korean":  "현미경",
-                                       "answers":  [
-                                                       "microscope"
-                                                   ]
-                                   },
                     "sub-":  {
                                  "english":  "Under",
                                  "answer":  "sub",
@@ -11416,6 +14700,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "sub-",
                                  "korean":  "아래, 하"
                              },
+                    "treatment room":  {
+                                           "english":  "A room used for medical treatment",
+                                           "answer":  "treatment room",
+                                           "source":  "Treatment room.md",
+                                           "answers":  [
+                                                           "treatment room"
+                                                       ],
+                                           "type":  "vocabulary",
+                                           "term":  "Treatment room",
+                                           "korean":  "처치실"
+                                       },
                     "thorac(o)":  {
                                       "english":  "Chest",
                                       "answer":  "thorac",
@@ -11486,6 +14781,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                             "thoracic cavity"
                                                         ]
                                         },
+                    "psych(o)":  {
+                                     "english":  "Soul, mind",
+                                     "answer":  "psych",
+                                     "source":  "psych(o).md",
+                                     "answers":  [
+                                                     "psych",
+                                                     "psycho",
+                                                     "psych/o",
+                                                     "psych(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "psych(o)",
+                                     "korean":  "정신, 마음"
+                                 },
+                    "cytokine":  {
+                                     "morphology":  {
+                                                        "roots":  [
+                                                                      "cyt(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "A small protein involved in cell signaling, especially in immune responses",
+                                     "answer":  "cytokine",
+                                     "term":  "Cytokine",
+                                     "type":  "vocabulary",
+                                     "source":  "Cytokine.md",
+                                     "korean":  "사이토카인",
+                                     "answers":  [
+                                                     "cytokine"
+                                                 ]
+                                 },
                     "plasm(o)":  {
                                      "english":  "Genetic or formative material",
                                      "answer":  "plasm",
@@ -11500,6 +14825,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "plasm(o)",
                                      "korean":  "형질, 혈장"
                                  },
+                    "hematology":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ology"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "hemat(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "The medical science concerned with blood and blood-forming tissues",
+                                       "answer":  "hematology",
+                                       "term":  "Hematology",
+                                       "type":  "vocabulary",
+                                       "source":  "Hematology.md",
+                                       "korean":  "혈액학",
+                                       "answers":  [
+                                                       "hematology"
+                                                   ]
+                                   },
                     "opt(o)":  {
                                    "english":  "Eye, vision",
                                    "answer":  "opt",
@@ -11525,17 +14869,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                 "term":  "Projectile vomiting",
                                                 "korean":  "분출성 구토"
                                             },
-                    "phalanx":  {
-                                    "english":  "A bone of a finger or toe",
-                                    "answer":  "phalanx",
-                                    "source":  "Phalanx.md",
-                                    "answers":  [
-                                                    "phalanx"
-                                                ],
-                                    "type":  "vocabulary",
-                                    "term":  "Phalanx",
-                                    "korean":  "손발가락뼈"
-                                },
+                    "intercellular junction":  {
+                                                   "english":  "A specialized connection between adjacent cells",
+                                                   "answer":  "intercellular junction",
+                                                   "source":  "Intercellular junction.md",
+                                                   "answers":  [
+                                                                   "intercellular junction"
+                                                               ],
+                                                   "type":  "vocabulary",
+                                                   "term":  "Intercellular junction",
+                                                   "korean":  "세포간연결"
+                                               },
+                    "heterologous":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-ous"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "heter(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Derived from or involving a different species, individual, or tissue",
+                                         "answer":  "heterologous",
+                                         "term":  "Heterologous",
+                                         "type":  "vocabulary",
+                                         "source":  "Heterologous.md",
+                                         "korean":  "이종의",
+                                         "answers":  [
+                                                         "heterologous"
+                                                     ]
+                                     },
                     "frontal plane":  {
                                           "morphology":  {
                                                              "prefixes":  [
@@ -11605,17 +14968,57 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                "term":  "a-",
                                "korean":  "없음, 결핍"
                            },
-                    "-ectasis":  {
-                                     "english":  "Dilatation",
-                                     "answer":  "ectasis",
-                                     "source":  "-ectasis.md",
+                    "agoraphobia":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-phobia"
+                                                                        ]
+                                                       },
+                                        "english":  "Fear of open or public places",
+                                        "answer":  "agoraphobia",
+                                        "term":  "Agoraphobia",
+                                        "type":  "vocabulary",
+                                        "source":  "Agoraphobia.md",
+                                        "korean":  "광장공포증",
+                                        "answers":  [
+                                                        "agoraphobia"
+                                                    ]
+                                    },
+                    "encephalomyelopathy":  {
+                                                "morphology":  {
+                                                                   "roots":  [
+                                                                                 "encephal(o)",
+                                                                                 "myel(o)"
+                                                                             ]
+                                                               },
+                                                "english":  "Disease of the brain and spinal cord",
+                                                "answer":  "encephalomyelopathy",
+                                                "term":  "Encephalomyelopathy",
+                                                "type":  "vocabulary",
+                                                "source":  "Encephalomyelopathy.md",
+                                                "korean":  "뇌척수병증",
+                                                "answers":  [
+                                                                "encephalomyelopathy"
+                                                            ]
+                                            },
+                    "lymphoma":  {
+                                     "morphology":  {
+                                                        "suffixes":  [
+                                                                         "-oma"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "lymph(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "A malignant tumor of lymphoid tissue",
+                                     "answer":  "lymphoma",
+                                     "term":  "Lymphoma",
+                                     "type":  "vocabulary",
+                                     "source":  "Lymphoma.md",
+                                     "korean":  "림프종",
                                      "answers":  [
-                                                     "ectasis",
-                                                     "-ectasis"
-                                                 ],
-                                     "type":  "suffix",
-                                     "term":  "-ectasis",
-                                     "korean":  "확장"
+                                                     "lymphoma"
+                                                 ]
                                  },
                     "cerebral":  {
                                      "morphology":  {
@@ -11640,46 +15043,46 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                  ]
                                  },
                     "intramuscular injection":  {
-                                                    "morphology":  {
-                                                                       "prefixes":  [
-                                                                                        "intra-"
-                                                                                    ],
-                                                                       "suffixes":  [
-                                                                                        "-ar"
-                                                                                    ],
-                                                                       "roots":  [
-                                                                                     "muscul(o)"
-                                                                                 ]
-                                                                   },
                                                     "english":  "Injection into a muscle",
                                                     "answer":  "intramuscular injection",
-                                                    "term":  "Intramuscular injection",
-                                                    "type":  "vocabulary",
                                                     "source":  "Intramuscular injection.md",
-                                                    "korean":  "근내 주사; IM",
                                                     "answers":  [
                                                                     "intramuscular injection"
-                                                                ]
+                                                                ],
+                                                    "type":  "vocabulary",
+                                                    "term":  "Intramuscular injection",
+                                                    "korean":  "근내 주사; IM"
                                                 },
-                    "intravenous":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "intra-"
-                                                                        ],
-                                                           "vocabulary":  [
-                                                                              "Venous"
-                                                                          ]
-                                                       },
-                                        "english":  "Situated, performed, or occurring within a vein",
-                                        "answer":  "intravenous",
-                                        "term":  "Intravenous",
-                                        "type":  "vocabulary",
-                                        "source":  "Intravenous.md",
-                                        "korean":  "정맥내의",
-                                        "answers":  [
-                                                        "intravenous"
-                                                    ]
-                                    },
+                    "midwife":  {
+                                    "english":  "A person who assists women in childbirth",
+                                    "answer":  "midwife",
+                                    "source":  "Midwife.md",
+                                    "answers":  [
+                                                    "midwife"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Midwife",
+                                    "korean":  "조산사"
+                                },
+                    "pathology":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-ology"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "path(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "The study of disease",
+                                      "answer":  "pathology",
+                                      "term":  "Pathology",
+                                      "type":  "vocabulary",
+                                      "source":  "Pathology.md",
+                                      "korean":  "병리학",
+                                      "answers":  [
+                                                      "pathology"
+                                                  ]
+                                  },
                     "myoma":  {
                                   "morphology":  {
                                                      "prefixes":  [
@@ -11702,6 +15105,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "myoma"
                                               ]
                               },
+                    "transfusion":  {
+                                        "morphology":  {
+                                                           "prefixes":  [
+                                                                            "trans-"
+                                                                        ],
+                                                           "suffixes":  [
+                                                                            "-fusion"
+                                                                        ],
+                                                           "roots":  [
+
+                                                                     ]
+                                                       },
+                                        "english":  "The transfer of blood or blood components into the bloodstream",
+                                        "answer":  "transfusion",
+                                        "term":  "Transfusion",
+                                        "type":  "vocabulary",
+                                        "source":  "Transfusion.md",
+                                        "korean":  "수혈",
+                                        "answers":  [
+                                                        "transfusion"
+                                                    ]
+                                    },
                     "brady-":  {
                                    "english":  "Slow",
                                    "answer":  "brady",
@@ -11714,6 +15139,39 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "brady-",
                                    "korean":  "느린"
                                },
+                    "maxill(o)":  {
+                                      "english":  "Maxilla, upper jaw",
+                                      "answer":  "maxill",
+                                      "source":  "maxill(o).md",
+                                      "answers":  [
+                                                      "maxill",
+                                                      "maxillo",
+                                                      "maxill/o",
+                                                      "maxill(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "maxill(o)",
+                                      "korean":  "위턱뼈, 상악골"
+                                  },
+                    "excision":  {
+                                     "morphology":  {
+                                                        "prefixes":  [
+                                                                         "ex-"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "cis(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "Removal by cutting",
+                                     "answer":  "excision",
+                                     "term":  "Excision",
+                                     "type":  "vocabulary",
+                                     "source":  "Excision.md",
+                                     "korean":  "절제술",
+                                     "answers":  [
+                                                     "excision"
+                                                 ]
+                                 },
                     "-rrhea":  {
                                    "english":  "Flow, discharge",
                                    "answer":  "rrhea",
@@ -11726,6 +15184,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-rrhea",
                                    "korean":  "흐름, 분비"
                                },
+                    "incisor":  {
+                                    "english":  "A front cutting tooth",
+                                    "answer":  "incisor",
+                                    "source":  "Incisor.md",
+                                    "answers":  [
+                                                    "incisor"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Incisor",
+                                    "korean":  "앞니, 절치"
+                                },
                     "fungi":  {
                                   "morphology":  {
                                                      "prefixes":  [
@@ -11771,6 +15240,37 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "otitis media"
                                                      ]
                                      },
+                    "urology":  {
+                                    "morphology":  {
+                                                       "suffixes":  [
+                                                                        "-ology"
+                                                                    ],
+                                                       "roots":  [
+                                                                     "ur(o)"
+                                                                 ]
+                                                   },
+                                    "english":  "The branch of medicine concerned with the urinary tract and male reproductive system",
+                                    "answer":  "urology",
+                                    "term":  "Urology",
+                                    "type":  "vocabulary",
+                                    "source":  "Urology.md",
+                                    "korean":  "비뇨기과학",
+                                    "answers":  [
+                                                    "urology"
+                                                ]
+                                },
+                    "re-":  {
+                                "english":  "Back",
+                                "answer":  "re",
+                                "source":  "re-.md",
+                                "answers":  [
+                                                "re",
+                                                "re-"
+                                            ],
+                                "type":  "prefix",
+                                "term":  "re-",
+                                "korean":  "뒤로, 다시"
+                            },
                     "endocrine":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -11793,6 +15293,31 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "endocrine"
                                                   ]
                                   },
+                    "registered nurse":  {
+                                             "english":  "A nurse who has met registration requirements for professional nursing",
+                                             "answer":  "registered nurse",
+                                             "source":  "Registered nurse.md",
+                                             "answers":  [
+                                                             "registered nurse"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Registered nurse",
+                                             "korean":  "간호사"
+                                         },
+                    "ped(o)":  {
+                                   "english":  "Child",
+                                   "answer":  "ped",
+                                   "source":  "ped(o).md",
+                                   "answers":  [
+                                                   "ped",
+                                                   "pedo",
+                                                   "ped/o",
+                                                   "ped(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "ped(o)",
+                                   "korean":  "어린이"
+                               },
                     "melan(o)":  {
                                      "english":  "Black",
                                      "answer":  "melan",
@@ -11807,6 +15332,23 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "melan(o)",
                                      "korean":  "흑색"
                                  },
+                    "podiatry":  {
+                                     "morphology":  {
+                                                        "roots":  [
+                                                                      "pod(o)",
+                                                                      "iatr(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "The medical care and treatment of the foot",
+                                     "answer":  "podiatry",
+                                     "term":  "Podiatry",
+                                     "type":  "vocabulary",
+                                     "source":  "Podiatry.md",
+                                     "korean":  "족학",
+                                     "answers":  [
+                                                     "podiatry"
+                                                 ]
+                                 },
                     "extra-":  {
                                    "english":  "Outside of, beyond, in addition",
                                    "answer":  "extra",
@@ -11819,20 +15361,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "extra-",
                                    "korean":  "~의 밖에, ~을 넘어, 추가의"
                                },
-                    "trache(o)":  {
-                                      "english":  "Main airway tube leading to the lungs",
-                                      "answer":  "trache",
-                                      "source":  "trache(o).md",
-                                      "answers":  [
-                                                      "trache",
-                                                      "tracheo",
-                                                      "trache/o",
-                                                      "trache(o)"
-                                                  ],
-                                      "type":  "root",
-                                      "term":  "trache(o)",
-                                      "korean":  "기관"
-                                  },
+                    "costochondral":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-al"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "cost(o)",
+                                                                           "chondr(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Relating to a rib and its cartilage",
+                                          "answer":  "costochondral",
+                                          "term":  "Costochondral",
+                                          "type":  "vocabulary",
+                                          "source":  "Costochondral.md",
+                                          "korean":  "갈비연골의",
+                                          "answers":  [
+                                                          "costochondral"
+                                                      ]
+                                      },
                     "anti-":  {
                                   "english":  "Against, opposing",
                                   "answer":  "anti",
@@ -11871,22 +15419,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "lingu(o)",
                                      "korean":  "혀"
                                  },
-                    "neutrophil":  {
-                                       "morphology":  {
-                                                          "suffixes":  [
-                                                                           "-phil"
-                                                                       ]
-                                                      },
-                                       "english":  "A granulocyte that is the chief phagocytic white blood cell of the blood",
-                                       "answer":  "neutrophil",
-                                       "term":  "Neutrophil",
-                                       "type":  "vocabulary",
-                                       "source":  "Neutrophil.md",
-                                       "korean":  "호중구",
-                                       "answers":  [
-                                                       "neutrophil"
-                                                   ]
-                                   },
+                    "emergency medicine":  {
+                                               "english":  "The medical specialty concerned with emergency care",
+                                               "answer":  "emergency medicine",
+                                               "source":  "Emergency medicine.md",
+                                               "answers":  [
+                                                               "emergency medicine"
+                                                           ],
+                                               "type":  "vocabulary",
+                                               "term":  "Emergency medicine",
+                                               "korean":  "응급의학"
+                                           },
                     "-i":  {
                                "english":  "Plural ending",
                                "answer":  "i",
@@ -11921,6 +15464,86 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "postpartum"
                                                    ]
                                    },
+                    "oral administration":  {
+                                                "morphology":  {
+                                                                   "prefixes":  [
+
+                                                                                ],
+                                                                   "suffixes":  [
+                                                                                    "-al"
+                                                                                ],
+                                                                   "roots":  [
+                                                                                 "or(o)"
+                                                                             ]
+                                                               },
+                                                "english":  "Administration by mouth",
+                                                "answer":  "oral administration",
+                                                "term":  "Oral administration",
+                                                "type":  "vocabulary",
+                                                "source":  "Oral administration.md",
+                                                "korean":  "경구투여",
+                                                "answers":  [
+                                                                "oral administration"
+                                                            ]
+                                            },
+                    "cystectomy":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-ectomy"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "cyst(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Excision or surgical removal of the bladder or a cyst",
+                                       "answer":  "cystectomy",
+                                       "term":  "Cystectomy",
+                                       "type":  "vocabulary",
+                                       "source":  "Cystectomy.md",
+                                       "korean":  "방광절제술",
+                                       "answers":  [
+                                                       "cystectomy"
+                                                   ]
+                                   },
+                    "amnioscope":  {
+                                       "morphology":  {
+                                                          "suffixes":  [
+                                                                           "-scope"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "amni(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "An instrument for viewing the amnion or amniotic cavity",
+                                       "answer":  "amnioscope",
+                                       "term":  "Amnioscope",
+                                       "type":  "vocabulary",
+                                       "source":  "Amnioscope.md",
+                                       "korean":  "양수경",
+                                       "answers":  [
+                                                       "amnioscope"
+                                                   ]
+                                   },
+                    "renovascular":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-ar"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "ren(o)",
+                                                                          "vascul(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Relating to the blood vessels of the kidney",
+                                         "answer":  "renovascular",
+                                         "term":  "Renovascular",
+                                         "type":  "vocabulary",
+                                         "source":  "Renovascular.md",
+                                         "korean":  "콩팥혈관성, 신장혈관성",
+                                         "answers":  [
+                                                         "renovascular"
+                                                     ]
+                                     },
                     "chol(e)":  {
                                     "english":  "Bile",
                                     "answer":  "chol",
@@ -11998,20 +15621,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "입천장, 구개"
                                  },
                     "retrospective":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "retro-"
-                                                                          ]
-                                                         },
                                           "english":  "Relating to a study that looks back on past cases or data",
                                           "answer":  "retrospective",
-                                          "term":  "Retrospective",
-                                          "type":  "vocabulary",
                                           "source":  "Retrospective.md",
-                                          "korean":  "후향적",
                                           "answers":  [
                                                           "retrospective"
-                                                      ]
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Retrospective",
+                                          "korean":  "후향적"
                                       },
                     "pylorospasm":  {
                                         "morphology":  {
@@ -12042,43 +15660,56 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                }
                                                            ]
                                     },
-                    "paresis":  {
-                                    "english":  "Slight or partial paralysis",
-                                    "answer":  "paresis",
-                                    "source":  "Paresis.md",
-                                    "answers":  [
-                                                    "paresis"
-                                                ],
-                                    "type":  "vocabulary",
-                                    "term":  "Paresis",
-                                    "korean":  "불완전 마비"
-                                },
-                    "derm(o)":  {
-                                    "english":  "Skin",
-                                    "answer":  "derm",
-                                    "source":  "Derm(o).md",
-                                    "answers":  [
-                                                    "derm",
-                                                    "dermo",
-                                                    "derm/o",
-                                                    "derm(o)"
-                                                ],
-                                    "type":  "root",
-                                    "term":  "Derm(o)",
-                                    "korean":  "피부"
-                                },
-                    "tetra-":  {
-                                   "english":  "Four",
-                                   "answer":  "tetra",
-                                   "source":  "tetra-.md",
-                                   "answers":  [
-                                                   "tetra",
-                                                   "tetra-"
-                                               ],
-                                   "type":  "prefix",
-                                   "term":  "tetra-",
-                                   "korean":  "넷의"
-                               },
+                    "-ologist":  {
+                                     "english":  "One who studies",
+                                     "answer":  "ologist",
+                                     "source":  "-ologist.md",
+                                     "answers":  [
+                                                     "ologist",
+                                                     "-ologist"
+                                                 ],
+                                     "type":  "suffix",
+                                     "term":  "-ologist",
+                                     "korean":  "학자, 전문의"
+                                 },
+                    "ophthalmoplegia":  {
+                                            "morphology":  {
+                                                               "suffixes":  [
+                                                                                "-plegia"
+                                                                            ],
+                                                               "roots":  [
+                                                                             "ophthalm(o)"
+                                                                         ]
+                                                           },
+                                            "english":  "Paralysis of the eye muscles",
+                                            "answer":  "ophthalmoplegia",
+                                            "term":  "Ophthalmoplegia",
+                                            "type":  "vocabulary",
+                                            "source":  "Ophthalmoplegia.md",
+                                            "korean":  "눈근육마비, 안근마비",
+                                            "answers":  [
+                                                            "ophthalmoplegia"
+                                                        ]
+                                        },
+                    "osteoporosis":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-osis"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "oste(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "A condition marked by decreased bone mass and increased bone fragility",
+                                         "answer":  "osteoporosis",
+                                         "term":  "Osteoporosis",
+                                         "type":  "vocabulary",
+                                         "source":  "Osteoporosis.md",
+                                         "korean":  "뼈다공증, 골다공증",
+                                         "answers":  [
+                                                         "osteoporosis"
+                                                     ]
+                                     },
                     "suprapubic":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -12138,6 +15769,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "bacteri(o)",
                                        "korean":  "세균"
                                    },
+                    "neuroanatomy":  {
+                                         "morphology":  {
+                                                            "prefixes":  [
+                                                                             "ana-"
+                                                                         ],
+                                                            "suffixes":  [
+                                                                             "-tomy"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "neur(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "The anatomy of the nervous system",
+                                         "answer":  "neuroanatomy",
+                                         "term":  "Neuroanatomy",
+                                         "type":  "vocabulary",
+                                         "source":  "Neuroanatomy.md",
+                                         "korean":  "신경해부학",
+                                         "answers":  [
+                                                         "neuroanatomy"
+                                                     ]
+                                     },
                     "-ule":  {
                                  "english":  "Little, small",
                                  "answer":  "ule",
@@ -12150,28 +15803,22 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "-ule",
                                  "korean":  "작은, 소(小)"
                              },
-                    "stenosis":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-
-                                                                     ],
-                                                        "suffixes":  [
-                                                                         "-osis"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "Sten(o)"
-                                                                  ]
-                                                    },
-                                     "english":  "A narrowing or constriction of the diameter of a bodily passage or orifice",
-                                     "answer":  "stenosis",
-                                     "term":  "Stenosis",
-                                     "type":  "vocabulary",
-                                     "source":  "Stenosis.md",
-                                     "korean":  "협착",
-                                     "answers":  [
-                                                     "stenosis"
-                                                 ]
-                                 },
+                    "gynecomastia":  {
+                                         "morphology":  {
+                                                            "roots":  [
+                                                                          "gynec(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Excessive development of breast tissue in a male",
+                                         "answer":  "gynecomastia",
+                                         "term":  "Gynecomastia",
+                                         "type":  "vocabulary",
+                                         "source":  "Gynecomastia.md",
+                                         "korean":  "여성형유방증",
+                                         "answers":  [
+                                                         "gynecomastia"
+                                                     ]
+                                     },
                     "myalgia":  {
                                     "morphology":  {
                                                        "prefixes":  [
@@ -12194,22 +15841,42 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                     "myalgia"
                                                 ]
                                 },
-                    "penicillin":  {
-                                       "morphology":  {
-                                                          "suffixes":  [
-                                                                           "-in"
-                                                                       ]
-                                                      },
-                                       "english":  "Any of several antibiotics produced by molds of the genus Penicillium or made synthetically",
-                                       "answer":  "penicillin",
-                                       "term":  "Penicillin",
-                                       "type":  "vocabulary",
-                                       "source":  "Penicillin.md",
-                                       "korean":  "페니실린",
+                    "pneumon(o)":  {
+                                       "english":  "Lung",
+                                       "answer":  "pneumon",
+                                       "source":  "pneumon(o).md",
                                        "answers":  [
-                                                       "penicillin"
-                                                   ]
+                                                       "pneumon",
+                                                       "pneumono",
+                                                       "pneumon/o",
+                                                       "pneumon(o)"
+                                                   ],
+                                       "type":  "root",
+                                       "term":  "pneumon(o)",
+                                       "korean":  "폐"
                                    },
+                    "antispasmodic":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+                                                                              "anti-"
+                                                                          ],
+                                                             "suffixes":  [
+
+                                                                          ],
+                                                             "roots":  [
+                                                                           "Spasm(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Capable of preventing or relieving spasms or convulsions",
+                                          "answer":  "antispasmodic",
+                                          "term":  "Antispasmodic",
+                                          "type":  "vocabulary",
+                                          "source":  "Antispasmodic.md",
+                                          "korean":  "진경제, 경련 완화성의",
+                                          "answers":  [
+                                                          "antispasmodic"
+                                                      ]
+                                      },
                     "transverse plane":  {
                                              "morphology":  {
                                                                 "prefixes":  [
@@ -12268,28 +15935,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                            "dermatomycosis"
                                                        ]
                                        },
-                    "pharmacist":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-ist"
-                                                                       ],
-                                                          "roots":  [
-                                                                        "Pharmac(o)"
-                                                                    ]
-                                                      },
-                                       "english":  "A health-care professional licensed to prepare and dispense drugs",
-                                       "answer":  "pharmacist",
-                                       "term":  "Pharmacist",
-                                       "type":  "vocabulary",
-                                       "source":  "Pharmacist.md",
-                                       "korean":  "약사",
-                                       "answers":  [
-                                                       "pharmacist"
-                                                   ]
-                                   },
+                    "ante-":  {
+                                  "english":  "Before, in front of, forward",
+                                  "answer":  "ante",
+                                  "source":  "ante-.md",
+                                  "answers":  [
+                                                  "ante",
+                                                  "ante-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "ante-",
+                                  "korean":  "앞에, 이전에, 전방의"
+                              },
                     "cartilage":  {
                                       "english":  "Firm, flexible connective tissue, such as the tissue in the rib area described in the slide",
                                       "answer":  "cartilage",
@@ -12386,6 +16043,31 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                              }
                                                          ]
                                   },
+                    "syringe and needle":  {
+                                               "english":  "An instrument with a needle used to inject or withdraw fluid",
+                                               "answer":  "syringe and needle",
+                                               "source":  "Syringe and needle.md",
+                                               "answers":  [
+                                                               "syringe and needle"
+                                                           ],
+                                               "type":  "vocabulary",
+                                               "term":  "Syringe and needle",
+                                               "korean":  "주사기와 바늘"
+                                           },
+                    "nas(o)":  {
+                                   "english":  "Nose",
+                                   "answer":  "nas",
+                                   "source":  "nas(o).md",
+                                   "answers":  [
+                                                   "nas",
+                                                   "naso",
+                                                   "nas/o",
+                                                   "nas(o)"
+                                               ],
+                                   "type":  "root",
+                                   "term":  "nas(o)",
+                                   "korean":  "코"
+                               },
                     "cardi(o)":  {
                                      "english":  "Heart",
                                      "answer":  "cardi",
@@ -12400,56 +16082,112 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "Cardi(o)",
                                      "korean":  "심장"
                                  },
+                    "para-":  {
+                                  "english":  "Beside, irregular",
+                                  "answer":  "para",
+                                  "source":  "para-.md",
+                                  "answers":  [
+                                                  "para",
+                                                  "para-"
+                                              ],
+                                  "type":  "prefix",
+                                  "term":  "para-",
+                                  "korean":  "곁의, 비정상의"
+                              },
+                    "hypertension":  {
+                                         "english":  "Abnormally high blood pressure",
+                                         "answer":  "hypertension",
+                                         "source":  "Hypertension.md",
+                                         "answers":  [
+                                                         "hypertension"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Hypertension",
+                                         "korean":  "고혈압"
+                                     },
                     "microorganism":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "micro-"
-                                                                          ]
-                                                         },
                                           "english":  "An organism of microscopic or ultramicroscopic size",
                                           "answer":  "microorganism",
-                                          "term":  "Microorganism",
-                                          "type":  "vocabulary",
                                           "source":  "Microorganism.md",
-                                          "korean":  "미생물",
                                           "answers":  [
                                                           "microorganism"
-                                                      ]
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Microorganism",
+                                          "korean":  "미생물"
                                       },
-                    "-scopy":  {
-                                   "english":  "Processing of visually examining",
-                                   "answer":  "scopy",
-                                   "source":  "-scopy.md",
+                    "tachy-":  {
+                                   "english":  "Rapid",
+                                   "answer":  "tachy",
+                                   "source":  "tachy-.md",
                                    "answers":  [
-                                                   "scopy",
-                                                   "-scopy"
+                                                   "tachy",
+                                                   "tachy-"
                                                ],
-                                   "type":  "suffix",
-                                   "term":  "-scopy",
-                                   "korean":  "-경술"
+                                   "type":  "prefix",
+                                   "term":  "tachy-",
+                                   "korean":  "빠른"
                                },
-                    "transfusion":  {
+                    "emergency room":  {
+                                           "english":  "A hospital room or area for emergency treatment",
+                                           "answer":  "emergency room",
+                                           "source":  "Emergency room.md",
+                                           "answers":  [
+                                                           "emergency room"
+                                                       ],
+                                           "type":  "vocabulary",
+                                           "term":  "Emergency room",
+                                           "korean":  "응급실"
+                                       },
+                    "hepatectomy":  {
                                         "morphology":  {
-                                                           "prefixes":  [
-                                                                            "trans-"
-                                                                        ],
                                                            "suffixes":  [
-                                                                            "-fusion"
+                                                                            "-ectomy"
                                                                         ],
                                                            "roots":  [
-
+                                                                         "Hepat(o)"
                                                                      ]
                                                        },
-                                        "english":  "The transfer of blood or blood components into the bloodstream",
-                                        "answer":  "transfusion",
-                                        "term":  "Transfusion",
+                                        "english":  "Surgical removal of all or part of the liver",
+                                        "answer":  "hepatectomy",
+                                        "term":  "Hepatectomy",
                                         "type":  "vocabulary",
-                                        "source":  "Transfusion.md",
-                                        "korean":  "수혈",
+                                        "source":  "Hepatectomy.md",
+                                        "korean":  "간절제술",
                                         "answers":  [
-                                                        "transfusion"
+                                                        "hepatectomy"
                                                     ]
                                     },
+                    "supraglottis":  {
+                                         "morphology":  {
+                                                            "prefixes":  [
+                                                                             "supra-"
+                                                                         ],
+                                                            "suffixes":  [
+
+                                                                         ],
+                                                            "roots":  [
+
+                                                                      ]
+                                                        },
+                                         "english":  "The part situated above the glottis",
+                                         "answer":  "supraglottis",
+                                         "term":  "Supraglottis",
+                                         "type":  "vocabulary",
+                                         "source":  "Supraglottis.md",
+                                         "korean":  "성문위부",
+                                         "answers":  [
+                                                         "supraglottis"
+                                                     ],
+                                         "imageQuestions":  [
+                                                                {
+                                                                    "number":  4,
+                                                                    "source":  "Pasted image 20260331141804.png",
+                                                                    "type":  "numbered",
+                                                                    "src":  "question-images/larynx-group-1.png"
+                                                                }
+                                                            ]
+                                     },
                     "inguin(o)":  {
                                       "english":  "Groin",
                                       "answer":  "inguin",
@@ -12486,6 +16224,45 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                         "gastrectomy"
                                                     ]
                                     },
+                    "ovarian cyst":  {
+                                         "morphology":  {
+                                                            "roots":  [
+                                                                          "cyst(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "A cyst in or on an ovary",
+                                         "answer":  "ovarian cyst",
+                                         "term":  "Ovarian cyst",
+                                         "type":  "vocabulary",
+                                         "source":  "Ovarian cyst.md",
+                                         "korean":  "난소낭, 난소물혹, 난소낭종",
+                                         "answers":  [
+                                                         "ovarian cyst"
+                                                     ]
+                                     },
+                    "pyloric stenosis":  {
+                                             "morphology":  {
+                                                                "prefixes":  [
+
+                                                                             ],
+                                                                "suffixes":  [
+
+                                                                             ],
+                                                                "roots":  [
+                                                                              "Pylor(o)",
+                                                                              "Sten(o)"
+                                                                          ]
+                                                            },
+                                             "english":  "Narrowing of the pyloric opening",
+                                             "answer":  "pyloric stenosis",
+                                             "term":  "Pyloric stenosis",
+                                             "type":  "vocabulary",
+                                             "source":  "Pyloric stenosis.md",
+                                             "korean":  "유문 협착",
+                                             "answers":  [
+                                                             "pyloric stenosis"
+                                                         ]
+                                         },
                     "inferior":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -12508,18 +16285,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                      "inferior"
                                                  ]
                                  },
-                    "-y":  {
-                               "english":  "Process, operation",
-                               "answer":  "y",
-                               "source":  "-y.md",
-                               "answers":  [
-                                               "y",
-                                               "-y"
-                                           ],
-                               "type":  "suffix",
-                               "term":  "-y",
-                               "korean":  "검사, 시술"
-                           },
+                    "bacill(o)":  {
+                                      "english":  "A straight rod-shaped bacterium",
+                                      "answer":  "bacill",
+                                      "source":  "bacill(o).md",
+                                      "answers":  [
+                                                      "bacill",
+                                                      "bacillo",
+                                                      "bacill/o",
+                                                      "bacill(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "bacill(o)",
+                                      "korean":  "막대균"
+                                  },
                     "sinus":  {
                                   "english":  "A cavity or hollow",
                                   "answer":  "sinus",
@@ -12531,6 +16310,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                   "term":  "Sinus",
                                   "korean":  "동, 굴"
                               },
+                    "gastralgia":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+
+                                                                       ],
+                                                          "suffixes":  [
+                                                                           "-algia"
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Gastr(o)"
+                                                                    ]
+                                                      },
+                                       "english":  "Pain in the stomach",
+                                       "answer":  "gastralgia",
+                                       "term":  "Gastralgia",
+                                       "type":  "vocabulary",
+                                       "source":  "Gastralgia.md",
+                                       "korean":  "위통",
+                                       "answers":  [
+                                                       "gastralgia"
+                                                   ]
+                                   },
                     "bacterium":  {
                                       "morphology":  {
                                                          "prefixes":  [
@@ -12656,20 +16457,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                           "thoracentesis"
                                                       ]
                                       },
-                    "nas(o)":  {
-                                   "english":  "Nose",
-                                   "answer":  "nas",
-                                   "source":  "nas(o).md",
-                                   "answers":  [
-                                                   "nas",
-                                                   "naso",
-                                                   "nas/o",
-                                                   "nas(o)"
-                                               ],
-                                   "type":  "root",
-                                   "term":  "nas(o)",
-                                   "korean":  "코"
-                               },
+                    "laterality":  {
+                                       "morphology":  {
+                                                          "prefixes":  [
+
+                                                                       ],
+                                                          "suffixes":  [
+
+                                                                       ],
+                                                          "roots":  [
+
+                                                                    ]
+                                                      },
+                                       "english":  "The preference or dominance of one side of the body over the other",
+                                       "answer":  "laterality",
+                                       "term":  "Laterality",
+                                       "type":  "vocabulary",
+                                       "source":  "Laterality.md",
+                                       "korean":  "쪽치우침, 편측성",
+                                       "answers":  [
+                                                       "laterality"
+                                                   ]
+                                   },
                     "bronch(o)":  {
                                       "english":  "Bronchus",
                                       "answer":  "bronch",
@@ -12684,28 +16493,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "bronch(o)",
                                       "korean":  "기관지 also used as bronchi(o)"
                                   },
-                    "oral administration":  {
-                                                "morphology":  {
-                                                                   "prefixes":  [
-
-                                                                                ],
-                                                                   "suffixes":  [
-                                                                                    "-al"
-                                                                                ],
-                                                                   "roots":  [
-                                                                                 "or(o)"
-                                                                             ]
-                                                               },
-                                                "english":  "Administration by mouth",
-                                                "answer":  "oral administration",
-                                                "term":  "Oral administration",
-                                                "type":  "vocabulary",
-                                                "source":  "Oral administration.md",
-                                                "korean":  "경구투여",
-                                                "answers":  [
-                                                                "oral administration"
-                                                            ]
-                                            },
+                    "microscope":  {
+                                       "english":  "An instrument used for viewing very small objects",
+                                       "answer":  "microscope",
+                                       "source":  "Microscope.md",
+                                       "answers":  [
+                                                       "microscope"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Microscope",
+                                       "korean":  "현미경"
+                                   },
                     "contraceptive":  {
                                           "morphology":  {
                                                              "prefixes":  [
@@ -12742,6 +16540,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "term":  "pylor(o)",
                                      "korean":  "날문, 유문"
                                  },
+                    "splenomegaly":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-megaly"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "splen(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Enlargement of the spleen",
+                                         "answer":  "splenomegaly",
+                                         "term":  "Splenomegaly",
+                                         "type":  "vocabulary",
+                                         "source":  "Splenomegaly.md",
+                                         "korean":  "지라비대, 비장비대",
+                                         "answers":  [
+                                                         "splenomegaly"
+                                                     ]
+                                     },
                     "horizontal plane":  {
                                              "morphology":  {
                                                                 "prefixes":  [
@@ -12803,6 +16620,29 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "hyster(o)",
                                       "korean":  "자궁"
                                   },
+                    "un-":  {
+                                "english":  "Negative prefix, not",
+                                "answer":  "un",
+                                "source":  "un-.md",
+                                "answers":  [
+                                                "un",
+                                                "un-"
+                                            ],
+                                "type":  "prefix",
+                                "term":  "un-",
+                                "korean":  "부정 접두어, 비(非), 무(無)"
+                            },
+                    "scalpel":  {
+                                    "english":  "A small surgical knife",
+                                    "answer":  "scalpel",
+                                    "source":  "Scalpel.md",
+                                    "answers":  [
+                                                    "scalpel"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Scalpel",
+                                    "korean":  "메스"
+                                },
                     "-trophy":  {
                                     "english":  "Nourishment, enlargement (growth)",
                                     "answer":  "trophy",
@@ -12815,37 +16655,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-trophy",
                                     "korean":  "영양, 커짐"
                                 },
-                    "cyanosis":  {
-                                     "morphology":  {
-                                                        "suffixes":  [
-                                                                         "-osis"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "cyan(o)"
-                                                                  ]
-                                                    },
-                                     "english":  "Bluish discoloration of the skin or mucous membranes due to insufficient oxygen in the blood",
-                                     "answer":  "cyanosis",
-                                     "term":  "Cyanosis",
-                                     "type":  "vocabulary",
-                                     "source":  "Cyanosis.md",
-                                     "korean":  "청색증",
+                    "hypnosis":  {
+                                     "english":  "A trancelike state that resembles sleep but is induced by suggestion",
+                                     "answer":  "hypnosis",
+                                     "source":  "Hypnosis.md",
                                      "answers":  [
-                                                     "cyanosis"
-                                                 ]
+                                                     "hypnosis"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Hypnosis",
+                                     "korean":  "최면상태"
                                  },
-                    "pro-":  {
-                                 "english":  "In front of, before, preceding",
-                                 "answer":  "pro",
-                                 "source":  "pro-.md",
-                                 "answers":  [
-                                                 "pro",
-                                                 "pro-"
-                                             ],
-                                 "type":  "prefix",
-                                 "term":  "pro-",
-                                 "korean":  "앞의, 이전의, 선행하는"
-                             },
                     "bi-":  {
                                 "english":  "Two, double",
                                 "answer":  "bi",
@@ -12858,6 +16678,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                 "term":  "bi-",
                                 "korean":  "둘, 이중"
                             },
+                    "dysphagia":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+                                                                          "dys-"
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-phagia"
+                                                                      ]
+                                                     },
+                                      "english":  "Difficulty in swallowing",
+                                      "answer":  "dysphagia",
+                                      "term":  "Dysphagia",
+                                      "type":  "vocabulary",
+                                      "source":  "Dysphagia.md",
+                                      "korean":  "삼킴곤란, 연하곤란",
+                                      "answers":  [
+                                                      "dysphagia"
+                                                  ]
+                                  },
                     "hypogastric":  {
                                         "morphology":  {
                                                            "prefixes":  [
@@ -12910,6 +16749,45 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "dysplasia"
                                                   ]
                                   },
+                    "urolithiasis":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-iasis"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "ur(o)",
+                                                                          "Lith(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Formation or presence of stones in the urinary tract",
+                                         "answer":  "urolithiasis",
+                                         "term":  "Urolithiasis",
+                                         "type":  "vocabulary",
+                                         "source":  "Urolithiasis.md",
+                                         "korean":  "요로결석증, 요로돌증",
+                                         "answers":  [
+                                                         "urolithiasis"
+                                                     ]
+                                     },
+                    "neurology":  {
+                                      "morphology":  {
+                                                         "suffixes":  [
+                                                                          "-ology"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "neur(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "The branch of medicine concerned with the nervous system",
+                                      "answer":  "neurology",
+                                      "term":  "Neurology",
+                                      "type":  "vocabulary",
+                                      "source":  "Neurology.md",
+                                      "korean":  "신경학",
+                                      "answers":  [
+                                                      "neurology"
+                                                  ]
+                                  },
                     "abdominal cavity":  {
                                              "morphology":  {
                                                                 "prefixes":  [
@@ -12954,36 +16832,38 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                          "amniorrhexis"
                                                      ]
                                      },
-                    "para-":  {
-                                  "english":  "Beside, irregular",
-                                  "answer":  "para",
-                                  "source":  "para-.md",
-                                  "answers":  [
-                                                  "para",
-                                                  "para-"
-                                              ],
-                                  "type":  "prefix",
-                                  "term":  "para-",
-                                  "korean":  "곁의, 비정상의"
-                              },
+                    "glossitis":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-itis"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Gloss(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Inflammation of the tongue",
+                                      "answer":  "glossitis",
+                                      "term":  "Glossitis",
+                                      "type":  "vocabulary",
+                                      "source":  "Glossitis.md",
+                                      "korean":  "설염, 혀염",
+                                      "answers":  [
+                                                      "glossitis"
+                                                  ]
+                                  },
                     "endogenous":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "endo-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-genous"
-                                                                       ]
-                                                      },
                                        "english":  "Produced or originating within the organism",
                                        "answer":  "endogenous",
-                                       "term":  "Endogenous",
-                                       "type":  "vocabulary",
                                        "source":  "Endogenous.md",
-                                       "korean":  "내인(성)의",
                                        "answers":  [
                                                        "endogenous"
-                                                   ]
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Endogenous",
+                                       "korean":  "내인(성)의"
                                    },
                     "gastr(o)":  {
                                      "english":  "Stomach",
@@ -13013,28 +16893,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "spondyl(o)",
                                        "korean":  "척추뼈"
                                    },
-                    "umbilical cord":  {
-                                           "morphology":  {
-                                                              "prefixes":  [
-
-                                                                           ],
-                                                              "suffixes":  [
-                                                                               "-al"
-                                                                           ],
-                                                              "roots":  [
-
-                                                                        ]
-                                                          },
-                                           "english":  "The cord connecting a fetus with the placenta",
-                                           "answer":  "umbilical cord",
-                                           "term":  "Umbilical cord",
-                                           "type":  "vocabulary",
-                                           "source":  "Umbilical cord.md",
-                                           "korean":  "탯줄",
-                                           "answers":  [
-                                                           "umbilical cord"
-                                                       ]
-                                       },
+                    "dermatology":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-ology"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "Dermat(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "The branch of medicine concerned with the skin",
+                                        "answer":  "dermatology",
+                                        "term":  "Dermatology",
+                                        "type":  "vocabulary",
+                                        "source":  "Dermatology.md",
+                                        "korean":  "피부과학",
+                                        "answers":  [
+                                                        "dermatology"
+                                                    ]
+                                    },
+                    "mes":  {
+                                "english":  "A scalpel or surgical knife",
+                                "answer":  "mes",
+                                "source":  "Mes.md",
+                                "answers":  [
+                                                "mes"
+                                            ],
+                                "type":  "vocabulary",
+                                "term":  "Mes",
+                                "korean":  "메스"
+                            },
                     "-tresia":  {
                                     "english":  "Opening",
                                     "answer":  "tresia",
@@ -13047,6 +16935,26 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-tresia",
                                     "korean":  "열림"
                                 },
+                    "cervicofacial":  {
+                                          "morphology":  {
+                                                             "suffixes":  [
+                                                                              "-al"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "cervic(o)",
+                                                                           "faci(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Relating to the neck and face",
+                                          "answer":  "cervicofacial",
+                                          "term":  "Cervicofacial",
+                                          "type":  "vocabulary",
+                                          "source":  "Cervicofacial.md",
+                                          "korean":  "목얼굴의",
+                                          "answers":  [
+                                                          "cervicofacial"
+                                                      ]
+                                      },
                     "contraindication":  {
                                              "morphology":  {
                                                                 "prefixes":  [
@@ -13069,28 +16977,25 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                              "contraindication"
                                                          ]
                                          },
-                    "intercostal":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "inter-"
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-al"
-                                                                        ],
-                                                           "roots":  [
-                                                                         "cost(o)"
-                                                                     ]
-                                                       },
-                                        "english":  "Situated or occurring between the ribs",
-                                        "answer":  "intercostal",
-                                        "term":  "Intercostal",
-                                        "type":  "vocabulary",
-                                        "source":  "Intercostal.md",
-                                        "korean":  "갈비사이의, 늑간의",
-                                        "answers":  [
-                                                        "intercostal"
-                                                    ]
-                                    },
+                    "arthrocentesis":  {
+                                           "morphology":  {
+                                                              "suffixes":  [
+                                                                               "-centesis"
+                                                                           ],
+                                                              "roots":  [
+                                                                            "arthr(o)"
+                                                                        ]
+                                                          },
+                                           "english":  "Puncture of a joint for removal of fluid",
+                                           "answer":  "arthrocentesis",
+                                           "term":  "Arthrocentesis",
+                                           "type":  "vocabulary",
+                                           "source":  "Arthrocentesis.md",
+                                           "korean":  "관절천자",
+                                           "answers":  [
+                                                           "arthrocentesis"
+                                                       ]
+                                       },
                     "leukopenia":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -13114,23 +17019,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "tetraplegia":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "tetra-"
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-plegia"
-                                                                        ]
-                                                       },
                                         "english":  "Partial or complete paralysis of both the arms and legs",
                                         "answer":  "tetraplegia",
-                                        "term":  "Tetraplegia",
-                                        "type":  "vocabulary",
                                         "source":  "Tetraplegia.md",
-                                        "korean":  "사지마비",
                                         "answers":  [
                                                         "tetraplegia"
-                                                    ]
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Tetraplegia",
+                                        "korean":  "사지마비"
                                     },
                     "epiglottis":  {
                                        "morphology":  {
@@ -13168,27 +17065,38 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                               }
                                                           ]
                                    },
+                    "pelvic cavity":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-ic"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "pelv(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "The cavity below the abdominal cavity that contains pelvic organs",
+                                          "answer":  "pelvic cavity",
+                                          "term":  "Pelvic cavity",
+                                          "type":  "vocabulary",
+                                          "source":  "Pelvic cavity.md",
+                                          "korean":  "골반강, 골반안",
+                                          "answers":  [
+                                                          "pelvic cavity"
+                                                      ]
+                                      },
                     "retroperitoneal":  {
-                                            "morphology":  {
-                                                               "prefixes":  [
-                                                                                "retro-"
-                                                                            ],
-                                                               "suffixes":  [
-                                                                                "-al"
-                                                                            ],
-                                                               "roots":  [
-                                                                             "peritone(o)"
-                                                                         ]
-                                                           },
                                             "english":  "Situated behind the peritoneum",
                                             "answer":  "retroperitoneal",
-                                            "term":  "Retroperitoneal",
-                                            "type":  "vocabulary",
                                             "source":  "Retroperitoneal.md",
-                                            "korean":  "복막 뒤의",
                                             "answers":  [
                                                             "retroperitoneal"
-                                                        ]
+                                                        ],
+                                            "type":  "vocabulary",
+                                            "term":  "Retroperitoneal",
+                                            "korean":  "복막 뒤의"
                                         },
                     "diagnosis":  {
                                       "morphology":  {
@@ -13212,54 +17120,36 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                       "diagnosis"
                                                   ]
                                   },
-                    "unilateral":  {
-                                       "morphology":  {
-                                                          "prefixes":  [
-                                                                           "uni-"
-                                                                       ],
-                                                          "suffixes":  [
-                                                                           "-al"
-                                                                       ],
-                                                          "roots":  [
-
-                                                                    ]
-                                                      },
-                                       "english":  "Affecting one side of the body",
-                                       "answer":  "unilateral",
-                                       "term":  "Unilateral",
-                                       "type":  "vocabulary",
-                                       "source":  "Unilateral.md",
-                                       "korean":  "한쪽의, 편측의, 일측성의",
-                                       "answers":  [
-                                                       "unilateral"
-                                                   ],
-                                       "imageQuestions":  [
-                                                              {
-                                                                  "number":  1,
-                                                                  "source":  "Pasted image 20260331144508.png",
-                                                                  "type":  "numbered",
-                                                                  "src":  "question-images/direction-group-1.png"
-                                                              }
-                                                          ]
-                                   },
+                    "cerebrovascular accident":  {
+                                                     "morphology":  {
+                                                                        "suffixes":  [
+                                                                                         "-ar"
+                                                                                     ],
+                                                                        "roots":  [
+                                                                                      "cerebr(o)",
+                                                                                      "vascul(o)"
+                                                                                  ]
+                                                                    },
+                                                     "english":  "Stroke",
+                                                     "answer":  "cerebrovascular accident",
+                                                     "term":  "Cerebrovascular accident",
+                                                     "type":  "vocabulary",
+                                                     "source":  "Cerebrovascular accident.md",
+                                                     "korean":  "뇌졸중, CVA",
+                                                     "answers":  [
+                                                                     "cerebrovascular accident"
+                                                                 ]
+                                                 },
                     "endoderm":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "endo-"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "Derm(o)"
-                                                                  ]
-                                                    },
                                      "english":  "The innermost of the three primary germ layers of an embryo",
                                      "answer":  "endoderm",
-                                     "term":  "Endoderm",
-                                     "type":  "vocabulary",
                                      "source":  "Endoderm.md",
-                                     "korean":  "내배엽",
                                      "answers":  [
                                                      "endoderm"
-                                                 ]
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Endoderm",
+                                     "korean":  "내배엽"
                                  },
                     "dia-":  {
                                  "english":  "Through, apart, across, between",
@@ -13273,6 +17163,17 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                  "term":  "dia-",
                                  "korean":  "통하여, 분리되어, 가로질러, 사이에"
                              },
+                    "psychiatrist":  {
+                                         "english":  "A physician specializing in psychiatry",
+                                         "answer":  "psychiatrist",
+                                         "source":  "Psychiatrist.md",
+                                         "answers":  [
+                                                         "psychiatrist"
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Psychiatrist",
+                                         "korean":  "정신과의사"
+                                     },
                     "nephropexy":  {
                                        "morphology":  {
                                                           "prefixes":  [
@@ -13295,6 +17196,28 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                        "nephropexy"
                                                    ]
                                    },
+                    "neuralgia":  {
+                                      "morphology":  {
+                                                         "prefixes":  [
+
+                                                                      ],
+                                                         "suffixes":  [
+                                                                          "-algia"
+                                                                      ],
+                                                         "roots":  [
+                                                                       "Neur(o)"
+                                                                   ]
+                                                     },
+                                      "english":  "Acute paroxysmal pain radiating along the course of one or more nerves usually without demonstrable changes in the nerve structure",
+                                      "answer":  "neuralgia",
+                                      "term":  "Neuralgia",
+                                      "type":  "vocabulary",
+                                      "source":  "Neuralgia.md",
+                                      "korean":  "신경통",
+                                      "answers":  [
+                                                      "neuralgia"
+                                                  ]
+                                  },
                     "pandemic":  {
                                      "morphology":  {
                                                         "prefixes":  [
@@ -13374,6 +17297,18 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                      "inferior laryngeal nerve"
                                                                  ]
                                                  },
+                    "-scopy":  {
+                                   "english":  "Processing of visually examining",
+                                   "answer":  "scopy",
+                                   "source":  "-scopy.md",
+                                   "answers":  [
+                                                   "scopy",
+                                                   "-scopy"
+                                               ],
+                                   "type":  "suffix",
+                                   "term":  "-scopy",
+                                   "korean":  "-경술"
+                               },
                     "quarantine":  {
                                        "english":  "Restraint designed to prevent the spread of disease",
                                        "answer":  "quarantine",
@@ -13385,17 +17320,33 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                        "term":  "Quarantine",
                                        "korean":  "검역"
                                    },
-                    "parasite":  {
-                                     "english":  "An organism that lives in or on another organism and derives nutrients at the host\u0027s expense",
-                                     "answer":  "parasite",
-                                     "source":  "Parasite.md",
-                                     "answers":  [
-                                                     "parasite"
-                                                 ],
-                                     "type":  "vocabulary",
-                                     "term":  "Parasite",
-                                     "korean":  "기생충"
-                                 },
+                    "acupressure":  {
+                                        "morphology":  {
+                                                           "roots":  [
+                                                                         "acu(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "Treatment by applying pressure to specific points on the body",
+                                        "answer":  "acupressure",
+                                        "term":  "Acupressure",
+                                        "type":  "vocabulary",
+                                        "source":  "Acupressure.md",
+                                        "korean":  "지압",
+                                        "answers":  [
+                                                        "acupressure"
+                                                    ]
+                                    },
+                    "hypersomnia":  {
+                                        "english":  "Sleep of excessive depth or duration",
+                                        "answer":  "hypersomnia",
+                                        "source":  "Hypersomnia.md",
+                                        "answers":  [
+                                                        "hypersomnia"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Hypersomnia",
+                                        "korean":  "과다수면"
+                                    },
                     "hypoperistalsis":  {
                                             "morphology":  {
                                                                "prefixes":  [
@@ -13418,6 +17369,20 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                             "hypoperistalsis"
                                                         ]
                                         },
+                    "sphygm(o)":  {
+                                      "english":  "Pulse",
+                                      "answer":  "sphygm",
+                                      "source":  "sphygm(o).md",
+                                      "answers":  [
+                                                      "sphygm",
+                                                      "sphygmo",
+                                                      "sphygm/o",
+                                                      "sphygm(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "sphygm(o)",
+                                      "korean":  "맥박"
+                                  },
                     "central nervous system":  {
                                                    "english":  "The part of the nervous system consisting of the brain and spinal cord",
                                                    "answer":  "central nervous system",
@@ -13457,47 +17422,50 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "-lexia",
                                    "korean":  "읽기"
                                },
-                    "hemiplegia":  {
+                    "esophageal":  {
                                        "morphology":  {
                                                           "prefixes":  [
-                                                                           "hemi-"
+
                                                                        ],
                                                           "suffixes":  [
-                                                                           "-plegia"
-                                                                       ]
+
+                                                                       ],
+                                                          "roots":  [
+                                                                        "Esophag(o)"
+                                                                    ]
                                                       },
-                                       "english":  "Paralysis of one side of the body",
-                                       "answer":  "hemiplegia",
-                                       "term":  "Hemiplegia",
+                                       "english":  "Of or relating to the esophagus",
+                                       "answer":  "esophageal",
+                                       "term":  "Esophageal",
                                        "type":  "vocabulary",
-                                       "source":  "Hemiplegia.md",
-                                       "korean":  "반마비, 편측마비",
+                                       "source":  "Esophageal.md",
+                                       "korean":  "식도의",
                                        "answers":  [
-                                                       "hemiplegia"
+                                                       "esophageal"
                                                    ]
                                    },
-                    "ultrasonography":  {
-                                            "morphology":  {
-                                                               "prefixes":  [
-                                                                                "ultra-"
-                                                                            ],
-                                                               "suffixes":  [
-                                                                                "-graphy"
-                                                                            ],
-                                                               "roots":  [
-                                                                             "Son(o)"
-                                                                         ]
-                                                           },
-                                            "english":  "The diagnostic or therapeutic use of ultrasound and especially a noninvasive technique involving the formation of a two-dimensional image used for the examination and measurement of internal body structures and the detection of bodily abnormalities",
-                                            "answer":  "ultrasonography",
-                                            "term":  "Ultrasonography",
-                                            "type":  "vocabulary",
-                                            "source":  "Ultrasonography.md",
-                                            "korean":  "초음파촬영(술)",
-                                            "answers":  [
-                                                            "ultrasonography"
-                                                        ]
-                                        },
+                    "hemiplegia":  {
+                                       "english":  "Paralysis of one side of the body",
+                                       "answer":  "hemiplegia",
+                                       "source":  "Hemiplegia.md",
+                                       "answers":  [
+                                                       "hemiplegia"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Hemiplegia",
+                                       "korean":  "반마비, 편측마비"
+                                   },
+                    "hemorrhage":  {
+                                       "english":  "Abnormal or excessive bleeding",
+                                       "answer":  "hemorrhage",
+                                       "source":  "Hemorrhage.md",
+                                       "answers":  [
+                                                       "hemorrhage"
+                                                   ],
+                                       "type":  "vocabulary",
+                                       "term":  "Hemorrhage",
+                                       "korean":  "출혈"
+                                   },
                     "-itis":  {
                                   "english":  "Inflammation",
                                   "answer":  "itis",
@@ -13539,50 +17507,62 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                               }
                                                           ]
                                    },
+                    "sarc(o)":  {
+                                    "english":  "Flesh, muscular substance",
+                                    "answer":  "sarc",
+                                    "source":  "sarc(o).md",
+                                    "answers":  [
+                                                    "sarc",
+                                                    "sarco",
+                                                    "sarc/o",
+                                                    "sarc(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "sarc(o)",
+                                    "korean":  "살, 근육성 물질"
+                                },
                     "poliomyelitis":  {
-                                          "morphology":  {
-                                                             "prefixes":  [
-                                                                              "polio-"
-                                                                          ],
-                                                             "suffixes":  [
-                                                                              "-itis"
-                                                                          ],
-                                                             "roots":  [
-                                                                           "myel(o)"
-                                                                       ]
-                                                         },
                                           "english":  "An infectious viral disease marked by inflammation of nerve cells in the spinal cord and often paralysis",
                                           "answer":  "poliomyelitis",
-                                          "term":  "Poliomyelitis",
-                                          "type":  "vocabulary",
                                           "source":  "Poliomyelitis.md",
-                                          "korean":  "회색질척수염",
                                           "answers":  [
                                                           "poliomyelitis"
-                                                      ]
+                                                      ],
+                                          "type":  "vocabulary",
+                                          "term":  "Poliomyelitis",
+                                          "korean":  "회색질척수염"
                                       },
                     "intradermal":  {
-                                        "morphology":  {
-                                                           "prefixes":  [
-                                                                            "intra-"
-                                                                        ],
-                                                           "suffixes":  [
-                                                                            "-al"
-                                                                        ],
-                                                           "roots":  [
-                                                                         "Derm(o)"
-                                                                     ]
-                                                       },
                                         "english":  "Situated, occurring, or introduced within the skin",
                                         "answer":  "intradermal",
-                                        "term":  "Intradermal",
-                                        "type":  "vocabulary",
                                         "source":  "Intradermal.md",
-                                        "korean":  "피내의",
                                         "answers":  [
                                                         "intradermal"
-                                                    ]
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Intradermal",
+                                        "korean":  "피내의"
                                     },
+                    "osteosarcoma":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-oma"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "oste(o)",
+                                                                          "sarc(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "A malignant tumor of bone",
+                                         "answer":  "osteosarcoma",
+                                         "term":  "Osteosarcoma",
+                                         "type":  "vocabulary",
+                                         "source":  "Osteosarcoma.md",
+                                         "korean":  "뼈육종, 골육종",
+                                         "answers":  [
+                                                         "osteosarcoma"
+                                                     ]
+                                     },
                     "distal phalanx":  {
                                            "morphology":  {
                                                               "prefixes":  [
@@ -13659,46 +17639,77 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                    ]
                                    },
                     "tachypnea":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-                                                                          "tachy-"
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-pnea"
-                                                                      ]
-                                                     },
                                       "english":  "Abnormally rapid breathing",
                                       "answer":  "tachypnea",
-                                      "term":  "Tachypnea",
-                                      "type":  "vocabulary",
                                       "source":  "Tachypnea.md",
-                                      "korean":  "빈호흡, 빠른호흡",
                                       "answers":  [
                                                       "tachypnea"
-                                                  ]
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Tachypnea",
+                                      "korean":  "빈호흡, 빠른호흡"
                                   },
-                    "thoracocentesis":  {
-                                            "morphology":  {
-                                                               "prefixes":  [
-
-                                                                            ],
-                                                               "suffixes":  [
-                                                                                "-centesis"
-                                                                            ],
-                                                               "roots":  [
-                                                                             "Thorac(o)"
-                                                                         ]
-                                                           },
-                                            "english":  "Aspiration of fluid from the chest (as in empyema)",
-                                            "answer":  "thoracocentesis",
-                                            "term":  "Thoracocentesis",
-                                            "type":  "vocabulary",
-                                            "source":  "Thoracocentesis.md",
-                                            "korean":  "가슴천자, 흉강천자",
-                                            "answers":  [
-                                                            "thoracocentesis"
-                                                        ]
-                                        },
+                    "colonoscope":  {
+                                        "morphology":  {
+                                                           "suffixes":  [
+                                                                            "-scope"
+                                                                        ],
+                                                           "roots":  [
+                                                                         "col(o)"
+                                                                     ]
+                                                       },
+                                        "english":  "An instrument for viewing the colon",
+                                        "answer":  "colonoscope",
+                                        "term":  "Colonoscope",
+                                        "type":  "vocabulary",
+                                        "source":  "Colonoscope.md",
+                                        "korean":  "결장경",
+                                        "answers":  [
+                                                        "colonoscope"
+                                                    ]
+                                    },
+                    "substantia nigra":  {
+                                             "english":  "A layer of deeply pigmented gray matter situated in the midbrain and containing dopamine-producing nerve cells",
+                                             "answer":  "substantia nigra",
+                                             "source":  "Substantia nigra.md",
+                                             "answers":  [
+                                                             "substantia nigra"
+                                                         ],
+                                             "type":  "vocabulary",
+                                             "term":  "Substantia nigra",
+                                             "korean":  "흑(색)질"
+                                         },
+                    "phagocytosis":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-osis"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "phag(o)",
+                                                                          "cyt(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Engulfment and digestion of particles by cells",
+                                         "answer":  "phagocytosis",
+                                         "term":  "Phagocytosis",
+                                         "type":  "vocabulary",
+                                         "source":  "Phagocytosis.md",
+                                         "korean":  "포식, 포식작용",
+                                         "answers":  [
+                                                         "phagocytosis"
+                                                     ]
+                                     },
+                    "midline":  {
+                                    "english":  "A median line",
+                                    "answer":  "midline",
+                                    "source":  "Midline.md",
+                                    "answers":  [
+                                                    "midline"
+                                                ],
+                                    "type":  "vocabulary",
+                                    "term":  "Midline",
+                                    "korean":  "중심선"
+                                },
                     "-dynia":  {
                                    "english":  "Pain",
                                    "answer":  "dynia",
@@ -13723,51 +17734,61 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                     "term":  "-tropia",
                                     "korean":  "회전, 편위"
                                 },
-                    "cholelithiasis":  {
-                                           "morphology":  {
-                                                              "prefixes":  [
-
-                                                                           ],
-                                                              "suffixes":  [
-                                                                               "-iasis"
-                                                                           ],
-                                                              "roots":  [
-                                                                            "Chol(e)",
-                                                                            "Lith(o)"
-                                                                        ]
-                                                          },
-                                           "english":  "Production of gallstones; also the resulting abnormal condition",
-                                           "answer":  "cholelithiasis",
-                                           "term":  "Cholelithiasis",
-                                           "type":  "vocabulary",
-                                           "source":  "Cholelithiasis.md",
-                                           "korean":  "담석증, 쓸개돌증",
-                                           "answers":  [
-                                                           "cholelithiasis"
-                                                       ]
-                                       },
-                    "asphyxia":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "a-"
-                                                                     ],
-                                                        "suffixes":  [
-
-                                                                     ],
-                                                        "roots":  [
-
-                                                                  ]
-                                                    },
-                                     "english":  "The state of not being able to breathe",
-                                     "answer":  "asphyxia",
-                                     "term":  "Asphyxia",
-                                     "type":  "vocabulary",
-                                     "source":  "Asphyxia.md",
-                                     "korean":  "질식, 가사",
+                    "intercostal":  {
+                                        "english":  "Situated or occurring between the ribs",
+                                        "answer":  "intercostal",
+                                        "source":  "Intercostal.md",
+                                        "answers":  [
+                                                        "intercostal"
+                                                    ],
+                                        "type":  "vocabulary",
+                                        "term":  "Intercostal",
+                                        "korean":  "갈비사이의, 늑간의"
+                                    },
+                    "parasite":  {
+                                     "english":  "An organism that lives in or on another organism and derives nutrients at the host\u0027s expense",
+                                     "answer":  "parasite",
+                                     "source":  "Parasite.md",
                                      "answers":  [
-                                                     "asphyxia"
-                                                 ]
+                                                     "parasite"
+                                                 ],
+                                     "type":  "vocabulary",
+                                     "term":  "Parasite",
+                                     "korean":  "기생충"
                                  },
+                    "plastic surgery":  {
+                                            "english":  "Surgery concerned with repair, restoration, or improvement of body structures",
+                                            "answer":  "plastic surgery",
+                                            "source":  "Plastic surgery.md",
+                                            "answers":  [
+                                                            "plastic surgery"
+                                                        ],
+                                            "type":  "vocabulary",
+                                            "term":  "Plastic surgery",
+                                            "korean":  "성형외과학"
+                                        },
+                    "bronchiolitis":  {
+                                          "morphology":  {
+                                                             "prefixes":  [
+
+                                                                          ],
+                                                             "suffixes":  [
+                                                                              "-itis"
+                                                                          ],
+                                                             "roots":  [
+                                                                           "Bronchiol(o)"
+                                                                       ]
+                                                         },
+                                          "english":  "Inflammation of the bronchioles",
+                                          "answer":  "bronchiolitis",
+                                          "term":  "Bronchiolitis",
+                                          "type":  "vocabulary",
+                                          "source":  "Bronchiolitis.md",
+                                          "korean":  "세기관지염",
+                                          "answers":  [
+                                                          "bronchiolitis"
+                                                      ]
+                                      },
                     "bacteriostatic antibiotics":  {
                                                        "morphology":  {
                                                                           "prefixes":  [
@@ -13790,25 +17811,34 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                                        "bacteriostatic antibiotics"
                                                                    ]
                                                    },
-                    "ectoderm":  {
-                                     "morphology":  {
-                                                        "prefixes":  [
-                                                                         "ecto-"
-                                                                     ],
-                                                        "roots":  [
-                                                                      "Derm(o)"
-                                                                  ]
-                                                    },
-                                     "english":  "The outermost of the three primary germ layers of an embryo",
-                                     "answer":  "ectoderm",
-                                     "term":  "Ectoderm",
-                                     "type":  "vocabulary",
-                                     "source":  "Ectoderm.md",
-                                     "korean":  "외배엽",
-                                     "answers":  [
-                                                     "ectoderm"
-                                                 ]
-                                 },
+                    "granul(o)":  {
+                                      "english":  "Granule",
+                                      "answer":  "granul",
+                                      "source":  "granul(o).md",
+                                      "answers":  [
+                                                      "granul",
+                                                      "granulo",
+                                                      "granul/o",
+                                                      "granul(o)"
+                                                  ],
+                                      "type":  "root",
+                                      "term":  "granul(o)",
+                                      "korean":  "과립"
+                                  },
+                    "glyc(o)":  {
+                                    "english":  "Carbohydrate, sugar",
+                                    "answer":  "glyc",
+                                    "source":  "glyc(o).md",
+                                    "answers":  [
+                                                    "glyc",
+                                                    "glyco",
+                                                    "glyc/o",
+                                                    "glyc(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "glyc(o)",
+                                    "korean":  "탄수화물, 당"
+                                },
                     "alg(o)":  {
                                    "english":  "Pain",
                                    "answer":  "alg",
@@ -13823,24 +17853,44 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                    "term":  "alg(o)",
                                    "korean":  "통증"
                                },
+                    "physi(o)":  {
+                                     "english":  "Nature, physiology, physics",
+                                     "answer":  "physi",
+                                     "source":  "physi(o).md",
+                                     "answers":  [
+                                                     "physi",
+                                                     "physio",
+                                                     "physi/o",
+                                                     "physi(o)"
+                                                 ],
+                                     "type":  "root",
+                                     "term":  "physi(o)",
+                                     "korean":  "자연, 생리, 물리"
+                                 },
+                    "angi(o)":  {
+                                    "english":  "Vessel, blood vessel",
+                                    "answer":  "angi",
+                                    "source":  "angi(o).md",
+                                    "answers":  [
+                                                    "angi",
+                                                    "angio",
+                                                    "angi/o",
+                                                    "angi(o)"
+                                                ],
+                                    "type":  "root",
+                                    "term":  "angi(o)",
+                                    "korean":  "혈관"
+                                },
                     "infraorbital":  {
-                                         "morphology":  {
-                                                            "prefixes":  [
-                                                                             "infra-"
-                                                                         ],
-                                                            "vocabulary":  [
-                                                                               "Orbital"
-                                                                           ]
-                                                        },
                                          "english":  "Situated below the orbit of the eye",
                                          "answer":  "infraorbital",
-                                         "term":  "Infraorbital",
-                                         "type":  "vocabulary",
                                          "source":  "Infraorbital.md",
-                                         "korean":  "눈확아래의, 안와하의",
                                          "answers":  [
                                                          "infraorbital"
-                                                     ]
+                                                     ],
+                                         "type":  "vocabulary",
+                                         "term":  "Infraorbital",
+                                         "korean":  "눈확아래의, 안와하의"
                                      },
                     "-tion":  {
                                   "english":  "Action or process",
@@ -13960,28 +18010,58 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                             }
                                                         ]
                                  },
-                    "glossitis":  {
-                                      "morphology":  {
-                                                         "prefixes":  [
-
-                                                                      ],
-                                                         "suffixes":  [
-                                                                          "-itis"
-                                                                      ],
-                                                         "roots":  [
-                                                                       "Gloss(o)"
-                                                                   ]
-                                                     },
-                                      "english":  "Inflammation of the tongue",
-                                      "answer":  "glossitis",
-                                      "term":  "Glossitis",
-                                      "type":  "vocabulary",
-                                      "source":  "Glossitis.md",
-                                      "korean":  "설염, 혀염",
+                    "oncogene":  {
+                                     "morphology":  {
+                                                        "suffixes":  [
+                                                                         "-gen"
+                                                                     ],
+                                                        "roots":  [
+                                                                      "onc(o)"
+                                                                  ]
+                                                    },
+                                     "english":  "A gene capable of causing or promoting tumor formation",
+                                     "answer":  "oncogene",
+                                     "term":  "Oncogene",
+                                     "type":  "vocabulary",
+                                     "source":  "Oncogene.md",
+                                     "korean":  "종양유전자",
+                                     "answers":  [
+                                                     "oncogene"
+                                                 ]
+                                 },
+                    "ambulance":  {
+                                      "english":  "A vehicle for transporting sick or injured people",
+                                      "answer":  "ambulance",
+                                      "source":  "Ambulance.md",
                                       "answers":  [
-                                                      "glossitis"
-                                                  ]
+                                                      "ambulance"
+                                                  ],
+                                      "type":  "vocabulary",
+                                      "term":  "Ambulance",
+                                      "korean":  "구급차"
                                   },
+                    "osteomalacia":  {
+                                         "morphology":  {
+                                                            "prefixes":  [
+
+                                                                         ],
+                                                            "suffixes":  [
+                                                                             "-malacia"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "Oste(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Softening of the bones due to defective mineralization",
+                                         "answer":  "osteomalacia",
+                                         "term":  "Osteomalacia",
+                                         "type":  "vocabulary",
+                                         "source":  "Osteomalacia.md",
+                                         "korean":  "골연화증",
+                                         "answers":  [
+                                                         "osteomalacia"
+                                                     ]
+                                     },
                     "-ium":  {
                                  "english":  "Structure, tissue",
                                  "answer":  "ium",
@@ -14031,24 +18111,15 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                      "korean":  "색"
                                  },
                     "melanocytic system":  {
-                                               "morphology":  {
-                                                                  "suffixes":  [
-                                                                                   "-ic"
-                                                                               ],
-                                                                  "roots":  [
-                                                                                "melan(o)",
-                                                                                "cyt(o)"
-                                                                            ]
-                                                              },
                                                "english":  "A system of melanin-producing cells in the skin and other organs",
                                                "answer":  "melanocytic system",
-                                               "term":  "Melanocytic system",
-                                               "type":  "vocabulary",
                                                "source":  "Melanocytic system.md",
-                                               "korean":  "멜라닌세포계",
                                                "answers":  [
                                                                "melanocytic system"
-                                                           ]
+                                                           ],
+                                               "type":  "vocabulary",
+                                               "term":  "Melanocytic system",
+                                               "korean":  "멜라닌세포계"
                                            },
                     "-pathy":  {
                                    "english":  "Disease",
@@ -14073,22 +18144,31 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                       "term":  "Remission",
                                       "korean":  "완화, 진정"
                                   },
-                    "midline":  {
-                                    "english":  "A median line",
-                                    "answer":  "midline",
-                                    "source":  "Midline.md",
-                                    "answers":  [
-                                                    "midline"
-                                                ],
-                                    "type":  "vocabulary",
-                                    "term":  "Midline",
-                                    "korean":  "중심선"
-                                }
+                    "leukocytosis":  {
+                                         "morphology":  {
+                                                            "suffixes":  [
+                                                                             "-osis"
+                                                                         ],
+                                                            "roots":  [
+                                                                          "leuk(o)",
+                                                                          "cyt(o)"
+                                                                      ]
+                                                        },
+                                         "english":  "Increase in the number of white blood cells",
+                                         "answer":  "leukocytosis",
+                                         "term":  "Leukocytosis",
+                                         "type":  "vocabulary",
+                                         "source":  "Leukocytosis.md",
+                                         "korean":  "백혈구증가증",
+                                         "answers":  [
+                                                         "leukocytosis"
+                                                     ]
+                                     }
                 },
     "missingEntries":  [
 
                        ],
-    "generatedAt":  "2026-04-14 18:22:44",
+    "generatedAt":  "2026-04-22 12:08:57",
     "weeks":  [
                   {
                       "title":  "1주차 - 용어의 구성",
@@ -14621,7 +18701,10 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "pharmac(o)",
                                                   "pharyng(o)",
                                                   "sept(o)",
-                                                  "somn(i)"
+                                                  "seps(o)",
+                                                  "somn(i)",
+                                                  "somn(o)",
+                                                  "ven(o)"
                                               ]
                                 }
                   },
@@ -14791,6 +18874,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "alb(o)",
                                                   "cellul(o)",
                                                   "chrom(o)",
+                                                  "chron(o)",
                                                   "cost(o)",
                                                   "cyan(o)",
                                                   "glauc(o)",
@@ -14800,6 +18884,7 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "morph(o)",
                                                   "myel(o)",
                                                   "nas(o)",
+                                                  "nat(i)",
                                                   "or(o)",
                                                   "peritone(o)",
                                                   "plasm(o)",
@@ -14944,6 +19029,264 @@ window.MEDICAL_ENGLISH_QUIZ_DATA = {
                                                   "ventr(i)",
                                                   "ventr(o)",
                                                   "viscer(o)"
+                                              ]
+                                }
+                  },
+                  {
+                      "title":  "7주차 - Medical Terminology",
+                      "week":  7,
+                      "items":  {
+                                    "prefixes":  [
+                                                     "cis-",
+                                                     "idio-",
+                                                     "ortho-",
+                                                     "paed-",
+                                                     "paedo-",
+                                                     "pedo-"
+                                                 ],
+                                    "vocabulary":  [
+                                                       "Abdominocentesis",
+                                                       "Acupressure",
+                                                       "Acupuncture",
+                                                       "Adenocarcinoma",
+                                                       "Adenopathy",
+                                                       "Agoraphobia",
+                                                       "Allergy",
+                                                       "Amnioscope",
+                                                       "Anesthesiology",
+                                                       "Angiogenesis",
+                                                       "Antenatal",
+                                                       "Arthralgia",
+                                                       "Arthritis",
+                                                       "Arthrocentesis",
+                                                       "Arthropod",
+                                                       "Aseptic",
+                                                       "Axillary artery",
+                                                       "Biochemistry",
+                                                       "Biohazard",
+                                                       "Bronchostenosis",
+                                                       "Carcinoma",
+                                                       "Cardiovascular disease",
+                                                       "Cardiovascular surgery",
+                                                       "Cerebellum",
+                                                       "Cerebrovascular accident",
+                                                       "Cervicofacial",
+                                                       "Cervicovaginal",
+                                                       "Chemotaxis",
+                                                       "Chest surgery",
+                                                       "Chiropractic",
+                                                       "Chondrocyte",
+                                                       "Chondromalacia",
+                                                       "Chronometry",
+                                                       "Cis-activation",
+                                                       "Clinical pathology",
+                                                       "Colonoscope",
+                                                       "Computerized tomography",
+                                                       "Costal cartilage",
+                                                       "Costochondral",
+                                                       "Cystectomy",
+                                                       "Cytokine",
+                                                       "Cytology",
+                                                       "Cytoplasm",
+                                                       "Dentistry",
+                                                       "Dermatitis",
+                                                       "Dermatology",
+                                                       "Dissection",
+                                                       "Dysphagia",
+                                                       "Electrolyte",
+                                                       "Embryology",
+                                                       "Embryonic",
+                                                       "Emergency medicine",
+                                                       "Encephalomyelitis",
+                                                       "Encephalomyelopathy",
+                                                       "Endocrinology",
+                                                       "Enterocolitis",
+                                                       "Eosinophil",
+                                                       "Epidemiology",
+                                                       "Excision",
+                                                       "Family medicine",
+                                                       "Fetal",
+                                                       "Gastroesophageal reflux disease",
+                                                       "Genome",
+                                                       "Genotype",
+                                                       "Glandular tissue",
+                                                       "Glossodynia",
+                                                       "Glycosuria",
+                                                       "Gonad",
+                                                       "Gonorrhea",
+                                                       "Granulocyte",
+                                                       "Granuloma",
+                                                       "Granulomas",
+                                                       "Gross anatomy",
+                                                       "Gynecology",
+                                                       "Gynecomastia",
+                                                       "Hematology",
+                                                       "Hematuria",
+                                                       "Hemophilia",
+                                                       "Hemorrhage",
+                                                       "Hepatectomy",
+                                                       "Hepatobiliary",
+                                                       "Heterologous",
+                                                       "Histology",
+                                                       "Homologous",
+                                                       "Hydrophilic",
+                                                       "Hydrophobic",
+                                                       "Hyperglycemia",
+                                                       "Iatrogenic",
+                                                       "Idiopathic",
+                                                       "Idiotype",
+                                                       "Immortal",
+                                                       "Immunology",
+                                                       "Incision",
+                                                       "Incisor",
+                                                       "Infectious disease",
+                                                       "Innate",
+                                                       "Internal medicine",
+                                                       "Internal medicine subspecialties",
+                                                       "Ischemia",
+                                                       "Laryngotomy",
+                                                       "Leukocytosis",
+                                                       "Lithotomy",
+                                                       "Lymphocyte",
+                                                       "Lymphoma",
+                                                       "Manometer",
+                                                       "Maxillofacial",
+                                                       "Mes",
+                                                       "Metamorphosis",
+                                                       "Microscopic anatomy",
+                                                       "Morphology",
+                                                       "Mortality",
+                                                       "Mucocutaneous",
+                                                       "Mucopurulent",
+                                                       "Myeloma",
+                                                       "Myocardial ischemia",
+                                                       "Nephrology",
+                                                       "Nephrotoxicity",
+                                                       "Neuroanatomy",
+                                                       "Neurology",
+                                                       "Neurosurgery",
+                                                       "Nuclear medicine",
+                                                       "Obstetrics and gynecology",
+                                                       "Occupational medicine",
+                                                       "Oncogene",
+                                                       "Oncology",
+                                                       "Ophthalmoplegia",
+                                                       "Orthopedic surgery",
+                                                       "Orthopedics",
+                                                       "Osteomyelitis",
+                                                       "Osteoporosis",
+                                                       "Osteosarcoma",
+                                                       "Otorhinolaryngology",
+                                                       "Ovarian cyst",
+                                                       "Parasitology",
+                                                       "Pathogen",
+                                                       "Pathogenesis",
+                                                       "Pathology",
+                                                       "Pedialgia",
+                                                       "Pediatrics",
+                                                       "Pedicure",
+                                                       "Pedophilia",
+                                                       "Peritoneal dialysis",
+                                                       "Peritonitis",
+                                                       "Phagocytosis",
+                                                       "Pharmacology",
+                                                       "Physiology",
+                                                       "Physiotherapy",
+                                                       "Plasma analysis",
+                                                       "Plastic surgery",
+                                                       "Pleural cavity",
+                                                       "Pneumonia",
+                                                       "Pneumothorax",
+                                                       "Podalgia",
+                                                       "Podiatry",
+                                                       "Polymorphism",
+                                                       "Prescription",
+                                                       "Preventive medicine",
+                                                       "Psychiatry",
+                                                       "Psychosis",
+                                                       "Psychosomatic",
+                                                       "Public health",
+                                                       "Pulmonary function test",
+                                                       "Pulmonology",
+                                                       "Pyelonephritis",
+                                                       "Radiology",
+                                                       "Radiotherapy",
+                                                       "Rectosigmoid",
+                                                       "Rehabilitation medicine",
+                                                       "Renography",
+                                                       "Renovascular",
+                                                       "Resection",
+                                                       "Sarcoid",
+                                                       "Sphygmomanometer",
+                                                       "Sphygmos",
+                                                       "Splenomegaly",
+                                                       "Suppurative",
+                                                       "Surgery",
+                                                       "Synchronizer",
+                                                       "Thorax",
+                                                       "Thrombocytopenia",
+                                                       "Tracheobronchitis",
+                                                       "Trans-activation",
+                                                       "Ureteral stone",
+                                                       "Urogenital",
+                                                       "Urolithiasis",
+                                                       "Urology",
+                                                       "Venous blood"
+                                                   ],
+                                    "suffixes":  [
+                                                     "-philia",
+                                                     "-rrhagia",
+                                                     "-taxis",
+                                                     "-uria"
+                                                 ],
+                                    "roots":  [
+                                                  "acu(o)",
+                                                  "angi(o)",
+                                                  "arthr(o)",
+                                                  "axill(o)",
+                                                  "bili(o)",
+                                                  "chir(o)",
+                                                  "cis(o)",
+                                                  "cyst(o)",
+                                                  "eosin(o)",
+                                                  "esthesi(o)",
+                                                  "faci(o)",
+                                                  "gen(o)",
+                                                  "glyc(o)",
+                                                  "gnos(o)",
+                                                  "gon(o)",
+                                                  "granul(o)",
+                                                  "gynec(o)",
+                                                  "iatr(o)",
+                                                  "isch(o)",
+                                                  "lymph(o)",
+                                                  "maxill(o)",
+                                                  "mort(o)",
+                                                  "muc(o)",
+                                                  "onc(o)",
+                                                  "orth(o)",
+                                                  "ped(i)",
+                                                  "ped(o)",
+                                                  "phil(o)",
+                                                  "phob(o)",
+                                                  "physi(o)",
+                                                  "pne(o)",
+                                                  "pneum(o)",
+                                                  "pneumon(o)",
+                                                  "pod(o)",
+                                                  "psych(o)",
+                                                  "pulmon(o)",
+                                                  "pyel(o)",
+                                                  "radi(o)",
+                                                  "ren(o)",
+                                                  "sarc(o)",
+                                                  "secti(o)",
+                                                  "somat(o)",
+                                                  "sphygm(o)",
+                                                  "ur(o)",
+                                                  "ureter(o)",
+                                                  "vagin(o)",
+                                                  "vascul(o)"
                                               ]
                                 }
                   }

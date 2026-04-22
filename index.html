@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>의학영어 땡시</title>
-  <link rel="stylesheet" href="./styles.css?v=20260415-6">
+  <link rel="stylesheet" href="./styles.css?v=20260422-1">
 </head>
 <body>
   <main class="app-shell">
@@ -118,16 +118,21 @@
           <span>실전 레이아웃으로 시작</span>
         </label>
         <label class="checkbox inline-checkbox">
-          <input id="test-mode-checkbox" type="checkbox">
-          <span>테스트 모드</span>
+          <input id="practical-question-checkbox" type="checkbox">
+          <span>실전 문항 추가</span>
         </label>
         <label class="checkbox inline-checkbox">
           <input id="learning-mode-checkbox" type="checkbox">
           <span>학습 모드</span>
         </label>
+        <label class="checkbox inline-checkbox">
+          <input id="test-mode-checkbox" type="checkbox">
+          <span>테스트 모드</span>
+        </label>
       </div>
 
       <div class="notice">
+        <p>실전 문항 추가는 조건에 맞는 용어를 여러 개 쓰는 비정형 문항을 추가하기 위한 옵션입니다.</p>
         <p>학습 모드는 정답 확인 뒤 다음 문제 버튼을 눌러야 넘어갑니다.</p>
         <p>테스트 모드는 새로고침 전까지 이미 맞힌 문제를 다음 출제에서 제외합니다.</p>
       </div>
@@ -244,6 +249,7 @@
             <label class="field answer-field">
               <span id="answer-label">정답 입력</span>
               <input id="answer-input" type="text" autocomplete="off" spellcheck="false">
+              <div id="multi-answer-inputs" class="multi-answer-inputs hidden"></div>
             </label>
 
             <label id="exam-answer-toggle-wrap" class="checkbox exam-answer-toggle">
@@ -278,7 +284,7 @@
     </section>
   </main>
 
-  <script src="./quiz-data.js?v=20260415-6"></script>
-  <script src="./app.js?v=20260415-6"></script>
+  <script src="./quiz-data.js?v=20260422-5"></script>
+  <script src="./app.js?v=20260422-5"></script>
 </body>
 </html>

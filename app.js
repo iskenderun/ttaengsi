@@ -24,8 +24,109 @@
     definition: "영어 설명",
     image: "이미지",
     gloss: "영어 설명",
-    cloze: "빈칸"
+    cloze: "빈칸",
+    abbreviation: "약어",
+    practical: "실전 문항"
   };
+
+  const PRACTICAL_SUFFIX_LIST_SPECS = Object.freeze([
+    Object.freeze({ suffix: "-itis", meaning: "염증", count: 5 }),
+    Object.freeze({ suffix: "-osis", meaning: "비정상 상태/증", count: 5 }),
+    Object.freeze({ suffix: "-cyte", meaning: "세포", count: 5 }),
+    Object.freeze({ suffix: "-algia", meaning: "통증", count: 3 }),
+    Object.freeze({ suffix: "-ectomy", meaning: "절제술/제거술", count: 3 }),
+    Object.freeze({ suffix: "-oma", meaning: "종양/덩어리", count: 5 }),
+    Object.freeze({ suffix: "-plasia", meaning: "형성/발달", count: 3 }),
+    Object.freeze({ suffix: "-trophy", meaning: "영양/발달", count: 3 }),
+    Object.freeze({ suffix: "-centesis", meaning: "천자", count: 3 }),
+    Object.freeze({ suffix: "-emia", meaning: "혈액 상태", count: 3 }),
+    Object.freeze({ suffix: "-megaly", meaning: "비대", count: 3 }),
+    Object.freeze({ suffix: "-penia", meaning: "감소/결핍", count: 3 }),
+    Object.freeze({ suffix: "-pnea", meaning: "호흡", count: 3 }),
+    Object.freeze({ suffix: "-rrhexis", meaning: "파열", count: 3 }),
+    Object.freeze({ suffix: "-scope", meaning: "관찰 기구", count: 3 }),
+    Object.freeze({ suffix: "-meter", meaning: "측정 기구", count: 3 })
+  ]);
+  const PRACTICAL_VOCAB_LIST_SPECS = Object.freeze([
+    Object.freeze({
+      id: "medical-field-or-department",
+      title: "의학 분야 또는 진료과에 해당하는 용어 5가지를 쓰시오.",
+      count: 5,
+      terms: Object.freeze([
+        "Anesthesiology",
+        "Cardiology",
+        "Cardiovascular surgery",
+        "Chest surgery",
+        "Clinical pathology",
+        "Cytology",
+        "Dentistry",
+        "Dermatology",
+        "Embryology",
+        "Emergency medicine",
+        "Endocrinology",
+        "Epidemiology",
+        "Family medicine",
+        "Gastroenterology",
+        "Gynecology",
+        "Hematology",
+        "Histology",
+        "Immunology",
+        "Internal medicine",
+        "Nephrology",
+        "Neurology",
+        "Neurosurgery",
+        "Nuclear medicine",
+        "Obstetrics and gynecology",
+        "Occupational medicine",
+        "Oncology",
+        "Ophthalmology",
+        "Orthopedic surgery",
+        "Orthopedics",
+        "Otorhinolaryngology",
+        "Parasitology",
+        "Pathology",
+        "Pediatrics",
+        "Pharmacology",
+        "Physiology",
+        "Plastic surgery",
+        "Preventive medicine",
+        "Psychiatry",
+        "Public health",
+        "Pulmonology",
+        "Radiology",
+        "Rehabilitation medicine",
+        "Surgery",
+        "Urology"
+      ])
+    }),
+    Object.freeze({
+      id: "surgery-field",
+      title: "Surgery가 들어간 진료 분야 3가지를 쓰시오.",
+      count: 3,
+      terms: Object.freeze([
+        "Cardiovascular surgery",
+        "Chest surgery",
+        "Neurosurgery",
+        "Orthopedic surgery",
+        "Plastic surgery"
+      ])
+    })
+  ]);
+  const PRACTICAL_ORGAN_LIST_SPECS = Object.freeze([
+    Object.freeze({ id: "digestive-system", label: "Digestive system", terms: Object.freeze(["mouth", "pharynx", "esophagus", "stomach", "small intestine", "large intestine", "liver", "gall bladder", "pancreas"]) }),
+    Object.freeze({ id: "urinary-system", label: "Urinary system", terms: Object.freeze(["kidney", "ureter", "bladder", "urethra"]) }),
+    Object.freeze({ id: "respiratory-system", label: "Respiratory system", terms: Object.freeze(["nose", "larynx", "trachea", "bronchus", "lung"]) }),
+    Object.freeze({ id: "female-reproductive-system", label: "여성의 reproductive system", terms: Object.freeze(["ovary", "fallopian tube", "uterus", "vagina", "breast"]) }),
+    Object.freeze({ id: "male-reproductive-system", label: "남성의 reproductive system", terms: Object.freeze(["testicle", "urethra", "prostate"]) }),
+    Object.freeze({ id: "endocrine-system", label: "Endocrine system", terms: Object.freeze(["thyroid gland", "hypophysis", "pancreas", "parathyroid gland", "thymus"]) }),
+    Object.freeze({ id: "nervous-system", label: "Nervous system", terms: Object.freeze(["brain", "spinal cord", "neuron"]) }),
+    Object.freeze({ id: "cardiovascular-system", label: "Cardiovascular system", terms: Object.freeze(["heart", "vessel", "lymph", "lymph node", "spleen"]) }),
+    Object.freeze({ id: "musculoskeletal-system", label: "Musculoskeletal system", terms: Object.freeze(["muscle", "bone", "joint"]) }),
+    Object.freeze({ id: "integumentary-system", label: "Integumentary system", terms: Object.freeze(["skin", "hair", "nail"]) }),
+    Object.freeze({ id: "thoracic-cavity", label: "Thoracic cavity", terms: Object.freeze(["lung", "heart", "esophagus", "trachea", "thymus", "aorta"]) }),
+    Object.freeze({ id: "abdominal-cavity", label: "Abdominal cavity", terms: Object.freeze(["stomach", "intestine", "pancreas", "spleen", "liver", "gall bladder"]) }),
+    Object.freeze({ id: "pelvic-cavity", label: "Pelvic cavity", terms: Object.freeze(["bladder", "ureter", "urethra", "uterus"]) })
+  ]);
 
   const HELP_CONTENT = {
     "setup-overview": {
@@ -98,6 +199,7 @@
     "study-modes": {
       title: "학습/테스트 모드",
       blocks: [
+        { label: "실전 문항 추가", value: "조건에 맞는 용어를 여러 개 쓰는 비정형 실전 문항을 추가합니다." },
         { label: "학습 모드", value: "정답 확인 뒤 다음 문제 버튼을 눌러야 넘어갑니다." },
         { label: "테스트 모드", value: "새로고침 전까지 이미 맞힌 문제를 다음 출제에서 제외합니다." }
       ]
@@ -160,9 +262,10 @@
     "-genous": "정답을 s로 끝내시오.",
     "ecto-": "정답에 알파벳 c를 포함하시오.",
     "ex-": "정답에 알파벳 x를 포함하시오.",
-    "hyper-": "정답에 알파벳 y를 포함하시오.",
-    "supra-": "정답에 알파벳 a를 포함하시오.",
-    "super-": "정답에 알파벳 e를 포함하고 a와 y를 포함하지 마시오.",
+    "hyper-": "정답을 h로 시작하시오.",
+    "supra-": "정답을 supr로 시작하시오.",
+    "super-": "정답을 supe로 시작하시오.",
+    "ultra-": "정답을 u로 시작하시오.",
     "ante-": "정답에 알파벳 n을 포함하시오.",
     "pre-": "정답에 연속 알파벳 re를 포함하시오.",
     "pro-": "정답에 알파벳 o를 포함하시오.",
@@ -189,7 +292,28 @@
     "alb(o)": "정답에 알파벳 a를 포함하시오.",
     "leuk(o)": "정답에 알파벳 e를 포함하시오.",
     "abdomin(o)": "정답을 a로 시작하시오.",
-    "lapar(o)": "정답을 l로 시작하시오."
+    "lapar(o)": "정답을 l로 시작하시오.",
+    "pneum(o)": "정답을 m으로 끝내시오.",
+    "pneumon(o)": "정답에 알파벳 l을 포함하지 않고 n으로 끝내시오.",
+    "pulmon(o)": "정답에 알파벳 l을 포함하시오.",
+    "nephr(o)": "정답을 n으로 시작하시오.",
+    "ren(o)": "정답을 r로 시작하시오.",
+    "angi(o)": "정답을 a로 시작하시오.",
+    "vascul(o)": "정답을 v로 시작하시오.",
+    "ped(i)": "정답에 알파벳 e를 포함하시오.",
+    "pod(o)": "정답에 알파벳 o를 포함하시오.",
+    "bili(o)": "정답을 b로 시작하시오.",
+    "chol(e)": "정답을 c로 시작하시오.",
+    "mort(o)": "정답을 m으로 시작하시오.",
+    "necr(o)": "정답을 n으로 시작하시오.",
+    "paed-": "정답을 d로 끝내시오.",
+    "paedo-": "정답에 알파벳 a를 포함하고 o로 끝내시오.",
+    "pedo-": "정답에 알파벳 a를 포함하지 않고 o로 끝내시오.",
+    "per-": "정답을 p로 시작하시오.",
+    "dia-": "정답을 d로 시작하시오.",
+    "trans-": "정답을 t로 시작하시오.",
+    "dys-": "정답을 d로 시작하시오.",
+    "mal-": "정답을 m으로 시작하시오."
   });
   const VOCAB_PROMPT_CONSTRAINTS = Object.freeze({
     "hypodermic": "정답에 알파벳 h를 포함하시오.",
@@ -202,6 +326,14 @@
     "hemopoiesis": "정답에 알파벳 t를 포함하지 마시오.",
     "membraneous": "정답에 연속 알파벳 eo를 포함하시오.",
     "membranous": "정답에 연속 알파벳 eo를 포함하지 마시오.",
+    "excision": "정답을 e로 시작하시오.",
+    "resection": "정답을 r로 시작하시오.",
+    "granuloma": "정답을 a로 끝내시오.",
+    "granulomas": "정답을 s로 끝내시오.",
+    "pedialgia": "정답에 알파벳 e를 포함하시오.",
+    "podalgia": "정답에 알파벳 o를 포함하시오.",
+    "antenatal": "정답을 a로 시작하시오.",
+    "prenatal": "정답을 p로 시작하시오.",
     "polydactylia": "정답을 a로 끝내시오.",
     "polydactyly": "정답을 y로 끝내시오.",
     "syndactylia": "정답을 a로 끝내시오.",
@@ -222,6 +354,10 @@
     "horizontal": "정답을 h로 시작하시오.",
     "transverse plane": "정답을 t로 시작하시오.",
     "horizontal plane": "정답을 h로 시작하시오."
+  });
+  const ADDITIONAL_ACCEPTED_ANSWERS = Object.freeze({
+    "computed tomography": Object.freeze(["computed tomography", "computerized tomography"]),
+    "computerized tomography": Object.freeze(["computerized tomography", "computed tomography"])
   });
   const VOCAB_IMAGE_PROMPT_OVERRIDES = Object.freeze({
     electrocardiograph: {
@@ -252,6 +388,42 @@
     "computed tomography": Object.freeze({ mode: "whole" }),
     "otitis media": Object.freeze({ mode: "whole" }),
     "stomach ulcer": Object.freeze({ mode: "whole" }),
+    "cardiovascular surgery": Object.freeze({ mode: "whole" }),
+    "chest surgery": Object.freeze({ mode: "whole" }),
+    "clinical pathology": Object.freeze({ mode: "whole" }),
+    "emergency medicine": Object.freeze({ mode: "whole" }),
+    "family medicine": Object.freeze({ mode: "whole" }),
+    "gross anatomy": Object.freeze({ mode: "whole" }),
+    "internal medicine": Object.freeze({ mode: "whole" }),
+    "internal medicine subspecialties": Object.freeze({ mode: "whole" }),
+    "microscopic anatomy": Object.freeze({ mode: "whole" }),
+    "nuclear medicine": Object.freeze({ mode: "whole" }),
+    "obstetrics and gynecology": Object.freeze({ mode: "whole" }),
+    "occupational medicine": Object.freeze({ mode: "whole" }),
+    "orthopedic surgery": Object.freeze({ mode: "whole" }),
+    "plastic surgery": Object.freeze({ mode: "whole" }),
+    "preventive medicine": Object.freeze({ mode: "whole" }),
+    "public health": Object.freeze({ mode: "whole" }),
+    "rehabilitation medicine": Object.freeze({ mode: "whole" }),
+    "axillary artery": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "cardiovascular disease": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "cerebrovascular accident": Object.freeze({ blankWordIndexes: Object.freeze([0]), abbreviation: "CVA" }),
+    "computerized tomography": Object.freeze({
+      abbreviation: "CT",
+      acceptedAnswers: Object.freeze(["computerized tomography", "computed tomography"])
+    }),
+    "costal cartilage": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "gastroesophageal reflux disease": Object.freeze({ blankWordIndexes: Object.freeze([0]), abbreviation: "GERD" }),
+    "glandular tissue": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "infectious disease": Object.freeze({ mode: "whole" }),
+    "myocardial ischemia": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "ovarian cyst": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "peritoneal dialysis": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "plasma analysis": Object.freeze({ mode: "whole" }),
+    "pleural cavity": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "pulmonary function test": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "ureteral stone": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
+    "venous blood": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
     "frontal plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
     "coronal plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
     "sagittal plane": Object.freeze({ blankWordIndexes: Object.freeze([0]) }),
@@ -302,6 +474,7 @@
   const customQuestionCountInput = document.getElementById("custom-question-count");
   const learningModeCheckbox = document.getElementById("learning-mode-checkbox");
   const layoutModeCheckbox = document.getElementById("layout-mode-checkbox");
+  const practicalQuestionCheckbox = document.getElementById("practical-question-checkbox");
   const testModeCheckbox = document.getElementById("test-mode-checkbox");
   const listCategoryFilter = document.getElementById("list-category-filter");
   const dataSummary = document.getElementById("data-summary");
@@ -330,6 +503,7 @@
   const timerText = document.getElementById("timer-text");
   const examTimerText = document.getElementById("exam-timer-text");
   const examSessionMeta = document.getElementById("exam-session-meta");
+  const examAnswerToggleWrap = document.getElementById("exam-answer-toggle-wrap");
   const examAnswerVisibilityCheckbox = document.getElementById("exam-answer-visibility");
   const progressFill = document.getElementById("progress-fill");
   const metaWeek = document.getElementById("meta-week");
@@ -339,6 +513,7 @@
   const questionBody = document.getElementById("question-body");
   const answerLabel = document.getElementById("answer-label");
   const answerInput = document.getElementById("answer-input");
+  const multiAnswerInputs = document.getElementById("multi-answer-inputs");
   const feedback = document.getElementById("feedback");
   const resultSummary = document.getElementById("result-summary");
   const resultStats = document.getElementById("result-stats");
@@ -412,6 +587,21 @@
     answerInput.addEventListener("paste", handleExamAnswerPaste);
     answerInput.addEventListener("click", keepExamCaretAtEnd);
     answerInput.addEventListener("focus", keepExamCaretAtEnd);
+    if (multiAnswerInputs) {
+      multiAnswerInputs.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") {
+          return;
+        }
+
+        event.preventDefault();
+        if (!nextButton.classList.contains("hidden")) {
+          goToNextQuestion();
+          return;
+        }
+
+        submitAnswer(false);
+      });
+    }
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && listDetail && !listDetail.classList.contains("hidden")) {
@@ -640,7 +830,20 @@
     return state.layoutMode === "exam";
   }
 
+  function isMultiAnswerQuestion(question) {
+    return Boolean(question && question.answerMode === "multi-any-order");
+  }
+
+  function getCurrentQuestion() {
+    return state.questions[state.currentIndex] || null;
+  }
+
   function syncExamAnswerVisibility() {
+    if (isMultiAnswerQuestion(getCurrentQuestion())) {
+      answerInput.classList.remove("exam-answer-masked");
+      return;
+    }
+
     if (!isExamLayout()) {
       answerInput.classList.remove("exam-answer-masked");
       return;
@@ -652,6 +855,10 @@
   }
 
   function isExamAnswerProtected() {
+    if (isMultiAnswerQuestion(getCurrentQuestion())) {
+      return false;
+    }
+
     return isExamLayout() && !(examAnswerVisibilityCheckbox && examAnswerVisibilityCheckbox.checked);
   }
 
@@ -746,10 +953,19 @@
   }
 
   function getCurrentAnswerValue() {
+    const question = getCurrentQuestion();
+    if (isMultiAnswerQuestion(question)) {
+      return getMultiAnswerValues();
+    }
+
     return isExamLayout() ? state.examAnswerDraft : answerInput.value;
   }
 
   function isAnswerCorrect(question, userInput) {
+    if (isMultiAnswerQuestion(question)) {
+      return isMultiAnswerCorrect(question, userInput);
+    }
+
     const normalizedInput = normalize(userInput);
     if (!normalizedInput) {
       return false;
@@ -762,23 +978,61 @@
     return acceptedAnswers.includes(normalizedInput);
   }
 
+  function getMultiAnswerValues() {
+    if (!multiAnswerInputs) {
+      return [];
+    }
+
+    return Array.from(multiAnswerInputs.querySelectorAll("input[data-answer-slot=\"true\"]"))
+      .map((input) => input.value);
+  }
+
+  function isMultiAnswerCorrect(question, userInput) {
+    const values = Array.isArray(userInput)
+      ? userInput
+      : String(userInput).split(/[,\n;]+/);
+    const normalizedValues = values
+      .map((value) => normalize(value))
+      .filter(Boolean);
+    const uniqueValues = Array.from(new Set(normalizedValues));
+    const acceptedAnswers = Array.isArray(question.acceptedAnswers)
+      ? question.acceptedAnswers.map((answer) => normalize(answer)).filter(Boolean)
+      : [];
+
+    if (uniqueValues.length < question.answerCount) {
+      return false;
+    }
+
+    return uniqueValues.every((value) => acceptedAnswers.includes(value));
+  }
+
+  function formatUserAnswer(userInput) {
+    if (Array.isArray(userInput)) {
+      const filled = userInput.map((value) => cleanupDisplay(value)).filter(Boolean);
+      return filled.length > 0 ? filled.join(", ") : "";
+    }
+
+    return cleanupDisplay(userInput);
+  }
+
   function startQuiz() {
     try {
       const selectedModes = Array.from(document.querySelectorAll(".mode-groups input[type=\"checkbox\"]:checked"))
         .map((element) => element.value);
       const scopeConfig = getScopeConfig(true);
       const allowCombiningVowel = false;
+      const includePracticalQuestions = Boolean(practicalQuestionCheckbox && practicalQuestionCheckbox.checked);
 
       if (!scopeConfig) {
         return;
       }
 
-      if (selectedModes.length === 0) {
+      if (selectedModes.length === 0 && !includePracticalQuestions) {
         window.alert("최소 한 개 이상의 문제 형식을 선택해 주세요.");
         return;
       }
 
-        let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel);
+        let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel, includePracticalQuestions);
         if (testModeCheckbox && testModeCheckbox.checked) {
           questions = questions.filter((question) => !state.solvedQuestionIds.has(question.id));
         }
@@ -853,12 +1107,14 @@
       term: config.term,
       prompt: config.prompt,
       answer: config.answer,
+      answerMode: config.answerMode || "single",
+      answerCount: config.answerCount || 1,
       acceptedAnswers: config.acceptedAnswers,
       displayAnswer: config.displayAnswer
     };
   }
 
-  function buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel) {
+  function buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel, includePracticalQuestions) {
     const scopedTerms = getScopedTerms(scopeConfig);
     const vocabularyTerms = scopedTerms.vocabulary;
     const morphologyVocabulary = vocabularyTerms
@@ -875,19 +1131,19 @@
 
       if (selectedModeSet.has("vocabulary:korean")) {
         try {
-          const promptInfo = buildVocabularyQuestionConfig(entry, allowCombiningVowel);
-
-          questions.push(createQuestion({
-            id: `vocabulary:korean:${entry.term}`,
-            week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
-            category: "vocabulary",
-            mode: promptInfo.mode,
-            term: entry.term,
-            prompt: promptInfo.prompt,
-            answer: promptInfo.answer,
-            acceptedAnswers: promptInfo.acceptedAnswers,
-            displayAnswer: promptInfo.displayAnswer
-          }));
+          buildVocabularyQuestionConfigs(entry, allowCombiningVowel).forEach((promptInfo) => {
+            questions.push(createQuestion({
+              id: `vocabulary:${promptInfo.mode}:${entry.term}:${promptInfo.idPart || "default"}`,
+              week: findIntroducedWeek(entry.term, "vocabulary", scopeConfig),
+              category: "vocabulary",
+              mode: promptInfo.mode,
+              term: entry.term,
+              prompt: promptInfo.prompt,
+              answer: promptInfo.answer,
+              acceptedAnswers: promptInfo.acceptedAnswers,
+              displayAnswer: promptInfo.displayAnswer
+            }));
+          });
         } catch (error) {
           console.warn("어휘 텍스트형 문항 생성 실패", entry.term, error);
         }
@@ -969,7 +1225,174 @@
       });
     });
 
+    if (includePracticalQuestions) {
+      buildPracticalSuffixListQuestions(scopeConfig, scopedTerms, morphologyVocabulary)
+        .forEach((question) => questions.push(question));
+      buildPracticalVocabularyListQuestions(scopeConfig, scopedTerms)
+        .forEach((question) => questions.push(question));
+      buildPracticalOrganListQuestions(scopeConfig)
+        .forEach((question) => questions.push(question));
+    }
+
     return questions;
+  }
+
+  function buildPracticalOrganListQuestions(scopeConfig) {
+    if (!scopeConfig.weeks.includes(6)) {
+      return [];
+    }
+
+    return PRACTICAL_ORGAN_LIST_SPECS
+      .map((spec) => {
+        const answerCount = getPracticalListAnswerCount(spec.terms.length);
+        if (!answerCount) {
+          return null;
+        }
+
+        return createQuestion({
+          id: `practical:organ-list:${spec.id}:${answerCount}:${scopeConfig.rangeMode}:${scopeConfig.weeks.join("-")}`,
+          week: "6주차",
+          category: "vocabulary",
+          mode: "practical",
+          term: spec.label,
+          prompt: {
+            title: `${spec.label}에 존재하는 장기 ${answerCount}가지를 쓰시오.`,
+            blocks: [
+              { label: "조건", value: `각 칸에는 서로 다른 영어 용어를 하나씩 쓰시오. 현재 범위에서 가능한 답은 ${spec.terms.length}개입니다.` }
+            ]
+          },
+          answer: spec.id,
+          answerMode: "multi-any-order",
+          answerCount,
+          acceptedAnswers: spec.terms,
+          displayAnswer: spec.terms.join(", ")
+        });
+      })
+      .filter(Boolean);
+  }
+
+  function getPracticalListAnswerCount(totalAnswers) {
+    if (totalAnswers >= 5) {
+      return 5;
+    }
+
+    if (totalAnswers >= 3) {
+      return 3;
+    }
+
+    return 0;
+  }
+
+  function buildPracticalVocabularyListQuestions(scopeConfig, scopedTerms) {
+    const scopedVocabulary = new Set(scopedTerms.vocabulary.map((term) => cleanupDisplay(term).toLowerCase()));
+
+    return PRACTICAL_VOCAB_LIST_SPECS
+      .map((spec) => {
+        const displayAnswers = [];
+        const acceptedAnswers = [];
+        const seenTerms = new Set();
+
+        spec.terms
+          .filter((term) => scopedVocabulary.has(cleanupDisplay(term).toLowerCase()))
+          .forEach((term) => {
+            const entry = data.entries[term.toLowerCase()];
+            const displayTerm = cleanupDisplay(entry?.term || term);
+            const normalizedDisplay = normalize(displayTerm);
+            if (!displayTerm || seenTerms.has(normalizedDisplay)) {
+              return;
+            }
+
+            seenTerms.add(normalizedDisplay);
+            displayAnswers.push(displayTerm);
+            [displayTerm, entry?.answer, ...(Array.isArray(entry?.answers) ? entry.answers : [])]
+              .map((answer) => cleanupDisplay(answer))
+              .filter(Boolean)
+              .forEach((answer) => acceptedAnswers.push(answer));
+          });
+
+        if (displayAnswers.length < spec.count) {
+          return null;
+        }
+
+        return createQuestion({
+          id: `practical:vocab-list:${spec.id}:${spec.count}:${scopeConfig.rangeMode}:${scopeConfig.weeks.join("-")}`,
+          week: "7주차",
+          category: "vocabulary",
+          mode: "practical",
+          term: spec.id,
+          prompt: {
+            title: spec.title,
+            blocks: [
+              { label: "조건", value: `각 칸에는 서로 다른 영어 용어를 하나씩 쓰시오. 현재 범위에서 가능한 답은 ${displayAnswers.length}개입니다.` }
+            ]
+          },
+          answer: spec.id,
+          answerMode: "multi-any-order",
+          answerCount: spec.count,
+          acceptedAnswers,
+          displayAnswer: displayAnswers.join(", ")
+        });
+      })
+      .filter(Boolean);
+  }
+
+  function buildPracticalSuffixListQuestions(scopeConfig, scopedTerms, morphologyVocabulary) {
+    const scopedSuffixes = new Set(scopedTerms.suffixes.map((term) => cleanupDisplay(term).toLowerCase()));
+
+    return PRACTICAL_SUFFIX_LIST_SPECS
+      .filter((spec) => scopedSuffixes.has(spec.suffix))
+      .map((spec) => {
+        const answerEntries = morphologyVocabulary
+          .filter((entry) => hasMorphologySuffix(entry, spec.suffix))
+          .sort((left, right) => cleanupDisplay(left.term).localeCompare(cleanupDisplay(right.term), "en", { sensitivity: "base" }));
+        const displayAnswers = [];
+        const acceptedAnswers = [];
+        const seenTerms = new Set();
+
+        answerEntries.forEach((entry) => {
+          const displayTerm = cleanupDisplay(entry.term);
+          const normalizedDisplay = normalize(displayTerm);
+          if (!displayTerm || seenTerms.has(normalizedDisplay)) {
+            return;
+          }
+
+          seenTerms.add(normalizedDisplay);
+          displayAnswers.push(displayTerm);
+          [entry.term, entry.answer, ...(Array.isArray(entry.answers) ? entry.answers : [])]
+            .map((answer) => cleanupDisplay(answer))
+            .filter(Boolean)
+            .forEach((answer) => acceptedAnswers.push(answer));
+        });
+
+        if (displayAnswers.length < spec.count) {
+          return null;
+        }
+
+        return createQuestion({
+          id: `practical:suffix-list:${spec.suffix}:${spec.count}:${scopeConfig.rangeMode}:${scopeConfig.weeks.join("-")}`,
+          week: findIntroducedWeek(spec.suffix, "suffixes", scopeConfig),
+          category: "suffix",
+          mode: "practical",
+          term: spec.suffix,
+          prompt: {
+            title: `${spec.meaning}을 뜻하는 접미어 ${spec.suffix}가 들어간 용어 ${spec.count}가지를 쓰시오.`,
+            blocks: [
+              { label: "조건", value: `각 칸에는 서로 다른 영어 용어를 하나씩 쓰시오. 현재 범위에서 가능한 답은 ${displayAnswers.length}개입니다.` }
+            ]
+          },
+          answer: spec.suffix,
+          answerMode: "multi-any-order",
+          answerCount: spec.count,
+          acceptedAnswers,
+          displayAnswer: displayAnswers.join(", ")
+        });
+      })
+      .filter(Boolean);
+  }
+
+  function hasMorphologySuffix(entry, suffix) {
+    return Boolean(entry && entry.morphology && Array.isArray(entry.morphology.suffixes)
+      && entry.morphology.suffixes.some((item) => cleanupDisplay(item).toLowerCase() === suffix));
   }
 
   function getScopedTerms(scopeConfig) {
@@ -1245,6 +1668,11 @@
   }
 
   function getAcceptedAnswers(entry, allowCombiningVowel) {
+    const additionalAnswers = ADDITIONAL_ACCEPTED_ANSWERS[entry.term.toLowerCase()];
+    if (entry.type === "vocabulary" && Array.isArray(additionalAnswers)) {
+      return Array.from(new Set([...(entry.answers || []), ...additionalAnswers]));
+    }
+
     if (entry.type === "root" && !allowCombiningVowel) {
       return [entry.answer];
     }
@@ -1294,18 +1722,59 @@
   }
 
   function buildVocabularyQuestionConfig(entry, allowCombiningVowel) {
+    const configs = buildVocabularyQuestionConfigs(entry, allowCombiningVowel);
+    return configs[Math.floor(Math.random() * configs.length)];
+  }
+
+  function buildVocabularyQuestionConfigs(entry, allowCombiningVowel) {
+    const configs = [];
     const clozeConfig = buildVocabularyMultiwordClozeConfig(entry);
     if (clozeConfig) {
-      return clozeConfig;
+      configs.push(clozeConfig);
+    }
+
+    const abbreviationConfig = buildVocabularyAbbreviationConfig(entry);
+    if (abbreviationConfig) {
+      configs.push(abbreviationConfig);
+    }
+
+    if (configs.length > 0) {
+      return configs;
     }
 
     const promptInfo = buildVocabularyPrompt(entry);
-    return {
+    return [{
+      idPart: promptInfo.mode,
       mode: promptInfo.mode,
       prompt: promptInfo.prompt,
       answer: entry.answer,
       acceptedAnswers: getAcceptedAnswers(entry, allowCombiningVowel),
       displayAnswer: entry.term
+    }];
+  }
+
+  function buildVocabularyAbbreviationConfig(entry) {
+    const rule = MULTIWORD_VOCAB_RULES[entry.term.toLowerCase()];
+    if (!rule || !rule.abbreviation) {
+      return null;
+    }
+
+    const acceptedAnswers = Array.isArray(rule.acceptedAnswers) && rule.acceptedAnswers.length > 0
+      ? rule.acceptedAnswers
+      : entry.answers;
+
+    return {
+      idPart: `abbreviation-${normalize(rule.abbreviation)}`,
+      mode: "abbreviation",
+      prompt: {
+        title: "약어를 보고 전체 영어 어휘를 쓰시오.",
+        blocks: [
+          { label: "약어", value: rule.abbreviation }
+        ]
+      },
+      answer: entry.answer,
+      acceptedAnswers,
+      displayAnswer: acceptedAnswers.map((answer) => cleanupDisplay(answer)).join(" / ")
     };
   }
 
@@ -1354,6 +1823,10 @@
       return null;
     }
 
+    if (rule && rule.abbreviation && !Array.isArray(rule.blankWordIndexes)) {
+      return null;
+    }
+
     const blankWordIndexes = Array.isArray(rule?.blankWordIndexes) && rule.blankWordIndexes.length > 0
       ? rule.blankWordIndexes
       : [0];
@@ -1383,6 +1856,7 @@
     ];
 
     return {
+      idPart: `cloze-${chosen.index}`,
       mode: "korean",
       prompt: { title, blocks },
       answer: chosen.answerWord.toLowerCase(),
@@ -1870,6 +2344,56 @@
     return `${word.slice(0, startIndex)}${blank}${word.slice(startIndex + length)}`;
   }
 
+  function renderAnswerArea(question) {
+    const isMulti = isMultiAnswerQuestion(question);
+
+    answerInput.classList.toggle("hidden", isMulti);
+    answerInput.disabled = isMulti;
+    if (multiAnswerInputs) {
+      multiAnswerInputs.innerHTML = "";
+      multiAnswerInputs.classList.toggle("hidden", !isMulti);
+    }
+    if (examAnswerToggleWrap) {
+      examAnswerToggleWrap.classList.toggle("hidden", isMulti);
+    }
+
+    if (!isMulti || !multiAnswerInputs) {
+      return;
+    }
+
+    const count = Math.max(1, question.answerCount || 1);
+    for (let index = 0; index < count; index += 1) {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.autocomplete = "off";
+      input.spellcheck = false;
+      input.placeholder = `답 ${index + 1}`;
+      input.dataset.answerSlot = "true";
+      multiAnswerInputs.appendChild(input);
+    }
+  }
+
+  function setMultiAnswerInputsDisabled(disabled) {
+    if (!multiAnswerInputs) {
+      return;
+    }
+
+    Array.from(multiAnswerInputs.querySelectorAll("input[data-answer-slot=\"true\"]"))
+      .forEach((input) => {
+        input.disabled = disabled;
+      });
+  }
+
+  function focusAnswerArea(question) {
+    const target = isMultiAnswerQuestion(question) && multiAnswerInputs
+      ? multiAnswerInputs.querySelector("input[data-answer-slot=\"true\"]")
+      : answerInput;
+
+    if (target) {
+      target.focus();
+    }
+  }
+
   function renderQuestion() {
     clearTimer();
     clearAdvanceTimer();
@@ -1886,14 +2410,16 @@
     state.examAnswerDraft = "";
     answerInput.value = "";
     answerInput.disabled = false;
+    setMultiAnswerInputsDisabled(false);
     submitButton.disabled = false;
     skipButton.disabled = false;
+    const question = state.questions[state.currentIndex];
+    renderAnswerArea(question);
     if (examAnswerVisibilityCheckbox) {
       examAnswerVisibilityCheckbox.checked = false;
     }
     syncExamAnswerVisibility();
 
-    const question = state.questions[state.currentIndex];
     const total = state.questions.length;
 
     progressText.textContent = `${state.currentIndex + 1} / ${total}`;
@@ -1913,7 +2439,9 @@
       questionTitle.textContent = question.prompt.title;
     }
     if (answerLabel) {
-      answerLabel.textContent = isExamLayout() ? "\uB2F5 1" : "\uC815\uB2F5 \uC785\uB825";
+      answerLabel.textContent = isMultiAnswerQuestion(question)
+        ? `정답 ${question.answerCount}개 입력`
+        : isExamLayout() ? "\uB2F5 1" : "\uC815\uB2F5 \uC785\uB825";
     }
     submitButton.textContent = isExamLayout() ? "답안 전송" : "제출";
     questionBody.innerHTML = "";
@@ -1953,7 +2481,7 @@
       questionBody.appendChild(container);
     });
 
-    answerInput.focus();
+    focusAnswerArea(question);
     startTimer();
   }
 
@@ -2022,15 +2550,17 @@
       const reason = isTimeout ? "\uC2DC\uAC04 \uCD08\uACFC" : isSkip ? "\uAC74\uB108\uB700" : "\uC624\uB2F5";
       if (!isExamLayout()) {
         feedback.className = "feedback bad";
-        feedback.textContent = `${reason}\n정답: ${question.displayAnswer}${userInput ? `\n내 답: ${userInput}` : ""}`;
+        const displayedUserInput = formatUserAnswer(userInput);
+        feedback.textContent = `${reason}\n정답: ${question.displayAnswer}${displayedUserInput ? `\n내 답: ${displayedUserInput}` : ""}`;
       }
       state.missed.push({
         question,
-        userInput: userInput || (isTimeout ? "\uC2DC\uAC04 \uCD08\uACFC" : "\uAC74\uB108\uB700")
+        userInput: formatUserAnswer(userInput) || (isTimeout ? "\uC2DC\uAC04 \uCD08\uACFC" : "\uAC74\uB108\uB700")
       });
     }
 
     answerInput.disabled = true;
+    setMultiAnswerInputsDisabled(true);
     submitButton.disabled = true;
     skipButton.disabled = true;
     if (state.learningMode) {
