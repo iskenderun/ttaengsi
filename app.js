@@ -332,6 +332,8 @@
     "granulomas": "정답을 s로 끝내시오.",
     "pedialgia": "정답에 알파벳 e를 포함하시오.",
     "podalgia": "정답에 알파벳 o를 포함하시오.",
+    "glossalgia": "정답에 알파벳 d를 포함하지 마시오.",
+    "glossodynia": "정답에 알파벳 d를 포함하시오.",
     "antenatal": "정답을 a로 시작하시오.",
     "prenatal": "정답을 p로 시작하시오.",
     "polydactylia": "정답을 a로 끝내시오.",
@@ -357,7 +359,9 @@
   });
   const ADDITIONAL_ACCEPTED_ANSWERS = Object.freeze({
     "computed tomography": Object.freeze(["computed tomography", "computerized tomography"]),
-    "computerized tomography": Object.freeze(["computerized tomography", "computed tomography"])
+    "computerized tomography": Object.freeze(["computerized tomography", "computed tomography"]),
+    "histology": Object.freeze(["histology", "microscopic anatomy"]),
+    "microscopic anatomy": Object.freeze(["microscopic anatomy", "histology"])
   });
   const VOCAB_IMAGE_PROMPT_OVERRIDES = Object.freeze({
     electrocardiograph: {
@@ -505,6 +509,7 @@
   const examSessionMeta = document.getElementById("exam-session-meta");
   const examAnswerToggleWrap = document.getElementById("exam-answer-toggle-wrap");
   const examAnswerVisibilityCheckbox = document.getElementById("exam-answer-visibility");
+  const examAnswerRow = document.querySelector(".exam-answer-row");
   const progressFill = document.getElementById("progress-fill");
   const metaWeek = document.getElementById("meta-week");
   const metaCategory = document.getElementById("meta-category");
@@ -2354,7 +2359,10 @@
       multiAnswerInputs.classList.toggle("hidden", !isMulti);
     }
     if (examAnswerToggleWrap) {
-      examAnswerToggleWrap.classList.toggle("hidden", isMulti);
+      examAnswerToggleWrap.classList.toggle("hidden", isMulti && !isExamLayout());
+    }
+    if (examAnswerRow) {
+      examAnswerRow.classList.toggle("multi-answer-active", isMulti);
     }
 
     if (!isMulti || !multiAnswerInputs) {

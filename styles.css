@@ -1016,6 +1016,23 @@ body.quiz-layout-exam .multi-answer-inputs {
   max-width: 760px;
 }
 
+body.quiz-layout-exam .exam-answer-row.multi-answer-active {
+  display: block;
+}
+
+body.quiz-layout-exam .exam-answer-row.multi-answer-active .multi-answer-inputs {
+  grid-template-columns: 1fr;
+  width: 308px;
+  max-width: 308px;
+  gap: 6px;
+}
+
+body.quiz-layout-exam .exam-answer-row.multi-answer-active .exam-answer-toggle {
+  display: flex;
+  width: fit-content;
+  margin-top: 8px;
+}
+
 body.quiz-layout-exam .multi-answer-inputs input {
   width: 100%;
   max-width: none;
