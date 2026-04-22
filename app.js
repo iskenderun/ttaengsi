@@ -34,15 +34,20 @@
     Object.freeze({ suffix: "-osis", meaning: "비정상 상태/증", count: 5 }),
     Object.freeze({ suffix: "-cyte", meaning: "세포", count: 5 }),
     Object.freeze({ suffix: "-algia", meaning: "통증", count: 3 }),
-    Object.freeze({ suffix: "-ectomy", meaning: "절제술/제거술", count: 3 }),
+    Object.freeze({ suffix: "-ectomy", meaning: "절제술/제거술", count: 5 }),
     Object.freeze({ suffix: "-oma", meaning: "종양/덩어리", count: 5 }),
     Object.freeze({ suffix: "-plasia", meaning: "형성/발달", count: 3 }),
     Object.freeze({ suffix: "-trophy", meaning: "영양/발달", count: 3 }),
     Object.freeze({ suffix: "-centesis", meaning: "천자", count: 3 }),
     Object.freeze({ suffix: "-emia", meaning: "혈액 상태", count: 3 }),
-    Object.freeze({ suffix: "-megaly", meaning: "비대", count: 3 }),
+    Object.freeze({ suffix: "-megaly", meaning: "비대", count: 4 }),
     Object.freeze({ suffix: "-penia", meaning: "감소/결핍", count: 3 }),
-    Object.freeze({ suffix: "-pnea", meaning: "호흡", count: 3 }),
+    Object.freeze({
+      suffix: "-pnea",
+      meaning: "호흡",
+      count: 5,
+      extraTerms: Object.freeze(["Bradypnea", "Tachypnea"])
+    }),
     Object.freeze({ suffix: "-rrhexis", meaning: "파열", count: 3 }),
     Object.freeze({ suffix: "-scope", meaning: "관찰 기구", count: 3 }),
     Object.freeze({ suffix: "-meter", meaning: "측정 기구", count: 3 })
@@ -110,7 +115,135 @@
         "Orthopedic surgery",
         "Plastic surgery"
       ])
+    }),
+    Object.freeze({
+      id: "hospital-department-place",
+      title: "병원 부서/장소에 해당하는 용어 5가지를 쓰시오.",
+      count: 5,
+      terms: Object.freeze([
+        "Admitting department",
+        "Central supply room",
+        "Clinical laboratory",
+        "Consulting room",
+        "Delivery room",
+        "Dispensary",
+        "Emergency room",
+        "Endoscopic room",
+        "Information desk",
+        "Intensive care unit",
+        "Mortuary",
+        "Nurse center",
+        "Operating room",
+        "Outpatient clinic",
+        "Radiographic room",
+        "Rehabilitation center",
+        "Sickroom",
+        "Treatment room",
+        "Waiting room",
+        "Ward",
+        "X-ray room"
+      ])
+    }),
+    Object.freeze({
+      id: "hospital-staff",
+      title: "병원 직원/의료 인력에 해당하는 용어 5가지를 쓰시오.",
+      count: 5,
+      terms: Object.freeze([
+        "Dietician",
+        "Dietitian",
+        "General practitioner",
+        "Head nurse",
+        "Laboratory technician",
+        "Midwife",
+        "Physical therapist",
+        "Physician",
+        "Practical nurse",
+        "Psychiatrist",
+        "Radiographic technologist",
+        "Record librarian",
+        "Registered nurse",
+        "Specialist"
+      ])
+    }),
+    Object.freeze({
+      id: "medical-equipment-tool",
+      title: "의료 장비/도구에 해당하는 용어 5가지를 쓰시오.",
+      count: 5,
+      terms: Object.freeze([
+        "Absorbent cotton",
+        "Ambulance",
+        "Bandage",
+        "Basin",
+        "Blood pressure gauge",
+        "Cast",
+        "Chart",
+        "Crutch",
+        "Gauze",
+        "Ice bag",
+        "Plaster",
+        "Scalpel",
+        "Sphygmomanometer",
+        "Stethoscope",
+        "Sticking plaster",
+        "Stretcher",
+        "Surgical knife",
+        "Syringe and needle",
+        "Tripod"
+      ])
+    }),
+    Object.freeze({
+      id: "nurse-staff",
+      title: "Nurse가 들어간 의료 인력 3가지를 쓰시오.",
+      count: 3,
+      terms: Object.freeze([
+        "Head nurse",
+        "Practical nurse",
+        "Registered nurse"
+      ])
     })
+  ]);
+  const PRACTICAL_INFERENCE_TERM_SPECS = Object.freeze([
+    Object.freeze({ term: "Gastritis", korean: "위염", english: "Inflammation of the stomach", roots: Object.freeze(["gastr(o)"]), suffixes: Object.freeze(["-itis"]) }),
+    Object.freeze({ term: "Cystitis", korean: "방광염", english: "Inflammation of the bladder", roots: Object.freeze(["cyst(o)"]), suffixes: Object.freeze(["-itis"]) }),
+    Object.freeze({ term: "Laryngitis", korean: "후두염", english: "Inflammation of the larynx", roots: Object.freeze(["laryng(o)"]), suffixes: Object.freeze(["-itis"]) }),
+    Object.freeze({ term: "Pharyngitis", korean: "인두염", english: "Inflammation of the pharynx", roots: Object.freeze(["pharyng(o)"]), suffixes: Object.freeze(["-itis"]) }),
+    Object.freeze({ term: "Tonsillitis", korean: "편도염", english: "Inflammation of the tonsil", roots: Object.freeze(["tonsill(o)"]), suffixes: Object.freeze(["-itis"]) }),
+    Object.freeze({ term: "Adenitis", korean: "샘염, 선염", english: "Inflammation of a gland", roots: Object.freeze(["aden(o)"]), suffixes: Object.freeze(["-itis"]) }),
+    Object.freeze({ term: "Rhinoplasty", korean: "코성형술", english: "Surgical repair of the nose", roots: Object.freeze(["rhin(o)"]), suffixes: Object.freeze(["-plasty"]) }),
+    Object.freeze({ term: "Arthroplasty", korean: "관절성형술", english: "Surgical repair of a joint", roots: Object.freeze(["arthr(o)"]), suffixes: Object.freeze(["-plasty"]) }),
+    Object.freeze({ term: "Angioplasty", korean: "혈관성형술", english: "Surgical repair of a blood vessel", roots: Object.freeze(["angi(o)"]), suffixes: Object.freeze(["-plasty"]) }),
+    Object.freeze({ term: "Tracheotomy", korean: "기관절개술", english: "Incision into the trachea", roots: Object.freeze(["trache(o)"]), suffixes: Object.freeze(["-tomy"]) }),
+    Object.freeze({ term: "Thoracotomy", korean: "흉부절개술", english: "Incision into the chest", roots: Object.freeze(["thorac(o)"]), suffixes: Object.freeze(["-tomy"]) }),
+    Object.freeze({
+      term: "Appendectomy",
+      korean: "충수절제술",
+      english: "Surgical removal of the appendix",
+      sourceVocabulary: Object.freeze(["Appendicitis"]),
+      suffixes: Object.freeze(["-ectomy"]),
+      formParts: Object.freeze(["appendic-", "-ectomy"]),
+      acceptedAnswers: Object.freeze(["Appendectomy", "Appendicectomy"])
+    }),
+    Object.freeze({ term: "Laryngectomy", korean: "후두절제술", english: "Surgical removal of the larynx", roots: Object.freeze(["laryng(o)"]), suffixes: Object.freeze(["-ectomy"]) }),
+    Object.freeze({ term: "Nephrectomy", korean: "신장절제술", english: "Surgical removal of a kidney", roots: Object.freeze(["nephr(o)"]), suffixes: Object.freeze(["-ectomy"]) }),
+    Object.freeze({ term: "Pneumonectomy", korean: "폐절제술", english: "Surgical removal of a lung", roots: Object.freeze(["pneumon(o)"]), suffixes: Object.freeze(["-ectomy"]) }),
+    Object.freeze({ term: "Tracheostomy", korean: "기관창냄술", english: "Formation of an opening into the trachea", roots: Object.freeze(["trache(o)"]), suffixes: Object.freeze(["-stomy"]) }),
+    Object.freeze({ term: "Gastrostomy", korean: "위창냄술", english: "Formation of an opening into the stomach", roots: Object.freeze(["gastr(o)"]), suffixes: Object.freeze(["-stomy"]) }),
+    Object.freeze({ term: "Cystoscope", korean: "방광경", english: "Instrument for viewing the bladder", roots: Object.freeze(["cyst(o)"]), suffixes: Object.freeze(["-scope"]) }),
+    Object.freeze({ term: "Bronchoscope", korean: "기관지경", english: "Instrument for viewing the bronchus", roots: Object.freeze(["bronch(o)"]), suffixes: Object.freeze(["-scope"]) }),
+    Object.freeze({ term: "Laryngoscope", korean: "후두경", english: "Instrument for viewing the larynx", roots: Object.freeze(["laryng(o)"]), suffixes: Object.freeze(["-scope"]) }),
+    Object.freeze({ term: "Rhinoscope", korean: "비경", english: "Instrument for viewing the nose", roots: Object.freeze(["rhin(o)"]), suffixes: Object.freeze(["-scope"]) }),
+    Object.freeze({ term: "Cystoscopy", korean: "방광경검사", english: "Visual examination of the bladder", roots: Object.freeze(["cyst(o)"]), suffixes: Object.freeze(["-scopy"]) }),
+    Object.freeze({ term: "Bronchoscopy", korean: "기관지경검사", english: "Visual examination of the bronchus", roots: Object.freeze(["bronch(o)"]), suffixes: Object.freeze(["-scopy"]) }),
+    Object.freeze({ term: "Laparoscopy", korean: "복강경검사", english: "Visual examination of the abdomen", roots: Object.freeze(["lapar(o)"]), suffixes: Object.freeze(["-scopy"]) }),
+    Object.freeze({ term: "Colonoscopy", korean: "대장내시경검사", english: "Visual examination of the colon", roots: Object.freeze(["col(o)"]), suffixes: Object.freeze(["-scopy"]) }),
+    Object.freeze({ term: "Tachycardia", korean: "빈맥", english: "Rapid heart action", prefixes: Object.freeze(["tachy-"]), suffixes: Object.freeze(["-cardia"]) }),
+    Object.freeze({ term: "Hypoglycemia", korean: "저혈당", english: "Low blood sugar", prefixes: Object.freeze(["hypo-"]), roots: Object.freeze(["glyc(o)"]), suffixes: Object.freeze(["-emia"]) }),
+    Object.freeze({ term: "Bacteremia", korean: "균혈증", english: "Bacteria in the blood", roots: Object.freeze(["bacteri(o)"]), suffixes: Object.freeze(["-emia"]) }),
+    Object.freeze({ term: "Eosinophilia", korean: "호산구증가증", english: "Increased eosinophils", roots: Object.freeze(["eosin(o)"]), suffixes: Object.freeze(["-philia"]) }),
+    Object.freeze({ term: "Cephalalgia", korean: "두통", english: "Pain in the head", roots: Object.freeze(["cephal(o)"]), suffixes: Object.freeze(["-algia"]) }),
+    Object.freeze({ term: "Otalgia", korean: "귀통증", english: "Pain in the ear", roots: Object.freeze(["ot(o)"]), suffixes: Object.freeze(["-algia"]) }),
+    Object.freeze({ term: "Arthrosis", korean: "관절증", english: "Abnormal condition of a joint", roots: Object.freeze(["arthr(o)"]), suffixes: Object.freeze(["-osis"]) }),
+    Object.freeze({ term: "Adenosis", korean: "샘증, 선증", english: "Abnormal condition of a gland", roots: Object.freeze(["aden(o)"]), suffixes: Object.freeze(["-osis"]) })
   ]);
   const PRACTICAL_ORGAN_LIST_SPECS = Object.freeze([
     Object.freeze({ id: "digestive-system", label: "Digestive system", terms: Object.freeze(["mouth", "pharynx", "esophagus", "stomach", "small intestine", "large intestine", "liver", "gall bladder", "pancreas"]) }),
@@ -329,7 +462,6 @@
     "excision": "정답을 e로 시작하시오.",
     "resection": "정답을 r로 시작하시오.",
     "granuloma": "정답을 a로 끝내시오.",
-    "granulomas": "정답을 s로 끝내시오.",
     "pedialgia": "정답에 알파벳 e를 포함하시오.",
     "podalgia": "정답에 알파벳 o를 포함하시오.",
     "glossalgia": "정답에 알파벳 d를 포함하지 마시오.",
@@ -445,7 +577,8 @@
     "posterior cerebral artery": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
     "distal phalanx": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
     "proximal phalanx": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
-    "superior laryngeal nerve": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) })
+    "superior laryngeal nerve": Object.freeze({ blankWordIndexes: Object.freeze([0, 1]) }),
+    "syringe and needle": Object.freeze({ blankWordIndexesTogether: Object.freeze([0, 2]) })
   });
 
   const state = {
@@ -1235,6 +1368,8 @@
         .forEach((question) => questions.push(question));
       buildPracticalVocabularyListQuestions(scopeConfig, scopedTerms)
         .forEach((question) => questions.push(question));
+      buildPracticalInferenceQuestions(scopeConfig, scopedTerms)
+        .forEach((question) => questions.push(question));
       buildPracticalOrganListQuestions(scopeConfig)
         .forEach((question) => questions.push(question));
     }
@@ -1341,6 +1476,56 @@
       .filter(Boolean);
   }
 
+  function buildPracticalInferenceQuestions(scopeConfig, scopedTerms) {
+    const scopedMorphology = {
+      vocabulary: new Set(scopedTerms.vocabulary.map((term) => cleanupDisplay(term).toLowerCase())),
+      prefixes: new Set(scopedTerms.prefixes.map((term) => cleanupDisplay(term).toLowerCase())),
+      roots: new Set(scopedTerms.roots.map((term) => cleanupDisplay(term).toLowerCase())),
+      suffixes: new Set(scopedTerms.suffixes.map((term) => cleanupDisplay(term).toLowerCase()))
+    };
+
+    return PRACTICAL_INFERENCE_TERM_SPECS
+      .filter((spec) => hasInferenceComponentsInScope(spec, scopedMorphology))
+      .map((spec) => {
+        const acceptedAnswers = Array.isArray(spec.acceptedAnswers) && spec.acceptedAnswers.length > 0
+          ? spec.acceptedAnswers
+          : [spec.term];
+
+        return createQuestion({
+          id: `practical:inference:${spec.term}:${scopeConfig.rangeMode}:${scopeConfig.weeks.join("-")}`,
+          week: "추론",
+          category: "vocabulary",
+          mode: "practical",
+          term: spec.term,
+          prompt: {
+            title: "뜻풀이를 보고 영어 용어를 쓰시오.",
+            blocks: [
+              { label: "한국어 대응어", value: spec.korean },
+              { label: "영어 설명", value: spec.english }
+            ]
+          },
+          answer: spec.term.toLowerCase(),
+          acceptedAnswers,
+          displayAnswer: acceptedAnswers.map((answer) => cleanupDisplay(answer)).join(" / ")
+        });
+      });
+  }
+
+  function hasInferenceComponentsInScope(spec, scopedMorphology) {
+    return [
+      ["vocabulary", spec.sourceVocabulary],
+      ["prefixes", spec.prefixes],
+      ["roots", spec.roots],
+      ["suffixes", spec.suffixes]
+    ].every(([bucketName, terms]) => {
+      if (!Array.isArray(terms) || terms.length === 0) {
+        return true;
+      }
+
+      return terms.every((term) => scopedMorphology[bucketName].has(cleanupDisplay(term).toLowerCase()));
+    });
+  }
+
   function buildPracticalSuffixListQuestions(scopeConfig, scopedTerms, morphologyVocabulary) {
     const scopedSuffixes = new Set(scopedTerms.suffixes.map((term) => cleanupDisplay(term).toLowerCase()));
 
@@ -1354,7 +1539,7 @@
         const acceptedAnswers = [];
         const seenTerms = new Set();
 
-        answerEntries.forEach((entry) => {
+        const addAnswerEntry = (entry) => {
           const displayTerm = cleanupDisplay(entry.term);
           const normalizedDisplay = normalize(displayTerm);
           if (!displayTerm || seenTerms.has(normalizedDisplay)) {
@@ -1367,7 +1552,15 @@
             .map((answer) => cleanupDisplay(answer))
             .filter(Boolean)
             .forEach((answer) => acceptedAnswers.push(answer));
-        });
+        };
+
+        answerEntries.forEach(addAnswerEntry);
+        if (Array.isArray(spec.extraTerms)) {
+          spec.extraTerms
+            .map((term) => data.entries[term.toLowerCase()])
+            .filter(Boolean)
+            .forEach(addAnswerEntry);
+        }
 
         if (displayAnswers.length < spec.count) {
           return null;
@@ -1830,6 +2023,33 @@
 
     if (rule && rule.abbreviation && !Array.isArray(rule.blankWordIndexes)) {
       return null;
+    }
+
+    if (Array.isArray(rule?.blankWordIndexesTogether) && rule.blankWordIndexesTogether.length > 0) {
+      const blankIndexes = rule.blankWordIndexesTogether
+        .filter((index) => Number.isInteger(index) && index >= 0 && index < words.length);
+      if (blankIndexes.length > 0) {
+        const blankIndexSet = new Set(blankIndexes);
+        const masked = words.map((word, wordIndex) => blankIndexSet.has(wordIndex) ? "______" : word).join(" ");
+        const constraint = VOCAB_PROMPT_CONSTRAINTS[entry.term.toLowerCase()];
+        const title = constraint
+          ? `뜻풀이를 보고 빈칸에 들어갈 영어 어휘를 쓰시오. 조건: ${constraint}`
+          : "뜻풀이를 보고 빈칸에 들어갈 영어 어휘를 쓰시오.";
+        return {
+          idPart: `cloze-${blankIndexes.join("-")}`,
+          mode: "korean",
+          prompt: {
+            title,
+            blocks: [
+              buildMeaningBlock(entry),
+              { label: "빈칸", value: masked }
+            ]
+          },
+          answer: entry.answer,
+          acceptedAnswers: getAcceptedAnswers(entry, false),
+          displayAnswer: entry.term
+        };
+      }
     }
 
     const blankWordIndexes = Array.isArray(rule?.blankWordIndexes) && rule.blankWordIndexes.length > 0
