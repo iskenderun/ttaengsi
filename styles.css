@@ -37,6 +37,69 @@ body {
   padding: 40px 0 56px;
 }
 
+body.view-home {
+  background: #ffffff;
+}
+
+body.view-home .app-shell {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+body.view-home .hero {
+  display: none;
+}
+
+.home-panel {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.home-banner {
+  padding: 18px 20px 24px;
+  background: #008000;
+  color: #ffffff;
+}
+
+.home-banner h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  line-height: 1.08;
+}
+
+.home-banner p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.home-eyebrow {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 180px 120px;
+  padding: 64px 66px 120px;
+}
+
+.home-link {
+  color: #1f47ff;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.25;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.home-link:hover {
+  color: #0f34d9;
+}
+
 .hero {
   margin-bottom: 22px;
 }
@@ -48,20 +111,20 @@ body.view-result .hero {
 
 body.view-quiz .app-shell,
 body.view-result .app-shell {
-  padding-top: 18px;
+  padding-top: 8px;
 }
 
 body.view-quiz:not(.quiz-layout-exam) .app-shell,
 body.view-result:not(.quiz-layout-exam) .app-shell {
   width: min(920px, calc(100% - 26px));
-  padding-top: 10px;
-  padding-bottom: 28px;
+  padding-top: 4px;
+  padding-bottom: 20px;
 }
 
 body.view-quiz:not(.quiz-layout-exam) #quiz-panel,
 body.view-result:not(.quiz-layout-exam) #result-panel {
-  margin-top: 10px;
-  padding: 18px;
+  margin-top: 4px;
+  padding: 12px 16px 14px;
   border-radius: 20px;
 }
 
@@ -70,27 +133,27 @@ body.view-quiz:not(.quiz-layout-exam) .status-bar {
 }
 
 body.view-quiz:not(.quiz-layout-exam) .status-item {
-  padding: 10px 12px;
+  padding: 6px 10px;
   border-radius: 14px;
 }
 
 body.view-quiz:not(.quiz-layout-exam) .status-item strong {
-  margin-top: 4px;
-  font-size: 1.05rem;
+  margin-top: 2px;
+  font-size: 1rem;
 }
 
 body.view-quiz:not(.quiz-layout-exam) .status-label {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
 }
 
 body.view-quiz:not(.quiz-layout-exam) .progress-track {
   height: 8px;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 body.view-quiz:not(.quiz-layout-exam) .question-meta {
   gap: 6px;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 body.view-quiz:not(.quiz-layout-exam) .pill {
@@ -99,14 +162,14 @@ body.view-quiz:not(.quiz-layout-exam) .pill {
 }
 
 body.view-quiz:not(.quiz-layout-exam) .question-card {
-  margin-top: 10px;
-  padding: 12px;
+  margin-top: 8px;
+  padding: 10px;
   border-radius: 16px;
 }
 
 body.view-quiz:not(.quiz-layout-exam) .question-card h2 {
-  margin-bottom: 8px;
-  font-size: 1rem;
+  margin-bottom: 6px;
+  font-size: 0.96rem;
   line-height: 1.35;
 }
 
@@ -545,6 +608,50 @@ button:disabled {
   word-break: break-word;
 }
 
+.question-options {
+  display: grid;
+  gap: 6px;
+}
+
+.question-option {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fffdf8;
+  color: var(--text);
+  text-align: left;
+  font: inherit;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.question-option:hover {
+  border-color: rgba(181, 72, 40, 0.4);
+  background: rgba(181, 72, 40, 0.08);
+}
+
+.question-option:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.question-option.correct,
+.question-option.correct:disabled {
+  color: #166534;
+  border-color: rgba(22, 101, 52, 0.3);
+  background: rgba(34, 197, 94, 0.16);
+  opacity: 1;
+}
+
+.question-option.incorrect,
+.question-option.incorrect:disabled {
+  color: #991b1b;
+  border-color: rgba(153, 27, 27, 0.26);
+  background: rgba(239, 68, 68, 0.14);
+  opacity: 1;
+}
+
 .question-block-image {
   background: transparent;
   padding: 0;
@@ -978,6 +1085,12 @@ body.quiz-layout-exam .question-value {
   font-weight: 400;
 }
 
+body.quiz-layout-exam .question-option {
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+
 body.quiz-layout-exam .question-image-frame {
   max-width: min(100%, 340px);
   padding: 4px;
@@ -1075,6 +1188,16 @@ body.quiz-layout-exam .primary:hover {
 }
 
 @media (max-width: 640px) {
+  .home-link-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 42px 24px 72px;
+  }
+
+  .home-link {
+    font-size: 1.1rem;
+  }
+
   .app-shell {
     width: min(100% - 20px, 960px);
     padding-top: 24px;

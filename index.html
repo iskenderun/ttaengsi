@@ -4,26 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>의학영어 땡시</title>
-  <link rel="stylesheet" href="./styles.css?v=20260422-1">
+  <link rel="stylesheet" href="./styles.css?v=20260617-3">
 </head>
 <body>
   <main class="app-shell">
+    <section class="home-panel" id="home-panel">
+      <header class="home-banner">
+        <p class="home-eyebrow">MEDICAL ENGLISH DRILL</p>
+        <h1>의학영어 땡시</h1>
+        <p>중간 대비 또는 기말 대비를 클릭하면 해당 문제 세트로 이동합니다.</p>
+      </header>
+
+      <div class="home-link-grid">
+        <a href="#" class="home-link" data-track-link="midterm">의학영어(1) 중간 대비</a>
+        <a href="#" class="home-link" data-track-link="final">의학영어(1) 기말 대비</a>
+      </div>
+    </section>
+
     <section class="hero">
-      <p class="eyebrow">Medical English Weekly Drill</p>
-      <h1>의학영어 땡시</h1>
+      <p id="hero-eyebrow" class="eyebrow">Medical English Weekly Drill</p>
+      <h1 id="hero-title">의학영어 땡시</h1>
     </section>
 
     <section class="panel" id="setup-panel">
       <div class="panel-header">
-        <h2>퀴즈 설정</h2>
+        <h2 id="setup-title">퀴즈 설정</h2>
         <div class="panel-header-meta">
           <p id="data-summary" class="muted"></p>
+          <button id="home-button" type="button" class="ghost">처음 화면</button>
           <button id="setup-help-button" type="button" class="help-trigger panel-help-trigger" aria-label="도움말 열기">ⓘ</button>
         </div>
       </div>
 
       <div class="grid">
-        <label class="field">
+        <label id="range-mode-field" class="field">
           <span>학습 방식</span>
           <select id="range-mode-select">
             <option value="cumulative" selected>누적 범위</option>
@@ -37,7 +51,7 @@
           <select id="week-select"></select>
         </label>
 
-        <label class="field">
+        <label id="question-count-field" class="field">
           <span>문제 수</span>
           <select id="question-count">
             <option value="10">10문제</option>
@@ -62,7 +76,7 @@
         <input id="custom-question-count" type="number" min="1" step="1" inputmode="numeric" placeholder="예: 37">
       </label>
 
-      <div class="mode-groups">
+      <div id="midterm-mode-groups" class="mode-groups">
         <fieldset class="mode-group">
           <legend>어휘</legend>
           <label class="checkbox">
@@ -112,12 +126,30 @@
         </fieldset>
       </div>
 
+      <div id="final-mode-groups" class="mode-groups hidden">
+        <fieldset class="mode-group">
+          <legend>9주차 유형</legend>
+          <label class="checkbox">
+            <input type="checkbox" value="final:definition" checked>
+            <span>정의를 보고 의학용어 쓰기</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="final:cloze" checked>
+            <span>슬라이드 문장 빈칸 채우기</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" value="final:choice" checked>
+            <span>acute/chronic/progressive cause 보기형</span>
+          </label>
+        </fieldset>
+      </div>
+
       <div class="bottom-toggles">
         <label class="checkbox inline-checkbox">
           <input id="layout-mode-checkbox" type="checkbox">
           <span>실전 레이아웃으로 시작</span>
         </label>
-        <label class="checkbox inline-checkbox">
+        <label id="practical-question-toggle" class="checkbox inline-checkbox">
           <input id="practical-question-checkbox" type="checkbox">
           <span>실전 문항 추가</span>
         </label>
@@ -131,7 +163,7 @@
         </label>
       </div>
 
-      <div class="notice">
+      <div id="setup-notice" class="notice">
         <p>실전 문항 추가는 조건에 맞는 용어를 여러 개 쓰는 비정형 문항을 추가하기 위한 옵션입니다.</p>
         <p>학습 모드는 정답 확인 뒤 다음 문제 버튼을 눌러야 넘어갑니다.</p>
         <p>테스트 모드는 새로고침 전까지 이미 맞힌 문제를 다음 출제에서 제외합니다.</p>
@@ -284,7 +316,7 @@
     </section>
   </main>
 
-  <script src="./quiz-data.js?v=20260423-2"></script>
-  <script src="./app.js?v=20260423-2"></script>
+  <script src="./quiz-data.js?v=20260617-1"></script>
+  <script src="./app.js?v=20260617-5"></script>
 </body>
 </html>

@@ -26,8 +26,149 @@
     gloss: "영어 설명",
     cloze: "빈칸",
     abbreviation: "약어",
-    practical: "실전 문항"
+    practical: "실전 문항",
+    "final-definition": "정의",
+    "final-cloze": "빈칸",
+    "final-choice": "보기"
   };
+
+  const FINAL_DEFINITION_SPECS = Object.freeze([
+    Object.freeze({ term: "Acute", english: "Having a short and relatively severe course" }),
+    Object.freeze({ term: "Chronic", english: "Persisting over a long period of time" }),
+    Object.freeze({ term: "Sign", english: "Objective evidence indicating the presence of disease" }),
+    Object.freeze({ term: "Symptom", english: "A subjective complaint or sensation felt by the patient" }),
+    Object.freeze({ term: "Nausea", english: "The subjective feeling of a need to vomit" }),
+    Object.freeze({ term: "Vomiting", english: "The oral expulsion of gastrointestinal contents due to gut and thoracoabdominal wall contractions" }),
+    Object.freeze({ term: "Tenderness", english: "The development of pain with the application of light touch to a specific area" }),
+    Object.freeze({ term: "Rebound tenderness", english: "Pain felt when a hand pressing on the abdomen is suddenly released" }),
+    Object.freeze({ term: "Episodic", english: "Occurring or appearing at usually irregular intervals" }),
+    Object.freeze({ term: "Progressive", english: "Advancing from bad to worse and increasing in scope or severity" }),
+    Object.freeze({ term: "Diverticulum", english: "A small bulging sac pushing outward from the intestine wall" }),
+    Object.freeze({ term: "Ischemia", english: "A low oxygen state usually due to obstruction of arterial blood supply or inadequate blood flow" }),
+    Object.freeze({ term: "Hypoxia", english: "Reduction of oxygen supply to tissue below physiological levels" }),
+    Object.freeze({ term: "Aneurysm", english: "A sac formed by the dilatation of the wall of an artery, a vein, or the heart" }),
+    Object.freeze({ term: "Bruit", english: "An unexpected audible swishing sound heard over an artery or vascular channel" }),
+    Object.freeze({ term: "Ectopic", english: "Positioned abnormally within the body" }),
+    Object.freeze({ term: "Infarction", english: "The formation of an area of tissue death due to a local lack of oxygen" }),
+    Object.freeze({ term: "Ketone", english: "A byproduct of fat metabolism" }),
+    Object.freeze({ term: "Salpinx", english: "Fallopian tube" }),
+    Object.freeze({ term: "Hiatus", english: "Gap, cleft, or opening" }),
+    Object.freeze({ term: "Hernia", english: "The abnormal exit of tissue or an organ through the wall of the cavity in which it normally resides" }),
+    Object.freeze({ term: "Peptic", english: "Pertaining to pepsin or digestion, related to the action of gastric juices" }),
+    Object.freeze({ term: "Syndrome", english: "A set of signs or symptoms occurring together that often point to a single disease or condition" }),
+    Object.freeze({ term: "Lymphoma", english: "A malignant tumor of the lymphatic system" })
+  ]);
+
+  const FINAL_CLOZE_SPECS = Object.freeze([
+    Object.freeze({
+      id: "acute",
+      answer: "acute",
+      sentence: "Abdominal pain can be short-lived (_____) or occur over weeks, months or years (chronic)."
+    }),
+    Object.freeze({
+      id: "chronic",
+      answer: "chronic",
+      sentence: "Abdominal pain can be short-lived (acute) or occur over weeks, months or years (_____)."
+    }),
+    Object.freeze({
+      id: "signs",
+      answer: "signs",
+      acceptedAnswers: Object.freeze(["sign", "signs"]),
+      sentence: "Seek immediate medical help if pain is accompanied by other worrisome _____ and symptoms."
+    }),
+    Object.freeze({
+      id: "nausea",
+      answer: "nausea",
+      sentence: "Persistent _____ and vomiting"
+    }),
+    Object.freeze({
+      id: "tenderness",
+      answer: "tenderness",
+      sentence: "Severe _____ when you touch your abdomen"
+    }),
+    Object.freeze({
+      id: "episodic",
+      answer: "episodic",
+      sentence: "Chronic abdominal pain may be intermittent, or _____, meaning it may come and go."
+    }),
+    Object.freeze({
+      id: "progressive",
+      answer: "progressive",
+      sentence: "Some conditions cause _____ pain, which steadily gets worse over time."
+    }),
+    Object.freeze({
+      id: "pyelonephritis",
+      answer: "pyelonephritis",
+      sentence: "Kidney infection (_____)"
+    }),
+    Object.freeze({
+      id: "splenomegaly",
+      answer: "splenomegaly",
+      sentence: "Enlarged spleen (_____)"
+    }),
+    Object.freeze({
+      id: "ketones",
+      answer: "ketones",
+      acceptedAnswers: Object.freeze(["ketone", "ketones"]),
+      sentence: "Diabetic ketoacidosis is associated with high levels of blood acids called _____."
+    }),
+    Object.freeze({
+      id: "hernia",
+      answer: "hernia",
+      sentence: "A hiatal _____ is related to an abnormal exit of tissue or an organ through the wall of the cavity."
+    }),
+    Object.freeze({
+      id: "lymphoma",
+      answer: "lymphoma",
+      sentence: "Non-Hodgkin's _____"
+    })
+  ]);
+
+  const FINAL_CAUSE_BANKS = Object.freeze({
+    acute: Object.freeze([
+      Object.freeze({ term: "Intussusception", english: "A telescoping of one portion of the intestine into another" }),
+      Object.freeze({ term: "Aneurysm", english: "A sac formed by the dilatation of the wall of an artery, a vein, or the heart" }),
+      Object.freeze({ term: "Cystitis", english: "Urinary bladder inflammation" }),
+      Object.freeze({ term: "Pericarditis", english: "Inflammation of tissue around the heart" }),
+      Object.freeze({ term: "Peritonitis", english: "Infection of the abdominal lining" }),
+      Object.freeze({ term: "Diverticulitis", english: "Inflammation of a small bulging sac pushing outward from the intestine wall" }),
+      Object.freeze({ term: "Salpingitis", english: "Inflammation of the fallopian tubes" }),
+      Object.freeze({ term: "Pleurisy", english: "Inflammation of the membrane surrounding the lungs" }),
+      Object.freeze({ term: "Cholecystitis", english: "Gallbladder inflammation" }),
+      Object.freeze({ term: "Cholangitis", english: "Bile duct inflammation" }),
+      Object.freeze({ term: "Mesenteric ischemia", english: "Decreased blood flow to the intestines" }),
+      Object.freeze({ term: "Pyelonephritis", english: "Inflammation of the renal pelvis and kidney" }),
+      Object.freeze({ term: "Pulmonary infarction", english: "Loss of blood flow to the lungs" }),
+      Object.freeze({ term: "Diabetic ketoacidosis", english: "A metabolic emergency with high levels of blood acids called ketones" }),
+      Object.freeze({ term: "Ectopic pregnancy", english: "A pregnancy in which the fertilized egg implants outside the uterus" }),
+      Object.freeze({ term: "Liver abscess", english: "A pus-filled pocket in the liver" })
+    ]),
+    chronic: Object.freeze([
+      Object.freeze({ term: "Angina", english: "Chest pain that occurs secondary to reduced blood flow to the heart" }),
+      Object.freeze({ term: "Pelvic inflammatory disease", english: "Infection of the female reproductive organs" }),
+      Object.freeze({ term: "Hernia", english: "The abnormal exit of tissue or an organ through the wall of the cavity in which it normally resides" }),
+      Object.freeze({ term: "Celiac disease", english: "A chronic digestive disorder that results in an inability to tolerate gluten" }),
+      Object.freeze({ term: "Endometriosis", english: "A condition in which functional endometrial tissue is present outside the uterus" }),
+      Object.freeze({ term: "Irritable bowel syndrome", english: "A syndrome characterized by abdominal discomfort and altered bowel habits" }),
+      Object.freeze({ term: "Gastroesophageal reflux disease", english: "A chronic condition characterized by frequent episodes of acid reflux" }),
+      Object.freeze({ term: "Peptic ulcer", english: "An ulcer related to the action of gastric juices and digestion" }),
+      Object.freeze({ term: "Gallstones", english: "Stones in the gallbladder that may cause repeated abdominal pain" }),
+      Object.freeze({ term: "Ovarian cysts", english: "Cysts in or on an ovary" }),
+      Object.freeze({ term: "Ulcerative colitis", english: "A type of inflammatory bowel disease" }),
+      Object.freeze({ term: "Gastritis", english: "Inflammation of the stomach lining" }),
+      Object.freeze({ term: "Mittelschmerz", english: "Pain associated with ovulation" }),
+      Object.freeze({ term: "Sickle cell anemia", english: "A blood disorder characterized by sickle-shaped red blood cells" })
+    ]),
+    progressive: Object.freeze([
+      Object.freeze({ term: "Uremia", english: "Retention or buildup of renal waste products in the blood" }),
+      Object.freeze({ term: "Hepatitis", english: "Liver inflammation" }),
+      Object.freeze({ term: "Non-Hodgkin's lymphoma", english: "A malignant tumor of the lymphatic system" }),
+      Object.freeze({ term: "Splenomegaly", english: "An enlarged spleen" }),
+      Object.freeze({ term: "Lead poisoning", english: "Toxicity caused by lead" }),
+      Object.freeze({ term: "Tubo-ovarian abscess", english: "A pus-filled pocket involving a fallopian tube and an ovary" }),
+      Object.freeze({ term: "Crohn's disease", english: "A type of inflammatory bowel disease that can affect the digestive tract from mouth to anus" })
+    ])
+  });
 
   const PRACTICAL_SUFFIX_LIST_SPECS = Object.freeze([
     Object.freeze({ suffix: "-itis", meaning: "염증", count: 5 }),
@@ -582,6 +723,7 @@
   });
 
   const state = {
+    track: "home",
     questions: [],
     currentIndex: 0,
     score: 0,
@@ -597,13 +739,20 @@
     examAnswerDraft: ""
   };
 
+  const homePanel = document.getElementById("home-panel");
+  const hero = document.querySelector(".hero");
+  const heroEyebrow = document.getElementById("hero-eyebrow");
+  const heroTitle = document.getElementById("hero-title");
   const setupPanel = document.getElementById("setup-panel");
+  const setupTitle = document.getElementById("setup-title");
   const listPanel = document.getElementById("list-panel");
   const quizPanel = document.getElementById("quiz-panel");
   const resultPanel = document.getElementById("result-panel");
+  const rangeModeField = document.getElementById("range-mode-field");
   const rangeModeSelect = document.getElementById("range-mode-select");
   const weekSelectField = document.getElementById("week-select-field");
   const weekSelect = document.getElementById("week-select");
+  const questionCountField = document.getElementById("question-count-field");
   const questionCountSelect = document.getElementById("question-count");
   const customWeekField = document.getElementById("custom-week-field");
   const customWeekOptions = document.getElementById("custom-week-options");
@@ -613,8 +762,13 @@
   const layoutModeCheckbox = document.getElementById("layout-mode-checkbox");
   const practicalQuestionCheckbox = document.getElementById("practical-question-checkbox");
   const testModeCheckbox = document.getElementById("test-mode-checkbox");
+  const midtermModeGroups = document.getElementById("midterm-mode-groups");
+  const finalModeGroups = document.getElementById("final-mode-groups");
+  const practicalQuestionToggle = document.getElementById("practical-question-toggle");
+  const setupNotice = document.getElementById("setup-notice");
   const listCategoryFilter = document.getElementById("list-category-filter");
   const dataSummary = document.getElementById("data-summary");
+  const homeButton = document.getElementById("home-button");
   const setupHelpButton = document.getElementById("setup-help-button");
   const listSummary = document.getElementById("list-summary");
   const listDetail = document.getElementById("list-detail");
@@ -628,6 +782,7 @@
   const helpContent = document.getElementById("help-content");
   const helpCloseButton = document.getElementById("help-close");
   const listGroups = document.getElementById("list-groups");
+  const trackLinks = Array.from(document.querySelectorAll("[data-track-link]"));
   const startButton = document.getElementById("start-button");
   const openListButton = document.getElementById("open-list-button");
   const closeListButton = document.getElementById("close-list-button");
@@ -665,7 +820,14 @@
     updateRangeModeUI();
     updateQuestionCountUI();
     renderDataSummary();
+    applyTrackUI();
     syncViewState();
+    trackLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        selectTrack(link.dataset.trackLink);
+      });
+    });
     rangeModeSelect.addEventListener("change", handleRangeModeChange);
     weekSelect.addEventListener("change", () => {
       populateCustomWeekOptions();
@@ -681,6 +843,9 @@
     startButton.addEventListener("click", startQuiz);
     openListButton.addEventListener("click", openListView);
     closeListButton.addEventListener("click", closeListView);
+    if (homeButton) {
+      homeButton.addEventListener("click", showHomePanel);
+    }
     submitButton.addEventListener("click", () => submitAnswer(false, false));
     skipButton.addEventListener("click", () => submitAnswer(false, true));
     nextButton.addEventListener("click", goToNextQuestion);
@@ -751,6 +916,81 @@
         closeHelpModal();
       }
     });
+
+    showHomePanel();
+  }
+
+  function isFinalTrack() {
+    return state.track === "final";
+  }
+
+  function selectTrack(track) {
+    state.track = track === "final" ? "final" : "midterm";
+    homePanel.classList.add("hidden");
+    setupPanel.classList.remove("hidden");
+    listPanel.classList.add("hidden");
+    quizPanel.classList.add("hidden");
+    resultPanel.classList.add("hidden");
+    closeListDetail();
+    closeHelpModal();
+    applyTrackUI();
+    applyLayoutMode();
+    syncViewState();
+  }
+
+  function showHomePanel() {
+    homePanel.classList.remove("hidden");
+    setupPanel.classList.add("hidden");
+    listPanel.classList.add("hidden");
+    quizPanel.classList.add("hidden");
+    resultPanel.classList.add("hidden");
+    closeListDetail();
+    closeHelpModal();
+    applyLayoutMode();
+    syncViewState();
+  }
+
+  function applyTrackUI() {
+    const finalTrack = isFinalTrack();
+
+    if (heroEyebrow) {
+      heroEyebrow.textContent = finalTrack ? "Medical English Final Drill" : "Medical English Weekly Drill";
+    }
+    if (heroTitle) {
+      heroTitle.textContent = finalTrack ? "의학영어 기말 땡시" : "의학영어 땡시";
+    }
+    if (setupTitle) {
+      setupTitle.textContent = finalTrack ? "기말 대비 설정" : "중간 대비 설정";
+    }
+
+    if (midtermModeGroups) {
+      midtermModeGroups.classList.toggle("hidden", finalTrack);
+    }
+    if (finalModeGroups) {
+      finalModeGroups.classList.toggle("hidden", !finalTrack);
+    }
+    if (rangeModeField) {
+      rangeModeField.classList.toggle("hidden", finalTrack);
+    }
+    if (weekSelectField) {
+      weekSelectField.classList.toggle("hidden", finalTrack);
+    }
+    if (customWeekField) {
+      customWeekField.classList.toggle("hidden", finalTrack ? true : rangeModeSelect.value !== "custom");
+    }
+    if (practicalQuestionToggle) {
+      practicalQuestionToggle.classList.remove("hidden");
+    }
+    if (openListButton) {
+      openListButton.classList.toggle("hidden", finalTrack);
+    }
+    if (setupNotice) {
+      setupNotice.innerHTML = finalTrack
+        ? "<p>기말 대비는 9주차 본문 기반 문항만 출제합니다.</p><p>실전 문항 추가를 켜면 질환을 보고 acute, chronic, progressive를 직접 쓰는 문항이 함께 출제됩니다.</p><p>학습 모드는 정답 확인 뒤 다음 문제 버튼을 눌러야 넘어갑니다.</p><p>테스트 모드는 새로고침 전까지 이미 맞힌 문제를 다음 출제에서 제외합니다.</p>"
+        : "<p>실전 문항 추가는 조건에 맞는 용어를 여러 개 쓰는 비정형 문항을 추가하기 위한 옵션입니다.</p><p>학습 모드는 정답 확인 뒤 다음 문제 버튼을 눌러야 넘어갑니다.</p><p>테스트 모드는 새로고침 전까지 이미 맞힌 문제를 다음 출제에서 제외합니다.</p>";
+    }
+
+    renderDataSummary();
   }
 
   function openHelpModal(key) {
@@ -827,6 +1067,17 @@
   }
 
   function renderDataSummary() {
+    if (isFinalTrack()) {
+      const summary = [
+        "9주차 본문 기반",
+        `정의 ${FINAL_DEFINITION_SPECS.length}문항`,
+        `빈칸 ${FINAL_CLOZE_SPECS.length}문항`,
+        `보기 ${Object.values(FINAL_CAUSE_BANKS).reduce((sum, bank) => sum + bank.length, 0)}문항`
+      ];
+      dataSummary.textContent = summary.join(" / ");
+      return;
+    }
+
     const weekCount = data.weeks.length;
     const entryCount = Object.keys(data.entries).length;
     const missingCount = data.missingEntries.length;
@@ -848,6 +1099,15 @@
   }
 
   function updateRangeModeUI() {
+    if (isFinalTrack()) {
+      if (rangeModeField) {
+        rangeModeField.classList.add("hidden");
+      }
+      weekSelectField.classList.add("hidden");
+      customWeekField.classList.add("hidden");
+      return;
+    }
+
     const isCustom = rangeModeSelect.value === "custom";
 
     weekSelectField.classList.toggle("hidden", isCustom);
@@ -958,6 +1218,7 @@
   }
 
   function syncViewState() {
+    document.body.classList.toggle("view-home", !homePanel.classList.contains("hidden"));
     document.body.classList.toggle("view-setup", !setupPanel.classList.contains("hidden"));
     document.body.classList.toggle("view-list", !listPanel.classList.contains("hidden"));
     document.body.classList.toggle("view-quiz", !quizPanel.classList.contains("hidden"));
@@ -972,8 +1233,29 @@
     return Boolean(question && question.answerMode === "multi-any-order");
   }
 
+  function isChoiceQuestion(question) {
+    return Boolean(question && question.answerMode === "choice");
+  }
+
   function getCurrentQuestion() {
     return state.questions[state.currentIndex] || null;
+  }
+
+  function formatWeekLabel(value) {
+    const cleaned = cleanupDisplay(value);
+    if (!cleaned) {
+      return "주차 미상";
+    }
+
+    if (/주차$/.test(cleaned)) {
+      return cleaned;
+    }
+
+    if (/^\d+$/.test(cleaned)) {
+      return `${cleaned}주차`;
+    }
+
+    return cleaned;
   }
 
   function syncExamAnswerVisibility() {
@@ -1155,33 +1437,37 @@
 
   function startQuiz() {
     try {
-      const selectedModes = Array.from(document.querySelectorAll(".mode-groups input[type=\"checkbox\"]:checked"))
+      const selectedModes = Array.from(document.querySelectorAll(`#${isFinalTrack() ? "final-mode-groups" : "midterm-mode-groups"} input[type="checkbox"]:checked`))
         .map((element) => element.value);
-      const scopeConfig = getScopeConfig(true);
-      const allowCombiningVowel = false;
       const includePracticalQuestions = Boolean(practicalQuestionCheckbox && practicalQuestionCheckbox.checked);
-
-      if (!scopeConfig) {
-        return;
-      }
-
       if (selectedModes.length === 0 && !includePracticalQuestions) {
         window.alert("최소 한 개 이상의 문제 형식을 선택해 주세요.");
         return;
       }
 
-        let questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel, includePracticalQuestions);
-        if (testModeCheckbox && testModeCheckbox.checked) {
-          questions = questions.filter((question) => !state.solvedQuestionIds.has(question.id));
-        }
-        if (questions.length === 0) {
-          window.alert(
-            testModeCheckbox && testModeCheckbox.checked
-              ? "선택한 범위에서 새로 풀 문제가 없습니다. 새로고침하거나 테스트 모드를 해제해 주세요."
-              : "선택한 범위와 문제 형식으로 만들 수 있는 문제가 없습니다."
-          );
+      let questions;
+      if (isFinalTrack()) {
+        questions = buildFinalQuestionPool(selectedModes, includePracticalQuestions);
+      } else {
+        const scopeConfig = getScopeConfig(true);
+        const allowCombiningVowel = false;
+        if (!scopeConfig) {
           return;
         }
+        questions = buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel, includePracticalQuestions);
+      }
+
+      if (testModeCheckbox && testModeCheckbox.checked) {
+        questions = questions.filter((question) => !state.solvedQuestionIds.has(question.id));
+      }
+      if (questions.length === 0) {
+        window.alert(
+          testModeCheckbox && testModeCheckbox.checked
+            ? "선택한 범위에서 새로 풀 문제가 없습니다. 새로고침하거나 테스트 모드를 해제해 주세요."
+            : "선택한 범위와 문제 형식으로 만들 수 있는 문제가 없습니다."
+        );
+        return;
+      }
 
       questions = shuffle(questions);
       const questionLimit = getQuestionLimit(questions.length);
@@ -1190,6 +1476,14 @@
       }
       questions = questions.slice(0, Math.min(questionLimit, questions.length));
 
+      launchQuiz(questions);
+    } catch (error) {
+      console.error("퀴즈 시작 실패", error);
+      window.alert("퀴즈를 시작하는 중 오류가 발생했습니다. 새로고침 후 다시 시도해 주세요.");
+    }
+  }
+
+  function launchQuiz(questions) {
       state.questions = questions;
       state.currentIndex = 0;
       state.score = 0;
@@ -1205,10 +1499,6 @@
       syncViewState();
 
       renderQuestion();
-    } catch (error) {
-      console.error("퀴즈 시작 실패", error);
-      window.alert("퀴즈를 시작하는 중 오류가 발생했습니다. 새로고침 후 다시 시도해 주세요.");
-    }
   }
 
   function openListView() {
@@ -1250,6 +1540,115 @@
       acceptedAnswers: config.acceptedAnswers,
       displayAnswer: config.displayAnswer
     };
+  }
+
+  function buildFinalQuestionPool(selectedModes, includePracticalQuestions) {
+    const selectedModeSet = new Set(selectedModes);
+    const questions = [];
+
+    if (selectedModeSet.has("final:definition")) {
+      FINAL_DEFINITION_SPECS.forEach((spec) => {
+        questions.push(createQuestion({
+          id: `final:definition:${normalize(spec.term)}`,
+          week: "9주차",
+          category: "vocabulary",
+          mode: "final-definition",
+          term: spec.term,
+          prompt: {
+            title: "정의를 보고 의학용어를 쓰시오.",
+            blocks: [
+              { label: "정의", value: spec.english }
+            ]
+          },
+          answer: spec.term,
+          acceptedAnswers: [spec.term],
+          displayAnswer: spec.term
+        }));
+      });
+    }
+
+    if (selectedModeSet.has("final:cloze")) {
+      FINAL_CLOZE_SPECS.forEach((spec) => {
+        const acceptedAnswers = Array.isArray(spec.acceptedAnswers) && spec.acceptedAnswers.length > 0
+          ? spec.acceptedAnswers
+          : [spec.answer];
+        questions.push(createQuestion({
+          id: `final:cloze:${spec.id}`,
+          week: "9주차",
+          category: "vocabulary",
+          mode: "final-cloze",
+          term: spec.answer,
+          prompt: {
+            title: "슬라이드 문장 빈칸에 들어갈 의학용어를 쓰시오.",
+            blocks: [
+              { label: "빈칸", value: spec.sentence }
+            ]
+          },
+          answer: spec.answer,
+          acceptedAnswers,
+          displayAnswer: spec.answer
+        }));
+      });
+    }
+
+    if (selectedModeSet.has("final:choice")) {
+      buildFinalChoiceQuestions().forEach((question) => questions.push(question));
+    }
+
+    if (includePracticalQuestions) {
+      buildFinalPracticalQuestions().forEach((question) => questions.push(question));
+    }
+
+    return questions;
+  }
+
+  function buildFinalChoiceQuestions() {
+    return Object.entries(FINAL_CAUSE_BANKS).flatMap(([stage, bank]) => bank.map((spec) => {
+      const options = shuffle(bank.map((item) => item.term))
+        .filter((term) => term !== spec.term)
+        .slice(0, Math.min(5, Math.max(0, bank.length - 1)));
+      options.push(spec.term);
+      const shuffledOptions = shuffle(options);
+      const stageLabel = stage === "acute" ? "acute" : stage === "chronic" ? "chronic" : "progressive";
+
+      return createQuestion({
+        id: `final:choice:${stage}:${normalize(spec.term)}`,
+        week: "9주차",
+        category: "vocabulary",
+        mode: "final-choice",
+        term: spec.term,
+        prompt: {
+          title: `${stageLabel} cause 보기에서 알맞은 의학용어를 고르시오.`,
+          blocks: [
+            { label: "정의", value: spec.english },
+            { label: "보기", type: "options", options: shuffledOptions }
+          ]
+        },
+        answer: spec.term,
+        answerMode: "choice",
+        acceptedAnswers: [spec.term],
+        displayAnswer: spec.term
+      });
+    }));
+  }
+
+  function buildFinalPracticalQuestions() {
+    return Object.entries(FINAL_CAUSE_BANKS).flatMap(([stage, bank]) => bank.map((spec) => createQuestion({
+      id: `final:practical:${stage}:${normalize(spec.term)}`,
+      week: "9주차",
+      category: "vocabulary",
+      mode: "practical",
+      term: spec.term,
+      prompt: {
+        title: "다음 질환이 acute, chronic, progressive 중 어디에 속하는지 쓰시오.",
+        blocks: [
+          { label: "질환", value: spec.term }
+        ]
+      },
+      answer: stage,
+      acceptedAnswers: [stage],
+      displayAnswer: stage
+    })));
   }
 
   function buildQuestionPool(scopeConfig, selectedModes, allowCombiningVowel, includePracticalQuestions) {
@@ -2571,19 +2970,22 @@
 
   function renderAnswerArea(question) {
     const isMulti = isMultiAnswerQuestion(question);
+    const isChoice = isChoiceQuestion(question);
 
-    answerInput.classList.toggle("hidden", isMulti);
-    answerInput.disabled = isMulti;
+    answerInput.classList.toggle("hidden", isMulti || isChoice);
+    answerInput.disabled = isMulti || isChoice;
     if (multiAnswerInputs) {
       multiAnswerInputs.innerHTML = "";
       multiAnswerInputs.classList.toggle("hidden", !isMulti);
     }
     if (examAnswerToggleWrap) {
-      examAnswerToggleWrap.classList.toggle("hidden", isMulti && !isExamLayout());
+      examAnswerToggleWrap.classList.toggle("hidden", isChoice || (isMulti && !isExamLayout()));
     }
     if (examAnswerRow) {
+      examAnswerRow.classList.toggle("hidden", isChoice);
       examAnswerRow.classList.toggle("multi-answer-active", isMulti);
     }
+    submitButton.classList.toggle("hidden", isChoice);
 
     if (!isMulti || !multiAnswerInputs) {
       return;
@@ -2613,9 +3015,15 @@
   }
 
   function focusAnswerArea(question) {
-    const target = isMultiAnswerQuestion(question) && multiAnswerInputs
-      ? multiAnswerInputs.querySelector("input[data-answer-slot=\"true\"]")
-      : answerInput;
+    let target = null;
+
+    if (isChoiceQuestion(question)) {
+      target = questionBody.querySelector(".question-option");
+    } else if (isMultiAnswerQuestion(question) && multiAnswerInputs) {
+      target = multiAnswerInputs.querySelector("input[data-answer-slot=\"true\"]");
+    } else {
+      target = answerInput;
+    }
 
     if (target) {
       target.focus();
@@ -2652,11 +3060,11 @@
 
     progressText.textContent = `${state.currentIndex + 1} / ${total}`;
     progressFill.style.width = `${((state.currentIndex + 1) / total) * 100}%`;
-    metaWeek.textContent = question.week;
+    metaWeek.textContent = formatWeekLabel(question.week);
     metaCategory.textContent = CATEGORY_LABELS[question.category];
     metaMode.textContent = MODE_LABELS[question.mode];
     if (examSessionMeta) {
-      examSessionMeta.textContent = `${question.week}주차 · ${CATEGORY_LABELS[question.category]} · ${MODE_LABELS[question.mode]} · ${state.currentIndex + 1}/${total}`;
+      examSessionMeta.textContent = `${formatWeekLabel(question.week)} · ${CATEGORY_LABELS[question.category]} · ${MODE_LABELS[question.mode]} · ${state.currentIndex + 1}/${total}`;
     }
     if (isExamLayout()) {
       questionTitle.innerHTML = `
@@ -2669,6 +3077,8 @@
     if (answerLabel) {
       answerLabel.textContent = isMultiAnswerQuestion(question)
         ? `정답 ${question.answerCount}개 입력`
+        : isChoiceQuestion(question)
+          ? "보기에서 선택"
         : isExamLayout() ? "\uB2F5 1" : "\uC815\uB2F5 \uC785\uB825";
     }
     submitButton.textContent = isExamLayout() ? "답안 전송" : "제출";
@@ -2699,6 +3109,28 @@
 
         frame.appendChild(image);
         container.appendChild(frame);
+      } else if (block.type === "options") {
+        const options = document.createElement("div");
+        options.className = "question-options";
+
+        (block.options || []).forEach((optionText) => {
+          const optionButton = document.createElement("button");
+          optionButton.type = "button";
+          optionButton.className = "question-option";
+          optionButton.textContent = cleanupDisplay(optionText);
+          optionButton.addEventListener("click", () => {
+            if (state.locked) {
+              return;
+            }
+
+            answerInput.value = optionText;
+            state.examAnswerDraft = optionText;
+            submitAnswer(false, false, optionText);
+          });
+          options.appendChild(optionButton);
+        });
+
+        container.appendChild(options);
       } else {
         const value = document.createElement("div");
         value.className = `question-value${block.small ? " question-small" : ""}`;
@@ -2711,6 +3143,33 @@
 
     focusAnswerArea(question);
     startTimer();
+  }
+
+  function renderChoiceResult(question, userInput) {
+    if (!isChoiceQuestion(question)) {
+      return;
+    }
+
+    const acceptedAnswers = Array.isArray(question.acceptedAnswers)
+      ? question.acceptedAnswers.map((answer) => normalize(answer)).filter(Boolean)
+      : [];
+    const selectedAnswer = normalize(userInput);
+    const buttons = Array.from(questionBody.querySelectorAll(".question-option"));
+
+    buttons.forEach((button) => {
+      const normalizedOption = normalize(button.textContent);
+      const isCorrectOption = acceptedAnswers.includes(normalizedOption);
+      const isSelectedOption = normalizedOption === selectedAnswer;
+
+      button.disabled = true;
+      button.classList.remove("correct", "incorrect");
+
+      if (isCorrectOption) {
+        button.classList.add("correct");
+      } else if (isSelectedOption) {
+        button.classList.add("incorrect");
+      }
+    });
   }
 
   function cleanupDisplay(text) {
@@ -2754,7 +3213,7 @@
     }
   }
 
-  function submitAnswer(isTimeout, isSkip) {
+  function submitAnswer(isTimeout, isSkip, forcedInput) {
     if (state.locked) {
       return;
     }
@@ -2763,20 +3222,24 @@
     state.locked = true;
 
     const question = state.questions[state.currentIndex];
-    const userInput = isTimeout || isSkip ? "" : getCurrentAnswerValue();
+    const userInput = isTimeout || isSkip ? "" : (typeof forcedInput === "string" ? forcedInput : getCurrentAnswerValue());
     const isCorrect = !isTimeout && !isSkip && isAnswerCorrect(question, userInput);
 
     if (isCorrect) {
       state.score += 1;
       state.solvedQuestionIds.add(question.id);
       scoreText.textContent = String(state.score);
-      if (!isExamLayout()) {
+      if (isChoiceQuestion(question)) {
+        renderChoiceResult(question, userInput);
+      } else if (!isExamLayout()) {
         feedback.className = "feedback ok";
         feedback.textContent = `정답입니다.\n정답: ${question.displayAnswer}`;
       }
     } else {
       const reason = isTimeout ? "\uC2DC\uAC04 \uCD08\uACFC" : isSkip ? "\uAC74\uB108\uB700" : "\uC624\uB2F5";
-      if (!isExamLayout()) {
+      if (isChoiceQuestion(question)) {
+        renderChoiceResult(question, userInput);
+      } else if (!isExamLayout()) {
         feedback.className = "feedback bad";
         const displayedUserInput = formatUserAnswer(userInput);
         feedback.textContent = `${reason}\n정답: ${question.displayAnswer}${displayedUserInput ? `\n내 답: ${displayedUserInput}` : ""}`;
@@ -2875,6 +3338,10 @@
     return String(value)
       .toLowerCase()
       .replace(/[^a-z0-9]/g, "");
+  }
+
+  function normalizeAnswer(value) {
+    return normalize(value);
   }
 
   function shuffle(list) {
